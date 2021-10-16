@@ -3,15 +3,14 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use std.textio.all;
 use ieee.std_logic_textio.all;
-use work.constants.all;
 
 entity FILTER is
 
     port (
       VIN, RST_n, CLK : in std_logic;
-      DIN : in  std_logic_vector( downto 0);
+      DIN : in  std_logic_vector(7 downto 0);
       VOUT : out  std_logic;
-      DOUT : out std_logic_vector(I_SIZE - 1 downto 0)
+      DOUT : out std_logic_vector(7 downto 0)
       );
   
 end FILTER;
@@ -23,7 +22,7 @@ architecture ARCH of FILTER is
         NBIT :		integer := 8);
     port (
       RST_n, CLK, VIN : in std_logic;
-      DIN_R, DIN_A : in  signed(NBIT-1 downto 0);
+      DIN_R, DIN_A : in  signed(NBIT -1 downto 0);
       C : in signed (NBIT -1 downto 0);
       DOUT_R, DOUT_A : out signed(NBIT - 1 downto 0)
       );
@@ -40,26 +39,28 @@ component FD is
 
 end component;
 
-  signal DINs, DIN_A0 : signed(NBIT-1 downto 0);
-  type MultConst is array(0 t0 N) of signed(nbit-1 downto 0);
+  signal DINs, DIN_A0 : signed(7 downto 0);
+  type MultConst is array(0 to 10) of signed(7 downto 0);
   signal constants : MultConst;
-  type internalSignal is array(0 t0 N) of signed(nbit-1 downto 0); 
+  type internalSignal is array(0 to 10) of signed(7 downto 0); 
   signal DIN_R_s, DIN_A_s : internalSignal;
-  signal VIN_internal : std_logic_vector(N downto 0);
+  signal VIN_internal : std_logic_vector(10 downto 0);
+  signal mul_partial : signed(15 downto 0);
 begin
 
   DIN_R_s(0) <= signed(DIN); --FIR input 
-  DIN_A_s(0) <= DIN_R_s(0) * constants(0);
+  mul_partial <= DIN_R_s(0) * constants(0);
+  DIN_A_s(0) <= mul_partial(15 downto 8);
   VIN_internal(0) <= VIN;
 
-  H: for i in 0 to N-1 Generate
+  H: for i in 0 to 9 Generate
     Stg: FIR_STAGE Generic Map(NBIT => 8)
                       Port Map(RST_n => RST_n,
                                CLK => CLK,
                                VIN => VIN,
                                DIN_R => DIN_R_s(i),
                                DIN_A => DIN_A_s(i),
-                               C => constant(i+1),
+                               C => constants(i+1),
                                DOUT_R =>DIN_R_s(i+1),
                                DOUT_A => DIN_A_s(i+1));
 
@@ -70,8 +71,8 @@ begin
                       Q => VIN_internal(i+1));
   end Generate;
 
-  DOUT <= DIN_A_s(N); --FIR output
-  VOUT <= VIN_internal(N) and VIN;
+  DOUT <= std_logic_vector(DIN_A_s(10)); --FIR output
+  VOUT <= VIN_internal(10) and VIN;
 
 
   -- Attivare Vout: serve un count che conti fino a N --> da quel momento fino a reset Vout --> 1 (valido)

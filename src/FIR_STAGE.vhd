@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use std.textio.all;
 use ieee.std_logic_textio.all;
-use work.constants.all;
+
 
 entity FIR_STAGE is
     generic (
@@ -29,7 +29,7 @@ architecture ARCH of FIR_STAGE is
                 ENABLE: In 	std_logic;
                 Q:	Out	signed(NBIT-1 downto 0));
     
-    end REG;
+    end component;
 
     signal DOUT_Rs: signed (NBIT-1 downto 0);
 

@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use WORK.constants.all;
+use ieee.numeric_std.all;
 
 entity REG is
 
