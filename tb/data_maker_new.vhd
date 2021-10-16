@@ -18,6 +18,7 @@ entity data_maker is
     H2      : out std_logic_vector(7 downto 0);
     H3      : out std_logic_vector(7 downto 0);
     H4      : out std_logic_vector(7 downto 0);
+	H5      : out std_logic_vector(7 downto 0);
     H6      : out std_logic_vector(7 downto 0);
     H7      : out std_logic_vector(7 downto 0);
     H8      : out std_logic_vector(7 downto 0);

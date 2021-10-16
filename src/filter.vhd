@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use std.textio.all;
 use ieee.std_logic_textio.all;
 
-entity FILTER is
+entity myfir is
 
     port (
       VIN, RST_n, CLK : in std_logic;
@@ -24,9 +24,9 @@ entity FILTER is
       DOUT : out std_logic_vector(7 downto 0)
       );
   
-end FILTER;
+end myfir;
 
-architecture ARCH of FILTER is 
+architecture ARCH of myfir is 
 
   component FIR_STAGE is
     generic (
