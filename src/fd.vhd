@@ -19,7 +19,7 @@ begin
 	begin
 	  if CK'event and CK='1' then -- positive edge triggered:
 
-	    if RESET='1' then -- active high reset 
+	    if RESET='0' then -- active low reset 
 	      Q <= '0'; 
 
 	    elsif ENABLE='1' then
@@ -37,7 +37,7 @@ begin
 	
 	PASYNCH: process(CK,RESET)
 	begin
-	  if RESET='1' then --reset is indipendent from the clock signal
+	  if RESET='0' then --reset is indipendent from the clock signal
 	    Q <= '0';
 	  elsif CK'event and CK='1' and ENABLE = '1' then -- positive edge triggered and enable is '1':
 	    Q <= D; 
