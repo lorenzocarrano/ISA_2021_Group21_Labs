@@ -8,7 +8,18 @@ entity FILTER is
 
     port (
       VIN, RST_n, CLK : in std_logic;
-      DIN : in  std_logic_vector(7 downto 0);
+      DIN  : in  std_logic_vector(7 downto 0);
+      H0   : in std_logic_vector(7 downto 0);
+      H1   : in std_logic_vector(7 downto 0);
+      H2   : in std_logic_vector(7 downto 0);
+      H3   : in std_logic_vector(7 downto 0);
+      H4   : in std_logic_vector(7 downto 0);
+      H5   : in std_logic_vector(7 downto 0);
+      H6   : in std_logic_vector(7 downto 0);
+      H7   : in std_logic_vector(7 downto 0);
+      H8   : in std_logic_vector(7 downto 0);
+      H9   : in std_logic_vector(7 downto 0);
+      H10  : in std_logic_vector(7 downto 0);
       VOUT : out  std_logic;
       DOUT : out std_logic_vector(7 downto 0)
       );
@@ -47,6 +58,18 @@ end component;
   signal VIN_internal : std_logic_vector(10 downto 0);
   signal mul_partial : signed(15 downto 0);
 begin
+  
+  constants(0) <= signed(H0);
+  constants(1) <= signed(H1);
+  constants(2) <= signed(H2);
+  constants(3) <= signed(H3);
+  constants(4) <= signed(H4);
+  constants(5) <= signed(H5);
+  constants(6) <= signed(H6);
+  constants(7) <= signed(H7);
+  constants(8) <= signed(H8);
+  constants(9) <= signed(H9);
+  constants(10) <= signed(H10);
 
   DIN_R_s(0) <= signed(DIN); --FIR input 
   mul_partial <= DIN_R_s(0) * constants(0);
