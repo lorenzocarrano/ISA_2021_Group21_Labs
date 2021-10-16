@@ -1,0 +1,183 @@
+m255
+13
+cModel Technology
+d/home/isa21_2021_2022/labs/lab1/ISAL1/sim
+Ccfg_fd_asynch
+aasynch
+efd
+DA work fd asynch YaielWa>Foh71iPK`^gKc3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fd 4J^Q<[d3<VPQ>GXERAcED1
+w1634072403
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
+l0
+L56
+V5PGO;LWWPi@=W40_Qc@U@0
+OE;C;6.2g;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Ccfg_fd_synch
+asynch
+efd
+DA work fd synch V2FboRThSg^D1NJCUHKUY0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fd 4J^Q<[d3<VPQ>GXERAcED1
+w1634072403
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
+l0
+L50
+V@eVhGUGVh?j6_8zDVd3V[1
+OE;C;6.2g;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Ccfg_reg_synch
+aarch
+ereg
+DE work fd 4J^Q<[d3<VPQ>GXERAcED1
+DC work cfg_fd_synch @eVhGUGVh?j6_8zDVd3V[1
+DA work reg arch QogZlWM0K3F>MPHFz=6>51
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work reg `bMTF@H`BZ`bG[SzFF4@h3
+w1634384638
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd
+l0
+L37
+V`@4ZWa_ng0T`Sz?GX31i23
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work -2002 -explicit
+tExplicit 1
+Efd
+w1634072403
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
+l0
+L4
+V4J^Q<[d3<VPQ>GXERAcED1
+OE;C;6.2g;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Aasynch
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fd 4J^Q<[d3<VPQ>GXERAcED1
+l36
+L34
+VYaielWa>Foh71iPK`^gKc3
+OE;C;6.2g;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Asynch
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fd 4J^Q<[d3<VPQ>GXERAcED1
+l17
+L15
+VV2FboRThSg^D1NJCUHKUY0
+OE;C;6.2g;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Efilter
+w1634384638
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/filter.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/filter.vhd
+l0
+L7
+V>3hNH`P`[N5hJaz?k75oN2
+OE;C;6.2g;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Aarch
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work filter >3hNH`P`[N5hJaz?k75oN2
+l49
+L18
+V??eVi8OLE4a0;]P2VHoWb2
+OE;C;6.2g;35
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 std textio
+M1 ieee std_logic_textio
+o-work work -2002 -explicit
+tExplicit 1
+Efir_stage
+w1634384638
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/FIR_STAGE.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/FIR_STAGE.vhd
+l0
+L8
+VQ;IKH[ocT3SBYeIQQcE4i1
+OE;C;6.2g;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Aarch
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fir_stage Q;IKH[ocT3SBYeIQQcE4i1
+l36
+L20
+VSQ^Uo?JBaBSDcaZ=O_kCd2
+OE;C;6.2g;35
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 std textio
+M1 ieee std_logic_textio
+o-work work -2002 -explicit
+tExplicit 1
+Ereg
+w1634384638
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd
+F/home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd
+l0
+L5
+V`bMTF@H`BZ`bG[SzFF4@h3
+OE;C;6.2g;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Aarch
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work reg `bMTF@H`BZ`bG[SzFF4@h3
+l29
+L17
+VQogZlWM0K3F>MPHFz=6>51
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work -2002 -explicit
+tExplicit 1

@@ -1,0 +1,22 @@
+# //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom ./../src/fd.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# ** Error: Library work not found.
+# ** Error: VHDL Compiler exiting
+# /software/mentor/modelsim_6.2g/linux/vcom failed.
+# Loading project ex1_sim
+# Compile of fd.vhd was successful.
+# Compile of fd.vhd was successful.
+# Compile of filter.vhd was successful.
+# Compile of FIR_STAGE.vhd was successful.
+# Compile of register.vhd was successful.
+# 4 compiles, 0 failed with no errors. 
