@@ -1,4 +1,13 @@
-/home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd
+/home/isa21_2021_2022/labs/lab1/ISAL1/tb/clk_gen.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/clk_gen.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity clk_gen
+-- Compiling architecture beh of clk_gen
+
+} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/src/register.vhd
 Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Loading package standard
 -- Loading package std_logic_1164
@@ -11,14 +20,15 @@ Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Loading entity fd
 -- Loading configuration cfg_fd_synch
 
-} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/tb/clk_gen.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/clk_gen.vhd
+} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/src/filter.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/src/filter.vhd
 Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Loading package standard
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Compiling entity clk_gen
--- Compiling architecture beh of clk_gen
+-- Loading package numeric_std
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Compiling entity myfir
+-- Compiling architecture arch of myfir
 
 } {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd
 Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
@@ -35,27 +45,6 @@ Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Loading entity fd
 -- Loading architecture asynch of fd
 
-} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/src/filter.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/src/filter.vhd
-Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Loading package textio
--- Loading package std_logic_textio
--- Compiling entity myfir
--- Compiling architecture arch of myfir
-
-} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_sink.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_sink.vhd
-Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package textio
--- Loading package std_logic_textio
--- Compiling entity data_sink
--- Compiling architecture beh of data_sink
-
 } {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/src/FIR_STAGE.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/src/FIR_STAGE.vhd
 Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Loading package standard
@@ -65,6 +54,13 @@ Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Loading package std_logic_textio
 -- Compiling entity fir_stage
 -- Compiling architecture arch of fir_stage
+
+} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/tb/tb_fir.v {1 {vlog -work work -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/tb_fir.v
+Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+-- Compiling module tb_fir
+
+Top level modules:
+	tb_fir
 
 } {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_maker_new.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_maker_new.vhd
 Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
@@ -77,11 +73,15 @@ Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 -- Compiling entity data_maker
 -- Compiling architecture beh of data_maker
 
-} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/tb/tb_fir.v {1 {vlog -work work -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/tb_fir.v
-Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
--- Compiling module tb_fir
-
-Top level modules:
-	tb_fir
+} {} {}} /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_sink.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_sink.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Compiling entity data_sink
+-- Compiling architecture beh of data_sink
 
 } {} {}}

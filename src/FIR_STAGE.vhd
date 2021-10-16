@@ -9,7 +9,7 @@ entity FIR_STAGE is
     generic (
         NBIT :		integer := 8);
     port (
-      RST_n, CLK, VIN : in std_logic;
+      RST_n, CLK : in std_logic;
       DIN_R, DIN_A : in  signed(NBIT-1 downto 0);
       C : in signed (NBIT -1 downto 0);
       DOUT_R, DOUT_A : out signed(NBIT - 1 downto 0)
@@ -32,12 +32,14 @@ architecture ARCH of FIR_STAGE is
     end component;
 
     signal DOUT_Rs: signed (NBIT-1 downto 0);
+	signal mult_partial: signed(15 downto 0);
 
 begin
 
-    REGn : REG port map (DIN_R, CLK, RST_n, VIN, DOUT_Rs);
+    REGn : REG port map (DIN_R, CLK, RST_n, '1', DOUT_Rs);
 
-    DOUT_A <= DOUT_Rs*C + DIN_A;
+    mult_partial <= DOUT_Rs*C;
+	DOUT_A <= mult_partial(15 downto 8) + DIN_A;
     DOUT_R <= DOUT_Rs;
 
 end ARCH;

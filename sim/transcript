@@ -15,21 +15,12 @@
 # Compile of register.vhd was successful.
 # Compile of clk_gen.vhd was successful.
 # Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
-# Load canceled
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
 # Compile of tb_fir.v was successful.
 # Compile of data_sink.vhd was successful.
 # 8 compiles, 0 failed with no errors. 
-vsim -t ns work.tb_fir
-# vsim -t ns work.tb_fir 
+vsim work.tb_fir
+# vsim work.tb_fir 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading work.tb_fir(fast)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
@@ -39,16 +30,15 @@ vsim -t ns work.tb_fir
 # Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
 # Loading work.data_maker(beh)
-# ** Error: (vsim-7) Failed to open VHDL file "../matlab/samples.txt" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/SM
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
 # Loading work.myfir(arch)
 # Loading work.fir_stage(arch)#1
 # Loading work.reg(arch)#1
 # Loading work.fd(asynch)
 # Loading work.data_sink(beh)
-# ** Fatal: (vsim-3363) /home/isa21_2021_2022/labs/lab1/ISAL1/tb/tb_fir.v(67): The array length (16) of VHDL port 'din' does not match the width (8) of its Verilog connection (4th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/DS File: /home/isa21_2021_2022/labs/lab1/ISAL1/tb/data_sink.vhd Line: 15
-# FATAL ERROR while loading design
-# Error loading design
+view wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+add wave *
+run -continue
+run
+run

@@ -49,7 +49,7 @@ begin  -- beh
   H10 <= conv_std_logic_vector(-1,8);
 
   process (CLK, RST_n)
-    file fp_in : text open READ_MODE is "../matlab/samples.txt";
+    file fp_in : text open READ_MODE is "../prototype/samples.txt"; --changed file path to a more convenient one
     variable line_in : line;
     variable x : integer;
   begin  -- process

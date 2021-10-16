@@ -32,7 +32,7 @@ architecture ARCH of myfir is
     generic (
         NBIT :		integer := 8);
     port (
-      RST_n, CLK, VIN : in std_logic;
+      RST_n, CLK : in std_logic;
       DIN_R, DIN_A : in  signed(NBIT -1 downto 0);
       C : in signed (NBIT -1 downto 0);
       DOUT_R, DOUT_A : out signed(NBIT - 1 downto 0)
@@ -80,7 +80,6 @@ begin
     Stg: FIR_STAGE Generic Map(NBIT => 8)
                       Port Map(RST_n => RST_n,
                                CLK => CLK,
-                               VIN => VIN,
                                DIN_R => DIN_R_s(i),
                                DIN_A => DIN_A_s(i),
                                C => constants(i+1),
@@ -90,7 +89,7 @@ begin
     FF : FD port map (D => VIN_internal(i),
                       CK => CLK,
                       RESET => RST_n,
-                      ENABLE => VIN,
+                      ENABLE => '1',
                       Q => VIN_internal(i+1));
   end Generate;
 
