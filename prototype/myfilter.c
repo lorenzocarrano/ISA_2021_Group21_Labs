@@ -15,7 +15,7 @@ int myfilter(int x)
   static int sy[NT-1]; /// y shift register
   static int first_run = 0; /// for cleaning shift registers
   int i; /// index
-  int y; /// output sample
+  char y; /// output sample
 
   /// clean the buffers
   if (first_run == 0)
@@ -28,18 +28,23 @@ int myfilter(int x)
   }
 
   /// shift and insert new sample in x shift register
-  for (i=NT-1; i>0; i--)
+  for (i = NT-1; i > 0; i--)
     sx[i] = sx[i-1];
   sx[0] = x;
 
   /// make the convolution
   /// Moving average part
   y = 0;
-  for (i=0; i<NT; i++)
-    y += (sx[i]*b[i]) >> (NB-1) ;
+  for (i = 0; i < NT; i++)
+    // THD -40 dB dB => result_0.txt
+    // y += ((sx[i]*b[i]) >> (NB - 1));
+    // THD -33 dB
+    y += ((sx[i]*b[i]) >> (NB));
+    // THD -27 dB => result_2.txt
+    // y += ((sx[i]*b[i]) >> (NB + 1));
 
   /// update the y shift register
-  for (i=NT-2; i>0; i--)
+  for (i = NT-2; i > 0; i--)
     sy[i] = sy[i-1];
   sy[0] = y;
  
@@ -55,11 +60,13 @@ int main (int argc, char **argv)
   int y;
 
   /// check the command line
+  /*
   if (argc != 3)
   {
     printf("Use: %s <input_file> <output_file>\n", argv[0]);
     exit(1);
   }
+  */
 
   /// open files
   fp_in = fopen("samples.txt", "r");
@@ -68,7 +75,7 @@ int main (int argc, char **argv)
     printf("Error: cannot open %s\n");
     exit(2);
   }
-  fp_out = fopen("result.txt", "w");
+  fp_out = fopen("result_2.txt", "w");
 
   /// get samples and apply filter
   fscanf(fp_in, "%d", &x);
