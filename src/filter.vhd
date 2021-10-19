@@ -32,7 +32,7 @@ architecture ARCH of myfir is
     generic (
         NBIT :		integer := 8);
     port (
-      RST_n, CLK : in std_logic;
+      RST_n, CLK, VIN : in std_logic;
       DIN_R, DIN_A : in  signed(NBIT -1 downto 0);
       C : in signed (NBIT -1 downto 0);
       DOUT_R, DOUT_A : out signed(NBIT - 1 downto 0)
@@ -50,13 +50,26 @@ component FD is
 
 end component;
 
-  signal DINs, DIN_A0 : signed(7 downto 0);
+component REG is
+
+        Generic (NBIT: integer:= 8);
+    
+        Port (	D:	In	signed(NBIT-1 downto 0);
+                CK:	In	std_logic;
+                RESET:	In	std_logic;
+                ENABLE: In 	std_logic;
+                Q:	Out	signed(NBIT-1 downto 0));
+    
+end component;
+
+  signal DINs, DIN_A0, outputsignal : signed(7 downto 0);
   type MultConst is array(0 to 10) of signed(7 downto 0);
   signal constants : MultConst;
   type internalSignal is array(0 to 10) of signed(7 downto 0); 
   signal DIN_R_s, DIN_A_s : internalSignal;
   signal VIN_internal : std_logic_vector(10 downto 0);
   signal mul_partial : signed(15 downto 0);
+   
 begin
   
   constants(0) <= signed(H0);
@@ -71,10 +84,12 @@ begin
   constants(9) <= signed(H9);
   constants(10) <= signed(H10);
 
-  DIN_R_s(0) <= signed(DIN); --FIR input 
+  --DIN_R_s(0) <= signed(DIN); --FIR input poi da rimuovere
   mul_partial <= DIN_R_s(0) * constants(0);
   DIN_A_s(0) <= mul_partial(15 downto 8);
-  VIN_internal(0) <= VIN;
+
+  InputReg: REG Generic Map(NBIT => 8)
+				   Port Map(D => signed(DIN), CK => CLK, RESET => RST_n, ENABLE => VIN, Q=>DIN_R_s(0)); --its output is the FIR input
 
   H: for i in 0 to 9 Generate
     Stg: FIR_STAGE Generic Map(NBIT => 8)
@@ -84,17 +99,34 @@ begin
                                DIN_A => DIN_A_s(i),
                                C => constants(i+1),
                                DOUT_R =>DIN_R_s(i+1),
+							   VIN => VIN_internal(0), -- VIN_INTERNAL(0) deve diventare un segnale singolo, perché non mi occorre più averne un array
                                DOUT_A => DIN_A_s(i+1));
 
-    FF : FD port map (D => VIN_internal(i),
+    --FF : FD port map (D => VIN_internal(i),
+      --                CK => CLK,
+        --              RESET => RST_n,
+          --            ENABLE => '1',
+            --          Q => VIN_internal(i+1));
+  end Generate;
+
+  OutputReg: REG Generic Map(NBIT => 8)
+				   Port Map(D => DIN_A_s(10), CK => CLK, RESET => RST_n, ENABLE => VIN_internal(0), Q=>outputsignal); --its output is the FIR input
+
+  DOUT <= std_logic_vector(outputsignal); --FIR output
+  --VOUT <= VIN_internal(10) and VIN;
+  --VOUT <= VIN;
+
+   FF1 : FD port map (D => VIN,
+                     CK => CLK,
+                     RESET => RST_n,
+                     ENABLE => '1',
+                     Q => VIN_internal(0));
+    
+    FF2 : FD port map (D => VIN_internal(0),
                       CK => CLK,
                       RESET => RST_n,
                       ENABLE => '1',
-                      Q => VIN_internal(i+1));
-  end Generate;
-
-  DOUT <= std_logic_vector(DIN_A_s(10)); --FIR output
-  VOUT <= VIN_internal(10) and VIN;
+                      Q => VOUT);		--TOGLIERE I VIN_INTERNAL IN ECCESSO
 
 
   -- Attivare Vout: serve un count che conti fino a N --> da quel momento fino a reset Vout --> 1 (valido)

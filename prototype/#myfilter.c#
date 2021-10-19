@@ -1,4 +1,4 @@
-#include<stdio.h>
+t #include<stdio.h>
 #include<stdlib.h>
 
 #define NT 11 /// number of coeffs
@@ -58,7 +58,6 @@ int main (int argc, char **argv)
 
   int x;
   int y;
-int ind;
 
   /// check the command line
   /*
@@ -76,16 +75,13 @@ int ind;
     printf("Error: cannot open %s\n");
     exit(2);
   }
-  fp_out = fopen("result.txt", "w");
+  fp_out = fopen("result_2.txt", "w");
 
   /// get samples and apply filter
   fscanf(fp_in, "%d", &x);
-  ind = 0;
   do{
     y = myfilter(x);
     fprintf(fp_out,"%d\n", y);
-    printf("%d ", y);
-    if(ind++ %10 == 0) printf("\n");
     fscanf(fp_in, "%d", &x);
   } while (!feof(fp_in));
 
