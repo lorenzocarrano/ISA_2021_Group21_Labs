@@ -10,7 +10,6 @@
 # //
 # Loading project ex1_sim
 # Compile of fd.vhd was successful.
-# Compile of fd.vhd was successful.
 # Compile of filter.vhd was successful.
 # Compile of FIR_STAGE.vhd was successful.
 # Compile of register.vhd was successful.
@@ -21,120 +20,6 @@
 # 8 compiles, 0 failed with no errors. 
 vsim work.tb_fir
 # vsim work.tb_fir 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading work.tb_fir(fast)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_maker(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.myfir(arch)
-# Loading work.fir_stage(arch)#1
-# Loading work.reg(arch)#1
-# Loading work.fd(asynch)
-# Loading work.data_sink(beh)
-add wave DOUT_i
-add wave VOUT_i
-add wave VIN_i
-add wave DIN_i
-run -continue
-run
-run
-run
-run
-run -all
-# Break key hit 
-# Simulation stop requested.
-quit -sim
-vsim work.tb_fir
-# vsim work.tb_fir 
-# Loading work.tb_fir(fast)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_maker(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.myfir(arch)
-# Loading work.fir_stage(arch)#1
-# Loading work.reg(arch)#1
-# Loading work.fd(asynch)
-# Loading work.data_sink(beh)
-add wave DIN_i
-add wave VIN_i
-add wave VOUT_i
-add wave DOUT_i
-run
-run
-run
-run
-run
-run
-run
-run
-quit -sim
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
-vsim work.tb_fir
-# vsim work.tb_fir 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.tb_fir(fast)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_maker(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.myfir(arch)
-# Loading work.fir_stage(arch)#1
-# Loading work.reg(arch)#1
-# Loading work.fd(asynch)
-# Loading work.data_sink(beh)
-add wave DOUT_i
-add wave VOUT_i
-add wave VIN_i
-add wave DIN_i
-run
-run
-quit -sim
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd failed with 1 errors.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 1 failed with 1 error. 
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
-vsim work.tb_fir
-# vsim work.tb_fir 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading work.tb_fir(fast)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
@@ -151,32 +36,8 @@ vsim work.tb_fir
 # Loading work.fir_stage(arch)#1
 # Loading work.reg(arch)#2
 # Loading work.data_sink(beh)
-add wave DOUT_i
-add wave VOUT_i
-add wave VIN_i
-add wave DIN_i
-run
-add wave sim:/tb_fir/UUT/inputreg/*
-restart -f
-# Loading work.tb_fir(fast)
-run
-add wave sim:/tb_fir/UUT/outputreg/*
-restart -f
-# Loading work.tb_fir(fast)
-run
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
-quit -sim
-vsim work.tb_fir
+do simulation.do
 # vsim work.tb_fir 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading work.tb_fir(fast)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
@@ -193,20 +54,259 @@ vsim work.tb_fir
 # Loading work.fir_stage(arch)#1
 # Loading work.reg(arch)#2
 # Loading work.data_sink(beh)
+# ** Error: Could not find any wave window
+# Error in macro ./simulation.do line 2
+# Could not find any wave window
+#     while executing
+# "findWindow wave $args"
+#     (procedure "wave addcursor" line 13)
+#     invoked from within
+# "wave add *"
+view wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
 run
+vsim -quit
+# No design specified
+sim -quit
+# bad option "-quit": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
+quit
+simulation -quit
+# invalid command name "simulation"
+vsim -help
+# Usage: vsim [options] [[<library>.]<primary>[(<secondary>)]]...
+#    -help                   Print this message
+#    -version                Print the version of the simulator
+# --------------------------- VHDL and Verilog options ---------------------------
+#    -0in                    Enable support for 0in tools
+#    -0in_options            Specify options to be passed to the 0in tools in quotes
+#    -0in_voptflow           Should be specified with -0in while loading a module optimized by vopt.
+#    -assertdebug            Keep data for debugging assertion failures
+#    -assertfile <filename>  Alternative file for recording assert messages
+#    -assume                 Simulate PSL and Verilog assume directives same as assert directives
+#    -c                      Command line mode
+#    -compress_elab          In conjunction with -elab, enables compression of
+#                            the elab file
+#    -coverage               Allows enabled coverage statistics to be kept
+#    -do "<command>"         Execute <command> on startup; <command> can be
+#                            a macro filename
+#    +dumpports+direction    Provide port direction info in VCD file for dumpports
+#    +dumpports+unique       Provide unique Extended VCD identifier for each port
+#    +dumpports+no_strength_range Ignore strength range when resolving conflicts
+#    +dumpports+collapse     Collapse dumpport vectors into single VCD ids
+#    -elab <filename>        Elaborate a design into a file
+#    -elab_cont <filename>   Elaborate a design into a file and simulate
+#    -elab_defer_fli         Defer calling FLI initialization routines
+#    -error <msgNumber>[,<msgNumber>...]  Change the severity of the listed
+#                            messages to Error
+#    -f <filename>           Read command line arguments from <filename>
+#    -fatal <msgNumber>[,<msgNumber>...]  Change the severity of the listed
+#                            messages to Fatal
+#    -filemap_elab <HDLfilename>=<NEWfilename>
+#                            Define a mapping used during -load_elab
+#    -g<Name>=<Value>        Specify generic/parameter default Value for Name
+#    -G<Name>=<Value>        Override generic/parameter with specified Value
+#    -gblso <shared_obj>     Open the specified shared object with global
+#                            symbol visibility.
+#    -gui                    Open the GUI without loading a design
+#    -i                      Force interactive mode
+#    -installcolormap        Cause the application to use its own color map
+#    -keeploaded             Prevent the simulator from unloading/reloading
+#                            shared libraries
+#    -keeploadedrestart      Prevent the simulator from unloading/reloading
+#                            shared libraries during restart
+#    -keepstdout             Do not redirect stdout to transcript window
+#    -l <filename>           Write simulation log to <filename>
+#                            (Default: transcript)
+#    -lib <libname>          Load top-level design units from <libname>
+#                            (Default: work)
+#    -lic_nomgc              Do not look for Mentor Graphics Licenses
+#    -lic_nomti              Do not look for Model Technology Licenses
+#    -lic_noqueue            Do not wait in the license queue when a license
+#                            is not available
+#    -lic_plus               Immediately reserve a VHDL and Verilog license
+#    -lic_vhdl               Immediately reserve a VHDL license
+#    -lic_vlog               Immediately reserve a Verilog license
+#    -lic_no_slvhdl          Disable checkout of qhsimvh and vsim single
+#                            language VHDL license features
+#    -lic_no_slvlog          Disable checkout of qhsimvl and vsimvlog
+#                            single language Verilog license features
+#    -lic_no_mix             Disable checkout of msimhdlmix and hdlmix
+#                            second language only license features
+#    -lic_no_lnl             Disable checkout of msimhdlsim and hdlsim
+#                            language neutral license features
+#    -lic_mixed_only         Disable checkout of qhsimvh,qhsimvl,vsim,
+#                            vsimvlog single language license features
+#    -lic_lnl_only           Disable checkout of qhsimvh,qhsimvl,vsim,
+#                            vsimvlog,msimhdlmix,hdlmix license features
+#    -load_elab <filename>   Load simulation from previous elaboration
+#    -memprof                Collect memory allocation profile data for use with
+#                            current simulation
+#    -memprof[+file=<filename>]
+#                            Collect memory allocation profile data for use with
+#                            current simulation and copy raw data to <filename>
+#    -memprof[+fileonly=<filename>]
+#                            Collect memory allocation profile data in raw format
+#                            to <filename>
+#    -multisource_delay min|max|latest
+#                            Controls annotation of SDF INTERCONNECT construct
+#                            (Default: max)
+#    +multisource_int_delays Enable multisource interconnect delays
+#                            for both Verilog and VHDL
+#    -msgmode <mode>         Controls transcripting of elaboration/runtime messages.
+#                            Messages will appear in transcript and/or MsgViewer (.wlf file)
+#                            Valid modes - tran, wlf, both (Default: both)
+#    -nocompress             Create/restore uncompressed checkpoint file
+#    +no_notifier            Disable notifier toggling for timing constraint
+#                            violations
+#    -noassume               Do not simulate PSL and Verilog assume directives
+#    -noexcludehiz           Do not automatically exclude rows with Hi-Z for
+#                            expression coverage
+#    -nopsl                  Disable PSL assertions
+#    +no_tchk_msg            Disable timing constraint error messages
+#    -note <msgNumber>[,<msgNumber>...]  Change the severity of the listed
+#                            messages to Note
+#    +notimingchecks         Disable Verilog and VITAL timing checks
+#    -novopt                 Force incremental mode (pre-6.0 behavior)
+#    -onfinish <mode>        Customize the kernel shutdown behavior at the end of simulation
+#                            Valid modes - ask, stop, exit (Default: ask)
+#    -printsimstats          Print simstats result at the end of simulation
+#    -psl                    Enable PSL assertions
+#    -quiet                  Do not report 'Loading...' messages
+#    -restore <filename>     Restore simulation from previous checkpoint
+#    -sdfmax[@<delayScale>] [<instance>=]<sdffile>
+#                            Annotate VITAL or Verilog <instance> with maximum
+#                            timing from <sdffile>, scaled by <delayScale>
+#    -sdfmaxerrors <n>       Max number of missing instances reported (default is 5)
+#    -sdfmin[@<delayScale>] [<instance>=]<sdffile>
+#                            Annotate VITAL or Verilog <instance> with minimum
+#                            timing from <sdffile>, scaled by <delayScale>
+#    -sdfnoerror             Treat SDF errors as warnings
+#    -sdfnowarn              Disable warnings from SDF annotator
+#    -sdftyp[@<delayScale>] [<instance>=]<sdffile>
+#                            Annotate VITAL or Verilog <instance> with typical
+#                            timing from <sdffile>, scaled by <delayScale>
+#    +sdf_verbose            Display SDF annotator status messages
+#    -suppress <msgNumber>[,<msgNumber>...]  Suppress the listed messages
+#    -t [1|10|100]fs|ps|ns|us|ms|sec  Time resolution limit
+#                            (VHDL default: resolution setting from .ini file)
+#                            (Verilog default: minimum time_precision in the
+#                            design)
+#    -tag <string>           Set tag for FLI/PLI tracing to <string>
+#    -title <string>         Optional title for the Main window
+#    -trace_foreign <n>      Set FLI/PLI tracing to level <n>
+#    -valgrind "[options]"   same as SystemC -valgrind option
+#    -vcdstim [<instance>=]<filename>  Stimulate the top-level design or instances
+#                            from an Extended VCD file
+#    -view [<dataset>=]<filename>  View the contents of the event log file
+#    -vopt                   Run vopt optimization before elaborating the simulator
+#    -voptargs="<arglist>"   Pass the specified arguments to vopt
+#    -warning <msgNumber>[,<msgNumber>...]  Change the severity of the listed
+#                            messages to Warning
+#    -wlf <filename>         Specify the name of the event log file
+#                            (Default: vsim.wlf)
+#    -wlfcompress            Turn on event log file compression (default)
+#    -wlfnocompress          Turn off event log file compression
+#    -wlfopt                 Turn on event log file optimization (default)
+#    -wlfnoopt               Turn off event log file optimization
+#    -wlfslim <size>         Specify the number of Megabytes to be saved in event
+#                            log file (Default: infinite)
+#    -wlftlim <duration>     Specify the duration of time to be saved in event
+#                            log file (Default: all)
+#    -wlfdeleteonquit        Delete WLF file when simulation quits.
+#    -wlfnodeleteonquit      Save WLF file when simulation quits. (default)
+#    -wlfcachesize           Specify WLF reader cache size (per WLF file.)
+#                            (Default: no reader cache)
+#    -wlfnocollapse          Log every item event and preserve event order.
+#    -wlfcollapsedelta       Log item values only at end of iteration. (default)
+#    -wlfcollapsetime        Log item values only at end of time step.
+# --------------------------------- VHDL options ---------------------------------
+#    -absentisempty          Treat non-existent VHDL files opened for read
+#                            as empty
+#    -foreign "<C_init_func> <shared_lib>"  Load a foreign module
+#    -nocollapse             Disable optimization of internal port map connections
+#    -nofileshare            Do not share file descriptors for VHDL files opened
+#                            for write or append that have identical names
+#    -noglitch               Disable VITAL glitch generation
+#    +no_glitch_msg          Disable glitch error messages
+#    -std_input <filename>   Use filename for VHDL textio STD_INPUT file
+#    -std_output <filename>  Use filename for VHDL textio STD_OUTPUT file
+#    -strictvital            Sacrifice performance for strict VITAL compliance
+#    -vcdread <filename>     Stimulate the VHDL top-level design from a VCD file
+#    -vital2.2b              Select SDF mapping for VITAL 2.2b (Default: VITAL 95)
+#    -vital_fix_negative_setup_hold_sum
+#                            Set negative time to zero when setuphold sum is negative
+# -------------------------------- Verilog options -------------------------------
+#    +alt_path_delays        Use current output value instead of pending value
+#                            when selecting inertial specify path output delay
+#    -dpiexportobj <filename> Generate specified DPI export object file then quit
+#    -dpiheader <filename>   Generate specified DPI C header file
+#    -dpioutoftheblue 1|0    Turn on/off DPI out-of-the-blue call from C function
+#    -extend_tcheck_data_limit <percent relaxation> Relax data limit for convergence
+#    -extend_tcheck_ref_limit  <percent relaxation> Relax ref limit for convergence
+#    -hazards                Enable hazard checking
+#    +int_delays             Optimize annotation of interconnect delays
+#    -L <libname>            Search library for design units instantiated from
+#                            Verilog and for VHDL default component binding
+#    -Lf <libname>           Same as -L, but libraries are searched before `uselib
+#    +maxdelays              Use maximum timing from min:typ:max expressions
+#    +mindelays              Use minimum timing from min:typ:max expressions
+#    +no_cancelled_e_msg     Disable negative pulse warning messages
+#    +no_neg_tchk            Set negative timing check limits to zero
+#    +no_path_edge           Ignore the input edge specification on path delays
+#    +no_pulse_msg           Disable path pulse error warning messages
+#    +nosdferror             Treat SDF errors as warnings
+#    +nosdfwarn              Disable warnings from SDF annotator
+#    +no_show_cancelled_e    Cancel negative pulse (Default)
+#    +nospecify              Disable specify path delays and timing checks
+#    -nosva                  Disable System Verilog concurrent assertions
+#    +nowarn<CODE | Number>  Disable specified warning message
+#                            (Example: +nowarnTFMPC)
+#    +ntc_warn               Enable warnings from negative timing constraint
+#                            algorithm
+#    -pli "<object list>"    Load the list of PLI shared objects
+#    +<plusarg>              Option accessible by PLI routine mc_scan_plusargs
+#    +pulse_e/<percent>      Set path pulse error limit as percentage of
+#                            path delay
+#    +pulse_e_style_ondetect Drive pulse error state immediately on detection
+#    +pulse_e_style_onevent  Drive pulse error state on time of pending event
+#                            (Default)
+#    +pulse_int_e/<percent>  Set interconnect pulse error limit as percentage
+#                            of delay
+#    +pulse_int_r/<percent>  Set interconnect pulse rejection limit as
+#                            percentage of delay
+#    +pulse_r/<percent>      Set path pulse rejection limit as percentage of
+#                            path delay
+#    +sdf_nocheck_celltype   Disable check between SDF celltype name and
+#                            module name
+#    +show_cancelled_e       Drive pulse error state on negative pulse
+#    -solvefaildebug         Display constraint conflicts on randomize() failure
+#    -solveflags=<flags>     Modify constraint solver behavior for specific testcases
+#                            (Example: -solveflags=ri)
+#    -solverev <version>     Specify random sequence compatability with <version>
+#                            (Example: -solverev 6.2a)
+#    -sv_lib <shared_obj>    DPI shared object, without extension
+#    -sv_root <dirname>      Directory name to use as prefix for DPI
+#                            shared object lookups
+#    -sv_liblist <filename>  The name of a bootstrap file containing names
+#                            of DPI shared objects to load
+#    -sv_seed <seed>         Specify a seed for the Random Number Generator
+#                            (RNG) of the root thread (SystemVerilog)
+#    -sva                    Enable System Verilog concurrent assertions
+#    +transport_int_delays   Use transport mode for interconnect delays
+#    +transport_path_delays  Use transport mode for path delays
+#                            (Default: inertial)
+#    +typdelays              Use typical timing from min:typ:max expressions
+#                            (Default)
+#    -v2k_int_delays         Use Verilog 2000 style interconnect delays
+# -------------------------------- SystemC options -------------------------------
+#    -sc_arg <arg>           Specify a SystemC command line argument
+#                            accessible using sc_argc() and sc_argv()
+#    -sclib <libname>        Load the SystemC shared library from <libname>
+#                            (Default: work)
+#    -valgrind "[options]"   Run valgrind in simulation with user given options
 quit -sim
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
-vsim work.tb_fir
+do simulation.do
 # vsim work.tb_fir 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading work.tb_fir(fast)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
@@ -223,29 +323,16 @@ vsim work.tb_fir
 # Loading work.fir_stage(arch)#1
 # Loading work.reg(arch)#2
 # Loading work.data_sink(beh)
-run
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# ** Error: Usage: wave addcursor [-window <win>] [-time <time>] [-name <name>] [-lock <0|1>] 
+# Error in macro ./simulation.do line 3
+# Usage: wave addcursor [-window <win>] [-time <time>] [-name <name>] [-lock <0|1>] 
+#     while executing
+# "wave add *"
+add wave -r /*
 quit -sim
-# Compile of fd.vhd was successful.
-# Compile of filter.vhd was successful.
-# Compile of FIR_STAGE.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker_new.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_fir.v was successful.
-# 8 compiles, 0 failed with no errors. 
-vsim work.tb_fir
+do simulation.do
 # vsim work.tb_fir 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading work.tb_fir(fast)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
@@ -262,4 +349,110 @@ vsim work.tb_fir
 # Loading work.fir_stage(arch)#1
 # Loading work.reg(arch)#2
 # Loading work.data_sink(beh)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+write format wave -window .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf /home/isa21_2021_2022/labs/lab1/ISAL1/sim/wave_config.do
+quit -sim
+do simulation.do
+# vsim work.tb_fir 
+# Loading work.tb_fir(fast)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.myfir(arch)#1
+# Loading work.reg(arch)#1
+# Loading work.fd(asynch)
+# Loading work.fir_stage(arch)#1
+# Loading work.reg(arch)#2
+# Loading work.data_sink(beh)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+do wave_config.do
+quit -sim
+do simulation.do
+# vsim work.tb_fir 
+# Loading work.tb_fir(fast)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.myfir(arch)#1
+# Loading work.reg(arch)#1
+# Loading work.fd(asynch)
+# Loading work.fir_stage(arch)#1
+# Loading work.reg(arch)#2
+# Loading work.data_sink(beh)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+quit -sim
+do simulation.do
+# vsim work.tb_fir 
+# Loading work.tb_fir(fast)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.myfir(arch)#1
+# Loading work.reg(arch)#1
+# Loading work.fd(asynch)
+# Loading work.fir_stage(arch)#1
+# Loading work.reg(arch)#2
+# Loading work.data_sink(beh)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+quit -sim
+do simulation.do
+# vsim work.tb_fir 
+# Loading work.tb_fir(fast)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.myfir(arch)#1
+# Loading work.reg(arch)#1
+# Loading work.fd(asynch)
+# Loading work.fir_stage(arch)#1
+# Loading work.reg(arch)#2
+# Loading work.data_sink(beh)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
 run
+quit -sim
+do simulation.do
+# vsim work.tb_fir 
+# Loading work.tb_fir(fast)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.myfir(arch)#1
+# Loading work.reg(arch)#1
+# Loading work.fd(asynch)
+# Loading work.fir_stage(arch)#1
+# Loading work.reg(arch)#2
+# Loading work.data_sink(beh)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+sim -quit
+# bad option "-quit": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
+quit -sim
