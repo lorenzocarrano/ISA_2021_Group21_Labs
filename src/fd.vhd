@@ -31,31 +31,11 @@ begin
 
 end SYNCH;
 
-architecture ASYNCH of FD is -- flip flop D with asyncronous reset
-
-begin
-	
-	PASYNCH: process(CK,RESET)
-	begin
-	  if RESET='0' then --reset is indipendent from the clock signal
-	    Q <= '0';
-	  elsif CK'event and CK='1' and ENABLE = '1' then -- positive edge triggered and enable is '1':
-	    Q <= D; 
-	  end if;
-	end process;
-
-end ASYNCH;
-
 
 configuration CFG_FD_SYNCH of FD is
 	for SYNCH
 	end for;
 end CFG_FD_SYNCH;
 
-
-configuration CFG_FD_ASYNCH of FD is
-	for ASYNCH
-	end for;
-end CFG_FD_ASYNCH;
 
 
