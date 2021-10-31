@@ -7,12 +7,15 @@ use ieee.std_logic_textio.all;
 library std;
 use std.textio.all;
 
-entity data_maker is  
+entity data_maker_unfolded is  
+  --now it has to generate 3 outputs at a time
   port (
     CLK     : in  std_logic;
     RST_n   : in  std_logic;
     VOUT    : out std_logic;
-    DOUT    : out std_logic_vector(7 downto 0);
+    DOUT0   : out std_logic_vector(7 downto 0);
+    DOUT1   : out std_logic_vector(7 downto 0);
+    DOUT2   : out std_logic_vector(7 downto 0);
     H0      : out std_logic_vector(7 downto 0);
     H1      : out std_logic_vector(7 downto 0);
     H2      : out std_logic_vector(7 downto 0);
@@ -25,9 +28,9 @@ entity data_maker is
     H9      : out std_logic_vector(7 downto 0);
     H10     : out std_logic_vector(7 downto 0);
     END_SIM : out std_logic);
-end data_maker;
+end data_maker_unfolded;
 
-architecture beh of data_maker is
+architecture beh of data_maker_unfolded is
 
   constant tco : time := 1 ns;
 
@@ -50,18 +53,26 @@ begin  -- beh
 
   process (CLK, RST_n)
     file fp_in : text open READ_MODE is "../prototype/samples.txt"; --changed file path to a more convenient one
-    variable line_in : line;
-    variable x : integer;
+    variable line_in0, line_in1, line_in2 : line;
+    variable x0, x1, x2: integer;
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
-      DOUT <= (others => '0') after tco;      
+      DOUT0 <= (others => '0') after tco;
+      DOUT1 <= (others => '0') after tco;
+      DOUT2 <= (others => '0') after tco;      
       VOUT <= '0' after tco;
       sEndSim <= '0' after tco;
     elsif CLK'event and CLK = '1' then  -- rising clock edge
       if not endfile(fp_in) then
-        readline(fp_in, line_in);
-        read(line_in, x);
-        DOUT <= conv_std_logic_vector(x, 8) after tco;
+        readline(fp_in, line_in0);
+        read(line_in0, x0);
+        readline(fp_in, line_in1);
+        read(line_in1, x1);
+        readline(fp_in, line_in2);
+        read(line_in2, x2);--every clock cycle three outputs are produced;
+        DOUT0 <= x0 after tco;
+        DOUT1 <= x1 after tco;
+        DOUT2 <= x2 after tco;
         VOUT <= '1' after tco;
         sEndSim <= '0' after tco;
       else
