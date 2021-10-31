@@ -1,7 +1,7 @@
 //`timescale 1ns
 
 module tb_fir_unfolded ();
-
+	//modified tb for unfolded version of fir filter
    wire CLK_i;
    wire RST_n_i;
    //originally was [15:00]
