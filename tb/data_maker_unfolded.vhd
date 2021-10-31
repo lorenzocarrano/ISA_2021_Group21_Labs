@@ -70,9 +70,9 @@ begin  -- beh
         read(line_in1, x1);
         readline(fp_in, line_in2);
         read(line_in2, x2);--every clock cycle three outputs are produced;
-        DOUT0 <= x0 after tco;
-        DOUT1 <= x1 after tco;
-        DOUT2 <= x2 after tco;
+        DOUT0 <= conv_std_logic_vector(x0, 8) after tco;
+        DOUT1 <= conv_std_logic_vector(x1, 8) after tco;
+        DOUT2 <= conv_std_logic_vector(x2, 8) after tco;
         VOUT <= '1' after tco;
         sEndSim <= '0' after tco;
       else

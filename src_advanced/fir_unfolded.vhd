@@ -61,7 +61,8 @@ architecture ARCH of FIR_UNFOLDED is
           );
       
     end component;
-    signal DIN_0_reg, DIN_1_reg, DIN_2_reg, DIN_0_1, DIN_0_2, DIN_0_3, DIN_1_0, DIN_1_1, DIN_1_2, DIN_2_1, DIN_2_2, DIN_2_3, DIN_2_4, DOUT0_reg, DOUT1_reg, DOUT2_reg, DOUT0_signed, DOUT1_signed, DOUT2_signed: signed(NBIT - 1 downto 0);
+    signal DIN_0_reg, DIN_1_reg, DIN_2_reg, DIN_0_1, DIN_0_2, DIN_0_3, DIN_1_1, DIN_1_2, DIN_1_3, DIN_2_1, DIN_2_2, DIN_2_3, DIN_2_4, DOUT0_reg, DOUT1_reg, DOUT2_reg, DOUT0_signed, DOUT1_signed, DOUT2_signed: signed(NBIT - 1 downto 0);
+    signal VIN_internal : std_logic;
 
 begin
 
@@ -69,35 +70,45 @@ begin
     reg_din1_ing: REG port map (signed(DIN1), CLK, RST_n, VIN, DIN_1_reg);
     reg_din2_ing: REG port map (signed(DIN2), CLK, RST_n, VIN, DIN_2_reg);
 
-    reg_din0_1 : REG port map (DIN_0_reg, CLK, RST_n, VIN, DIN_0_1);
-    reg_din0_2 : REG port map (DIN_0_1, CLK, RST_n, VIN, DIN_0_2);
-    reg_din0_3 : REG port map (DIN_0_2, CLK, RST_n, VIN, DIN_0_3);
+    reg_din0_1 : REG port map (DIN_0_reg, CLK, RST_n, VIN_internal, DIN_0_1);
+    reg_din0_2 : REG port map (DIN_0_1, CLK, RST_n, VIN_internal, DIN_0_2);
+    reg_din0_3 : REG port map (DIN_0_2, CLK, RST_n, VIN_internal, DIN_0_3);
 
-    reg_din1_1 : REG port map (DIN_1_reg, CLK, RST_n, VIN, DIN_1_1);
-    reg_din1_2 : REG port map (DIN_1_1, CLK, RST_n, VIN, DIN_1_2);
-    reg_din1_3 : REG port map (DIN_1_2, CLK, RST_n, VIN, DIN_1_3);
+    reg_din1_1 : REG port map (DIN_1_reg, CLK, RST_n, VIN_internal, DIN_1_1);
+    reg_din1_2 : REG port map (DIN_1_1, CLK, RST_n, VIN_internal, DIN_1_2);
+    reg_din1_3 : REG port map (DIN_1_2, CLK, RST_n, VIN_internal, DIN_1_3);
 
-    reg_din2_1 : REG port map (DIN_2_reg, CLK, RST_n, VIN, DIN_2_1);
-    reg_din2_2 : REG port map (DIN_2_1, CLK, RST_n, VIN, DIN_2_2);
-    reg_din2_3 : REG port map (DIN_2_2, CLK, RST_n, VIN, DIN_2_3);
-    reg_din2_3 : REG port map (DIN_2_3, CLK, RST_n, VIN, DIN_2_4);
+    reg_din2_1 : REG port map (DIN_2_reg, CLK, RST_n, VIN_internal, DIN_2_1);
+    reg_din2_2 : REG port map (DIN_2_1, CLK, RST_n, VIN_internal, DIN_2_2);
+    reg_din2_3 : REG port map (DIN_2_2, CLK, RST_n, VIN_internal, DIN_2_3);
+    reg_din2_4 : REG port map (DIN_2_3, CLK, RST_n, VIN_internal, DIN_2_4);
 
     stage_1: STAGE port map (DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3, DIN_0_3, DIN_2_4,
-                            H0, H1, H2, H3, H4, H5, H6, H7, H8, H9, H10, DOUT0_reg);
+                            signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT0_reg);
     stage_2: STAGE port map (DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3, DIN_0_3,
-                            H0, H1, H2, H3, H4, H5, H6, H7, H8, H9, H10, DOUT1_reg);
+                            signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT1_reg);
     stage_3: STAGE port map (DIN_2_reg, DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3,
-                            H0, H1, H2, H3, H4, H5, H6, H7, H8, H9, H10, DOUT2_reg);
+                            signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT2_reg);
 
-    reg_din0_out: REG port map (DOUT0_reg, CLK, RST_n, VIN, DOUT0_signed);
-    reg_din1_out: REG port map (DOUT1_reg, CLK, RST_n, VIN, DOUT1_signed);
-    reg_din2_out: REG port map (DOUT2_reg, CLK, RST_n, VIN, DOUT2_signed);
+    reg_din0_out: REG port map (DOUT0_reg, CLK, RST_n, VIN_internal, DOUT0_signed);
+    reg_din1_out: REG port map (DOUT1_reg, CLK, RST_n, VIN_internal, DOUT1_signed);
+    reg_din2_out: REG port map (DOUT2_reg, CLK, RST_n, VIN_internal, DOUT2_signed);
 
     DOUT0 <= std_logic_vector(DOUT0_signed);
     DOUT1 <= std_logic_vector(DOUT1_signed);
     DOUT2 <= std_logic_vector(DOUT2_signed);
 
-    VOUT <= '1';
+    FF1 : FD port map (D => VIN,
+        CK => CLK,
+        RESET => RST_n,
+        ENABLE => '1',
+        Q => VIN_internal);
+
+    FF2 : FD port map (D => VIN_internal,
+         CK => CLK,
+         RESET => RST_n,
+         ENABLE => '1',
+         Q => VOUT);		--TOGLIERE I VIN_INTERNAL IN ECCESSO
 
 
 end ARCH;

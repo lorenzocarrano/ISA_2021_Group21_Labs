@@ -49,4 +49,4 @@ begin
 
     DOUT <= DIN_10_sig;
 
-end STAGE;
+end ARCH;

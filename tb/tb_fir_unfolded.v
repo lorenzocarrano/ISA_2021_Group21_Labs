@@ -23,7 +23,7 @@ module tb_fir_unfolded ();
    wire [7:0] DOUT0_i;
    wire [7:0] DOUT1_i;
    wire [7:0] DOUT2_i;
-   wire VOUT;
+   wire VOUT_i;
    wire END_SIM_i;
 
     clk_gen CG(.END_SIM(END_SIM_i),
@@ -33,8 +33,8 @@ module tb_fir_unfolded ();
     data_maker_unfolded SM(.CLK(CLK_i),
 	         .RST_n(RST_n_i),
 		 .VOUT(VIN_i),
-		 .DOUT0(DIN0_i)
-		 .DOUT1(DIN1_i)
+		 .DOUT0(DIN0_i),
+		 .DOUT1(DIN1_i),
 		 .DOUT2(DIN2_i),
 		 .H0(H0_i),
 		 .H1(H1_i),
