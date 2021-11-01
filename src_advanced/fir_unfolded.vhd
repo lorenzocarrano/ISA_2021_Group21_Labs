@@ -55,6 +55,7 @@ architecture ARCH of FIR_UNFOLDED is
         generic (
             NBIT :		integer := 8);
         port (
+            VIN, RST_n, CLK : in std_logic;
             DIN_0, DIN_1, DIN_2, DIN_3, DIN_4, DIN_5, DIN_6, DIN_7, DIN_8, DIN_9, DIN_10: in  signed(NBIT-1 downto 0);
             C_0, C_1, C_2, C_3, C_4, C_5, C_6, C_7, C_8, C_9, C_10: in signed (NBIT -1 downto 0);
             DOUT : out signed(NBIT - 1 downto 0)
@@ -62,7 +63,7 @@ architecture ARCH of FIR_UNFOLDED is
       
     end component;
     signal DIN_0_reg, DIN_1_reg, DIN_2_reg, DIN_0_1, DIN_0_2, DIN_0_3, DIN_1_1, DIN_1_2, DIN_1_3, DIN_2_1, DIN_2_2, DIN_2_3, DIN_2_4, DOUT0_reg, DOUT1_reg, DOUT2_reg, DOUT0_signed, DOUT1_signed, DOUT2_signed: signed(NBIT - 1 downto 0);
-    signal VIN_internal : std_logic;
+    signal VIN_internal, VIN_internal_1 : std_logic;
 
 begin
 
@@ -83,16 +84,16 @@ begin
     reg_din2_3 : REG port map (DIN_2_2, CLK, RST_n, VIN_internal, DIN_2_3);
     reg_din2_4 : REG port map (DIN_2_3, CLK, RST_n, VIN_internal, DIN_2_4);
 
-    stage_1: STAGE port map (DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3, DIN_0_3, DIN_2_4,
+    stage_1: STAGE port map (VIN_internal, RST_n, CLK, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3, DIN_0_3, DIN_2_4,
                             signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT0_reg);
-    stage_2: STAGE port map (DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3, DIN_0_3,
+    stage_2: STAGE port map (VIN_internal, RST_n, CLK, DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3, DIN_0_3,
                             signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT1_reg);
-    stage_3: STAGE port map (DIN_2_reg, DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3,
+    stage_3: STAGE port map (VIN_internal, RST_n, CLK, DIN_2_reg, DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3,
                             signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT2_reg);
 
-    reg_din0_out: REG port map (DOUT0_reg, CLK, RST_n, VIN_internal, DOUT0_signed);
-    reg_din1_out: REG port map (DOUT1_reg, CLK, RST_n, VIN_internal, DOUT1_signed);
-    reg_din2_out: REG port map (DOUT2_reg, CLK, RST_n, VIN_internal, DOUT2_signed);
+    reg_din0_out: REG port map (DOUT0_reg, CLK, RST_n, VIN_internal_1, DOUT0_signed);
+    reg_din1_out: REG port map (DOUT1_reg, CLK, RST_n, VIN_internal_1, DOUT1_signed);
+    reg_din2_out: REG port map (DOUT2_reg, CLK, RST_n, VIN_internal_1, DOUT2_signed);
 
     DOUT0 <= std_logic_vector(DOUT0_signed);
     DOUT1 <= std_logic_vector(DOUT1_signed);
@@ -108,7 +109,13 @@ begin
          CK => CLK,
          RESET => RST_n,
          ENABLE => '1',
-         Q => VOUT);		--TOGLIERE I VIN_INTERNAL IN ECCESSO
+         Q => VIN_internal_1);		--TOGLIERE I VIN_INTERNAL IN ECCESSO
+
+    FF3 : FD port map (D => VIN_internal_1,
+            CK => CLK,
+            RESET => RST_n,
+            ENABLE => '1',
+            Q => VOUT);
 
 
 end ARCH;
