@@ -352,3 +352,92 @@ quit -sim
 # Compile of data_sink_unfolded.vhd was successful.
 # Compile of tb_fir_unfolded.v was successful.
 # 9 compiles, 1 failed with 1 error.
+# Compile of add_mul.vhd was successful.
+# Compile of fd.vhd was successful.
+# Compile of fir_unfolded.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of stage.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker_unfolded.vhd was successful.
+# Compile of data_sink_unfolded.vhd was successful.
+# Compile of tb_fir_unfolded.v was successful.
+# 9 compiles, 0 failed with no errors.
+# Compile of add_mul.vhd was successful.
+# Compile of fd.vhd was successful.
+# Compile of fir_unfolded.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of stage.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker_unfolded.vhd was successful.
+# Compile of data_sink_unfolded.vhd was successful.
+# Compile of tb_fir_unfolded.v was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir_unfolded
+# vsim -gui -t ns work.tb_fir_unfolded 
+# Start time: 12:25:14 on Nov 01,2021
+# Loading work.tb_fir_unfolded
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker_unfolded(beh)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_unfolded(arch)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.stage(arch)
+# Loading work.mul_add(arch)
+# Loading work.data_sink_unfolded(beh)
+# ** Warning: Design size of 13447 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+do wave.do
+run
+quit -sim
+# End time: 12:27:10 on Nov 01,2021, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 5
+# Compile of add_mul.vhd was successful.
+# Compile of fd.vhd was successful.
+# Compile of fir_unfolded.vhd failed with 3 errors.
+# Compile of register.vhd was successful.
+# Compile of stage.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker_unfolded.vhd was successful.
+# Compile of data_sink_unfolded.vhd was successful.
+# Compile of tb_fir_unfolded.v was successful.
+# 9 compiles, 1 failed with 3 errors.
+# Compile of add_mul.vhd was successful.
+# Compile of fd.vhd was successful.
+# Compile of fir_unfolded.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of stage.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker_unfolded.vhd was successful.
+# Compile of data_sink_unfolded.vhd was successful.
+# Compile of tb_fir_unfolded.v was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir_unfolded
+# vsim -gui -t ns work.tb_fir_unfolded 
+# Start time: 12:27:58 on Nov 01,2021
+# Loading work.tb_fir_unfolded
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker_unfolded(beh)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_unfolded(arch)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.stage(arch)
+# Loading work.mul_add(arch)
+# Loading work.data_sink_unfolded(beh)
+# ** Warning: Design size of 13470 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+do wave.do
+run
