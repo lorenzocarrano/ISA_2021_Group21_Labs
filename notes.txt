@@ -1,0 +1,27 @@
+per fare pipeline si sono considerate due varianti di component add+mul:
+
+Variante1:
+	x
+	|
+	|
+  _______________
+ |	reg      |
+ |_______________|
+ 	|
+	|
+------->+--------------------->
+
+variante2:
+	x
+	|
+	|
+  _______________
+ |	reg      |
+ |_______________|	 _
+ 	|		| |
+	|		|R|
+------->+-------------->|E|----->
+			|G|
+		        |_|
+
+Dall'esterno del componente l'interfaccia è la stessa, nel generate basterà scegliere un componente o l'altro per avere o meno un registro dopo l'adder
