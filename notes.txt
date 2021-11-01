@@ -1,4 +1,4 @@
-per fare pipeline si sono considerate due varianti di component add+mul:
+per implementare pipeline si sono considerate due varianti di component add+mul:
 
 Variante1:
 	x
@@ -24,4 +24,17 @@ variante2:
 			|G|
 		        |_|
 
-Dall'esterno del componente l'interfaccia è la stessa, nel generate basterà scegliere un componente o l'altro per avere o meno un registro dopo l'adder
+Dall'esterno del componente l'interfaccia è la stessa, nel generate basterà scegliere un componente
+o l'altro per avere o meno un registro dopo l'adder
+
+Nella catena di 10 adder si è partito inserendo un registro alla metà esatta:
++++++Reg+++++
+
+Successivamente, si è modificata la configurazione nel modo seguente:
++++Reg+++Reg++++
+
+Non avrebbe senso inserire un registro fra ogni coppia di adder, in quanto ipotizzando che la latenza 
+del moltiplicatore sia superiore a quella dell'adder, creare nella chain di adder un critical path
+più breve di tale latenza non porterebbe miglioramenti all'architettura.
+Si è quindi cercato di suddividere i registri fra gruppi di adder di dimensioni costanti per distribuire
+uniformemente il delay lungo la chain degli adder (appunto, 3adder->registro->3adder->registro->4adder).
