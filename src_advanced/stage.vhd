@@ -34,7 +34,7 @@ architecture ARCH of STAGE is
 begin
 
     mult_partial <= DIN_0 * C_0;
-    DIN_0_sig <= mult_partial(15 downto 8); //prova
+    DIN_0_sig <= mult_partial(15 downto 8); 
 
     stage_1 : MUL_ADD port map (DIN_1, DIN_0_sig, C_1, DIN_1_sig);
     stage_2 : MUL_ADD port map (DIN_2, DIN_1_sig, C_2, DIN_2_sig);
