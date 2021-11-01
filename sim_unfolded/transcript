@@ -339,3 +339,16 @@ vsim -gui -t ns work.tb_fir_unfolded
 # Expect performance to be adversely affected.
 do wave.do
 run
+quit -sim
+# End time: 12:22:29 on Nov 01,2021, Elapsed time: 0:25:32
+# Errors: 0, Warnings: 4
+# Compile of add_mul.vhd was successful.
+# Compile of fd.vhd was successful.
+# Compile of fir_unfolded.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of stage.vhd failed with 1 errors.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker_unfolded.vhd was successful.
+# Compile of data_sink_unfolded.vhd was successful.
+# Compile of tb_fir_unfolded.v was successful.
+# 9 compiles, 1 failed with 1 error.

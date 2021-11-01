@@ -69,11 +69,11 @@ begin
     stage_1 : MUL_ADD generic map (NBIT => 8, N_REG => 0) port map (VIN, RST_n, CLK, DIN_1, DIN_0_sig, C_1, DIN_1_sig);
     stage_2 : MUL_ADD generic map (NBIT => 8, N_REG => 0) port map (VIN, RST_n, CLK, DIN_2, DIN_1_sig, C_2, DIN_2_sig);
     stage_3 : MUL_ADD generic map (NBIT => 8, N_REG => 0) port map (VIN, RST_n, CLK, DIN_3, DIN_2_sig, C_3, DIN_3_sig);
-	reg_pipeline : REG port map (DIN_3_sig, CLK, RST_N, VIN_pipeline(0), DIN_3_sig_reg);
+	reg_pipeline_1 : REG port map (DIN_3_sig, CLK, RST_N, VIN_pipeline(0), DIN_3_sig_reg);
     stage_4 : MUL_ADD generic map (NBIT => 8, N_REG => 1) port map (VIN, RST_n, CLK, DIN_4, DIN_3_sig_reg, C_4, DIN_4_sig);
     stage_5 : MUL_ADD generic map (NBIT => 8, N_REG => 1) port map (VIN, RST_n, CLK, DIN_5, DIN_4_sig, C_5, DIN_5_sig);
     stage_6 : MUL_ADD generic map (NBIT => 8, N_REG => 1) port map (VIN, RST_n, CLK, DIN_6, DIN_5_sig, C_6, DIN_6_sig);
-	reg_pipeline : REG port map (DIN_6_sig, CLK, RST_N, VIN_pipeline(1), DIN_6_sig_reg);
+	reg_pipeline_2 : REG port map (DIN_6_sig, CLK, RST_N, VIN_pipeline(1), DIN_6_sig_reg);
     stage_7 : MUL_ADD generic map (NBIT => 8, N_REG => 2) port map (VIN, RST_n, CLK, DIN_7, DIN_6_sig_reg, C_7, DIN_7_sig);
     stage_8 : MUL_ADD generic map (NBIT => 8, N_REG => 2) port map (VIN, RST_n, CLK, DIN_8, DIN_7_sig, C_8, DIN_8_sig);
     stage_9 : MUL_ADD generic map (NBIT => 8, N_REG => 2) port map (VIN, RST_n, CLK, DIN_9, DIN_8_sig, C_9, DIN_9_sig);
