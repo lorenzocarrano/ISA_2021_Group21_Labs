@@ -1,31 +1,14 @@
-per implementare pipeline si sono considerate due varianti di component add+mul:
+per implementare pipeline si è ragionato partendo dal seguente componente base
 
-Variante1:
 	x
 	|
 	|
   _______________
- |	reg      |
- |_______________|
- 	|
-	|
-------->+--------------------->
-
-variante2:
-	x
-	|
-	|
-  _______________
- |	reg      |
- |_______________|	 _
- 	|		| |
-	|		|R|
-------->+-------------->|E|----->
-			|G|
-		        |_|
-
-Dall'esterno del componente l'interfaccia è la stessa, nel generate basterà scegliere un componente
-o l'altro per avere o meno un registro dopo l'adder
+ |	reg      |	il numero di registri fra moltiplicatore e adder è definibile tramite un generate
+ |_______________|	e non necessariamente uguale ad 1.
+ 	|		Aggiungere un registro fra due adder implica aggiungere un registro fra
+	|		moltiplicatore e adder
+------->+---------> 
 
 Nella catena di 10 adder si è partito inserendo un registro alla metà esatta:
 +++++Reg+++++
