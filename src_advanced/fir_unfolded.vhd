@@ -63,7 +63,7 @@ architecture ARCH of FIR_UNFOLDED is
       
     end component;
     signal DIN_0_reg, DIN_1_reg, DIN_2_reg, DIN_0_1, DIN_0_2, DIN_0_3, DIN_1_1, DIN_1_2, DIN_1_3, DIN_2_1, DIN_2_2, DIN_2_3, DIN_2_4, DOUT0_reg, DOUT1_reg, DOUT2_reg, DOUT0_signed, DOUT1_signed, DOUT2_signed: signed(NBIT - 1 downto 0);
-    signal VIN_internal, VIN_internal_1, VIN_internal_2, VIN_internal_3 : std_logic;
+    signal VIN_internal, VIN_internal_1, VIN_internal_2 : std_logic;
 
 begin
 
@@ -91,9 +91,9 @@ begin
     stage_3: STAGE port map (VIN_internal, RST_n, CLK, DIN_2_reg, DIN_1_reg, DIN_0_reg, DIN_2_1, DIN_1_1, DIN_0_1, DIN_2_2, DIN_1_2, DIN_0_2, DIN_2_3, DIN_1_3,
                             signed(H0), signed(H1), signed(H2), signed(H3), signed(H4), signed(H5), signed(H6), signed(H7), signed(H8), signed(H9), signed(H10), DOUT2_reg);
 
-    reg_din0_out: REG port map (DOUT0_reg, CLK, RST_n, VIN_internal_3, DOUT0_signed);
-    reg_din1_out: REG port map (DOUT1_reg, CLK, RST_n, VIN_internal_3, DOUT1_signed);
-    reg_din2_out: REG port map (DOUT2_reg, CLK, RST_n, VIN_internal_3, DOUT2_signed);
+    reg_din0_out: REG port map (DOUT0_reg, CLK, RST_n, VIN_internal_2, DOUT0_signed);
+    reg_din1_out: REG port map (DOUT1_reg, CLK, RST_n, VIN_internal_2, DOUT1_signed);
+    reg_din2_out: REG port map (DOUT2_reg, CLK, RST_n, VIN_internal_2, DOUT2_signed);
 
     DOUT0 <= std_logic_vector(DOUT0_signed);
     DOUT1 <= std_logic_vector(DOUT1_signed);
@@ -117,13 +117,7 @@ begin
         ENABLE => '1',
         Q => VIN_internal_2);
 
-        FF4 : FD port map (D => VIN_internal_2,
-            CK => CLK,
-            RESET => RST_n,
-            ENABLE => '1',
-            Q => VIN_internal_3);
-
-    FF5 : FD port map (D => VIN_internal_3,
+    FF4 : FD port map (D => VIN_internal_2,
             CK => CLK,
             RESET => RST_n,
             ENABLE => '1',
