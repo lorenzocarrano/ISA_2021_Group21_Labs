@@ -1,0 +1,403 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.12)  12 NOV 2021 12:47
+entering extended mode
+**c:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/report/homebook.tex
+(c:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/report/homebook.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-10-18> (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@chapter=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/10/19 3.65 The Babel package
+\babel@savecnt=\count191
+\U@D=\dimen139
+\l@unhyphenated=\language79
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count192
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+)) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box50
+\beforetitleunit=\skip58
+\aftertitleunit=\skip59
+\ttl@plus=\dimen140
+\ttl@minus=\dimen141
+\ttl@toksa=\toks16
+\titlewidth=\dimen142
+\titlewidthlast=\dimen143
+\titlewidthfirst=\dimen144
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\lst@mode=\count193
+\lst@gtempboxa=\box51
+\lst@token=\toks18
+\lst@length=\count194
+\lst@currlwidth=\dimen145
+\lst@column=\count195
+\lst@pos=\count196
+\lst@lostspace=\dimen146
+\lst@width=\dimen147
+\lst@newlines=\count197
+\lst@lineno=\count198
+\lst@maxwidth=\dimen148
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count199
+\lst@skipnumbers=\count266
+\lst@framebox=\box52
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen149
+\lightrulewidth=\dimen150
+\cmidrulewidth=\dimen151
+\belowrulesep=\dimen152
+\belowbottomsep=\dimen153
+\aboverulesep=\dimen154
+\abovetopsep=\dimen155
+\cmidrulesep=\dimen156
+\cmidrulekern=\dimen157
+\defaultaddspace=\dimen158
+\@cmidla=\count267
+\@cmidlb=\count268
+\@aboverulesep=\dimen159
+\@belowrulesep=\dimen160
+\@thisruleclass=\count269
+\@lastruleclass=\count270
+\@thisrulewidth=\dimen161
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip60
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen164
+)) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count271
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count272
+\leftroot@=\count273
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count274
+\DOTSCASE@=\count275
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count276
+\c@MaxMatrixCols=\count277
+\dotsspace@=\muskip16
+\c@parentequation=\count278
+\dspbrk@lvl=\count279
+\tag@help=\toks20
+\row@=\count280
+\column@=\count281
+\maxfields@=\count282
+\andhelp@=\toks21
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks22
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip63
+\thm@postskip=\skip64
+\thm@headsep=\skip65
+\dth@everypar=\toks29
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen173
+\captionmargin@=\dimen174
+\captionwidth=\dimen175
+\caption@tempdima=\dimen176
+\caption@indent=\dimen177
+\caption@parindent=\dimen178
+\caption@hangindent=\dimen179
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count283
+\c@continuedfloat=\count284
+Package caption Info: listings package is loaded.
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count285
+\float@exts=\toks30
+\float@box=\box55
+\@float@everytoks=\toks31
+\@floatcapt=\box56
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\empheq.sty
+Package: empheq 2017/03/31 v2.15 Emphasizing equations
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count286
+\calc@Bcount=\count287
+\calc@Adimen=\dimen180
+\calc@Bdimen=\dimen181
+\calc@Askip=\skip66
+\calc@Bskip=\skip67
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count288
+\calc@Cskip=\skip68
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count289
+\l_MT_multwidth_dim=\dimen182
+\origjot=\skip69
+\l_MT_shortvdotswithinadjustabove_dim=\dimen183
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen184
+\l_MT_above_intertext_sep=\dimen185
+\l_MT_below_intertext_sep=\dimen186
+\l_MT_above_shortintertext_sep=\dimen187
+\l_MT_below_shortintertext_sep=\dimen188
+\xmathstrut@box=\box57
+\xmathstrut@dim=\dimen189
+)
+\l_EQ_equationtype_int=\count290
+\l_EQ_alignmentmode_int=\count291
+\l_EQ_totalwidth_dim=\dimen190
+\l_EQ_displaywidth_dim=\dimen191
+\l_EQ_temp_linewidth_dim=\dimen192
+\l_EQ_linewidth_dim=\dimen193
+\EmphEqdelimitershortfall=\dimen194
+\EmphEqdelimiterfactor=\count292
+\g_EQ_toptag_height_dim=\dimen195
+\g_EQ_bottomtag_depth_dim=\dimen196
+\g_EQ_toprow_height_dim=\dimen197
+\g_EQ_bottomrow_depth_dim=\dimen198
+\g_EQ_widesttag_dim=\dimen199
+\EQ_mathdisplay_box=\box58
+\EQ_tag_box=\box59
+\g_EQ_temprow_int=\count293
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks32
+\verbatim@line=\toks33
+\verbatim@in@stream=\read3
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2021/10/15 v3.9 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count294
+\FV@InFile=\read4
+\FV@TabBox=\box60
+\c@FancyVerbLine=\count295
+\FV@StepNumber=\count296
+\FV@OutFile=\write3
+)
+\@indexfile=\write4
+\openout4 = `homebook.idx'.
+
+
+Writing index file homebook.idx
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
+\l__pdf_internal_box=\box61
+)
+
+LaTeX Warning: Unused global option(s):
+    [makeidx].
+
+(homebook.aux)
+\openout1 = `homebook.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+\c@lstlisting=\count298
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count299
+\scratchdimen=\dimen256
+\scratchbox=\box62
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen257
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks35
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\Hy@linkcounter=\count305
+<./logopoli.jpg, id=1, 573.8238pt x 565.1514pt>
+File: ./logopoli.jpg Graphic file (type jpg)
+<use ./logopoli.jpg>
+Package pdftex.def Info: ./logopoli.jpg  used on input line 115.
+(pdftex.def)             Requested size: 85.35826pt x 84.06192pt.
+ [1
+
+
+
+{C:/Users/nicola/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli.jpg>] (homebook.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write5
+\openout5 = `homebook.toc'.
+
+ [1
+
+] (chapters/chap1.tex
+Chapter 1.
+<chapters/figures/fa.pdf, id=14, 629.42104pt x 237.09378pt>
+File: chapters/figures/fa.pdf Graphic file (type pdf)
+<use chapters/figures/fa.pdf>
+Package pdftex.def Info: chapters/figures/fa.pdf  used on input line 26.
+(pdftex.def)             Requested size: 441.01772pt x 166.1273pt.
+[1
+
+
+ <./chapters/figures/fa.pdf>]
+File: "chapters/files/planar_FA_area_power.txt"  (verbatim)
+) (chapters/chap2.tex [2] [3]
+Chapter 2.
+) (chapters/chap3.tex [4
+
+]
+Chapter 3.
+) [5
+
+] (homebook.aux) ) 
+Here is how much of TeX's memory you used:
+ 7901 strings out of 478907
+ 125446 string characters out of 2851417
+ 454737 words of memory out of 3000000
+ 25676 multiletter control sequences out of 15000+600000
+ 409272 words of font info for 49 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,11n,66p,452b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\nicola\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on homebook.pdf (7 pages, 365961 bytes).
+PDF statistics:
+ 96 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

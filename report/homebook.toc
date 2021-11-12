@@ -1,0 +1,7 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Reference model development}{1}{}%
+\contentsline {section}{\numberline {1.1}Full Adder}{1}{}%
+\contentsline {subsection}{\numberline {1.1.1}Area and power estimation}{2}{}%
+\contentsline {section}{\numberline {1.2}Ripple Carry Adder}{3}{}%
+\contentsline {chapter}{\numberline {2}VLSI implementation}{4}{}%
+\contentsline {chapter}{\numberline {3}Advanced architecture development}{5}{}%
