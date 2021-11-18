@@ -1,7 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% This file defines the style for your report
-% You don't need to edit it any more, if not to change the authors name.
+% This file defines the style for your homebook
+% You don't need to edit it any more, if not to 
+% change the authors name:
 %
 % Search below for the keyword:   GROUP
 % insert your group number
@@ -9,18 +10,26 @@
 % Search below for the keyword:   AUTHORS
 % insert the name of the authors
 %
+%%%%%%
+% Now to update the dexcription  of your work you will 
+% use the file ``master.tex'' in the current directory
+% following the instructions in it 
+%
+%%%%%% 
+%%%%%%  
+%%%%%%
 % If you want to compile your document you have TWO ways
 % depending on the fact that 
-% 	1) you have inserted only postscript images in your .tex file 
+% 	1) you have inserted only postcript images in your tex file 
 %		---> then go to MODE 1
-%	2) you have inserted other kind of images (jpg, pdf, ...) in your .tex file
+%	2) you have inserted other kind of images (jpg..) in your tec file
 %		---> then go to MODE 2
 %
 % MODE 1 
-% Type:
+%simple type:
 % 	latex homebook.tex
 %
-% If the compilation runs successfully and you want to see the results type:
+% If the compilation runs succesfully and you want to see the results type:
 % 	xdvi homebook.dvi &
 % and use the menus to go through the document
 %
@@ -33,25 +42,28 @@
 %
 %
 % MODE 2
-% Type:
+% simple type:
 %	pdflatex homebook.tex
 %
-% If the compilation runs successfully you directly have the pdf file
+% If the compilation runs succesfully you directly have the pdf file
 % and you can see it using the command:
 %       acroread homebook.pdf &
 %
 % 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[10pt,  english, makeidx, a4paper, titlepage, oneside]{book}
 \usepackage{babel}
 \usepackage{fancyhdr}
 \usepackage{makeidx}
 \usepackage{titlesec}
-\usepackage{listings}
+\usepackage{listings} 
 \usepackage{booktabs}
+\usepackage{multirow}
 
-\newenvironment{listato}{\footnotesize}{\normalsize }
+
+\newenvironment{listato}{\footnotesize}
+                        {\normalsize }
+
 
 %\pagestyle{empty}
 
@@ -63,7 +75,7 @@
 
 \pagestyle{fancy}
 \lhead{}
-\chead{Microelectronic Systems}
+\chead{Integrated Systems Architecture}
 \lfoot{}
 \cfoot{}
 \rfoot{}
@@ -75,21 +87,6 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 %\oddsidemargin -1.1cm
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{float}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-%\usepackage{subscript}
-\usepackage{empheq}
-\usepackage{verbatim}
-\usepackage{fancyvrb}
-
-\lstdefinelanguage{VHDL}{morekeywords={library,use,all,entity,generic, is,port,in,out,end,architecture,of,begin,and,if,then,else,elsif,process},morecomment=[l]--}
-
-\lstdefinestyle{vhdl}{language = VHDL, basicstyle = \ttfamily, keywordstyle = \color{keyword}\bfseries, commentstyle = \color{comment}}
 
 \titleformat{\chapter}[display]
 {\normalfont\Large\filcenter\sffamily}
@@ -104,55 +101,59 @@
 \vspace{1pc}
 \Huge}
 
+\newcommand{\SubSubSection}[1]{\subsubsection{\bf Exercise   ~#1}}
+
+\newcommand{\homework}[1]{\subsubsection{\bf Homework   ~#1}}
+
+\newcommand{\Solution}{\subsubsection{\bf Solution}}
+
+
+
+
 \makeindex
-
 \begin{document}
-
 \frontmatter
 \begin{titlepage}
-\vspace{0cm}
-\centerline{
-\includegraphics[width=3cm]{./logopoli}} 
-\vspace{0.5cm}
-\centerline{\LARGE Politecnico di Torino}
-\vspace{2.5cm}
-\centerline{\huge\sf Integrated Systems Architectures}
-\vspace{1cm}
-\centerline{\Huge\sf Laboratory 1}
-\bigskip
-\centerline{\huge\sf Design and implementation of a digital filter}
 \vspace{2cm}
-\centerline{\Large Master degree in Electronics Engineering}
+\centerline{
+\includegraphics[width=2cm]{./logopoli}}  
+\centerline{\LARGE Politecnico di Torino}
 \bigskip
-\centerline{\Large Master degree in Computer Engineering}
-\vspace{4.5cm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\centerline{\large Referents: Prof. Guido Masera}
+\centerline{\Large III Facolt\`a di Ingegneria}
+\vspace{4cm}
+\centerline{\Huge\sf Laboratory 2}
 \bigskip
-\vspace{1cm}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerline{\Huge\bfseries\sf Digital arithmetic}
+\vspace{2cm}
+\centerline{\LARGE Master degree in Electrical Engineering}
+\vspace{4.4cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % GROUP
 % Change the name of your group below
 %
-\centerline{\large Authors: group\_21}
-\bigskip
+\centerline{\Large Authors: Group 21}
+\vspace{2cm}
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % AUTHORS
 % Change the name of the Group participants here
 %
-\centerline{\large Nicola Dilillo, Stefano Moncalvo, Lorenzo}
+\centerline{Nicola Dilillo, Stefano Moncalvo, Lorenzo Carrano}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{2cm}
-\centerline{\large \today}
+\centerline{\today}
+\vspace{1cm}
+{\scriptsize Many thanks to Prof. Mariagrazia Graziano for providing us with this template.}
 \end{titlepage}
 
 \tableofcontents
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
 \mainmatter
+\lstset{language=VHDL}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    
 % HERE IS WHERE YOU INCLUDE YOUR CHAPTERS
@@ -173,5 +174,5 @@
 % and so on
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+ 
 \end{document}
