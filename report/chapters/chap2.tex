@@ -5,3 +5,35 @@
 % chapter 2
 \chapter{VLSI implementation}
 \label{cha2}
+\section{Starting architecture development}
+
+The purpose of this section is to develop in VHDL the architecture of the previously designed filter. 
+The architecture of the filter is composed by four elements:
+
+\begin{itemize}
+    \item Adders
+    \item Multipliers
+    \item Flipflops
+    \item Registers
+\end{itemize}
+
+The 8-bit input is recived and then propagated through a chain of 10 registers;
+the output of each register is multiplied by the corresponding coefficient, and the results are summed together to form the
+filter's output. 
+All registers use VIN as an enable signal, in order to avoid unwanted propagation of data. The VIN signal, delayed of two clock cycles, is also used to 
+drive VOUT. Every input and output signal is loaded or produced by registers or flipflops, to reduce the risk of interference from external signals.
+
+%%Image of FIR filter
+
+\section{Simulation}
+
+The design was simulated using a testbench written in both Verilog and VHDL. The testbench is composed of four disinct entities:
+
+\begin{itemize}
+    \item \textbf{clk\_gen:} generates a clock signal of the specified frequency, and a reset signal.
+    \item \textbf{data\_maker:} reads the samples.txt file and provides an input every clock cycle and its validity using the VIN signal. 
+    \item \textbf{data\_sink:} recives the outputs of the filter every clock cycle and writes them in the output.txt file if VOUT is equal to 1. 
+    \item \textbf{tb\_fir:} is the testbench top entity written in Verilog.
+\end{itemize}
+
+At the end of the simulation
