@@ -20,10 +20,15 @@ The architecture of the filter is composed by four elements:
 The 8-bit input is recived and then propagated through a chain of 10 registers;
 the output of each register is multiplied by the corresponding coefficient, and the results are summed together to form the
 filter's output. 
-All registers use VIN as an enable signal, in order to avoid unwanted propagation of data. The VIN signal, delayed of two clock cycles, is also used to 
-drive VOUT. Every input and output signal is loaded or produced by registers or flipflops, to reduce the risk of interference from external signals.
+All registers use VIN as an enable signal, in order to avoid unwanted propagation of data. 
+
+The VIN signal, delayed of two clock cycles, is also used to drive VOUT. Every input and output signal is loaded or 
+produced by registers or flipflops, to reduce the risk of interference from external signals.
 
 %%Image of FIR filter
+
+\centerline{
+\includegraphics[width=15.5cm]{./chapters/figures/fir_base.jpg}} 
 
 \section{Simulation}
 
@@ -36,27 +41,44 @@ The design was simulated using a testbench written in both Verilog and VHDL. The
     \item \textbf{tb\_fir:} is the testbench top entity written in Verilog.
 \end{itemize}
 
-%%screen of waveforms
+\centerline{
+\includegraphics[width=15.5cm]{./chapters/figures/waveform1.jpg}}
 
+\vspace{5mm}
+The image above shows an extract of the Modelsim simulation; the waveforms show the moment where VIN goes to zero, and after two clock cycles VOUT is set to zero
+in order to avoid errors in the output signal.
 At the end of the simulation the values stored in Output.txt were compared with the ones produced by the C prototype. The two files are equal, which
 means that the filter is behaving correctly. 
 
 %%table with first results of files
-
 \section{Logic synthesis}
-
 After the simulation the design must be synthetized. To estimate the maximum working clock frequency of the filter,
 the clock period in the design compiler is set to 0 ns. In this way the compiler optimizes the circuit as much as possible,
 and the negative slack of the timing report corresponds to the maximum clock frequency. 
 
-After running the synthesis at the computed frequency the area is evaluated.
+After running the synthesis at the computed frequency the area is evaluated.\\
 
 %%table with frequency & area
+\centerline{
+\begin{tabularx}{1\textwidth} { 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X | }
+   \hline
+   \textbf{Max Clock Frequency} & \textbf{Min Clock Period} & \textbf{Area} \\
+   \hline
+   303 MHz  & 3.3 ns  & \unit{3765.23}{\micro\meter\squared}  \\
+  \hline
+\end{tabularx}}
+\vspace{5mm}
+It is requested to set the frequency to 25\% of the maximum value.
 
-It is requested to set the frequency to 25\% of the maximum value. After the synthesis a new area estimation is produced.
+\[ \frac{1}{4} f_{MAX} = 75.75 MHz\]
+After the synthesis a new area estimation is produced.
 
 %%new area
 
+\[ Area = \unit{3682}{\micro\meter\squared}\]
 The constraints on the clock have a significant role in the estimation of the area: by allowing the frequency to be lower, 
 the size of the circuit will be smaller.
 
@@ -66,8 +88,24 @@ which is saved in a .vcd file. The results of this simulation have been checked 
 original circuit.
 
 This file is converted to .saif and used by Design Compiler to generete a power report.
-
+\vspace{5mm}
 %table with power
+
+\centerline{
+\begin{tabularx}{1\textwidth} { 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X
+    | >{\centering\arraybackslash}X | }
+   \hline
+   \multicolumn{4}{|c|}{\textbf{Power [\unit{\micro\watt}]}} \\
+   \hline
+   \textbf{Internal} & \textbf{Switching} & \textbf{Internal} & \textbf{Total}\\
+   \hline
+   300.8059  & 252.0369  & 76.517 & 629.3596 \\
+  \hline
+\end{tabularx}}
+
 
 \section{Place \& Route}
 
@@ -91,10 +129,46 @@ To do that using Innovus several steps are necessary:
 
 %%immagine place&route
 
+\centerline{
+\includegraphics[width=8cm]{./chapters/figures/fir_base_plcrt.jpg}}
+
+\vspace{5mm}
+
 Since the slack values for setup and hold are positive and the verification on connectivity and geometry returned no errors, the final step is to simulate the
 produced netlist with Modelsim, to check if the circuit behaves correctly and to calculate the switching activity. The following results have been obtained:
+\vspace{5mm}
+%tabella con power
 
-%tabella con results
+\centerline{
+\begin{tabularx}{1\textwidth} { 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X | }
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Power [\unit{\micro\watt}]}} \\
+    \hline
+    \textbf{Internal} & \textbf{Switching} & \textbf{Internal} & \textbf{Total}\\
+    \hline
+    207.5  & 175.1  & 73.98 & 516.5 \\
+   \hline
+\end{tabularx}}
+\vspace{5mm}
 
 %tabella con area
 
+\centerline{
+\begin{tabularx}{0.6\textwidth} { 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X | }
+   \hline
+   \textbf{Gates} & \textbf{Cells} & \textbf{Area} \\
+   \hline
+   4488  & 1874  & \unit{3582}{\micro\meter\squared}  \\
+  \hline
+\end{tabularx}}
+\vspace{5mm}
+
+After the place and route phase, both the area and the power consumption estimations are reduced wth respect to the
+ones obtained after the synthesis. 

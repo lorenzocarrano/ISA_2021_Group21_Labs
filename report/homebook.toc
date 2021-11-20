@@ -6,9 +6,9 @@
 \contentsline {subsection}{\numberline {1.3.1}Evaluate the THD}{2}{}%
 \contentsline {chapter}{\numberline {2}VLSI implementation}{3}{}%
 \contentsline {section}{\numberline {2.1}Starting architecture development}{3}{}%
-\contentsline {section}{\numberline {2.2}Simulation}{3}{}%
+\contentsline {section}{\numberline {2.2}Simulation}{4}{}%
 \contentsline {section}{\numberline {2.3}Logic synthesis}{4}{}%
-\contentsline {section}{\numberline {2.4}Place \& Route}{4}{}%
-\contentsline {chapter}{\numberline {3}Advanced architecture development}{5}{}%
-\contentsline {section}{\numberline {3.1}Unfolding}{5}{}%
-\contentsline {section}{\numberline {3.2}Pipeline}{5}{}%
+\contentsline {section}{\numberline {2.4}Place \& Route}{5}{}%
+\contentsline {chapter}{\numberline {3}Advanced architecture development}{7}{}%
+\contentsline {section}{\numberline {3.1}Unfolding}{7}{}%
+\contentsline {section}{\numberline {3.2}Pipeline}{7}{}%
