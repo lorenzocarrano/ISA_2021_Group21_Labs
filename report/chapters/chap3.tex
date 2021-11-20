@@ -5,3 +5,52 @@
 % chapter 3
 \chapter{Advanced architecture development}
 \label{cha3}
+
+In this section the purpose is to improve the FIR performance. In first and unfolding 
+technique has been used to improve the throughput and then pipeline technique has 
+been used to reduce the longest path and improve maximum frequency.
+
+\section{Unfolding}
+
+Unfolding of order 3 has been applied to FIR filter (N = 3) and the equations derived
+to build the new system are the following:
+
+\begin{equation}
+\begin{split}
+    y[3n] = a_0 \cdot x[3n] + a_1 \cdot x[3(n-1) + 2] + a_2 \cdot x[3(n-1) + 1] + \\
+    a_3 \cdot x[3(n-1)] + a_4 \cdot x[3(n-2) + 2] + a_5 \cdot x[3(n-2) + 1] + a_6 \cdot x[3(n-2)] +  \\
+    a_7 \cdot x[3(n-3) + 2] + a_8 \cdot x[3(n-3) + 1] + a_9 \cdot x[3(n-3)] + a_{10} \cdot x[3(n-4) + 2]
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+    y[3n + 1] = a_0 \cdot x[3n + 1] + a_1 \cdot x[3n] + a_2 \cdot x[3(n-1) + 2] + \\
+    a_3 \cdot x[3(n-1) + 1] + a_4 \cdot x[3(n-1)] + a_5 \cdot x[3(n-2) + 2] + a_6 \cdot x[3(n-2)+1] +  \\
+    a_7 \cdot x[3(n-2)] + a_8 \cdot x[3(n-3)+2] + a_9 \cdot x[3(n-3) + 1] + a_{10} \cdot x[3(n-3)]
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+    y[3n + 2] = a_0 \cdot x[3n + 2] + a_1 \cdot x[3n + 1] + a_2 \cdot x[3n] + a_3 \cdot x[3(n-1) + 2] +\\
+    a_4 \cdot x[3(n-1) + 1] + a_5 \cdot x[3(n-1)] + a_6 \cdot x[3(n-2) + 2] +  a_7 \cdot x[3(n-3) + 1] +\\
+    a_8 \cdot x[3(n-2)] + a_9 \cdot x[3(n-3) + 2] + a_[10] \cdot x[3(n-3) + 1]
+\end{split}
+\end{equation}
+
+Using this method of optimization the two more input and output port have been added becouse
+now 3 inputs are processed and produce, at the same time, 3 output. To overall throughput has
+been triplicate.
+
+%% formula dove facciamo vedere che il throuput è triplicato e il nuovo valore calcolato
+
+\section{Pipeline}
+
+A further optimization has been applied. This method allows to reduce the size of critical path.
+
+From schematic of previous FIR is possible to see that the critical path is the chain off 
+adders. To achieve the best result is not necessary split each of them, but it is needed to 
+group them in order to have a total time path that is less than the amount of time for performed
+a multiplication. 
+
