@@ -36,22 +36,37 @@ The design was simulated using a testbench written in both Verilog and VHDL. The
     \item \textbf{tb\_fir:} is the testbench top entity written in Verilog.
 \end{itemize}
 
-%%screen of waveforms
+\centerline{
+\includegraphics[width=15.5cm]{./chapters/figures/waveform1.jpg}} 
 
+\vspace{5mm}
+The image above shows an extract of the Modelsim simulation; the waveforms show the moment where VIN goes to zero, and after two clock cycles VOUT is set to zero
+in order to avoid errors in the output signal.
 At the end of the simulation the values stored in Output.txt were compared with the ones produced by the C prototype. The two files are equal, which
 means that the filter is behaving correctly. 
 
 %%table with first results of files
 
-\section{Logic synthesis}
-
 After the simulation the design must be synthetized. To estimate the maximum working clock frequency of the filter,
 the clock period in the design compiler is set to 0 ns. In this way the compiler optimizes the circuit as much as possible,
 and the negative slack of the timing report corresponds to the maximum clock frequency. 
 
-After running the synthesis at the computed frequency the area is evaluated.
+After running the synthesis at the computed frequency the area is evaluated.\\
 
 %%table with frequency & area
+\centerline{
+\begin{tabularx}{1\textwidth} { 
+    | >{\raggedright\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\raggedleft\arraybackslash}X | }
+   \hline
+   \centerline{\textbf{Max Clock Frequency}} & \textbf{Min Clock Period} & \centerline{\textbf{Area}} \\
+   \hline
+   \centerline{303 MHz}  & 3.3 ns  & \centerline{\unit{3765.23}{\micro\meter\squared}}  \\
+  \hline
+\end{tabularx}}
+
+\section{Logic synthesis}
 
 It is requested to set the frequency to 25\% of the maximum value. After the synthesis a new area estimation is produced.
 

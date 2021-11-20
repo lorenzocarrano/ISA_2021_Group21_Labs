@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 17:22
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
@@ -198,6 +198,42 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks28
 ) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen170
+\ar@mcellbox=\box55
+\extrarowheight=\dimen171
+\NC@list=\toks29
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box56
+)
+\TX@col@width=\dimen172
+\TX@old@table=\dimen173
+\TX@old@col=\dimen174
+\TX@target=\dimen175
+\TX@delta=\dimen176
+\TX@cols=\count285
+\TX@ftn=\toks30
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.sty
+Package: SIunits 2007/12/02 v1.36 Support for the International System of units (MH)
+
+
+\@qskwidth=\skip68
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 46.
+\symgreek=\mathgroup6
+(C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.cfg)
+LaTeX Info: Redefining \usk on input line 576.
+
+Option `mediumspace' provided!
+LaTeX Info: Redefining \@qsk on input line 576.
+Option `mediumqspace' provided!
+Option `squaren' provided!
+
+Package SIunits Warning: What is `Grey'?.
+
 )
 \@indexfile=\write3
 \openout3 = `homebook.idx'.
@@ -206,8 +242,8 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 Writing index file homebook.idx
 (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count285
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count286
+\l__pdf_internal_box=\box57
 )
 
 LaTeX Warning: Unused global option(s):
@@ -216,46 +252,73 @@ LaTeX Warning: Unused global option(s):
 (homebook.aux)
 \openout1 = `homebook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-\c@lstlisting=\count286
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+\c@lstlisting=\count287
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen170
-\scratchbox=\box56
-\nofMPsegments=\count288
-\nofMParguments=\count289
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen171
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count288
+\scratchdimen=\dimen177
+\scratchbox=\box58
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen178
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks32
 ) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Option `squaren' provided! 
+ Command \squaren defined by SIunits package!
+
 <./logopoli.jpg, id=1, 573.8238pt x 565.1514pt>
 File: ./logopoli.jpg Graphic file (type jpg)
 <use ./logopoli.jpg>
-Package pdftex.def Info: ./logopoli.jpg  used on input line 119.
+Package pdftex.def Info: ./logopoli.jpg  used on input line 121.
 (pdftex.def)             Requested size: 56.9055pt x 56.04414pt.
- [1
+[1
 
 
 
@@ -282,25 +345,35 @@ Chapter 1.
 
 ]) (chapters/chap2.tex [2]
 Chapter 2.
+<./chapters/figures/waveform1.jpg, id=28, 758.08218pt x 175.40532pt>
+File: ./chapters/figures/waveform1.jpg Graphic file (type jpg)
+<use ./chapters/figures/waveform1.jpg>
+Package pdftex.def Info: ./chapters/figures/waveform1.jpg  used on input line 40.
+(pdftex.def)             Requested size: 441.01772pt x 102.04294pt.
 [3
 
-]) (chapters/chap3.tex [4]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[4 <./chapters/figures/waveform1.jpg>]) (chapters/chap3.tex [5]
 Chapter 3.
-) [5
+) [6
 
 ] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 5582 strings out of 478699
- 86313 string characters out of 2846961
- 584122 words of memory out of 3000000
- 23591 multiletter control sequences out of 15000+600000
- 409152 words of font info for 48 fonts, out of 8000000 for 9000
+ 6775 strings out of 478699
+ 106912 string characters out of 2846961
+ 601886 words of memory out of 3000000
+ 24735 multiletter control sequences out of 15000+600000
+ 410001 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,62p,304b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on homebook.pdf (7 pages, 387541 bytes).
+ 60i,15n,67p,304b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on homebook.pdf (8 pages, 442540 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
