@@ -61,4 +61,33 @@ The constraints on the clock have a significant role in the estimation of the ar
 the size of the circuit will be smaller.
 
 The Design Compiler produces the Verilog netlist of the synthetized circuit and a .sdf file containing the circuit's delays.
-Those files are used by Modelsim to generate 
+Those files are used by Modelsim to simulate the netlist with the correct timing parameters and obtain the switching activity of the nodes,
+which is saved in a .vcd file. The results of this simulation have been checked to assure that they are coherent with the ones of the
+original circuit.
+
+This file is converted to .saif and used by Design Compiler to generete a power report.
+
+%table with power
+
+\section{Place \& Route}
+
+The last section requires to perform the place and route on the synthetized circuit to obtain the switching activity and power report.
+To do that using Innovus several steps are necessary: 
+
+\begin{itemize}
+    \item \textbf{Structuring the floorplan}, where Innovus allocates the area for the cells;
+    \item \textbf{Inserting power rings}, two rings for power (VDD) and ground (VSS) are inserted around the floorplan;  
+    \item \textbf{Standard cell power routing}, horizzontal wires for power and ground are prepared for the cells;
+    \item \textbf{Placement}, the cells are placed in the floorplan but are still to be connected between them;
+    \item \textbf{Post Clock-Tree-Synthesis optimization}, the design is optimized to achieve the required timing constraints;
+    \item \textbf{Place filler}, filler cells are placed to ensure continuity in n+ and p+ wells in each row;
+    \item \textbf{Routing}, the cells are connected among each other;
+    \item \textbf{Post routing optimization}, the design is optimized again to achieve the timing constraints. After this step, the design is saved as a .enc file;
+    \item \textbf{Parasitics extraction}, Innovus extracts the parasitic values of resistencies and capacitances;
+    \item \textbf{Timing analysis}, the performance of the circuit is evaluated, if the slack is negative the constraints are violated;
+    \item \textbf{Design analysis and verification}, Innovus checks for the presence of floating wires and violations on the constraints on the geometric features of the circuit. 
+    Finally the area and gate count, the netlist and a file with delay annotations are saved.
+\end{itemize}
+
+
+
