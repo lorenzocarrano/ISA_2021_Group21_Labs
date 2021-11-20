@@ -485,6 +485,13 @@ INPUT chapters\chap2.tex
 INPUT .\chapters\chap2.tex
 INPUT .\chapters\chap2.tex
 INPUT chapters\chap2.tex
+INPUT .\chapters\figures\fir_base.jpg
+INPUT .\chapters\figures\fir_base.jpg
+INPUT chapters\figures\fir_base.jpg
+INPUT .\chapters\figures\fir_base.jpg
+INPUT .\chapters\figures\fir_base.jpg
+INPUT .\chapters\figures\fir_base.jpg
+INPUT .\chapters\figures\fir_base.jpg
 INPUT .\chapters\figures\waveform1.jpg
 INPUT .\chapters\figures\waveform1.jpg
 INPUT chapters\figures\waveform1.jpg
@@ -492,6 +499,13 @@ INPUT .\chapters\figures\waveform1.jpg
 INPUT .\chapters\figures\waveform1.jpg
 INPUT .\chapters\figures\waveform1.jpg
 INPUT .\chapters\figures\waveform1.jpg
+INPUT .\chapters\figures\fir_base_plcrt.jpg
+INPUT .\chapters\figures\fir_base_plcrt.jpg
+INPUT chapters\figures\fir_base_plcrt.jpg
+INPUT .\chapters\figures\fir_base_plcrt.jpg
+INPUT .\chapters\figures\fir_base_plcrt.jpg
+INPUT .\chapters\figures\fir_base_plcrt.jpg
+INPUT .\chapters\figures\fir_base_plcrt.jpg
 INPUT .\chapters\chap3.tex
 INPUT .\chapters\chap3.tex
 INPUT .\chapters\chap3.tex

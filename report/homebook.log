@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 18:04
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
@@ -345,35 +345,47 @@ Chapter 1.
 
 ]) (chapters/chap2.tex [2]
 Chapter 2.
-<./chapters/figures/waveform1.jpg, id=28, 758.08218pt x 175.40532pt>
-File: ./chapters/figures/waveform1.jpg Graphic file (type jpg)
-<use ./chapters/figures/waveform1.jpg>
-Package pdftex.def Info: ./chapters/figures/waveform1.jpg  used on input line 40.
-(pdftex.def)             Requested size: 441.01772pt x 102.04294pt.
+<./chapters/figures/fir_base.jpg, id=28, 893.58844pt x 345.54094pt>
+File: ./chapters/figures/fir_base.jpg Graphic file (type jpg)
+<use ./chapters/figures/fir_base.jpg>
+Package pdftex.def Info: ./chapters/figures/fir_base.jpg  used on input line 31.
+(pdftex.def)             Requested size: 441.01772pt x 170.53976pt.
 [3
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+ <./chapters/figures/fir_base.jpg>]
+<./chapters/figures/waveform1.jpg, id=32, 758.08218pt x 175.40532pt>
+File: ./chapters/figures/waveform1.jpg Graphic file (type jpg)
+<use ./chapters/figures/waveform1.jpg>
+Package pdftex.def Info: ./chapters/figures/waveform1.jpg  used on input line 45.
+(pdftex.def)             Requested size: 441.01772pt x 102.04294pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[4 <./chapters/figures/waveform1.jpg>]) (chapters/chap3.tex [5]
+[4 <./chapters/figures/waveform1.jpg>]
+<./chapters/figures/fir_base_plcrt.jpg, id=37, 362.10281pt x 341.77687pt>
+File: ./chapters/figures/fir_base_plcrt.jpg Graphic file (type jpg)
+<use ./chapters/figures/fir_base_plcrt.jpg>
+Package pdftex.def Info: ./chapters/figures/fir_base_plcrt.jpg  used on input line 135.
+(pdftex.def)             Requested size: 441.01772pt x 416.26834pt.
+ [5]) (chapters/chap3.tex [6 <./chapters/figures/fir_base_plcrt.jpg>]
 Chapter 3.
-) [6
+) [7
 
 ] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 6775 strings out of 478699
- 106912 string characters out of 2846961
- 601886 words of memory out of 3000000
- 24735 multiletter control sequences out of 15000+600000
+ 6789 strings out of 478699
+ 107412 string characters out of 2846961
+ 600886 words of memory out of 3000000
+ 24747 multiletter control sequences out of 15000+600000
  410001 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,67p,304b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,67p,304b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on homebook.pdf (8 pages, 442540 bytes).
+Output written on homebook.pdf (9 pages, 619410 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
