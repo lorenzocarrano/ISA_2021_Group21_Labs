@@ -15,14 +15,15 @@
 
 The goal of this laboratory is to design a Finite Impulse Filter filter (FIR) with a cut frequency of 2 kHz, and then applying some optimization 
 techniques such as unfolding and pipelining to the basic structure.
-Filter has is design according two parameter: order and number of bits. The order employ for the following filter
-is 10 and the number of bits are 9.
+Filter was designed according two parameter: order and number of bits. The order employed for the following filter
+is 10 and the number of bits is 9.
 
-A prototype version of the filter has been developed in C language and Matlab in order to be able to compare them with the
-results coming from the simulation of the HDL design.
+A prototype version of the filter has been developed in C language and Matlab in order to be able to compare their results with the
+ones coming from the simulation of the HDL design.
 \paragraph{}
-In the following main filter specifications are summarized:
+In the following table the main filter specifications are summarized:
 \paragraph{}
+\centerline{
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
 	\hline
 	Filter Specification&Value \\
@@ -33,7 +34,7 @@ In the following main filter specifications are summarized:
 	Filter order    &10\\
 	Number of bits&   9\\
 	\hline
-   \end{tabular}
+   \end{tabular}}
 
 \section{Design the filter with Matlab}
 
@@ -63,12 +64,12 @@ Number & Quantize & Normalize \\
 \label{tab:1}
 \end{table}
 \paragraph{}
-Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and real form
+Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and real form.
 It is possible to esimate the effect of this quantization by comparing the designed transfer function to the quantized one, as shown in figure \ref{fig:1}.
 \begin{figure}[!ht]
 	\caption{Designed Transfer Function vs Quantized Transfer Function}
 	\label{fig:1}
-	\includegraphics[scale=0.5]{IMG1.jpg}
+	\includegraphics[width=15.5cm]{IMG1.jpg}
 	\centering
 \end{figure}
 
@@ -79,8 +80,8 @@ input signal the average value between two sinusoidal waves of frequency of 500 
 After this execution two files have been generated:
 
 \begin{enumerate}
-	\item \emph{sample.txt}, which contains the sample values that have fed the input of FIR;
-	\item \emph{result.txt}, which contains the output values that has been elaborated from our FIR.
+	\item \emph{sample.txt}, which contains the sample values that have fed the input of the FIR;
+	\item \emph{result.txt}, which contains the output values that has been elaborated from the FIR.
 \end{enumerate}
 
 Figure \ref{fig:2} shows the two sinusoidal waveforms and the effective filter's input.
@@ -122,18 +123,18 @@ and the obtained one, it is possible to reduce bit numbers and thus the complexi
 
 %% add value of THD caculated each time
 
-With 9 bits used for data, obtained THD is -40 dB. 
+With 9 bits used for data, obtained THD is -39.07 dB. 
 Reducing the number of bits to 8 the obtained value of THD  
-is -33 dB, thus still acceptable. 
+is -33.65 dB, thus still acceptable. 
 Applying a further bit-number reduction, thus with a 7-bit parallelism, the value of THD exceeds the maximum allowed
-amount, reaching the value of -27dB.
+amount, reaching the value of -27.01 dB.
 
 At the end of this analysis, it has been decided to use 8 bits for the final implementation of the  FIR, 
-in order to reduce the area while still accomplish maximum THD amount, shown in figure \ref{fig:3}.
+in order to reduce the area while still accomplish the requested THD amount, shown in figure \ref{fig:3}.
 \begin{figure}[!h]
 	\caption{Final THD for FIR filter implementation}
 	\label{fig:3}
-	\includegraphics[scale=0.4]{IMG3.png}
+	\includegraphics[width=15.5cm]{IMG3.png}
 	\centering
 \end{figure}
 

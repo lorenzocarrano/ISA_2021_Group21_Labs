@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 19:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 22:41
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
@@ -343,17 +343,12 @@ Chapter 1.
 <./chapters/chap1images//IMG1.jpg, id=16, 963.6pt x 526.21594pt>
 File: ./chapters/chap1images//IMG1.jpg Graphic file (type jpg)
 <use ./chapters/chap1images//IMG1.jpg>
-Package pdftex.def Info: ./chapters/chap1images//IMG1.jpg  used on input line 71.
-(pdftex.def)             Requested size: 481.79883pt x 263.10733pt.
-
-Overfull \hbox (40.78111pt too wide) in paragraph at lines 71--73
- [][] 
- []
-
+Package pdftex.def Info: ./chapters/chap1images//IMG1.jpg  used on input line 72.
+(pdftex.def)             Requested size: 441.01772pt x 240.83377pt.
 <./chapters/chap1images//IMG2.jpg, id=17, 963.6pt x 526.96875pt>
 File: ./chapters/chap1images//IMG2.jpg Graphic file (type jpg)
 <use ./chapters/chap1images//IMG2.jpg>
-Package pdftex.def Info: ./chapters/chap1images//IMG2.jpg  used on input line 90.
+Package pdftex.def Info: ./chapters/chap1images//IMG2.jpg  used on input line 91.
 (pdftex.def)             Requested size: 337.26506pt x 184.44182pt.
 [1
 
@@ -362,12 +357,8 @@ Package pdftex.def Info: ./chapters/chap1images//IMG2.jpg  used on input line 90
 <./chapters/chap1images//IMG3.png, id=32, 1160.08406pt x 644.4075pt>
 File: ./chapters/chap1images//IMG3.png Graphic file (type png)
 <use ./chapters/chap1images//IMG3.png>
-Package pdftex.def Info: ./chapters/chap1images//IMG3.png  used on input line 136.
-(pdftex.def)             Requested size: 464.0254pt x 257.75844pt.
-
-Overfull \hbox (23.00769pt too wide) in paragraph at lines 136--138
- [][] 
- []
+Package pdftex.def Info: ./chapters/chap1images//IMG3.png  used on input line 137.
+(pdftex.def)             Requested size: 441.01772pt x 244.97572pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -400,21 +391,44 @@ Package pdftex.def Info: ./chapters/figures/fir_base_plcrt.jpg  used on input li
 (pdftex.def)             Requested size: 227.62204pt x 214.846pt.
  [7]) (chapters/chap3.tex [8 <./chapters/figures/fir_base_plcrt.jpg>]
 Chapter 3.
+<./chapters/figures/fir_adv_1.jpg, id=57, 954.56625pt x 230.36063pt>
+File: ./chapters/figures/fir_adv_1.jpg Graphic file (type jpg)
+<use ./chapters/figures/fir_adv_1.jpg>
+Package pdftex.def Info: ./chapters/figures/fir_adv_1.jpg  used on input line 58.
+(pdftex.def)             Requested size: 441.01772pt x 106.42763pt.
 [9
 
-]) [10] (homebook.aux) ) 
+]
+<./chapters/figures/fir_adv_2.jpg, id=62, 711.4078pt x 653.44125pt>
+File: ./chapters/figures/fir_adv_2.jpg Graphic file (type jpg)
+<use ./chapters/figures/fir_adv_2.jpg>
+Package pdftex.def Info: ./chapters/figures/fir_adv_2.jpg  used on input line 70.
+(pdftex.def)             Requested size: 441.01772pt x 405.09947pt.
+ [10 <./chapters/figures/fir_adv_1.jpg> <./chapters/figures/fir_adv_2.jpg>]
+<./chapters/figures/waveform2.jpg, id=66, 958.3303pt x 280.04625pt>
+File: ./chapters/figures/waveform2.jpg Graphic file (type jpg)
+<use ./chapters/figures/waveform2.jpg>
+Package pdftex.def Info: ./chapters/figures/waveform2.jpg  used on input line 84.
+(pdftex.def)             Requested size: 441.01772pt x 128.8741pt.
+ [11 <./chapters/figures/waveform2.jpg>]
+<./chapters/figures/fir_advanced.png, id=71, 381.67593pt x 365.86688pt>
+File: ./chapters/figures/fir_advanced.png Graphic file (type png)
+<use ./chapters/figures/fir_advanced.png>
+Package pdftex.def Info: ./chapters/figures/fir_advanced.png  used on input line 175.
+(pdftex.def)             Requested size: 227.62204pt x 218.19315pt.
+ [12 <./chapters/figures/fir_advanced.png>]) [13] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 6813 strings out of 478699
- 108160 string characters out of 2846961
+ 6841 strings out of 478699
+ 109125 string characters out of 2846961
  601918 words of memory out of 3000000
- 24767 multiletter control sequences out of 15000+600000
+ 24791 multiletter control sequences out of 15000+600000
  410001 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,67p,408b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,67p,408b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on homebook.pdf (12 pages, 857484 bytes).
+Output written on homebook.pdf (15 pages, 1263855 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

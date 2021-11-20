@@ -40,3 +40,6 @@ sim:/tb_fir/END_SIM_i
 #           Using alternate file: ./wlftn65kef
 run
 # Unrecognized paper size (Letter), using Custom
+quit -sim
+# End time: 21:15:23 on Nov 20,2021, Elapsed time: 6:25:52
+# Errors: 0, Warnings: 4
