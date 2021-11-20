@@ -11,91 +11,82 @@
 % or subsections -> \subsection{simulating a particular type of inverter}
 
 %%%%%%   First section
+\section{Introduction}
 
-According to our group number our goal is to design a FIR filter with a parallelism of 8 and a parallelism of 11.
+The goal of this laboratory is to design a Finite Impulse Filter filter (FIR) with a cut frequency of 2 kHz, and then applying some optimization 
+techniques such as unfolding and pipelining to the basic structure.
+Filter has is design according two parameter: order and number of bits. The order employ for the following filter
+is 10 and the number of bits are 9.
 
-\section{Full Adder}
+A prototype version of the filter has been developed in C language and Matlab in order to be able to compare them with the
+results coming from the simulation of the HDL design.
 
-Adders are one of the most used digital components in computer processors. In general an adder is a digital circuit that implements the sum of two numbers expressed on N bits.\\
-In particular, a full adder (FA) is characterized by three inputs and two outputs. If we consider a one-bit full adder, the three inputs are the two numbers to sum and the input carry. The outputs are the sum and the output carry. A schematic diagram of a one-bit full adder is shown in figure \ref{fig:fa}-A. % here is the reference to the figure below
+\section{Design the filter with Matlab}
 
-% Below is shown how you can insert a figure. If you give a label to the figure, you can refer to the figure using \ref{figure_label} as shown above. 
+First step is the generation of coefficients. To do this Matlab function fir1 has been used.
+The coefficients are shown in table \ref{tab:1}. % here is the reference to the table below
 
-	\begin{figure}[ht]
-	\centering
-	\includegraphics[width=\textwidth]{chapters/figures/fa} 
-	\caption{(A) Schematic symbol of a 1-bit full adder. A and B are the operands, Cin is the carry-in while Cout and S are the carry-out and the sum, respectively. (B) Logic diagram of the 1-bit full adder.}
-	\label{fig:fa}  % here is the figure label
-	\end{figure}
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c}
+\toprule
+Number & Quantize & Normalize \\
+\midrule
+0 & -1 & 1 \\
+1 & -2 & 1 \\
+2 & -4 & 1 \\
+3 & 8 & 0 \\
+4 & 35 & 1 \\
+5 & 50 & 1 \\
+6 & 35 & 1 \\
+7 & 8 & 1 \\
+8 & -4 & 1 \\
+9 & -2 & 1 \\
+10 & -1 & 1 \\
+\bottomrule
+\end{tabular}
+\caption{All coefficients.}
+\label{tab:1}
+\end{table}
 
-The truth table of the one-bit full adder is shown in table \ref{tab:1}. % here is the reference to the table below
+At this point, another Matlab script is executed in order to perform
+different simulatios with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
+input signal the average value between two sinusoidal waves of frequency of 500 HZ and 4.5 kHz respectively.
+After this execution two files have been generated:
 
-% Below is an example of how to create a simple table. You can create a reference (using \ref{table_label}) to tables too if you give them a label.
+\begin{enumerate}
+	\item \emph{sample.txt}, which contains the sample values that have fed the input of FIR;
+	\item \emph{result.txt}, which contains the output values that has been elaborated from our FIR.
+\end{enumerate}
 
-	\begin{table}[ht]
-	\centering
-	\begin{tabular}{ccc}
-	\toprule
-	A B Cin & S & Cout\\
-	\midrule
-	0 0 0 & 0 & 0\\
-	1 0 0 & 1 & 0\\
-	0 1 0 & 1 & 0\\
-	1 1 0 & 0 & 1\\
-	0 0 1 & 1 & 0\\
-	1 0 1 & 0 & 1\\
-	0 1 1 & 0 & 1\\
-	1 1 1 & 1 & 1\\
-	\bottomrule
-	\end{tabular}
-	\caption{Truth table of a 1-bit full adder.}
-	\label{tab:1} % here is the table label
-	\end{table}
-	
-From the truth table we can easily derive the logic equations that describe the full adder:
+\section{C prototype}
 
-% Below is an example of how to write equations.
+The C-language script simualtes a FIR filter implementing the following  relation:
 
-	\begin{equation}
-	S = A \oplus B \oplus C_{in}
-	\label{eq:1}
-	\end{equation}
+\begin{displaymath}
+y_i = \sum_{n=0}^{10}{x_{i-n} \cdot b_n}
+\end{displaymath}
 
-	\begin{equation}
-	C_{out} = AB + C_{in}( A \oplus B)
-	\label{eq:2}
-	\end{equation}
-	
-\subsection{Area and power estimation}
+Thanks to this script is possible to compare the performance of the fixed-point version with respect to 
+the Matlab computation results.
 
-A simple Bash script has been written to automatise the calculus of area and power starting from the layout of the circuit. The script takes in input the SVG (which is the primary Inkscape's format) description of the layout and it extracts all the necessary information. The output of the script is a .txt file containing different data.\\
-The output text file of the full adder is reported below.
+\subsection{Evaluate the THD}
 
-\verbatiminput{chapters/files/planar_FA_area_power.txt}  
+The purpose of this step is to evaluate the Total Harmonic Distortion (THD), trying to obtain a maximum 
+value of -30dB. 
+If THD exceeds the maximum tolerated value, it is necessary to increase 
+the bit numbers in order to reduce its amount, while if there is a gap between the maximum tolerated value 
+and the obtained one, it is possible to reduce bit numbers and thus the complexity of the FIR implementation.
 
-% The command \verbatiminput allows you to import the text (e.g, some code or the output resulting from running a program or a script) written in a file.
-% You can also include some text in this way:
-%	\begin{verbatim}
-%		text here
-%	\end{verbatim}
+%% add value of THD caculated each time
 
-% Below is shown how to create an itemize. An alternative to itemize is enumerate that allows you to generate a numbered list. It is used in the same way as itemize:
-%	\begin{enumerate}
-%		\item bla1
-%		\item bla2
-%		\item bla3
-%	\end{enumerate}
+With 9 bits used for data, obtained THD is -40 dB. 
+Reducing the number of bits to 8 the obtained value of THD  
+is -33 dB, thus still acceptable. 
+Applying a further bit-number reduction, thus with a 7-bit parallelism, the value of THD exceeds the maximum allowed
+amount, reaching the value of -27dB.
 
-To summarize, the planar full adder is characterized by:
-\begin{itemize}
-\item Delay = 3 clock cycles;
-\item Area = $2.7\ \mu m^2$;
-\item Power = $10.53\ \mu W$.
-\end{itemize}
-	
-\section{Ripple Carry Adder}
+At the end of this analysis, it has been decided to use 8 bits for the final implementation of the  FIR, 
+in order to reduce the area while still accomplish maximum THD amount.
 
-A Ripple-carry adder (RCA) is a more complex adder composed by a cascade of more full adders. It is used to add N-bit numbers and its name derives from the fact that the carry propagates from a full adder to the next one.\\
-\dots \dots \dots \\
-\dots \dots \\
-\dots
+%% vedi i ths a 9, 8 e 7 bits
