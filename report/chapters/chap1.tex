@@ -3,24 +3,39 @@
 % Remember that the character % is a comment in latex
 %
 % chapter 1
+
 \chapter{Reference model development}
 \label{chap1}
-
+\graphicspath{ {./chapters/chap1images/} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % you can organize a chapter using sections -> \section{Simulating an inverter}
 % or subsections -> \subsection{simulating a particular type of inverter}
-
 %%%%%%   First section
 \section{Introduction}
 
-The goal of this laboratory is to design a Finite Impulse Filter filter (FIR) with a cut frequency of 2 kHz.
+The goal of this laboratory is to design a Finite Impulse Filter filter (FIR) with a cut frequency of 2 kHz, and then applying some optimization 
+techniques such as unfolding and pipelining to the basic structure.
 Filter has is design according two parameter: order and number of bits. The order employ for the following filter
 is 10 and the number of bits are 9.
 
-Before starting with filter design it's needed to develop a prototype version that ensure the final 
-result of request implementation.
+A prototype version of the filter has been developed in C language and Matlab in order to be able to compare them with the
+results coming from the simulation of the HDL design.
+\paragraph{}
+In the following main filter specifications are summarized:
+\paragraph{}
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+	\hline
+	Filter Specification&Value \\
+	\hline
+	Filter Type   & FIR filter\\
+	Cut-off frequency&   2kHz\\
+	Sampling frequency &10kHz\\
+	Filter order    &10\\
+	Number of bits&   9\\
+	\hline
+   \end{tabular}
 
-\section{Design the filter with Matlab/Octave}
+\section{Design the filter with Matlab}
 
 First step is the generation of coefficients. To do this Matlab function fir1 has been used.
 The coefficients are shown in table \ref{tab:1}. % here is the reference to the table below
@@ -47,10 +62,20 @@ Number & Quantize & Normalize \\
 \caption{All coefficients.}
 \label{tab:1}
 \end{table}
+\paragraph{}
+Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and real form
+It is possible to esimate the effect of this quantization by comparing the designed transfer function to the quantized one, as shown in figure \ref{fig:1}.
+\begin{figure}[!ht]
+	\caption{Designed Transfer Function vs Quantized Transfer Function}
+	\label{fig:1}
+	\includegraphics[scale=0.5]{IMG1.jpg}
+	\centering
+\end{figure}
 
-Always staying in Matlab and using the previous coefficients, a further Matlab script is executes in order to perform
-different simulation with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz. The input signal
-used is an average between two sinusoidal waves respectively at 500 HZ and 4.5 kHz.
+\paragraph{}
+At this point, another Matlab script is executed in order to perform
+different simulatios with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
+input signal the average value between two sinusoidal waves of frequency of 500 HZ and 4.5 kHz respectively.
 After this execution two files have been generated:
 
 \begin{enumerate}
@@ -58,31 +83,58 @@ After this execution two files have been generated:
 	\item \emph{result.txt}, which contains the output values that has been elaborated from our FIR.
 \end{enumerate}
 
+Figure \ref{fig:2} shows the two sinusoidal waveforms and the effective filter's input.
+\begin{figure}[!ht]
+	\caption{FIR Input and Output overt time}
+	\label{fig:2}
+	\includegraphics[scale=0.35]{IMG2.jpg}
+	\centering
+\end{figure}
+
+
 \section{C prototype}
 
-A C program language has been written to have a 
-fixed point implementation of FIR that use the following formula:
+The C-language script simualtes a FIR filter implementing the following  relation:
 
-\begin{displaymath}
+\begin{displaymath}[!h]
 y_i = \sum_{n=0}^{10}{x_{i-n} \cdot b_n}
 \end{displaymath}
+\paragraph{}
+Inside the script, a function is defined in order to evaluate the output y[n] at a specific time instant, knowing the input sample x[n].
+\paragraph{}
+FIR constants are hardcoded inside the script, declared as a constant array of integers, while an internal buffer is needed to store the previous input values and shift them for each function call, and the output is obtained by summing coefficient-input products in a loop.
+\paragraph{}
+In order to emulate the finite internal parallelism of the hardware architecture, a shift operation is performed on the result before storing it into the accumulator.
+Of course, this truncation operation introduces an error in the evaluation of the output samples.
+The maximum accurancy would be obtained with a parallelism that is equale to the double of the bits number used for the architecture.
 
-Thanks this program is possible to evaluate the performance of fixed version respect to 
-Matlab execution.
+\paragraph{}
+Thanks to this script is possible to compare the performance of the fixed-point version with respect to 
+the Matlab computation results.
 
 \subsection{Evaluate the THD}
 
-The purpose of this script is to evaluate the Total Harmonic Distortion (THD) trying to react a value that is
-maximum -30dB. If an amount of tollerance is avaiable maybe will be possible to reduce 
-the bit numbers and so to reduce the size of FIR design.
+The purpose of this step is to evaluate the Total Harmonic Distortion (THD), trying to obtain a maximum 
+value of -30dB. 
+If THD exceeds the maximum tolerated value, it is necessary to increase 
+the bit numbers in order to reduce its amount, while if there is a gap between the maximum tolerated value 
+and the obtained one, it is possible to reduce bit numbers and thus the complexity of the FIR implementation.
 
 %% add value of THD caculated each time
 
-In first hand, with 9 bits used for data, the THD is -40 dB. Trying to reduce the number of bits to 8 the value of THD obtain 
-is still acceptable, it's -33 dB. When a further reduction has been applied the value of THD a 
-not allowed value is returned, with 7 bits THD is -27dB.
+With 9 bits used for data, obtained THD is -40 dB. 
+Reducing the number of bits to 8 the obtained value of THD  
+is -33 dB, thus still acceptable. 
+Applying a further bit-number reduction, thus with a 7-bit parallelism, the value of THD exceeds the maximum allowed
+amount, reaching the value of -27dB.
 
-In the end, for the final implementation of FIR 8 bits have been used in order to achieve the THD request and 
-to reduce the area.
+At the end of this analysis, it has been decided to use 8 bits for the final implementation of the  FIR, 
+in order to reduce the area while still accomplish maximum THD amount, shown in figure \ref{fig:3}.
+\begin{figure}[!h]
+	\caption{Final THD for FIR filter implementation}
+	\label{fig:3}
+	\includegraphics[scale=0.4]{IMG3.png}
+	\centering
+\end{figure}
 
 %% vedi i ths a 9, 8 e 7 bits

@@ -1,14 +1,22 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Reference model development}{1}{}%
 \contentsline {section}{\numberline {1.1}Introduction}{1}{}%
-\contentsline {section}{\numberline {1.2}Design the filter with Matlab/Octave}{1}{}%
+\contentsline {paragraph}{}{1}{}%
+\contentsline {paragraph}{}{1}{}%
+\contentsline {section}{\numberline {1.2}Design the filter with Matlab}{1}{}%
+\contentsline {paragraph}{}{1}{}%
+\contentsline {paragraph}{}{1}{}%
 \contentsline {section}{\numberline {1.3}C prototype}{2}{}%
-\contentsline {subsection}{\numberline {1.3.1}Evaluate the THD}{2}{}%
-\contentsline {chapter}{\numberline {2}VLSI implementation}{3}{}%
-\contentsline {section}{\numberline {2.1}Starting architecture development}{3}{}%
-\contentsline {section}{\numberline {2.2}Simulation}{3}{}%
-\contentsline {section}{\numberline {2.3}Logic synthesis}{4}{}%
-\contentsline {section}{\numberline {2.4}Place \& Route}{4}{}%
-\contentsline {chapter}{\numberline {3}Advanced architecture development}{5}{}%
-\contentsline {section}{\numberline {3.1}Unfolding}{5}{}%
-\contentsline {section}{\numberline {3.2}Pipeline}{5}{}%
+\contentsline {paragraph}{}{2}{}%
+\contentsline {paragraph}{}{3}{}%
+\contentsline {paragraph}{}{3}{}%
+\contentsline {paragraph}{}{3}{}%
+\contentsline {subsection}{\numberline {1.3.1}Evaluate the THD}{3}{}%
+\contentsline {chapter}{\numberline {2}VLSI implementation}{5}{}%
+\contentsline {section}{\numberline {2.1}Starting architecture development}{5}{}%
+\contentsline {section}{\numberline {2.2}Simulation}{5}{}%
+\contentsline {section}{\numberline {2.3}Logic synthesis}{6}{}%
+\contentsline {section}{\numberline {2.4}Place \& Route}{6}{}%
+\contentsline {chapter}{\numberline {3}Advanced architecture development}{7}{}%
+\contentsline {section}{\numberline {3.1}Unfolding}{7}{}%
+\contentsline {section}{\numberline {3.2}Pipeline}{7}{}%
