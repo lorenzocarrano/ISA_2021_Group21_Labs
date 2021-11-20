@@ -6,9 +6,9 @@
 \chapter{Advanced architecture development}
 \label{cha3}
 
-In this section the purpose is to improve the FIR performance. In first and unfolding 
-technique has been used to improve the throughput and then pipeline technique has 
-been used to reduce the longest path and improve maximum frequency.
+In this section the purpose is to improve the FIR performance. Initially the unfolding 
+technique has been applied to improve the throughput, then pipeline technique has 
+been implemented to reduce the critical path and improve the maximum clock frequency.
 
 \section{Unfolding}
 
@@ -39,9 +39,9 @@ to build the new system are the following:
 \end{split}
 \end{equation}
 
-Using this method of optimization the two more input and output port have been added becouse
-now 3 inputs are processed and produce, at the same time, 3 output. To overall throughput has
-been triplicate.
+Using this method of optimization the two more input and output ports have been added because
+now 3 inputs are processed and produce, at the same time, 3 outputs. The overall throughput has
+been triplicated.
 
 %% formula dove facciamo vedere che il throuput è triplicato e il nuovo valore calcolato
 
@@ -49,8 +49,14 @@ been triplicate.
 
 A further optimization has been applied. This method allows to reduce the size of critical path.
 
-From schematic of previous FIR is possible to see that the critical path is the chain off 
-adders. To achieve the best result is not necessary split each of them, but it is needed to 
-group them in order to have a total time path that is less than the amount of time for performed
-a multiplication. 
+From the schematic of the unfolded FIR is possible to see that to reduce the critical path a chain of registers
+is needed to separate the multipliers from the adders. After these registers are added, the new critical path 
+becomes the long chain of adders at the bottom of the scheme.
+A register is added in the middle of the adder chain; by doing so, it is necessary to delay the stages of the filter
+that are positioned behind the new register. Also VIN has to be carefully delayed according to which register it is enabling.
 
+After the optimization, the new critical path corresponds to a single multiplier, so it is not possible to improve it more
+without adding pipelining to the arithmetic blocks.
+
+To simulate the advanced implementation of the filter the testbench had to be modified. The data\_sink and data\_maker were
+updated in order to be able to transmit and receive 3 inputs every clock cycle.
