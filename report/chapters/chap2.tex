@@ -51,7 +51,7 @@ At the end of the simulation the values stored in Output.txt were compared with 
 means that the filter is behaving correctly. 
 
 %%table with first results of files
-
+\section{Logic synthesis}
 After the simulation the design must be synthetized. To estimate the maximum working clock frequency of the filter,
 the clock period in the design compiler is set to 0 ns. In this way the compiler optimizes the circuit as much as possible,
 and the negative slack of the timing report corresponds to the maximum clock frequency. 
@@ -70,9 +70,7 @@ After running the synthesis at the computed frequency the area is evaluated.\\
    303 MHz  & 3.3 ns  & \unit{3765.23}{\micro\meter\squared}  \\
   \hline
 \end{tabularx}}
-
-\section{Logic synthesis}
-
+\vspace{5mm}
 It is requested to set the frequency to 25\% of the maximum value.
 
 \[ \frac{1}{4} f_{MAX} = 75.75 MHz\]
@@ -132,14 +130,45 @@ To do that using Innovus several steps are necessary:
 %%immagine place&route
 
 \centerline{
-\includegraphics[width=15.5cm]{./chapters/figures/fir_base_plcrt.jpg}}
+\includegraphics[width=8cm]{./chapters/figures/fir_base_plcrt.jpg}}
 
 \vspace{5mm}
 
 Since the slack values for setup and hold are positive and the verification on connectivity and geometry returned no errors, the final step is to simulate the
 produced netlist with Modelsim, to check if the circuit behaves correctly and to calculate the switching activity. The following results have been obtained:
+\vspace{5mm}
+%tabella con power
 
-%tabella con results
+\centerline{
+\begin{tabularx}{1\textwidth} { 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X | }
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Power [\unit{\micro\watt}]}} \\
+    \hline
+    \textbf{Internal} & \textbf{Switching} & \textbf{Internal} & \textbf{Total}\\
+    \hline
+    207.5  & 175.1  & 73.98 & 516.5 \\
+   \hline
+\end{tabularx}}
+\vspace{5mm}
 
 %tabella con area
 
+\centerline{
+\begin{tabularx}{0.6\textwidth} { 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X | }
+   \hline
+   \textbf{Gates} & \textbf{Cells} & \textbf{Area} \\
+   \hline
+   4488  & 1874  & \unit{3582}{\micro\meter\squared}  \\
+  \hline
+\end{tabularx}}
+\vspace{5mm}
+
+After the place and route phase, both the area and the power consumption estimations are reduced wth respect to the
+ones obtained after the synthesis. 
