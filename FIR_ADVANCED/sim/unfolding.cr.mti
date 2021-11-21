@@ -1,0 +1,95 @@
+C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/clk_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/clk_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity clk_gen
+-- Compiling architecture beh of clk_gen
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/register.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity REG
+-- Compiling architecture ARCH of REG
+-- Compiling configuration CFG_REG_SYNCH
+-- Loading entity REG
+-- Loading architecture ARCH of REG
+-- Loading entity FD
+-- Loading configuration cfg_fd_synch
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/fir_unfolded.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/fir_unfolded.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity myfir
+-- Compiling architecture ARCH of myfir
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/fd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/fd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FD
+-- Compiling architecture SYNCH of FD
+-- Compiling configuration CFG_FD_SYNCH
+-- Loading entity FD
+-- Loading architecture SYNCH of FD
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/add_mul.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/add_mul.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity MUL_ADD
+-- Compiling architecture ARCH of MUL_ADD
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/stage.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/src/stage.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity STAGE
+-- Compiling architecture ARCH of STAGE
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/data_sink.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/data_sink.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity data_sink
+-- Compiling architecture beh of data_sink
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/tb_fir.v {1 {vlog -work work -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/tb_fir.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_fir
+
+Top level modules:
+	tb_fir
+
+} {} {}} C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/data_maker_new.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/FIR_ADVANCED/tb/data_maker_new.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity data_maker
+-- Compiling architecture beh of data_maker
+
+} {} {}}
