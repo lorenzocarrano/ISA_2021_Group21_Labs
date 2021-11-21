@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# ./.snaprc_myfir : snapshot resource file                          
+# label = myfir                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" myfir
+lappend tmpstr "fplan" $sdir/ss_myfir.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_myfir.amoeba.gif
+lappend tmpstr "place" $sdir/ss_myfir.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 5.321
+lappend tmpbar TNS
+lappend tmpstr TNS 0.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0
