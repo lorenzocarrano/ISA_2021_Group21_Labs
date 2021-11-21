@@ -1,0 +1,124 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir
+Version: O-2018.06-SP4
+Date   : Sun Nov 21 11:58:47 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: H1[4] (input port clocked by MY_CLK)
+  Endpoint: OutputReg/regn_7/Q_reg
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  H1[4] (in)                                              0.00       0.50 f
+  Stg_0/C[4] (FIR_STAGE_NBIT8_9)                          0.00       0.50 f
+  Stg_0/mult_41/b[4] (FIR_STAGE_NBIT8_9_DW_mult_tc_0)     0.00       0.50 f
+  Stg_0/mult_41/U327/ZN (XNOR2_X1)                        0.05       0.55 f
+  Stg_0/mult_41/U326/ZN (OAI22_X1)                        0.07       0.62 r
+  Stg_0/mult_41/U36/S (FA_X1)                             0.12       0.74 f
+  Stg_0/mult_41/U212/ZN (INV_X1)                          0.03       0.78 r
+  Stg_0/mult_41/U213/ZN (OAI222_X1)                       0.05       0.83 f
+  Stg_0/mult_41/U281/ZN (AOI222_X1)                       0.10       0.93 r
+  Stg_0/mult_41/U247/ZN (INV_X1)                          0.03       0.96 f
+  Stg_0/mult_41/U189/ZN (NAND2_X1)                        0.03       0.99 r
+  Stg_0/mult_41/U155/ZN (AND3_X2)                         0.06       1.05 r
+  Stg_0/mult_41/U164/ZN (OAI222_X1)                       0.05       1.10 f
+  Stg_0/mult_41/U231/ZN (NAND2_X1)                        0.04       1.14 r
+  Stg_0/mult_41/U228/ZN (NAND3_X1)                        0.04       1.18 f
+  Stg_0/mult_41/U179/ZN (XNOR2_X1)                        0.06       1.25 f
+  Stg_0/mult_41/product[9] (FIR_STAGE_NBIT8_9_DW_mult_tc_0)
+                                                          0.00       1.25 f
+  Stg_0/add_42/A[1] (FIR_STAGE_NBIT8_9_DW01_add_0)        0.00       1.25 f
+  Stg_0/add_42/U1_1/CO (FA_X1)                            0.09       1.34 f
+  Stg_0/add_42/U1_2/CO (FA_X1)                            0.09       1.43 f
+  Stg_0/add_42/U1_3/CO (FA_X1)                            0.09       1.52 f
+  Stg_0/add_42/U1_4/S (FA_X1)                             0.14       1.65 r
+  Stg_0/add_42/SUM[4] (FIR_STAGE_NBIT8_9_DW01_add_0)      0.00       1.65 r
+  Stg_0/DOUT_A[4] (FIR_STAGE_NBIT8_9)                     0.00       1.65 r
+  Stg_1/DIN_A[4] (FIR_STAGE_NBIT8_8)                      0.00       1.65 r
+  Stg_1/add_42/B[4] (FIR_STAGE_NBIT8_8_DW01_add_0)        0.00       1.65 r
+  Stg_1/add_42/U1_4/S (FA_X1)                             0.12       1.77 f
+  Stg_1/add_42/SUM[4] (FIR_STAGE_NBIT8_8_DW01_add_0)      0.00       1.77 f
+  Stg_1/DOUT_A[4] (FIR_STAGE_NBIT8_8)                     0.00       1.77 f
+  Stg_2/DIN_A[4] (FIR_STAGE_NBIT8_7)                      0.00       1.77 f
+  Stg_2/add_42/B[4] (FIR_STAGE_NBIT8_7_DW01_add_0)        0.00       1.77 f
+  Stg_2/add_42/U1_4/S (FA_X1)                             0.15       1.92 r
+  Stg_2/add_42/SUM[4] (FIR_STAGE_NBIT8_7_DW01_add_0)      0.00       1.92 r
+  Stg_2/DOUT_A[4] (FIR_STAGE_NBIT8_7)                     0.00       1.92 r
+  Stg_3/DIN_A[4] (FIR_STAGE_NBIT8_6)                      0.00       1.92 r
+  Stg_3/add_42/B[4] (FIR_STAGE_NBIT8_6_DW01_add_0)        0.00       1.92 r
+  Stg_3/add_42/U1_4/S (FA_X1)                             0.12       2.04 f
+  Stg_3/add_42/SUM[4] (FIR_STAGE_NBIT8_6_DW01_add_0)      0.00       2.04 f
+  Stg_3/DOUT_A[4] (FIR_STAGE_NBIT8_6)                     0.00       2.04 f
+  Stg_4/DIN_A[4] (FIR_STAGE_NBIT8_5)                      0.00       2.04 f
+  Stg_4/add_42/B[4] (FIR_STAGE_NBIT8_5_DW01_add_0)        0.00       2.04 f
+  Stg_4/add_42/U1_4/CO (FA_X1)                            0.10       2.15 f
+  Stg_4/add_42/U1_5/S (FA_X1)                             0.14       2.28 r
+  Stg_4/add_42/SUM[5] (FIR_STAGE_NBIT8_5_DW01_add_0)      0.00       2.28 r
+  Stg_4/DOUT_A[5] (FIR_STAGE_NBIT8_5)                     0.00       2.28 r
+  Stg_5/DIN_A[5] (FIR_STAGE_NBIT8_4)                      0.00       2.28 r
+  Stg_5/add_42/B[5] (FIR_STAGE_NBIT8_4_DW01_add_0)        0.00       2.28 r
+  Stg_5/add_42/U1_5/S (FA_X1)                             0.12       2.40 f
+  Stg_5/add_42/SUM[5] (FIR_STAGE_NBIT8_4_DW01_add_0)      0.00       2.40 f
+  Stg_5/DOUT_A[5] (FIR_STAGE_NBIT8_4)                     0.00       2.40 f
+  Stg_6/DIN_A[5] (FIR_STAGE_NBIT8_3)                      0.00       2.40 f
+  Stg_6/add_42/B[5] (FIR_STAGE_NBIT8_3_DW01_add_0)        0.00       2.40 f
+  Stg_6/add_42/U1_5/CO (FA_X1)                            0.10       2.50 f
+  Stg_6/add_42/U1_6/S (FA_X1)                             0.14       2.64 r
+  Stg_6/add_42/SUM[6] (FIR_STAGE_NBIT8_3_DW01_add_0)      0.00       2.64 r
+  Stg_6/DOUT_A[6] (FIR_STAGE_NBIT8_3)                     0.00       2.64 r
+  Stg_7/DIN_A[6] (FIR_STAGE_NBIT8_2)                      0.00       2.64 r
+  Stg_7/add_42/B[6] (FIR_STAGE_NBIT8_2_DW01_add_0)        0.00       2.64 r
+  Stg_7/add_42/U1_6/S (FA_X1)                             0.12       2.76 f
+  Stg_7/add_42/SUM[6] (FIR_STAGE_NBIT8_2_DW01_add_0)      0.00       2.76 f
+  Stg_7/DOUT_A[6] (FIR_STAGE_NBIT8_2)                     0.00       2.76 f
+  Stg_8/DIN_A[6] (FIR_STAGE_NBIT8_1)                      0.00       2.76 f
+  Stg_8/add_42/B[6] (FIR_STAGE_NBIT8_1_DW01_add_0)        0.00       2.76 f
+  Stg_8/add_42/U1_6/CO (FA_X1)                            0.10       2.86 f
+  Stg_8/add_42/U1_7/S (FA_X1)                             0.14       3.00 r
+  Stg_8/add_42/SUM[7] (FIR_STAGE_NBIT8_1_DW01_add_0)      0.00       3.00 r
+  Stg_8/DOUT_A[7] (FIR_STAGE_NBIT8_1)                     0.00       3.00 r
+  Stg_9/DIN_A[7] (FIR_STAGE_NBIT8_0)                      0.00       3.00 r
+  Stg_9/add_42/B[7] (FIR_STAGE_NBIT8_0_DW01_add_0)        0.00       3.00 r
+  Stg_9/add_42/U1_7/S (FA_X1)                             0.11       3.11 f
+  Stg_9/add_42/SUM[7] (FIR_STAGE_NBIT8_0_DW01_add_0)      0.00       3.11 f
+  Stg_9/DOUT_A[7] (FIR_STAGE_NBIT8_0)                     0.00       3.11 f
+  OutputReg/D[7] (REG_NBIT8_10)                           0.00       3.11 f
+  OutputReg/regn_7/D (FD_87)                              0.00       3.11 f
+  OutputReg/regn_7/U7/ZN (AOI22_X1)                       0.05       3.16 r
+  OutputReg/regn_7/U6/ZN (NOR2_X1)                        0.02       3.18 f
+  OutputReg/regn_7/Q_reg/D (DFF_X1)                       0.01       3.19 f
+  data arrival time                                                  3.19
+
+  clock MY_CLK (rise edge)                                3.30       3.30
+  clock network delay (ideal)                             0.00       3.30
+  clock uncertainty                                      -0.07       3.23
+  OutputReg/regn_7/Q_reg/CK (DFF_X1)                      0.00       3.23 r
+  library setup time                                     -0.04       3.19
+  data required time                                                 3.19
+  --------------------------------------------------------------------------
+  data required time                                                 3.19
+  data arrival time                                                 -3.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
