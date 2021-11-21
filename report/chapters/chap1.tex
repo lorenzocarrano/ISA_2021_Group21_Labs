@@ -120,7 +120,7 @@ The coefficients are shown in the following table: %\ref{tab:1}. % here is the r
 %\label{tab:1}
 %\end{table}
 \paragraph{}
-Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and real form.
+Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and normalized form.
 It is possible to esimate the effect of this quantization by comparing the designed transfer function to the quantized one, as shown in the following figure: %\ref{fig:1}.
 \begin{figure}[!ht]
 	%\caption{Designed Transfer Function vs Quantized Transfer Function}
@@ -131,7 +131,7 @@ It is possible to esimate the effect of this quantization by comparing the desig
 
 \paragraph{}
 At this point, another Matlab script is executed in order to perform
-different simulatios with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
+different simulatios of the prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
 input signal the average value between two sinusoidal waves of frequency of 500 HZ and 4.5 kHz respectively.
 After this execution two files have been generated:
 
