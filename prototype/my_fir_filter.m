@@ -13,7 +13,7 @@ x2=sin(2*pi*f2*tt); %% second sinewave
 
 x=(x1+x2)/2; %% input signal
 
-[bi, bq]=myfir_design(N, nb); %% filter design
+[bi, bq, b]=myfir_design(N, nb); %% filter design
 
 y=filter(bq, 1, x); %% apply filter
 

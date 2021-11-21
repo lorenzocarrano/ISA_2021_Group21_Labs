@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  20 NOV 2021 22:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  21 NOV 2021 10:58
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
@@ -340,30 +340,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (chapters/chap1.tex
 Chapter 1.
-<./chapters/chap1images//IMG1.jpg, id=16, 963.6pt x 526.21594pt>
-File: ./chapters/chap1images//IMG1.jpg Graphic file (type jpg)
-<use ./chapters/chap1images//IMG1.jpg>
-Package pdftex.def Info: ./chapters/chap1images//IMG1.jpg  used on input line 72.
-(pdftex.def)             Requested size: 441.01772pt x 240.83377pt.
-<./chapters/chap1images//IMG2.jpg, id=17, 963.6pt x 526.96875pt>
-File: ./chapters/chap1images//IMG2.jpg Graphic file (type jpg)
-<use ./chapters/chap1images//IMG2.jpg>
-Package pdftex.def Info: ./chapters/chap1images//IMG2.jpg  used on input line 91.
-(pdftex.def)             Requested size: 337.26506pt x 184.44182pt.
 [1
 
 
-] [2 <./chapters/chap1images//IMG1.jpg>]
-<./chapters/chap1images//IMG3.png, id=32, 1160.08406pt x 644.4075pt>
+]
+<./chapters/chap1images//IMG1.jpg, id=20, 963.6pt x 526.21594pt>
+File: ./chapters/chap1images//IMG1.jpg Graphic file (type jpg)
+<use ./chapters/chap1images//IMG1.jpg>
+Package pdftex.def Info: ./chapters/chap1images//IMG1.jpg  used on input line 103.
+(pdftex.def)             Requested size: 441.01772pt x 240.83377pt.
+<./chapters/chap1images//IMG2.jpg, id=21, 963.6pt x 526.96875pt>
+File: ./chapters/chap1images//IMG2.jpg Graphic file (type jpg)
+<use ./chapters/chap1images//IMG2.jpg>
+Package pdftex.def Info: ./chapters/chap1images//IMG2.jpg  used on input line 122.
+(pdftex.def)             Requested size: 337.26506pt x 184.44182pt.
+ [2 <./chapters/chap1images//IMG1.jpg> <./chapters/chap1images//IMG2.jpg>]
+<./chapters/chap1images//IMG3.png, id=26, 1160.08406pt x 644.4075pt>
 File: ./chapters/chap1images//IMG3.png Graphic file (type png)
 <use ./chapters/chap1images//IMG3.png>
-Package pdftex.def Info: ./chapters/chap1images//IMG3.png  used on input line 137.
+Package pdftex.def Info: ./chapters/chap1images//IMG3.png  used on input line 168.
 (pdftex.def)             Requested size: 441.01772pt x 244.97572pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (chapters/chap2.tex [3 <./chapters/chap1images//IMG2.jpg>] [4 <./chapters/chap1images//IMG3.png>]
+) (chapters/chap2.tex [3] [4 <./chapters/chap1images//IMG3.png>]
 Chapter 2.
 <./chapters/figures/fir_base.jpg, id=40, 893.58844pt x 345.54094pt>
 File: ./chapters/figures/fir_base.jpg Graphic file (type jpg)
@@ -424,9 +425,9 @@ Here is how much of TeX's memory you used:
  24791 multiletter control sequences out of 15000+600000
  410001 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,67p,408b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,67p,390b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on homebook.pdf (15 pages, 1263855 bytes).
+Output written on homebook.pdf (15 pages, 1263732 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

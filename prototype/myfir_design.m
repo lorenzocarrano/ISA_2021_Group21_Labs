@@ -1,4 +1,4 @@
-function [bi, bq]=myfir_design(N,nb)
+function [bi, bq, b]=myfir_design(N,nb)
 %% function myfir_design(N,nb)
 %% N is order of the filter
 %% nb is the number of bits
