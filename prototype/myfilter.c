@@ -36,7 +36,7 @@ int myfilter(int x)
   /// Moving average part
   y = 0;
   for (i = 0; i < NT; i++)
-    // THD -40 dB dB => result_0.txt
+    // THD -40 dB => result_0.txt
     // y += ((sx[i]*b[i]) >> (NB - 1));
     // THD -33 dB
     y += ((sx[i]*b[i]) >> (NB));

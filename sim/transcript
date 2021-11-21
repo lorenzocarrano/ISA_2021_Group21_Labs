@@ -1,0 +1,45 @@
+# Compile of fd.vhd was successful.
+# Compile of filter.vhd was successful.
+# Compile of FIR_STAGE.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker_new.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_fir.v was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.tb_fir -t ns
+# vsim -gui work.tb_fir -t ns 
+# Start time: 14:49:31 on Nov 20,2021
+# Loading work.tb_fir
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading ieee.numeric_std(body)
+# Loading work.myfir(arch)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.fir_stage(arch)
+# Loading work.data_sink(beh)
+add wave -position insertpoint  \
+sim:/tb_fir/CLK_i \
+sim:/tb_fir/RST_n_i \
+sim:/tb_fir/DIN_i \
+sim:/tb_fir/VIN_i \
+sim:/tb_fir/DOUT_i \
+sim:/tb_fir/VOUT_i \
+sim:/tb_fir/END_SIM_i
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 022localhost.localdomain  Hostname:   ProcessID: 808595807
+#           Attempting to use alternate WLF file "./wlftn65kef".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftn65kef
+run
+# Unrecognized paper size (Letter), using Custom
+quit -sim
+# End time: 21:15:23 on Nov 20,2021, Elapsed time: 6:25:52
+# Errors: 0, Warnings: 4
