@@ -3,4 +3,9 @@ settings.json
 .vscode/c_cpp_properties.json
 work/
 report/homebook.aux
-.gitignore
+report/homebook.ind
+report/homebook.fls
+report/homebook.fdb_latexmk
+report/homebook.log
+report/homebook.pdf
+report/homebook.synctex.gz
