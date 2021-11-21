@@ -36,11 +36,11 @@ int myfilter(int x)
   /// Moving average part
   y = 0;
   for (i = 0; i < NT; i++)
-    // THD -40 dB => result_0.txt
+    // THD -40 dB => result_9_bit.txt
     // y += ((sx[i]*b[i]) >> (NB - 1));
     // THD -33 dB
     y += ((sx[i]*b[i]) >> (NB));
-    // THD -27 dB => result_2.txt
+    // THD -27 dB => result_7_bit.txt
     // y += ((sx[i]*b[i]) >> (NB + 1));
 
   /// update the y shift register
@@ -84,8 +84,8 @@ int ind;
   do{
     y = myfilter(x);
     fprintf(fp_out,"%d\n", y);
-    printf("%d ", y);
-    if(ind++ %10 == 0) printf("\n");
+    // printf("%d ", y);
+    // if(ind++ %10 == 0) printf("\n");
     fscanf(fp_in, "%d", &x);
   } while (!feof(fp_in));
 
