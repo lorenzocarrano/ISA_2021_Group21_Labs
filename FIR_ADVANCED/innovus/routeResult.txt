@@ -1,0 +1,479 @@
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+**WARN: (IMPTCM-77):	Option "-routeEcoOnlyInLayers" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+Running Native NanoRoute ...
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 944.00 (MB), peak = 1167.27 (MB)
+#WARNING (NRIG-96) Selected single pass global detail route "-globalDetail". Clock eco and post optimizations will not be run. See "man NRIG-96" for more details.
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: mulit-cut via swapping is disabled by user.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+#**INFO: auto set of routeReserveSpaceForMultiCut to true
+#**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
+Begin checking placement ... (start mem=1223.1M, init mem=1223.1M)
+*info: Placed = 19953         
+*info: Unplaced = 0           
+Placement Density:100.00%(22359/22359)
+Placement Density (including fixed std cells):100.00%(22359/22359)
+Finished checkPlace (cpu: total=0:00:00.2, vio checks=0:00:00.1; mem=1223.1M)
+#**INFO: honoring user setting for routeWithTimingDriven set to false
+#**INFO: honoring user setting for routeWithSiDriven set to false
+**WARN: (IMPCK-8086):	The command changeUseClockNetStatus is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1223.1M) ***
+
+globalDetailRoute
+
+#setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+#setNanoRouteMode -routeReserveSpaceForMultiCut true
+#setNanoRouteMode -routeWithSiDriven false
+#setNanoRouteMode -routeWithTimingDriven false
+#Start globalDetailRoute on Sun Nov 21 12:55:03 2021
+#
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[7] of net DIN0[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[6] of net DIN0[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[5] of net DIN0[5] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[4] of net DIN0[4] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[3] of net DIN0[3] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[2] of net DIN0[2] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[1] of net DIN0[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN0[0] of net DIN0[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[7] of net DIN1[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[6] of net DIN1[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[5] of net DIN1[5] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[4] of net DIN1[4] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[3] of net DIN1[3] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[2] of net DIN1[2] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[1] of net DIN1[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN1[0] of net DIN1[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN2[7] of net DIN2[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN2[6] of net DIN2[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN2[5] of net DIN2[5] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN2[4] of net DIN2[4] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (EMS-27) Message (NRIG-39) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#NanoRoute Version 17.11-s080_1 NR170721-2155/17_11-UB
+#Start routing data preparation on Sun Nov 21 12:55:04 2021
+#
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal10 is not specified for width 0.8000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal10 is not specified for width 0.8000.
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.100.
+#Voltage range [0.000 - 0.000] has 1 net.
+#Voltage range [1.100 - 1.100] has 1 net.
+#Voltage range [0.000 - 1.100] has 7457 nets.
+# metal1       H   Track-Pitch = 0.1400    Line-2-Via Pitch = 0.1350
+# metal2       V   Track-Pitch = 0.1900    Line-2-Via Pitch = 0.1400
+# metal3       H   Track-Pitch = 0.1400    Line-2-Via Pitch = 0.1400
+# metal4       V   Track-Pitch = 0.2800    Line-2-Via Pitch = 0.2800
+# metal5       H   Track-Pitch = 0.2800    Line-2-Via Pitch = 0.2800
+# metal6       V   Track-Pitch = 0.2800    Line-2-Via Pitch = 0.2800
+# metal7       H   Track-Pitch = 0.8400    Line-2-Via Pitch = 0.8000
+# metal8       V   Track-Pitch = 0.8400    Line-2-Via Pitch = 0.8000
+# metal9       H   Track-Pitch = 1.6000    Line-2-Via Pitch = 1.6000
+# metal10      V   Track-Pitch = 1.6800    Line-2-Via Pitch = 1.6000
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer metal3's pitch = 0.1400.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 887.30 (MB), peak = 1167.27 (MB)
+#Merging special wires...
+#
+#Finished routing data preparation on Sun Nov 21 12:55:04 2021
+#
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 8.93 (MB)
+#Total memory = 887.63 (MB)
+#Peak memory = 1167.27 (MB)
+#
+#
+#Start global routing on Sun Nov 21 12:55:04 2021
+#
+#Number of eco nets is 0
+#
+#Start global routing data preparation on Sun Nov 21 12:55:04 2021
+#
+#Start routing resource analysis on Sun Nov 21 12:55:04 2021
+#
+#Routing resource analysis is done on Sun Nov 21 12:55:05 2021
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  metal1         H        1104          28        5775    69.75%
+#  metal2         V         809          38        5775     2.56%
+#  metal3         H        1132           0        5775     0.00%
+#  metal4         V         575           0        5775     0.00%
+#  metal5         H         565           0        5775     0.00%
+#  metal6         V         575           0        5775     0.00%
+#  metal7         H         188           0        5775     0.00%
+#  metal8         V         191           0        5775     0.00%
+#  metal9         H          76           0        5775     0.00%
+#  metal10        V          77           0        5775     0.00%
+#  --------------------------------------------------------------
+#  Total                   5292       0.69%       57750     7.23%
+#
+#
+#
+#
+#Global routing data preparation is done on Sun Nov 21 12:55:05 2021
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 888.66 (MB), peak = 1167.27 (MB)
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 888.94 (MB), peak = 1167.27 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 894.49 (MB), peak = 1167.27 (MB)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 916.55 (MB), peak = 1167.27 (MB)
+#
+#start global routing iteration 3...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 918.83 (MB), peak = 1167.27 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 42 (skipped).
+#Total number of routable nets = 7417.
+#Total number of nets in the design = 7459.
+#
+#7417 routable nets have only global wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default            7417  
+#-----------------------------
+#        Total            7417  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default            7417  
+#-----------------------------
+#        Total            7417  
+#-----------------------------
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#  metal1        0(0.00%)   (0.00%)
+#  metal2        0(0.00%)   (0.00%)
+#  metal3        0(0.00%)   (0.00%)
+#  metal4        0(0.00%)   (0.00%)
+#  metal5        0(0.00%)   (0.00%)
+#  metal6        0(0.00%)   (0.00%)
+#  metal7        0(0.00%)   (0.00%)
+#  metal8        0(0.00%)   (0.00%)
+#  metal9        0(0.00%)   (0.00%)
+#  metal10       0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      0(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#  Overflow after GR: 0.00% H + 0.00% V
+#
+[hotspot] +------------+---------------+---------------+
+[hotspot] |            |   max hotspot | total hotspot |
+[hotspot] +------------+---------------+---------------+
+[hotspot] | normalized |          0.00 |          0.00 |
+[hotspot] +------------+---------------+---------------+
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+#Complete Global Routing.
+#Total wire length = 64670 um.
+#Total half perimeter of net bounding box = 65023 um.
+#Total wire length on LAYER metal1 = 2 um.
+#Total wire length on LAYER metal2 = 26548 um.
+#Total wire length on LAYER metal3 = 30297 um.
+#Total wire length on LAYER metal4 = 7799 um.
+#Total wire length on LAYER metal5 = 23 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 38010
+#Up-Via Summary (total 38010):
+#           
+#-----------------------
+# metal1          22983
+# metal2          14208
+# metal3            817
+# metal4              2
+#-----------------------
+#                 38010 
+#
+#Max overcon = 0 track.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#
+#Global routing statistics:
+#Cpu time = 00:00:03
+#Elapsed time = 00:00:03
+#Increased memory = 32.30 (MB)
+#Total memory = 919.98 (MB)
+#Peak memory = 1167.27 (MB)
+#
+#Finished global routing on Sun Nov 21 12:55:07 2021
+#
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 906.46 (MB), peak = 1167.27 (MB)
+#Start Track Assignment.
+#Done with 10013 horizontal wires in 1 hboxes and 10208 vertical wires in 1 hboxes.
+#Done with 2056 horizontal wires in 1 hboxes and 2739 vertical wires in 1 hboxes.
+#Done with 1 horizontal wires in 1 hboxes and 1 vertical wires in 1 hboxes.
+#
+#Track assignment summary:
+# layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
+#------------------------------------------------------------------------
+# metal1         1.02 	100.00%  	  0.00% 	100.00%
+# metal2     26160.26 	  0.08%  	  0.00% 	  0.00%
+# metal3     29884.71 	  0.04%  	  0.00% 	  0.00%
+# metal4      7854.14 	  0.00%  	  0.00% 	  0.00%
+# metal5        24.27 	  0.00%  	  0.00% 	  0.00%
+# metal6         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal7         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal8         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal9         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal10        0.00 	  0.00%  	  0.00% 	  0.00%
+#------------------------------------------------------------------------
+# All       63924.40  	  0.05% 	  0.00% 	  0.00%
+#Complete Track Assignment.
+#Total wire length = 69615 um.
+#Total half perimeter of net bounding box = 65023 um.
+#Total wire length on LAYER metal1 = 3815 um.
+#Total wire length on LAYER metal2 = 26092 um.
+#Total wire length on LAYER metal3 = 31793 um.
+#Total wire length on LAYER metal4 = 7891 um.
+#Total wire length on LAYER metal5 = 24 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 38010
+#Up-Via Summary (total 38010):
+#           
+#-----------------------
+# metal1          22983
+# metal2          14208
+# metal3            817
+# metal4              2
+#-----------------------
+#                 38010 
+#
+#cpu time = 00:00:03, elapsed time = 00:00:03, memory = 913.23 (MB), peak = 1167.27 (MB)
+#
+#Routing data preparation, pin analysis, global routing and track assignment statistics:
+#Cpu time = 00:00:06
+#Elapsed time = 00:00:07
+#Increased memory = 34.93 (MB)
+#Total memory = 913.43 (MB)
+#Peak memory = 1167.27 (MB)
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#   number of violations = 2
+#
+#    By Layer and Type :
+#	         MetSpc    Short   Totals
+#	metal1        0        0        0
+#	metal2        0        1        1
+#	metal3        1        0        1
+#	Totals        1        1        2
+#cpu time = 00:00:42, elapsed time = 00:00:42, memory = 943.24 (MB), peak = 1167.27 (MB)
+#start 1st optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 943.29 (MB), peak = 1167.27 (MB)
+#start 2nd optimization iteration ...
+#   number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 943.46 (MB), peak = 1167.27 (MB)
+#Complete Detail Routing.
+#Total wire length = 70485 um.
+#Total half perimeter of net bounding box = 65023 um.
+#Total wire length on LAYER metal1 = 4579 um.
+#Total wire length on LAYER metal2 = 30237 um.
+#Total wire length on LAYER metal3 = 27529 um.
+#Total wire length on LAYER metal4 = 8117 um.
+#Total wire length on LAYER metal5 = 23 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 40181
+#Up-Via Summary (total 40181):
+#           
+#-----------------------
+# metal1          24438
+# metal2          14681
+# metal3           1060
+# metal4              2
+#-----------------------
+#                 40181 
+#
+#Total number of DRC violations = 0
+#Cpu time = 00:00:43
+#Elapsed time = 00:00:43
+#Increased memory = -5.75 (MB)
+#Total memory = 907.68 (MB)
+#Peak memory = 1167.27 (MB)
+#
+#Start Post Route wire spreading..
+#
+#Start DRC checking..
+#   number of violations = 0
+#cpu time = 00:00:05, elapsed time = 00:00:05, memory = 939.67 (MB), peak = 1167.27 (MB)
+#CELL_VIEW myfir,init has no DRC violation.
+#Total number of DRC violations = 0
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Sun Nov 21 12:55:58 2021
+#
+#
+#Start Post Route Wire Spread.
+#Done with 3033 horizontal wires in 2 hboxes and 2297 vertical wires in 2 hboxes.
+#Complete Post Route Wire Spread.
+#
+#Total wire length = 72100 um.
+#Total half perimeter of net bounding box = 65023 um.
+#Total wire length on LAYER metal1 = 4579 um.
+#Total wire length on LAYER metal2 = 30850 um.
+#Total wire length on LAYER metal3 = 28399 um.
+#Total wire length on LAYER metal4 = 8249 um.
+#Total wire length on LAYER metal5 = 23 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 40181
+#Up-Via Summary (total 40181):
+#           
+#-----------------------
+# metal1          24438
+# metal2          14681
+# metal3           1060
+# metal4              2
+#-----------------------
+#                 40181 
+#
+#
+#Start DRC checking..
+#   number of violations = 0
+#cpu time = 00:00:06, elapsed time = 00:00:06, memory = 929.75 (MB), peak = 1167.27 (MB)
+#CELL_VIEW myfir,init has no DRC violation.
+#Total number of DRC violations = 0
+#   number of violations = 0
+#cpu time = 00:00:07, elapsed time = 00:00:07, memory = 909.57 (MB), peak = 1167.27 (MB)
+#CELL_VIEW myfir,init has no DRC violation.
+#Total number of DRC violations = 0
+#Post Route wire spread is done.
+#Total wire length = 72100 um.
+#Total half perimeter of net bounding box = 65023 um.
+#Total wire length on LAYER metal1 = 4579 um.
+#Total wire length on LAYER metal2 = 30850 um.
+#Total wire length on LAYER metal3 = 28399 um.
+#Total wire length on LAYER metal4 = 8249 um.
+#Total wire length on LAYER metal5 = 23 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 40181
+#Up-Via Summary (total 40181):
+#           
+#-----------------------
+# metal1          24438
+# metal2          14681
+# metal3           1060
+# metal4              2
+#-----------------------
+#                 40181 
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:56
+#Elapsed time = 00:00:56
+#Increased memory = -5.98 (MB)
+#Total memory = 907.45 (MB)
+#Peak memory = 1167.27 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:01:03
+#Elapsed time = 00:01:03
+#Increased memory = -57.58 (MB)
+#Total memory = 886.85 (MB)
+#Peak memory = 1167.27 (MB)
+#Number of warnings = 57
+#Total number of warnings = 58
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Sun Nov 21 12:56:06 2021
+#
+#routeDesign: cpu time = 00:01:03, elapsed time = 00:01:03, memory = 874.81 (MB), peak = 1167.27 (MB)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+X Error: BadWindow (invalid Window parameter) 3
+  Major opcode: 18 (X_ChangeProperty)
+  Resource id:  0xc19773
+X Error: BadWindow (invalid Window parameter) 3
+  Major opcode: 25 (X_SendEvent)
+  Resource id:  0xc19773
+

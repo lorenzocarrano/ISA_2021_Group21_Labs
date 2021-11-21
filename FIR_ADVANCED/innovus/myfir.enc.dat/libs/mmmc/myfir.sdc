@@ -1,0 +1,1 @@
+/home/ms21.3/Desktop/ISAL1/FIR_ADVANCED/netlist/myfir.sdc
