@@ -1,2 +1,0 @@
-Error: Can't find the architecture 'myfir(ARCH)' in the library 'WORK'
-0
