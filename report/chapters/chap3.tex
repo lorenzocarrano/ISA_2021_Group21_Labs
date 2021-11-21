@@ -19,25 +19,25 @@ to build the new system are the following:
 
 \begin{equation}
 \begin{split}
-    y[3n] = a_0 \cdot x[3n] + a_1 \cdot x[3(n-1) + 2] + a_2 \cdot x[3(n-1) + 1] + \\
-    a_3 \cdot x[3(n-1)] + a_4 \cdot x[3(n-2) + 2] + a_5 \cdot x[3(n-2) + 1] + a_6 \cdot x[3(n-2)] +  \\
-    a_7 \cdot x[3(n-3) + 2] + a_8 \cdot x[3(n-3) + 1] + a_9 \cdot x[3(n-3)] + a_{10} \cdot x[3(n-4) + 2]
+    y[3n] = b_0 \cdot x[3n] + b_1 \cdot x[3(n-1) + 2] + b_2 \cdot x[3(n-1) + 1] + \\
+    b_3 \cdot x[3(n-1)] + b_4 \cdot x[3(n-2) + 2] + b_5 \cdot x[3(n-2) + 1] + b_6 \cdot x[3(n-2)] +  \\
+    b_7 \cdot x[3(n-3) + 2] + b_8 \cdot x[3(n-3) + 1] + b_9 \cdot x[3(n-3)] + b_{10} \cdot x[3(n-4) + 2]
 \end{split}
 \end{equation}
 
 \begin{equation}
 \begin{split}
-    y[3n + 1] = a_0 \cdot x[3n + 1] + a_1 \cdot x[3n] + a_2 \cdot x[3(n-1) + 2] + \\
-    a_3 \cdot x[3(n-1) + 1] + a_4 \cdot x[3(n-1)] + a_5 \cdot x[3(n-2) + 2] + a_6 \cdot x[3(n-2)+1] +  \\
-    a_7 \cdot x[3(n-2)] + a_8 \cdot x[3(n-3)+2] + a_9 \cdot x[3(n-3) + 1] + a_{10} \cdot x[3(n-3)]
+    y[3n + 1] = b_0 \cdot x[3n + 1] + b_1 \cdot x[3n] + b_2 \cdot x[3(n-1) + 2] + \\
+    b_3 \cdot x[3(n-1) + 1] + b_4 \cdot x[3(n-1)] + b_5 \cdot x[3(n-2) + 2] + b_6 \cdot x[3(n-2)+1] +  \\
+    b_7 \cdot x[3(n-2)] + b_8 \cdot x[3(n-3)+2] + b_9 \cdot x[3(n-3) + 1] + b_{10} \cdot x[3(n-3)]
 \end{split}
 \end{equation}
 
 \begin{equation}
 \begin{split}
-    y[3n + 2] = a_0 \cdot x[3n + 2] + a_1 \cdot x[3n + 1] + a_2 \cdot x[3n] + a_3 \cdot x[3(n-1) + 2] +\\
-    a_4 \cdot x[3(n-1) + 1] + a_5 \cdot x[3(n-1)] + a_6 \cdot x[3(n-2) + 2] +  a_7 \cdot x[3(n-3) + 1] +\\
-    a_8 \cdot x[3(n-2)] + a_9 \cdot x[3(n-3) + 2] + a_[10] \cdot x[3(n-3) + 1]
+    y[3n + 2] = b_0 \cdot x[3n + 2] + b_1 \cdot x[3n + 1] + b_2 \cdot x[3n] + b_3 \cdot x[3(n-1) + 2] +\\
+    b_4 \cdot x[3(n-1) + 1] + b_5 \cdot x[3(n-1)] + b_6 \cdot x[3(n-2) + 2] +  b_7 \cdot x[3(n-3) + 1] +\\
+    b_8 \cdot x[3(n-2)] + b_9 \cdot x[3(n-3) + 2] + b_{10} \cdot x[3(n-3) + 1]
 \end{split}
 \end{equation}
 
@@ -51,9 +51,9 @@ been triplicated with respect to the original architecture.
 
 \section{Pipeline}
 
-A further optimization has been applied. This method allows to reduce the size of critical path.
+A further optimization has been applied. This method allows to reduce the size of the critical path.
 
-From the schematic of the unfolded FIR is possible to see that to reduce the critical path a chain of registers
+From the schematic of the unfolded FIR it is possible to see that to reduce the critical path a chain of registers
 is needed to separate the multipliers from the adders. 
 \paragraph{}
 After these registers are added, the new critical path 
@@ -84,7 +84,7 @@ To simulate the advanced implementation of the filter the testbench had to be mo
 \paragraph{} 
 The data\_sink and data\_maker were updated in order to be able to transmit and receive 3 inputs every clock cycle.
 The first noticiable effect of the optimizations can be noted in the lenght of the Modelsim simulation, which changes from
-approximately 2100 ns to 700 ns, a third as expected due to the increased throughput.
+approximately 2100 ns to 700 ns, a third, as expected due to the increased throughput.
 
 \vspace{5mm}
 %image of filter
