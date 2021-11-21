@@ -23,7 +23,7 @@ architecture beh of data_sink_unfolded is
 begin  -- beh
   --now three results at a time have to be saved 
   process (CLK, RST_n)
-    file res_fp : text open WRITE_MODE is "./../sim_unfolded/results_unfolded.txt";
+    file res_fp : text open WRITE_MODE is "./../sim_unfolded/results_unfolded_pipeline.txt";
     variable line_out : line;    
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
