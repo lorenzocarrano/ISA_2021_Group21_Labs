@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sun Oct 24 13:55:51 2021
-#@ # Run by: isa21_2021_2022@localhost.localdomain
+#@ # Date:   Sun Nov 21 12:18:19 2021
+#@ # Run by: ms21.5@localhost.localdomain
 #@ 
 
 source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
@@ -6628,18 +6628,21 @@ source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 
-source /home/isa21_2021_2022/labs/lab1/ISAL1/syn/.synopsys_dc.setup
-#@ # -- Starting source /home/isa21_2021_2022/labs/lab1/ISAL1/syn/.synopsys_dc.setup
+source /home/ms21.5/Desktop/STE/ISAL1/FIR/syn/.synopsys_dc.setup
+#@ # -- Starting source /home/ms21.5/Desktop/STE/ISAL1/FIR/syn/.synopsys_dc.setup
 
 #@ define_design_lib WORK -path ./work
 #@ set search_path [list . /software/synopsys/syn_current_64.18/libraries/syn /software/dk/nangate45/synopsys ]
 #@ set link_library [list "*" "NangateOpenCellLibrary_typical_ecsm_nowlm.db" "dw_foundation.sldb" ]
 #@ set target_library [list "NangateOpenCellLibrary_typical_ecsm_nowlm.db" ]
 #@ set synthetic_library [list "dw_foundation.sldb" ]
-#@ # -- End source /home/isa21_2021_2022/labs/lab1/ISAL1/syn/.synopsys_dc.setup
+#@ # -- End source /home/ms21.5/Desktop/STE/ISAL1/FIR/syn/.synopsys_dc.setup
 
-read_verilog -netlist ../netlist/myfir.v
-read_saif -input ../saif/myfir_syn.saif -instance tb_fir/UUT -unit ns -scale 1
-create_clock -name MY_CLK CLK
-report_power > report_power_syn.txt
-quit
+source -echo -verbose /home/ms21.5/Desktop/STE/ISAL1/FIR/syn/syn_power.tcl
+#@ # -- Starting source /home/ms21.5/Desktop/STE/ISAL1/FIR/syn/syn_power.tcl
+
+#@ read_verilog -netlist ../netlist/myfir.v
+#@ read_saif -input ../saif/myfir_syn.saif -instance tb_fir/UUT -unit ns -scale 1
+#@ create_clock -name MY_CLK CLK
+#@ report_power > report_power.txt
+#@ quit

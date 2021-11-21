@@ -16,7 +16,7 @@ Information: Building the design 'FD'. (HDL-193)
 
 Inferred memory devices in process
 	in routine FD line 18 in file
-		'/home/isa21_2021_2022/labs/lab1/ISAL1/src/fd.vhd'.
+		'../src/fd.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================

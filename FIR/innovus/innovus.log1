@@ -4,14 +4,14 @@ Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
 Options:	
-Date:		Tue Oct 26 12:35:29 2021
-Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
-OS:		CentOS Linux release 7.6.1810 (Core) 
+Date:		Sun Nov 21 12:48:20 2021
+Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-1062.12.1.el7.x86_64) (1core*12cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+OS:		CentOS Linux release 7.7.1908 (Core)
 
 License:
 		invs	Innovus Implementation System	17.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
-Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
 
 **INFO:  MMMC transition support version v31-84 
 
@@ -26,7 +26,7 @@ Suppress "**WARN ..." messages.
 <CMD> encMessage info 0
 **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
 my_rc
-Loading view definition file from /home/isa21_2021_2022/labs/lab1/ISAL1/innovus/myfir.enc.dat/viewDefinition.tcl
+Loading view definition file from /home/ms21.5/Desktop/STE/ISAL1/FIR/innovus/myfir.enc.dat/viewDefinition.tcl
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
@@ -47,14 +47,12 @@ Loading view definition file from /home/isa21_2021_2022/labs/lab1/ISAL1/innovus/
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-*** End library_loading (cpu=0.04min, real=0.28min, mem=23.0M, fe_cpu=0.58min, fe_real=4.33min, fe_mem=541.1M) ***
+*** End library_loading (cpu=0.04min, real=0.05min, mem=18.1M, fe_cpu=0.54min, fe_real=1.05min, fe_mem=534.4M) ***
 *** Netlist is unique.
-Loading preference file /home/isa21_2021_2022/labs/lab1/ISAL1/innovus/myfir.enc.dat/gui.pref.tcl ...
+Loading preference file /home/ms21.5/Desktop/STE/ISAL1/FIR/innovus/myfir.enc.dat/gui.pref.tcl ...
 **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
 **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
 'set_default_switching_activity' finished successfully.
-<CMD> gui_select -rect {22.602 24.942 67.822 29.075}
-<CMD> gui_select -rect {47.157 69.189 48.373 66.636}
 my_rc
 <CMD> reset_parasitics
 Performing RC Extraction ...
@@ -66,7 +64,7 @@ PostRoute (effortLevel low) RC Extraction called for design myfir.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_569_localhost.localdomain_isa21_2021_2022_O2yu3m/myfir_569_VleM9C.rcdb.d  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_16131_localhost.localdomain_ms21.5_VSUw1X/myfir_16131_3rXxgc.rcdb.d  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -77,43 +75,43 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 936.8M)
-Extracted 10.0075% (CPU Time= 0:00:00.1  MEM= 995.1M)
-Extracted 20.0096% (CPU Time= 0:00:00.1  MEM= 996.1M)
-Extracted 30.0064% (CPU Time= 0:00:00.1  MEM= 996.1M)
-Extracted 40.0086% (CPU Time= 0:00:00.1  MEM= 996.1M)
-Extracted 50.0107% (CPU Time= 0:00:00.2  MEM= 996.1M)
-Extracted 60.0075% (CPU Time= 0:00:00.2  MEM= 997.1M)
-Extracted 70.0096% (CPU Time= 0:00:00.2  MEM= 997.1M)
-Extracted 80.0064% (CPU Time= 0:00:00.2  MEM= 997.1M)
-Extracted 90.0086% (CPU Time= 0:00:00.3  MEM= 997.1M)
-Extracted 100% (CPU Time= 0:00:00.4  MEM= 997.1M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 937.1M)
+Extracted 10.0075% (CPU Time= 0:00:00.1  MEM= 993.4M)
+Extracted 20.0096% (CPU Time= 0:00:00.1  MEM= 993.4M)
+Extracted 30.0064% (CPU Time= 0:00:00.1  MEM= 993.4M)
+Extracted 40.0086% (CPU Time= 0:00:00.1  MEM= 994.4M)
+Extracted 50.0107% (CPU Time= 0:00:00.2  MEM= 994.4M)
+Extracted 60.0075% (CPU Time= 0:00:00.2  MEM= 994.4M)
+Extracted 70.0096% (CPU Time= 0:00:00.2  MEM= 994.4M)
+Extracted 80.0064% (CPU Time= 0:00:00.3  MEM= 994.4M)
+Extracted 90.0086% (CPU Time= 0:00:00.3  MEM= 995.4M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 995.4M)
 Number of Extracted Resistors     : 30330
 Number of Extracted Ground Cap.   : 32491
 Number of Extracted Coupling Cap. : 40772
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 981.0M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:05.0  MEM: 981.047M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 979.4M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:01.0  MEM: 979.352M)
 <CMD> rcOut -setload myfir.setload -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
-RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 981.1M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 979.4M)
 <CMD> rcOut -setres myfir.setres -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
-RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 981.1M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 979.4M)
 <CMD> rcOut -spf myfir.spf -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
 Printing *|NET...
-RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 981.1M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.4  MEM= 979.4M)
 <CMD> rcOut -spef myfir.spef -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
 Dumping Spef file.....
 Printing D_NET...
-RC Out from RCDB Completed (CPU Time= 0:00:00.2  MEM= 981.1M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.2  MEM= 979.4M)
 <CMD> set_power_analysis_mode -reset
 <CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
 <CMD> set_power_output_dir -reset
@@ -145,27 +143,27 @@ Starting SI iteration 1 using Infinite Timing Windows
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=981.047)
+Start delay calculation (fullDC) (1 T). (MEM=979.352)
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
 AAE_INFO: 1 threads acquired from CTE.
 Total number of fetched objects 2405
 AAE_INFO-618: Total number of nets in the design is 2299,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1230.11 CPU=0:00:02.0 REAL=0:00:06.0)
-End delay calculation (fullDC). (MEM=1132.74 CPU=0:00:02.6 REAL=0:00:10.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1132.7M)
+End delay calculation. (MEM=1226.41 CPU=0:00:01.8 REAL=0:00:02.0)
+End delay calculation (fullDC). (MEM=1129.04 CPU=0:00:02.4 REAL=0:00:02.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1129.0M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:01.0, MEM = 1132.7M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1129.0M)
 Starting SI iteration 2
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1140.79)
+Start delay calculation (fullDC) (1 T). (MEM=1137.09)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2405. 
 Total number of fetched objects 2405
 AAE_INFO-618: Total number of nets in the design is 2299,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1108.78 CPU=0:00:00.1 REAL=0:00:01.0)
-End delay calculation (fullDC). (MEM=1108.78 CPU=0:00:00.1 REAL=0:00:01.0)
+End delay calculation. (MEM=1105.09 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1105.09 CPU=0:00:00.1 REAL=0:00:00.0)
 
 Begin Power Analysis
 
@@ -180,28 +178,28 @@ Begin Processing Timing Library for Power Calculation
 
 Begin Processing Power Net/Grid for Power Calculation
 
-Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=867.52MB/867.52MB)
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=923.70MB/923.70MB)
 
 Begin Processing Timing Window Data for Power Calculation
 
-MY_CLK(75.7576MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=867.79MB/867.79MB)
+MY_CLK(75.7576MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=924.17MB/924.17MB)
 
 Parsing VCD file ../vcd/design.vcd
 
 Starting Reading VCD variables
-2021-Oct-26 12:45:24 (2021-Oct-26 10:45:24 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
 
 Finished Reading VCD variables
-2021-Oct-26 12:45:24 (2021-Oct-26 10:45:24 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
    
 The vcd command required:
-   		0.12 user, 0.03 system, and 1.10 real seconds
+   		0.11 user, 0.02 system, and 0.13 real seconds
 
    Total number of value changes: 0.
 
-   Total simulation time: 2.136e-06s.
+   Total simulation time: 2.587e-06s.
 
-   With this vcd command,  0 value changes and 2.136e-06 second simulation
+   With this vcd command,  0 value changes and 2.587e-06 second simulation
 time were counted for power consumption calculation.
 
   Filename (activity)                    : ../vcd/design.vcd
@@ -214,40 +212,40 @@ time were counted for power consumption calculation.
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=900.58MB/900.58MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=959.53MB/959.53MB)
 
 Begin Processing Signal Activity
 
 
 Starting Levelizing
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT)
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 10%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 20%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 30%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 40%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 50%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 60%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 70%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 80%
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT): 90%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 10%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 20%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 30%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 40%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 50%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 60%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 70%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 80%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 90%
 
 Finished Levelizing
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
 
 Starting Activity Propagation
-2021-Oct-26 12:45:26 (2021-Oct-26 10:45:26 GMT)
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 10%
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 20%
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 30%
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 40%
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 50%
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 60%
-2021-Oct-26 12:45:27 (2021-Oct-26 10:45:27 GMT): 70%
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT): 80%
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT): 90%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 10%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 20%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 30%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 40%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 50%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 60%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 70%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 80%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 90%
 
 Finished Activity Propagation
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
 
 Activity annotation summary:
         Primary Inputs : 1/99 = 1.0101%
@@ -256,7 +254,7 @@ Activity annotation summary:
       Tristate outputs : 0/0 = 0%
             Total Nets : 1/2297 = 0.043535%
 
-Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:02, mem(process/total)=900.79MB/900.79MB)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total)=959.72MB/959.72MB)
 
 Begin Power Computation
 
@@ -270,28 +268,28 @@ Begin Power Computation
 
 
 Starting Calculating power
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT)
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT)
  ... Calculating switching power
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT): 10%
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT): 20%
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT): 30%
-2021-Oct-26 12:45:28 (2021-Oct-26 10:45:28 GMT): 40%
-2021-Oct-26 12:45:29 (2021-Oct-26 10:45:29 GMT): 50%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 10%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 20%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 30%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 40%
+2021-Nov-21 12:51:09 (2021-Nov-21 11:51:09 GMT): 50%
  ... Calculating internal and leakage power
-2021-Oct-26 12:45:29 (2021-Oct-26 10:45:29 GMT): 60%
-2021-Oct-26 12:45:30 (2021-Oct-26 10:45:30 GMT): 70%
-2021-Oct-26 12:45:31 (2021-Oct-26 10:45:31 GMT): 80%
-2021-Oct-26 12:45:33 (2021-Oct-26 10:45:33 GMT): 90%
+2021-Nov-21 12:51:10 (2021-Nov-21 11:51:10 GMT): 60%
+2021-Nov-21 12:51:10 (2021-Nov-21 11:51:10 GMT): 70%
+2021-Nov-21 12:51:10 (2021-Nov-21 11:51:10 GMT): 80%
+2021-Nov-21 12:51:10 (2021-Nov-21 11:51:10 GMT): 90%
 
 Finished Calculating power
-2021-Oct-26 12:45:34 (2021-Oct-26 10:45:34 GMT)
-Ended Power Computation: (cpu=0:00:01, real=0:00:06, mem(process/total)=901.16MB/901.16MB)
+2021-Nov-21 12:51:11 (2021-Nov-21 11:51:11 GMT)
+Ended Power Computation: (cpu=0:00:00, real=0:00:01, mem(process/total)=960.10MB/960.10MB)
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=901.16MB/901.16MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=960.10MB/960.10MB)
 
-Ended Power Analysis: (cpu=0:00:01, real=0:00:10, mem(process/total)=901.21MB/901.21MB)
+Ended Power Analysis: (cpu=0:00:01, real=0:00:01, mem(process/total)=960.15MB/960.15MB)
 
 Begin Static Power Report Generation
 *
@@ -306,11 +304,11 @@ Total Leakage Power:         0.07397759 	   14.3223%
 Total Power:                 0.51652186
 -----------------------------------------------------------------------------------------
 Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
-mem(process/total)=901.50MB/901.50MB)
+mem(process/total)=960.43MB/960.43MB)
 
 Begin Creating Binary Database
-Ended Creating Binary Database: (cpu=0:00:00, real=0:00:01,
-mem(process/total)=901.51MB/901.51MB)
+Ended Creating Binary Database: (cpu=0:00:00, real=0:00:00,
+mem(process/total)=960.45MB/960.45MB)
 
 Output file is .//myfir.rpt.
 <CMD> report_power -outfile report_power.txt -sort { total }
@@ -327,83 +325,12 @@ Total Leakage Power:         0.07397759 	   14.3223%
 Total Power:                 0.51652186
 -----------------------------------------------------------------------------------------
 Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
-mem(process/total)=903.25MB/903.25MB)
+mem(process/total)=960.86MB/960.86MB)
 
 
 Output file is .//report_power.txt.
-<CMD> setLayerPreference densityMap -isVisible 1
-<CMD> setLayerPreference pinDensityMap -isVisible 1
-<CMD> setLayerPreference timingMap -isVisible 1
-<CMD> setLayerPreference metalDensityMap -isVisible 1
-<CMD> setLayerPreference powerDensity -isVisible 1
-<CMD> setLayerPreference groupmain_Congestion -isVisible 1
-<CMD> ::fit main.layout.win
-<CMD> setLayerPreference densityMap -isVisible 0
-<CMD> setLayerPreference pinDensityMap -isVisible 0
-<CMD> setLayerPreference timingMap -isVisible 0
-<CMD> setLayerPreference metalDensityMap -isVisible 0
-<CMD> setLayerPreference powerDensity -isVisible 0
-<CMD> setLayerPreference groupmain_Congestion -isVisible 0
-<CMD> setLayerPreference trackObj -isVisible 1
-<CMD> setLayerPreference nonPrefTrackObj -isVisible 1
-<CMD> setLayerPreference trackObj -isVisible 0
-<CMD> setLayerPreference nonPrefTrackObj -isVisible 0
-<CMD> setLayerPreference allM2 -isVisible 0
-<CMD> setLayerPreference allM2 -isVisible 1
-<CMD> setLayerPreference allM2 -isSelectable 0
-<CMD> setLayerPreference allM2 -isSelectable 1
-<CMD> setLayerPreference allM3Cont -isVisible 0
-<CMD> setLayerPreference allM3Cont -isVisible 1
-<CMD> setLayerPreference allM10Cont -isVisible 0
-<CMD> setLayerPreference allM10Cont -isVisible 1
-<CMD> setLayerPreference mGrid -isVisible 1
-<CMD> setLayerPreference pGrid -isVisible 1
-<CMD> setLayerPreference userGrid -isVisible 1
-<CMD> setLayerPreference iGrid -isVisible 1
-<CMD> setLayerPreference fmGrid -isVisible 1
-<CMD> setLayerPreference fiGrid -isVisible 1
-<CMD> setLayerPreference fpGrid -isVisible 1
-<CMD> setLayerPreference gcell -isVisible 1
-<CMD> setLayerPreference trimGridObj -isVisible 1
-<CMD> setLayerPreference pgViaGridObj -isVisible 1
-<CMD> setLayerPreference mGrid -isVisible 0
-<CMD> setLayerPreference pGrid -isVisible 0
-<CMD> setLayerPreference userGrid -isVisible 0
-<CMD> setLayerPreference iGrid -isVisible 0
-<CMD> setLayerPreference fmGrid -isVisible 0
-<CMD> setLayerPreference fiGrid -isVisible 0
-<CMD> setLayerPreference fpGrid -isVisible 0
-<CMD> setLayerPreference gcell -isVisible 0
-<CMD> setLayerPreference trimGridObj -isVisible 0
-<CMD> setLayerPreference pgViaGridObj -isVisible 0
-<CMD> setLayerPreference netRect -isVisible 1
-<CMD> setLayerPreference substrateNoise -isVisible 1
-<CMD> setLayerPreference pwrdm -isVisible 0
-<CMD> setLayerPreference netRect -isVisible 0
-<CMD> setLayerPreference substrateNoise -isVisible 0
-<CMD> setLayerPreference powerNet -isVisible 0
-<CMD> setLayerPreference pwrdm -isVisible 1
-<CMD> setLayerPreference netRect -isVisible 1
-<CMD> setLayerPreference substrateNoise -isVisible 1
-<CMD> setLayerPreference powerNet -isVisible 1
-<CMD> setLayerPreference netRect -isSelectable 1
-<CMD> setLayerPreference substrateNoise -isSelectable 1
-<CMD> setLayerPreference pinObj -isVisible 1
-<CMD> setLayerPreference cellBlkgObj -isVisible 1
-<CMD> setLayerPreference layoutObj -isVisible 1
-<CMD> setLayerPreference pinObj -isVisible 0
-<CMD> setLayerPreference cellBlkgObj -isVisible 0
-<CMD> setLayerPreference layoutObj -isVisible 0
-<CMD> setLayerPreference pinObj -isVisible 1
-<CMD> setLayerPreference cellBlkgObj -isVisible 1
-<CMD> setLayerPreference layoutObj -isVisible 1
-<CMD> setLayerPreference pinObj -isSelectable 1
-<CMD> setLayerPreference cellBlkgObj -isSelectable 1
-<CMD> setLayerPreference layoutObj -isSelectable 1
-<CMD> get_visible_nets
-<CMD> getIoFlowFlag
 
-*** Memory Usage v#1 (Current mem = 1128.797M, initial mem = 187.684M) ***
+*** Memory Usage v#1 (Current mem = 1109.094M, initial mem = 179.684M) ***
 *** Message Summary: 24 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:01:17, real=0:15:57, mem=1128.8M) ---
+--- Ending "Innovus" (totcpu=0:01:10, real=0:03:53, mem=1109.1M) ---

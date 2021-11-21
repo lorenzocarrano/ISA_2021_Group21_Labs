@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Tue Oct 26 12:37:15 2021                
+#  Created on Sun Nov 21 12:48:45 2021                
 #                                                     
 #######################################################
 
@@ -21,13 +21,11 @@ win
 encMessage warning 0
 encMessage debug 0
 encMessage info 0
-restoreDesign /home/isa21_2021_2022/labs/lab1/ISAL1/innovus/myfir.enc.dat myfir
+restoreDesign /home/ms21.5/Desktop/STE/ISAL1/FIR/innovus/myfir.enc.dat myfir
 setDrawView fplan
 encMessage warning 1
 encMessage debug 0
 encMessage info 1
-gui_select -rect {22.602 24.942 67.822 29.075}
-gui_select -rect {47.157 69.189 48.373 66.636}
 reset_parasitics
 extractRC
 rcOut -setload myfir.setload -rc_corner my_rc
@@ -47,74 +45,3 @@ set_powerup_analysis -reset
 set_dynamic_power_simulation -reset
 report_power -rail_analysis_format VS -outfile .//myfir.rpt
 report_power -outfile report_power.txt -sort { total }
-setLayerPreference densityMap -isVisible 1
-setLayerPreference pinDensityMap -isVisible 1
-setLayerPreference timingMap -isVisible 1
-setLayerPreference metalDensityMap -isVisible 1
-setLayerPreference powerDensity -isVisible 1
-setLayerPreference groupmain_Congestion -isVisible 1
-::fit main.layout.win
-setLayerPreference densityMap -isVisible 0
-setLayerPreference pinDensityMap -isVisible 0
-setLayerPreference timingMap -isVisible 0
-setLayerPreference metalDensityMap -isVisible 0
-setLayerPreference powerDensity -isVisible 0
-setLayerPreference groupmain_Congestion -isVisible 0
-setLayerPreference trackObj -isVisible 1
-setLayerPreference nonPrefTrackObj -isVisible 1
-setLayerPreference trackObj -isVisible 0
-setLayerPreference nonPrefTrackObj -isVisible 0
-setLayerPreference allM2 -isVisible 0
-setLayerPreference allM2 -isVisible 1
-setLayerPreference allM2 -isSelectable 0
-setLayerPreference allM2 -isSelectable 1
-setLayerPreference allM3Cont -isVisible 0
-setLayerPreference allM3Cont -isVisible 1
-setLayerPreference allM10Cont -isVisible 0
-setLayerPreference allM10Cont -isVisible 1
-setLayerPreference mGrid -isVisible 1
-setLayerPreference pGrid -isVisible 1
-setLayerPreference userGrid -isVisible 1
-setLayerPreference iGrid -isVisible 1
-setLayerPreference fmGrid -isVisible 1
-setLayerPreference fiGrid -isVisible 1
-setLayerPreference fpGrid -isVisible 1
-setLayerPreference gcell -isVisible 1
-setLayerPreference trimGridObj -isVisible 1
-setLayerPreference pgViaGridObj -isVisible 1
-setLayerPreference mGrid -isVisible 0
-setLayerPreference pGrid -isVisible 0
-setLayerPreference userGrid -isVisible 0
-setLayerPreference iGrid -isVisible 0
-setLayerPreference fmGrid -isVisible 0
-setLayerPreference fiGrid -isVisible 0
-setLayerPreference fpGrid -isVisible 0
-setLayerPreference gcell -isVisible 0
-setLayerPreference trimGridObj -isVisible 0
-setLayerPreference pgViaGridObj -isVisible 0
-setLayerPreference netRect -isVisible 1
-setLayerPreference substrateNoise -isVisible 1
-setLayerPreference pwrdm -isVisible 0
-setLayerPreference netRect -isVisible 0
-setLayerPreference substrateNoise -isVisible 0
-setLayerPreference powerNet -isVisible 0
-setLayerPreference pwrdm -isVisible 1
-setLayerPreference netRect -isVisible 1
-setLayerPreference substrateNoise -isVisible 1
-setLayerPreference powerNet -isVisible 1
-setLayerPreference netRect -isSelectable 1
-setLayerPreference substrateNoise -isSelectable 1
-setLayerPreference pinObj -isVisible 1
-setLayerPreference cellBlkgObj -isVisible 1
-setLayerPreference layoutObj -isVisible 1
-setLayerPreference pinObj -isVisible 0
-setLayerPreference cellBlkgObj -isVisible 0
-setLayerPreference layoutObj -isVisible 0
-setLayerPreference pinObj -isVisible 1
-setLayerPreference cellBlkgObj -isVisible 1
-setLayerPreference layoutObj -isVisible 1
-setLayerPreference pinObj -isSelectable 1
-setLayerPreference cellBlkgObj -isSelectable 1
-setLayerPreference layoutObj -isSelectable 1
-get_visible_nets
-getIoFlowFlag

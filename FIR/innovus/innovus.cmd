@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Tue Oct 26 10:32:43 2021                
+#  Created on Sun Nov 21 12:19:43 2021                
 #                                                     
 #######################################################
 
@@ -52,9 +52,7 @@ set sprCreateIeRingLayers {}
 set sprCreateIeStripeWidth 10.0
 set sprCreateIeStripeThreshold 1.0
 setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
-addRing -nets {VSS VDD} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 0.8 bottom 0.8 left 0.8 right 0.8} -spacing {top 0.8 bottom 0.8 left 0.8 right 0.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-selectWire 86.2950 2.9200 87.0950 84.1600 2 VSS
-deselectAll
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 0.8 bottom 0.8 left 0.8 right 0.8} -spacing {top 0.8 bottom 0.8 left 0.8 right 0.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
 clearGlobalNets
 globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
 globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
@@ -63,23 +61,9 @@ sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeR
 setPlaceMode -prerouteAsObs {1 2 3 4 5 6 7 8}
 setPlaceMode -fp false
 placeDesign
-setLayerPreference allM2 -isVisible 0
-setLayerPreference allM2 -isVisible 1
-selectInst Stg_0_mult_41_U36
-deselectAll
-selectInst Stg_9_mult_41_U182
-deselectAll
-selectInst InputReg_regn_2_Q_reg
-deselectAll
-selectInst FF1_Q_reg
-deselectAll
-selectInst InputReg_regn_2_Q_reg
 setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postCTS
 optDesign -postCTS -hold
-deselectAll
-selectInst InputReg_regn_2_Q_reg
-deselectAll
 getFillerMode -quiet
 addFiller -cell FILLCELL_X8 FILLCELL_X4 FILLCELL_X32 FILLCELL_X2 FILLCELL_X16 FILLCELL_X1 -prefix FILLER
 setNanoRouteMode -quiet -timingEngine {}
@@ -96,19 +80,6 @@ setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postRoute
 optDesign -postRoute -hold
 saveDesign myfir.enc
-getDrawView
-setDrawView fplan
-win
-dumpToGIF ./ss_snap1.fplan.gif
-getDrawView
-setDrawView amoeba
-win
-dumpToGIF ./ss_snap1.amoeba.gif
-getDrawView
-setDrawView place
-win
-dumpToGIF ./ss_snap1.place.gif
-checkPlace checkplace.ss.rpt
 reset_parasitics
 extractRC
 rcOut -setload myfir.setload -rc_corner my_rc
@@ -128,39 +99,3 @@ saveNetlist myfir.v
 all_hold_analysis_views 
 all_setup_analysis_views 
 write_sdf  -ideal_clock_network myfir.sdf
-set_power_analysis_mode -reset
-set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
-set_power_output_dir -reset
-set_power_output_dir ./
-set_default_switching_activity -reset
-set_default_switching_activity -input_activity 0.2 -period 10.0
-read_activity_file -reset
-read_activity_file -format VCD -scope /tb_fir/UUT -start {} -end {} -block {} ../vcd/design.vcd
-set_power -reset
-set_powerup_analysis -reset
-set_dynamic_power_simulation -reset
-report_power -rail_analysis_format VS -outfile .//myfir.rpt
-set_power_analysis_mode -reset
-set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
-set_power_output_dir -reset
-set_power_output_dir ./
-set_default_switching_activity -reset
-set_default_switching_activity -input_activity 0.2 -period 10.0
-read_activity_file -reset
-read_activity_file -format VCD -scope /tb_fir/UUT -start {} -end {} -block {} ../vcd/design.vcd
-set_power -reset
-set_powerup_analysis -reset
-set_dynamic_power_simulation -reset
-report_power -rail_analysis_format VS -outfile .//myfir.rpt
-set_power_analysis_mode -reset
-set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
-set_power_output_dir -reset
-set_power_output_dir ./
-set_default_switching_activity -reset
-set_default_switching_activity -input_activity 0.2 -period 10.0
-read_activity_file -reset
-read_activity_file -format VCD -scope /tb_fir/UUT -start {} -end {} -block {} ../vcd/design.vcd
-set_power -reset
-set_powerup_analysis -reset
-set_dynamic_power_simulation -reset
-report_power -rail_analysis_format VS -outfile .//myfir.rpt
