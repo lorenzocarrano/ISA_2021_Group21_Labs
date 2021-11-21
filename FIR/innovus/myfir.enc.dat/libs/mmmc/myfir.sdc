@@ -1,1 +1,1 @@
-/home/isa21_2021_2022/labs/lab1/ISAL1/netlist/myfir.sdc
+/home/ms21.5/Desktop/STE/ISAL1/FIR/netlist/myfir.sdc

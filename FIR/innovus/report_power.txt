@@ -2,14 +2,14 @@
 *	Innovus 17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2021-Oct-26 12:46:27 (2021-Oct-26 10:46:27 GMT)
+* 	Date & Time:	2021-Nov-21 12:51:26 (2021-Nov-21 11:51:26 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
 *	Design: myfir
 *
 *	Liberty Libraries used: 
-*	        MyAnView: /home/isa21_2021_2022/labs/lab1/ISAL1/innovus/myfir.enc.dat/libs/mmmc/NangateOpenCellLibrary_typical_ecsm_nowlm.lib
+*	        MyAnView: /home/ms21.5/Desktop/STE/ISAL1/FIR/innovus/myfir.enc.dat/libs/mmmc/NangateOpenCellLibrary_typical_ecsm_nowlm.lib
 *
 *	Power Domain used: 
 *		Rail:        VDD 	Voltage:        1.1 
@@ -20,7 +20,7 @@
 *
 *	Switching Activity File used: 
 *	        ../vcd/design.vcd
-*			Vcd Window used(Start Time, Stop Time):(-4.23808e+24, -4.23808e+24) 
+*			Vcd Window used(Start Time, Stop Time):(1.1077e+07, 1.1077e+07) 
 *                     Vcd Scale Factor: 1 
 **                    Design annotation coverage: 0/2297 = 0% 
 *

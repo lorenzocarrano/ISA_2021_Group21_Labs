@@ -47,12 +47,15 @@ The design was simulated using a testbench written in both Verilog and VHDL. The
 \vspace{5mm}
 The image above shows an extract of the Modelsim simulation; the waveforms show the moment where VIN goes to zero, and after two clock cycles VOUT is set to zero
 in order to avoid errors in the output signal.
+\paragraph{}
 At the end of the simulation the values stored in Output.txt were compared with the ones produced by the C prototype. The two files are equal, which
 means that the filter is behaving correctly. 
 
 %%table with first results of files
 \section{Logic synthesis}
-After the simulation the design must be synthetized. To estimate the maximum working clock frequency of the filter,
+After the simulation the design must be synthesized. 
+\paragraph{}
+To estimate the maximum working clock frequency of the filter,
 the clock period in the design compiler is set to 0 ns. In this way the compiler optimizes the circuit as much as possible,
 and the negative slack of the timing report corresponds to the maximum clock frequency. 
 
@@ -84,7 +87,9 @@ the size of the circuit will be smaller.
 
 The Design Compiler produces the Verilog netlist of the synthetized circuit and a .sdf file containing the circuit's delays.
 Those files are used by Modelsim to simulate the netlist with the correct timing parameters and obtain the switching activity of the nodes,
-which is saved in a .vcd file. The results of this simulation have been checked to assure that they are coherent with the ones of the
+which is saved in a .vcd file. 
+\paragraph{}
+The results of this simulation have been checked to assure that they are coherent with the ones of the
 original circuit.
 
 This file is converted to .saif and used by Design Compiler to generete a power report.
