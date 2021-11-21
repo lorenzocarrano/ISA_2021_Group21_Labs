@@ -61,7 +61,7 @@ In the following table the main filter specifications are summarized:
 
 \paragraph{}
 
-First step is the generation of coefficients. To do this Matlab function fir1 has been used.
+First step is the generation of coefficients. To do this Matlab function \emph{fir1} has been used.
 The coefficients are shown in the following table: %\ref{tab:1}. % here is the reference to the table below
 \paragraph{}
 \centerline{
@@ -120,7 +120,7 @@ The coefficients are shown in the following table: %\ref{tab:1}. % here is the r
 %\label{tab:1}
 %\end{table}
 \paragraph{}
-Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and real form.
+Those coefficients are subjected to a quantization operation over the number of bits and expressed both in integer and real form.
 It is possible to esimate the effect of this quantization by comparing the designed transfer function to the quantized one, as shown in the following figure: %\ref{fig:1}.
 \begin{figure}[!ht]
 	%\caption{Designed Transfer Function vs Quantized Transfer Function}
@@ -132,7 +132,7 @@ It is possible to esimate the effect of this quantization by comparing the desig
 \paragraph{}
 At this point, another Matlab script is executed in order to perform
 different simulatios with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
-input signal the average value between two sinusoidal waves of frequency of 500 HZ and 4.5 kHz respectively.
+input signal the average value between two sinusoidal waves of frequency of 500 HZ (in band) and 4.5 kHz (out band) respectively.
 After this execution two files have been generated:
 
 \begin{enumerate}
@@ -140,7 +140,7 @@ After this execution two files have been generated:
 	\item \emph{result.txt}, which contains the output values that has been elaborated from the FIR.
 \end{enumerate}
 
-The following figure shows the two sinusoidal waveforms and the effective filter's input:
+The following figure shows the two sinusoidal waveforms, their average that will be the effective filter's input and the filter output:
 \begin{figure}[!ht]
 	%\caption{FIR Input and Output overt time}
 	%\label{fig:2}
@@ -153,7 +153,7 @@ The following figure shows the two sinusoidal waveforms and the effective filter
 
 The C-language script simualtes a FIR filter implementing the following  relation:
 
-\begin{displaymath}[!h]
+\begin{displaymath}
 y_i = \sum_{n=0}^{10}{x_{i-n} \cdot b_n}
 \end{displaymath}
 \paragraph{}
@@ -163,7 +163,7 @@ FIR constants are hardcoded inside the script, declared as a constant array of i
 \paragraph{}
 In order to emulate the finite internal parallelism of the hardware architecture, a shift operation is performed on the result before storing it into the accumulator.
 Of course, this truncation operation introduces an error in the evaluation of the output samples.
-The maximum accurancy would be obtained with a parallelism that is equale to the double of the bits number used for the architecture.
+The maximum accurancy would be obtained with a parallelism that is equal to the double of the bits number used for the architecture.
 
 \paragraph{}
 Thanks to this script is possible to compare the performance of the fixed-point version with respect to 

@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  21 NOV 2021 12:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.12)  21 NOV 2021 15:25
 entering extended mode
-**"c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/LAB1/ISAL1/report/homebook.tex"
-(c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/LAB1/ISAL1/report/homebook.tex
+**c:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/report/homebook.tex
+(c:/Users/nicola/OneDrive/Desktop/ISA/ISAL1/report/homebook.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-08-27> (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+L3 programming layer <2021-10-18> (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
 Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
-File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/base\bk11.clo
+File: bk11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count182
 \c@chapter=\count183
@@ -20,24 +20,21 @@ File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2021/07/22 3.63 The Babel package
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2021/07/22 3.63 Babel common definitions
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/10/19 3.65 The Babel package
 \babel@savecnt=\count191
 \U@D=\dimen139
 \l@unhyphenated=\language79
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-)
 \bbl@dirlevel=\count192
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -45,7 +42,7 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+)) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip49
 \f@nch@O@elh=\skip50
@@ -56,13 +53,13 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@erf=\skip55
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 ) (titlesec.sty
 Package: titlesec 2001/01/23 v2.4 Sectioning titles
 \ttl@box=\box50
 \titlewidth=\dimen140
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
@@ -78,16 +75,16 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@newlines=\count197
 \lst@lineno=\count198
 \lst@maxwidth=\dimen144
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count199
 \lst@skipnumbers=\count266
 \lst@framebox=\box52
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen145
 \lightrulewidth=\dimen146
@@ -106,42 +103,42 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count269
 \@lastruleclass=\count270
 \@thisrulewidth=\dimen157
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip58
 \multirow@cntb=\count271
 \multirow@dima=\skip59
 \bigstrutjot=\dimen158
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen159
 \Gin@req@width=\dimen160
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen161
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen162
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count272
@@ -181,14 +178,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -199,11 +196,11 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip64
 \thm@headsep=\skip65
 \dth@everypar=\toks28
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \col@sep=\dimen170
 \ar@mcellbox=\box55
@@ -220,14 +217,14 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \TX@delta=\dimen176
 \TX@cols=\count284
 \TX@ftn=\toks30
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.sty
 Package: SIunits 2007/12/02 v1.36 Support for the International System of units (MH)
 
 
 \@qskwidth=\skip68
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 46.
 \symgreek=\mathgroup6
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.cfg)
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.cfg)
 LaTeX Info: Redefining \usk on input line 576.
 
 Option `mediumspace' provided!
@@ -243,8 +240,8 @@ Package SIunits Warning: What is `Grey'?.
 
 
 Writing index file homebook.idx
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box57
 )
@@ -270,7 +267,7 @@ LaTeX Font Info:    ... okay on input line 116.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
 LaTeX Font Info:    ... okay on input line 116.
 \c@lstlisting=\count286
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count287
 \scratchdimen=\dimen177
@@ -283,23 +280,23 @@ LaTeX Font Info:    ... okay on input line 116.
 \MPnumerator=\count291
 \makeMPintoPDFobject=\count292
 \everyMPtoPDFconversion=\toks32
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+)) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -310,7 +307,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+ (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Option `squaren' provided! 
@@ -325,114 +322,225 @@ Package pdftex.def Info: ./logopoli_new.png  used on input line 121.
 
 
 
-{C:/Users/Utente/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli_new.png>] (homebook.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+{C:/Users/nicola/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli_new.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2]
+No file homebook.toc.
 \tf@toc=\write4
 \openout4 = `homebook.toc'.
 
- [1
+[1
 
-] (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+] (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (chapters/chap1.tex
 Chapter 1.
-<./chapters/chap1images//IMG1.jpg, id=16, 963.6pt x 526.21594pt>
+(C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd) (C:\Users\nicola\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd) [1
+
+
+]
+<./chapters/chap1images//IMG1.jpg, id=23, 963.6pt x 526.21594pt>
 File: ./chapters/chap1images//IMG1.jpg Graphic file (type jpg)
 <use ./chapters/chap1images//IMG1.jpg>
 Package pdftex.def Info: ./chapters/chap1images//IMG1.jpg  used on input line 128.
 (pdftex.def)             Requested size: 441.01772pt x 240.83377pt.
-[1
-
-
-]
-<./chapters/chap1images//IMG2.jpg, id=21, 963.6pt x 526.96875pt>
+<./chapters/chap1images//IMG2.jpg, id=24, 963.6pt x 526.96875pt>
 File: ./chapters/chap1images//IMG2.jpg Graphic file (type jpg)
 <use ./chapters/chap1images//IMG2.jpg>
 Package pdftex.def Info: ./chapters/chap1images//IMG2.jpg  used on input line 147.
 (pdftex.def)             Requested size: 337.26506pt x 184.44182pt.
- [2 <./chapters/chap1images//IMG1.jpg> <./chapters/chap1images//IMG2.jpg>]
-<./chapters/chap1images//IMG3.png, id=26, 1160.08406pt x 644.4075pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2 <./chapters/chap1images//IMG1.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3 <./chapters/chap1images//IMG2.jpg>]
+<./chapters/chap1images//IMG3.png, id=37, 1160.08406pt x 644.4075pt>
 File: ./chapters/chap1images//IMG3.png Graphic file (type png)
 <use ./chapters/chap1images//IMG3.png>
 Package pdftex.def Info: ./chapters/chap1images//IMG3.png  used on input line 193.
 (pdftex.def)             Requested size: 441.01772pt x 244.97572pt.
+) (chapters/chap2.tex
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (chapters/chap2.tex [3] [4 <./chapters/chap1images//IMG3.png>]
+[4 <./chapters/chap1images//IMG3.png>]
 Chapter 2.
-<./chapters/figures/fir_base.jpg, id=40, 893.58844pt x 345.54094pt>
+
+LaTeX Warning: File `./chapters/schematic/FIR_stagedrawio.svg' not found on input line 12.
+
+
+chapters/chap2.tex:12: LaTeX Error: Unknown graphics extension: .svg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ..../chapters/schematic/FIR_stagedrawio.svg}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<./chapters/figures/fir_base.jpg, id=43, 893.58844pt x 345.54094pt>
 File: ./chapters/figures/fir_base.jpg Graphic file (type jpg)
 <use ./chapters/figures/fir_base.jpg>
-Package pdftex.def Info: ./chapters/figures/fir_base.jpg  used on input line 31.
+Package pdftex.def Info: ./chapters/figures/fir_base.jpg  used on input line 37.
 (pdftex.def)             Requested size: 441.01772pt x 170.53976pt.
 [5
 
- <./chapters/figures/fir_base.jpg>]
-<./chapters/figures/waveform1.jpg, id=45, 758.08218pt x 175.40532pt>
+]
+<./chapters/figures/waveform1.jpg, id=47, 758.08218pt x 175.40532pt>
 File: ./chapters/figures/waveform1.jpg Graphic file (type jpg)
 <use ./chapters/figures/waveform1.jpg>
-Package pdftex.def Info: ./chapters/figures/waveform1.jpg  used on input line 45.
+Package pdftex.def Info: ./chapters/figures/waveform1.jpg  used on input line 51.
 (pdftex.def)             Requested size: 441.01772pt x 102.04294pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6 <./chapters/figures/fir_base.jpg> <./chapters/figures/waveform1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-[6 <./chapters/figures/waveform1.jpg>]
-<./chapters/figures/fir_base_plcrt.jpg, id=50, 362.10281pt x 341.77687pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+<./chapters/figures/fir_base_plcrt.jpg, id=56, 362.10281pt x 341.77687pt>
 File: ./chapters/figures/fir_base_plcrt.jpg Graphic file (type jpg)
 <use ./chapters/figures/fir_base_plcrt.jpg>
-Package pdftex.def Info: ./chapters/figures/fir_base_plcrt.jpg  used on input line 138.
+Package pdftex.def Info: ./chapters/figures/fir_base_plcrt.jpg  used on input line 144.
 (pdftex.def)             Requested size: 227.62204pt x 214.846pt.
- [7]) (chapters/chap3.tex [8 <./chapters/figures/fir_base_plcrt.jpg>]
+) (chapters/chap3.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8 <./chapters/figures/fir_base_plcrt.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
 Chapter 3.
-<./chapters/figures/fir_adv_1.jpg, id=57, 954.56625pt x 230.36063pt>
+[10
+
+]
+<./chapters/figures/fir_adv_1.jpg, id=68, 954.56625pt x 230.36063pt>
 File: ./chapters/figures/fir_adv_1.jpg Graphic file (type jpg)
 <use ./chapters/figures/fir_adv_1.jpg>
 Package pdftex.def Info: ./chapters/figures/fir_adv_1.jpg  used on input line 64.
 (pdftex.def)             Requested size: 441.01772pt x 106.42763pt.
-[9
-
-]
-<./chapters/figures/fir_adv_2.jpg, id=62, 711.4078pt x 653.44125pt>
+<./chapters/figures/fir_adv_2.jpg, id=69, 711.4078pt x 653.44125pt>
 File: ./chapters/figures/fir_adv_2.jpg Graphic file (type jpg)
 <use ./chapters/figures/fir_adv_2.jpg>
 Package pdftex.def Info: ./chapters/figures/fir_adv_2.jpg  used on input line 77.
 (pdftex.def)             Requested size: 441.01772pt x 405.09947pt.
- [10 <./chapters/figures/fir_adv_1.jpg> <./chapters/figures/fir_adv_2.jpg>]
-<./chapters/figures/waveform2.jpg, id=66, 958.3303pt x 280.04625pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11 <./chapters/figures/fir_adv_1.jpg>]
+<./chapters/figures/waveform2.jpg, id=73, 958.3303pt x 280.04625pt>
 File: ./chapters/figures/waveform2.jpg Graphic file (type jpg)
 <use ./chapters/figures/waveform2.jpg>
 Package pdftex.def Info: ./chapters/figures/waveform2.jpg  used on input line 92.
 (pdftex.def)             Requested size: 441.01772pt x 128.8741pt.
- [11 <./chapters/figures/waveform2.jpg>]
-<./chapters/figures/fir_advanced.png, id=71, 381.67593pt x 365.86688pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12 <./chapters/figures/fir_adv_2.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13 <./chapters/figures/waveform2.jpg>]
+<./chapters/figures/fir_advanced.png, id=80, 381.67593pt x 365.86688pt>
 File: ./chapters/figures/fir_advanced.png Graphic file (type png)
 <use ./chapters/figures/fir_advanced.png>
 Package pdftex.def Info: ./chapters/figures/fir_advanced.png  used on input line 183.
 (pdftex.def)             Requested size: 227.62204pt x 218.19315pt.
- [12 <./chapters/figures/fir_advanced.png>]) [13] (homebook.aux) ) 
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14 <./chapters/figures/fir_advanced.png>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15] (homebook.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6512 strings out of 478927
- 98074 string characters out of 2852060
- 603374 words of memory out of 3000000
- 24232 multiletter control sequences out of 15000+600000
- 410001 words of font info for 51 fonts, out of 8000000 for 9000
+ 6575 strings out of 478907
+ 99235 string characters out of 2851417
+ 601991 words of memory out of 3000000
+ 24298 multiletter control sequences out of 15000+600000
+ 412956 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,15n,70p,432b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Utente\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on homebook.pdf (15 pages, 1262364 bytes).
+ 61i,15n,70p,382b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\nicola\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nicola/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on homebook.pdf (18 pages, 1262924 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
+ 151 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

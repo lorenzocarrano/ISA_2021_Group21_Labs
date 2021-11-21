@@ -11,26 +11,26 @@
 \contentsline {paragraph}{}{3}{}%
 \contentsline {paragraph}{}{3}{}%
 \contentsline {paragraph}{}{3}{}%
-\contentsline {subsection}{\numberline {1.2.1}Evaluate the THD}{3}{}%
-\contentsline {paragraph}{}{3}{}%
-\contentsline {paragraph}{}{3}{}%
-\contentsline {paragraph}{}{3}{}%
+\contentsline {subsection}{\numberline {1.2.1}Evaluate the THD}{4}{}%
+\contentsline {paragraph}{}{4}{}%
+\contentsline {paragraph}{}{4}{}%
+\contentsline {paragraph}{}{4}{}%
 \contentsline {chapter}{\numberline {2}VLSI implementation}{5}{}%
 \contentsline {section}{\numberline {2.1}Starting architecture development}{5}{}%
 \contentsline {section}{\numberline {2.2}Simulation}{6}{}%
 \contentsline {paragraph}{}{6}{}%
 \contentsline {section}{\numberline {2.3}Logic synthesis}{6}{}%
-\contentsline {paragraph}{}{6}{}%
+\contentsline {paragraph}{}{7}{}%
 \contentsline {paragraph}{}{7}{}%
 \contentsline {section}{\numberline {2.4}Place \& Route}{7}{}%
-\contentsline {chapter}{\numberline {3}Advanced architecture development}{9}{}%
-\contentsline {paragraph}{}{9}{}%
-\contentsline {section}{\numberline {3.1}Unfolding}{9}{}%
-\contentsline {paragraph}{}{9}{}%
-\contentsline {section}{\numberline {3.2}Pipeline}{9}{}%
+\contentsline {chapter}{\numberline {3}Advanced architecture development}{10}{}%
 \contentsline {paragraph}{}{10}{}%
+\contentsline {section}{\numberline {3.1}Unfolding}{10}{}%
 \contentsline {paragraph}{}{10}{}%
-\contentsline {section}{\numberline {3.3}Simulation}{11}{}%
+\contentsline {section}{\numberline {3.2}Pipeline}{11}{}%
 \contentsline {paragraph}{}{11}{}%
-\contentsline {section}{\numberline {3.4}Logic synthesis}{11}{}%
-\contentsline {section}{\numberline {3.5}Place \& Route}{12}{}%
+\contentsline {paragraph}{}{11}{}%
+\contentsline {section}{\numberline {3.3}Simulation}{12}{}%
+\contentsline {paragraph}{}{12}{}%
+\contentsline {section}{\numberline {3.4}Logic synthesis}{13}{}%
+\contentsline {section}{\numberline {3.5}Place \& Route}{14}{}%
