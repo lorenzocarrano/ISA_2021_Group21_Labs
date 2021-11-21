@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex homebook.idx"] 1637506053 "homebook.idx" "homebook.ind" "homebook" 1637506281
-  "homebook.idx" 1637506278 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex homebook.idx"] 1637506053 "homebook.idx" "homebook.ind" "homebook" 1637506848
+  "homebook.idx" 1637506846 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "homebook.ind"
   "homebook.ilg"
-["pdflatex"] 1637506277 "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex" "homebook.pdf" "homebook" 1637506281
+["pdflatex"] 1637506845 "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex" "homebook.pdf" "homebook" 1637506848
   "C:/Users/monca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1637504079 12668 05be4e08b997625c314670fa7ddefdab ""
   "C:/Users/monca/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1637246193 9767274 b4c81d32ef04f750ad52b2a744e7bc4c ""
   "C:/Users/monca/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1637486180 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -100,7 +100,7 @@
   "chapters/chap1images//IMG1.jpg" 1637429675 34680 8a452834aff0a8f2952e7945cf4026bf ""
   "chapters/chap1images//IMG2.jpg" 1637429675 140878 ee13919daddf59fc99939017ab8d7d67 ""
   "chapters/chap1images//IMG3.png" 1637429675 50149 8af397349ff346d9a8f314be1843dc48 ""
-  "chapters/chap2.tex" 1637506006 8175 b410329ecbff72fdfab92e0b59c8d350 ""
+  "chapters/chap2.tex" 1637506843 8175 5c357f67236f261bd9db0d0fbe423ea5 ""
   "chapters/chap3.tex" 1637501083 8538 4c4af9133f1abd73c1c3b6b97c648f6c ""
   "chapters/figures/fir_adv_1.jpg" 1637434346 65874 2dbd5a0651687d0664124a50c4c9eb9b ""
   "chapters/figures/fir_adv_2.jpg" 1637434671 144164 36b5d20e86dea2995c468bcf9fdb2fc7 ""
@@ -109,16 +109,16 @@
   "chapters/figures/fir_base_plcrt.jpg" 1637427816 77813 2e10b527b857c55c33cba01c234ea087 ""
   "chapters/figures/waveform1.jpg" 1637420141 48917 65ab4a59b6223a5bca96f05f6e01433a ""
   "chapters/figures/waveform2.jpg" 1637439542 137107 a96929d484ef8e5dffcf35f12a0b867c ""
-  "homebook.aux" 1637506280 3521 c43641610564fd0d30887b76fed8fde8 "pdflatex"
+  "homebook.aux" 1637506848 3596 8c6a463c677e5cd6a65b2faa7e64ebd3 "pdflatex"
   "homebook.ind" 1637506053 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
   "homebook.tex" 1637504305 4422 05f9f5e9c746534d15aee36c014b4c90 ""
-  "homebook.toc" 1637506280 1701 131508a948422276de7422081c2b1027 "pdflatex"
+  "homebook.toc" 1637506848 1735 81a88393853609f5ac8fa2d15a254ba2 "pdflatex"
   "logopoli_new.png" 1637431538 268312 19b7b3b5d2bea6d36e5545454ae1f690 ""
-  "schematic/FIR_stagedrawio.jpg" 1637505862 57522 0be477e4cbb3e529c2a8dc98bfc3fcc3 ""
+  "schematic/FIR.jpg" 1637506302 36788 af77bbb9a99becbae1cc950c7b1e5e49 ""
   "titlesec.sty" 1637234493 37821 64ad863c8c12f6a697080a369b2f9f4d ""
   (generated)
-  "homebook.idx"
-  "homebook.log"
   "homebook.toc"
-  "homebook.aux"
+  "homebook.log"
   "homebook.pdf"
+  "homebook.aux"
+  "homebook.idx"

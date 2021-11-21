@@ -16,6 +16,7 @@
 \contentsline {paragraph}{}{4}{}%
 \contentsline {paragraph}{}{4}{}%
 \contentsline {chapter}{\numberline {2}VLSI implementation}{5}{}%
+\contentsline {paragraph}{}{5}{}%
 \contentsline {section}{\numberline {2.1}Starting architecture development}{5}{}%
 \contentsline {section}{\numberline {2.2}Simulation}{6}{}%
 \contentsline {paragraph}{}{6}{}%

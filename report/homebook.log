@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  21 NOV 2021 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  21 NOV 2021 16:00
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISAL1/report/homebook.tex
@@ -386,11 +386,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4 <./chapters/chap1images//IMG3.png>]
 Chapter 2.
-<./schematic/FIR_stagedrawio.jpg, id=40, 1233.60875pt x 251.94125pt>
-File: ./schematic/FIR_stagedrawio.jpg Graphic file (type jpg)
-<use ./schematic/FIR_stagedrawio.jpg>
-Package pdftex.def Info: ./schematic/FIR_stagedrawio.jpg  used on input line 12.
-(pdftex.def)             Requested size: 441.01772pt x 90.0683pt.
+<./schematic/FIR.jpg, id=40, 1165.35374pt x 202.7575pt>
+File: ./schematic/FIR.jpg Graphic file (type jpg)
+<use ./schematic/FIR.jpg>
+Package pdftex.def Info: ./schematic/FIR.jpg  used on input line 12.
+(pdftex.def)             Requested size: 441.01772pt x 76.72998pt.
 <./chapters/figures/fir_base.jpg, id=41, 893.58844pt x 345.54094pt>
 File: ./chapters/figures/fir_base.jpg Graphic file (type jpg)
 <use ./chapters/figures/fir_base.jpg>
@@ -398,7 +398,7 @@ Package pdftex.def Info: ./chapters/figures/fir_base.jpg  used on input line 37.
 (pdftex.def)             Requested size: 441.01772pt x 170.53976pt.
 [5
 
- <./schematic/FIR_stagedrawio.jpg>]
+ <./schematic/FIR.jpg>]
 <./chapters/figures/waveform1.jpg, id=46, 758.08218pt x 175.40532pt>
 File: ./chapters/figures/waveform1.jpg Graphic file (type jpg)
 <use ./chapters/figures/waveform1.jpg>
@@ -516,14 +516,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
  6860 strings out of 478699
- 109539 string characters out of 2846961
+ 109455 string characters out of 2846961
  601905 words of memory out of 3000000
  24803 multiletter control sequences out of 15000+600000
  412956 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,15n,67p,390b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on homebook.pdf (17 pages, 1322893 bytes).
+Output written on homebook.pdf (17 pages, 1302157 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
