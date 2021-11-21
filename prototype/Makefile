@@ -1,3 +1,0 @@
-
-all:
-	gcc myfilter.c
