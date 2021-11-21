@@ -15,7 +15,7 @@
 
 The goal of this laboratory is to design a Finite Impulse Filter filter (FIR) with a cut frequency of 2 kHz, and then applying some optimization 
 techniques such as unfolding and pipelining to the basic structure.
-Filter was designed according two parameter: order and number of bits. The order employed for the following filter
+The filter was designed according to two parameters: order and number of bits. The order employed for the following filter
 is 10 and the number of bits is 9.
 A prototype version of the filter has been developed in C language and Matlab in order to be able to compare their results with the
 ones coming from the simulation of the HDL design.
@@ -120,7 +120,7 @@ The coefficients are shown in the following table: %\ref{tab:1}. % here is the r
 %\label{tab:1}
 %\end{table}
 \paragraph{}
-Those coefficients are subjected to a quantization operation over the number of bits and expressed both in integer and real form.
+Those coefficients are subjected to a quantization operation over the number of bits and expressed both in integer and normalized form.
 
 It is possible to esimate the effect of this quantization by comparing the designed transfer function to the quantized one, as shown in the following figure: %\ref{fig:1}.
 \begin{figure}[!ht]
@@ -132,7 +132,7 @@ It is possible to esimate the effect of this quantization by comparing the desig
 
 \paragraph{}
 At this point, another Matlab script is executed in order to perform
-different simulatios with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
+different simulatios of the prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
 input signal the average value between two sinusoidal waves of frequency of 500 HZ (in band) and 4.5 kHz (out band) respectively.
 
 After this execution two files have been generated:
