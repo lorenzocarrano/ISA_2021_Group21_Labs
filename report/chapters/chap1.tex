@@ -15,6 +15,7 @@
 
 The goal of this laboratory is to design a Finite Impulse Filter filter (FIR) with a cut frequency of 2 kHz, and then applying some optimization 
 techniques such as unfolding and pipelining to the basic structure.
+
 Filter was designed according two parameter: order and number of bits. The order employed for the following filter
 is 10 and the number of bits is 9.
 
@@ -63,6 +64,7 @@ Number & Quantize & Normalize \\
 \caption{All coefficients.}
 \label{tab:1}
 \end{table}
+
 \paragraph{}
 Those coefficients are subjected to a quantization operation over Nb bits and expressed both in integer and real form.
 It is possible to esimate the effect of this quantization by comparing the designed transfer function to the quantized one, as shown in figure \ref{fig:1}.
@@ -74,12 +76,14 @@ It is possible to esimate the effect of this quantization by comparing the desig
 \end{figure}
 
 \paragraph{}
+
 At this point, another Matlab script is executed in order to perform
 different simulatios with prototype filter with a cut-off frequency of 2 kHz and a sampling frequency of 10 kHz, taking as 
 input signal the average value between two sinusoidal waves of frequency of 500 HZ and 4.5 kHz respectively.
 After this execution two files have been generated:
 
 \begin{enumerate}
+
 	\item \emph{sample.txt}, which contains the sample values that have fed the input of the FIR;
 	\item \emph{result.txt}, which contains the output values that has been elaborated from the FIR.
 \end{enumerate}
@@ -92,6 +96,11 @@ Figure \ref{fig:2} shows the two sinusoidal waveforms and the effective filter's
 	\centering
 \end{figure}
 
+
+=======
+	\item \emph{sample.txt}, which contains the sample values that have fed the input of FIR;
+	\item \emph{result.txt}, which contains the output values that has been elaborated from our FIR.
+\end{enumerate}
 
 \section{C prototype}
 
@@ -110,6 +119,11 @@ Of course, this truncation operation introduces an error in the evaluation of th
 The maximum accurancy would be obtained with a parallelism that is equale to the double of the bits number used for the architecture.
 
 \paragraph{}
+
+\begin{displaymath}
+y_i = \sum_{n=0}^{10}{x_{i-n} \cdot b_n}
+\end{displaymath}
+
 Thanks to this script is possible to compare the performance of the fixed-point version with respect to 
 the Matlab computation results.
 
@@ -137,5 +151,14 @@ in order to reduce the area while still accomplish the requested THD amount, sho
 	\includegraphics[width=15.5cm]{IMG3.png}
 	\centering
 \end{figure}
+
+With 9 bits used for data, obtained THD is -40 dB. 
+Reducing the number of bits to 8 the obtained value of THD  
+is -33 dB, thus still acceptable. 
+Applying a further bit-number reduction, thus with a 7-bit parallelism, the value of THD exceeds the maximum allowed
+amount, reaching the value of -27dB.
+
+At the end of this analysis, it has been decided to use 8 bits for the final implementation of the  FIR, 
+in order to reduce the area while still accomplish maximum THD amount.
 
 %% vedi i ths a 9, 8 e 7 bits
