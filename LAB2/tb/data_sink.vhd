@@ -20,7 +20,7 @@ architecture beh of data_sink is
 begin  -- beh
 
   process (CLK)
-    file res_fp : text open WRITE_MODE is "C:\Users\nicola\OneDrive\Desktop\ISA\ISAL2\sim\fp_prod.hex";
+    file res_fp : text open WRITE_MODE is "./fp_prod.hex";
     variable line_out : line;    
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)

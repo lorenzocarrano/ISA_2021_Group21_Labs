@@ -1,72 +1,10 @@
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_mul.vhd was successful.
-# Compile of fpmul_pipeline.vhd failed with 4 errors.
-# Compile of fpmul_stage1_struct.vhd was successful.
-# Compile of fpmul_stage2_struct.vhd was successful.
-# Compile of fpmul_stage3_struct.vhd was successful.
-# Compile of fpmul_stage4_struct.vhd was successful.
-# Compile of fpnormalize_fpnormalize.vhd was successful.
-# Compile of fpround_fpround.vhd was successful.
-# Compile of packfp_packfp.vhd was successful.
-# Compile of unpackfp_unpackfp.vhd was successful.
-# Compile of fpadd_normalize_struct.vhd was successful.
-# Compile of fpadd_pipeline.vhd was successful.
-# Compile of fpadd_stage1_struct.vhd was successful.
-# Compile of fpadd_stage2_struct.vhd was successful.
-# Compile of fpadd_stage3_struct.vhd was successful.
-# Compile of fpadd_stage4_struct.vhd was successful.
-# Compile of fpadd_stage5_struct.vhd was successful.
-# Compile of fpadd_stage6_struct.vhd was successful.
-# Compile of fpalign_struct.vhd was successful.
-# Compile of fpinvert_fpinvert.vhd was successful.
-# Compile of fplzc_fplzc.vhd was successful.
-# Compile of fpselcomplement_fpselcomplement.vhd was successful.
-# Compile of fpswap_fpswap.vhd was successful.
-# 26 compiles, 1 failed with 4 errors.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_mul.vhd was successful.
-# Compile of fpmul_pipeline.vhd failed with 4 errors.
-# Compile of fpmul_stage1_struct.vhd was successful.
-# Compile of fpmul_stage2_struct.vhd was successful.
-# Compile of fpmul_stage3_struct.vhd was successful.
-# Compile of fpmul_stage4_struct.vhd was successful.
-# Compile of fpnormalize_fpnormalize.vhd was successful.
-# Compile of fpround_fpround.vhd was successful.
-# Compile of packfp_packfp.vhd was successful.
-# Compile of unpackfp_unpackfp.vhd was successful.
-# Compile of fpadd_normalize_struct.vhd was successful.
-# Compile of fpadd_pipeline.vhd was successful.
-# Compile of fpadd_stage1_struct.vhd was successful.
-# Compile of fpadd_stage2_struct.vhd was successful.
-# Compile of fpadd_stage3_struct.vhd was successful.
-# Compile of fpadd_stage4_struct.vhd was successful.
-# Compile of fpadd_stage5_struct.vhd was successful.
-# Compile of fpadd_stage6_struct.vhd was successful.
-# Compile of fpalign_struct.vhd was successful.
-# Compile of fpinvert_fpinvert.vhd was successful.
-# Compile of fplzc_fplzc.vhd was successful.
-# Compile of fpselcomplement_fpselcomplement.vhd was successful.
-# Compile of fpswap_fpswap.vhd was successful.
 # Compile of fd.vhd was successful.
-# Compile of register.vhd was successful.
-# 28 compiles, 1 failed with 4 errors.
-# Compile of clk_gen.vhd was successful.
-# Compile of data_maker.vhd was successful.
-# Compile of data_sink.vhd was successful.
-# Compile of tb_mul.vhd was successful.
-# Compile of fpmul_pipeline.vhd failed with 4 errors.
+# Compile of fpmul_pipeline.vhd failed with 1 errors.
 # Compile of fpmul_stage1_struct.vhd was successful.
 # Compile of fpmul_stage2_struct.vhd was successful.
 # Compile of fpmul_stage3_struct.vhd was successful.
 # Compile of fpmul_stage4_struct.vhd was successful.
-# Compile of fpnormalize_fpnormalize.vhd was successful.
-# Compile of fpround_fpround.vhd was successful.
-# Compile of packfp_packfp.vhd was successful.
-# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of register.vhd was successful.
 # Compile of fpadd_normalize_struct.vhd was successful.
 # Compile of fpadd_pipeline.vhd was successful.
 # Compile of fpadd_stage1_struct.vhd was successful.
@@ -80,22 +18,22 @@
 # Compile of fplzc_fplzc.vhd was successful.
 # Compile of fpselcomplement_fpselcomplement.vhd was successful.
 # Compile of fpswap_fpswap.vhd was successful.
-# Compile of fd.vhd was successful.
-# Compile of register.vhd was successful.
-# 28 compiles, 1 failed with 4 errors.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
 # Compile of clk_gen.vhd was successful.
 # Compile of data_maker.vhd was successful.
 # Compile of data_sink.vhd was successful.
 # Compile of tb_mul.vhd was successful.
+# 28 compiles, 1 failed with 1 error.
+# Compile of fd.vhd was successful.
 # Compile of fpmul_pipeline.vhd was successful.
 # Compile of fpmul_stage1_struct.vhd was successful.
 # Compile of fpmul_stage2_struct.vhd was successful.
 # Compile of fpmul_stage3_struct.vhd was successful.
 # Compile of fpmul_stage4_struct.vhd was successful.
-# Compile of fpnormalize_fpnormalize.vhd was successful.
-# Compile of fpround_fpround.vhd was successful.
-# Compile of packfp_packfp.vhd was successful.
-# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of register.vhd was successful.
 # Compile of fpadd_normalize_struct.vhd was successful.
 # Compile of fpadd_pipeline.vhd was successful.
 # Compile of fpadd_stage1_struct.vhd was successful.
@@ -109,70 +47,520 @@
 # Compile of fplzc_fplzc.vhd was successful.
 # Compile of fpselcomplement_fpselcomplement.vhd was successful.
 # Compile of fpswap_fpswap.vhd was successful.
-# Compile of fd.vhd was successful.
-# Compile of register.vhd was successful.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_mul.vhd was successful.
 # 28 compiles, 0 failed with no errors.
-vsim -gui work.tb_mul(arch) -t ns
-# vsim -gui work.tb_mul(arch) -t ns 
-# Start time: 10:00:59 on Nov 09,2021
+vsim -gui work.tb_mul -t ns
+# vsim -gui work.tb_mul -t ns 
+# Start time: 11:22:03 on Nov 23,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading work.tb_mul(arch)
 # Loading work.fpmul(pipeline)
+# ** Fatal: (vsim-3817) Port "RST_n" of entity "fpmul" is not in the component being instantiated.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul File: C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/fpuvhdl/multiplier/fpmul_pipeline.vhd Line: 21
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 11:22:03 on Nov 23,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 10
+# Compile of fd.vhd was successful.
+# Compile of fpmul_pipeline.vhd was successful.
+# Compile of fpmul_stage1_struct.vhd was successful.
+# Compile of fpmul_stage2_struct.vhd was successful.
+# Compile of fpmul_stage3_struct.vhd was successful.
+# Compile of fpmul_stage4_struct.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of fpadd_normalize_struct.vhd was successful.
+# Compile of fpadd_pipeline.vhd was successful.
+# Compile of fpadd_stage1_struct.vhd was successful.
+# Compile of fpadd_stage2_struct.vhd was successful.
+# Compile of fpadd_stage3_struct.vhd was successful.
+# Compile of fpadd_stage4_struct.vhd was successful.
+# Compile of fpadd_stage5_struct.vhd was successful.
+# Compile of fpadd_stage6_struct.vhd was successful.
+# Compile of fpalign_struct.vhd was successful.
+# Compile of fpinvert_fpinvert.vhd was successful.
+# Compile of fplzc_fplzc.vhd was successful.
+# Compile of fpselcomplement_fpselcomplement.vhd was successful.
+# Compile of fpswap_fpswap.vhd was successful.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_fir.v was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir
+# vsim -gui -t ns work.tb_fir 
+# Start time: 11:25:30 on Nov 23,2021
+# Loading work.tb_fir
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# ** Warning: (vsim-7) Failed to open VHDL file "C:\Users\nicola\OneDrive\Desktop\ISA\ISAL2\tb\fp_samples.hex" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/SM
+# Loading work.fpmul(pipeline)
 # Loading ieee.numeric_std(body)
 # Loading work.reg(arch)
-# Loading work.fd(asynch)
+# Loading work.fd(synch)
 # Loading work.fpmul_stage1(struct)
 # Loading work.unpackfp(unpackfp)
 # Loading work.fpmul_stage2(struct)
+# ** Fatal: (vsim-3348) Port length (32) does not match actual length (28) for port "/tb_fir/UUT/I2/reg1/D".
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2/reg1 File: C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/fpuvhdl/multiplier/register.vhd Line: 9
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 11:25:30 on Nov 23,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+# Compile of fd.vhd was successful.
+# Compile of fpmul_pipeline.vhd was successful.
+# Compile of fpmul_stage1_struct.vhd was successful.
+# Compile of fpmul_stage2_struct.vhd was successful.
+# Compile of fpmul_stage3_struct.vhd was successful.
+# Compile of fpmul_stage4_struct.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of fpadd_normalize_struct.vhd was successful.
+# Compile of fpadd_pipeline.vhd was successful.
+# Compile of fpadd_stage1_struct.vhd was successful.
+# Compile of fpadd_stage2_struct.vhd was successful.
+# Compile of fpadd_stage3_struct.vhd was successful.
+# Compile of fpadd_stage4_struct.vhd was successful.
+# Compile of fpadd_stage5_struct.vhd was successful.
+# Compile of fpadd_stage6_struct.vhd was successful.
+# Compile of fpalign_struct.vhd was successful.
+# Compile of fpinvert_fpinvert.vhd was successful.
+# Compile of fplzc_fplzc.vhd was successful.
+# Compile of fpselcomplement_fpselcomplement.vhd was successful.
+# Compile of fpswap_fpswap.vhd was successful.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_fir.v was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir
+# vsim -gui -t ns work.tb_fir 
+# Start time: 11:27:15 on Nov 23,2021
+# Loading work.tb_fir
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# ** Warning: (vsim-7) Failed to open VHDL file "C:\Users\nicola\OneDrive\Desktop\ISA\ISAL2\tb\fp_samples.hex" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/SM
+# Loading work.fpmul(pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.fpmul_stage1(struct)
+# Loading work.unpackfp(unpackfp)
+# Loading work.fpmul_stage2(struct)
 # Loading work.fpmul_stage3(struct)
 # Loading work.fpnormalize(fpnormalize)
 # Loading work.fpround(fpround)
 # Loading work.fpmul_stage4(struct)
 # Loading work.packfp(packfp)
-# Loading work.clk_gen(beh)
-# Loading ieee.std_logic_textio(body)
 # Loading work.data_sink(beh)
-# Loading work.data_maker(beh)
+# ** Warning: (vsim-7) Failed to open VHDL file "C:\Users\nicola\OneDrive\Desktop\ISA\ISAL2\sim\fp_prod.hex" in r+ mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/DS
 add wave -position insertpoint  \
-sim:/tb_mul/input \
-sim:/tb_mul/output \
-sim:/tb_mul/clk
+sim:/tb_fir/CLK_i \
+sim:/tb_fir/RST_n_i \
+sim:/tb_fir/VIN_i \
+sim:/tb_fir/VOUT_i \
+sim:/tb_fir/END_SIM_i \
+sim:/tb_fir/DIN_i \
+sim:/tb_fir/DOUT_i
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
+#           Attempting to use alternate WLF file "./wlft7cn7y8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7cn7y8
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I3/I11
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I3/I11
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 1  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 1  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 1  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 1  Instance: /tb_mul/mul/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 3  Instance: /tb_mul/mul/I2
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 3  Instance: /tb_mul/mul/I2
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Fatal: (vsim-7) Failed to open VHDL file "C:\Users\nicola\OneDrive\Desktop\ISA\ISAL2\tb\fp_samples.hex" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 15 ns  Iteration: 2  Process: /tb_fir/SM/line__28 File: C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/tb/data_maker.vhd
+# Fatal error in Process line__28 at C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/tb/data_maker.vhd line 38
+# 
+# HDL call sequence:
+# Stopped at C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/tb/data_maker.vhd 38 Process line__28
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/tb/data_maker.vhd 38 Process line__28
+# 
+quit -sim
+# End time: 11:32:35 on Nov 23,2021, Elapsed time: 0:05:20
+# Errors: 1, Warnings: 21
+# Compile of fd.vhd was successful.
+# Compile of fpmul_pipeline.vhd was successful.
+# Compile of fpmul_stage1_struct.vhd was successful.
+# Compile of fpmul_stage2_struct.vhd was successful.
+# Compile of fpmul_stage3_struct.vhd was successful.
+# Compile of fpmul_stage4_struct.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of fpadd_normalize_struct.vhd was successful.
+# Compile of fpadd_pipeline.vhd was successful.
+# Compile of fpadd_stage1_struct.vhd was successful.
+# Compile of fpadd_stage2_struct.vhd was successful.
+# Compile of fpadd_stage3_struct.vhd was successful.
+# Compile of fpadd_stage4_struct.vhd was successful.
+# Compile of fpadd_stage5_struct.vhd was successful.
+# Compile of fpadd_stage6_struct.vhd was successful.
+# Compile of fpalign_struct.vhd was successful.
+# Compile of fpinvert_fpinvert.vhd was successful.
+# Compile of fplzc_fplzc.vhd was successful.
+# Compile of fpselcomplement_fpselcomplement.vhd was successful.
+# Compile of fpswap_fpswap.vhd was successful.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_fir.v was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir
+# vsim -gui -t ns work.tb_fir 
+# Start time: 11:33:00 on Nov 23,2021
+# Loading work.tb_fir
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading work.fpmul(pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.fpmul_stage1(struct)
+# Loading work.unpackfp(unpackfp)
+# Loading work.fpmul_stage2(struct)
+# Loading work.fpmul_stage3(struct)
+# Loading work.fpnormalize(fpnormalize)
+# Loading work.fpround(fpround)
+# Loading work.fpmul_stage4(struct)
+# Loading work.packfp(packfp)
+# Loading work.data_sink(beh)
+add wave -position insertpoint  \
+sim:/tb_fir/CLK_i \
+sim:/tb_fir/RST_n_i \
+sim:/tb_fir/VIN_i \
+sim:/tb_fir/VOUT_i \
+sim:/tb_fir/END_SIM_i \
+sim:/tb_fir/DIN_i \
+sim:/tb_fir/DOUT_i
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
+#           Attempting to use alternate WLF file "./wlft0gnx5q".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0gnx5q
+run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 4  Instance: /tb_mul/mul/I3/I11
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 4  Instance: /tb_mul/mul/I3/I11
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+quit -sim
+# End time: 11:48:11 on Nov 23,2021, Elapsed time: 0:15:11
+# Errors: 0, Warnings: 21
+# Compile of fd.vhd was successful.
+# Compile of fpmul_pipeline.vhd was successful.
+# Compile of fpmul_stage1_struct.vhd was successful.
+# Compile of fpmul_stage2_struct.vhd was successful.
+# Compile of fpmul_stage3_struct.vhd was successful.
+# Compile of fpmul_stage4_struct.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of fpadd_normalize_struct.vhd was successful.
+# Compile of fpadd_pipeline.vhd was successful.
+# Compile of fpadd_stage1_struct.vhd was successful.
+# Compile of fpadd_stage2_struct.vhd was successful.
+# Compile of fpadd_stage3_struct.vhd was successful.
+# Compile of fpadd_stage4_struct.vhd was successful.
+# Compile of fpadd_stage5_struct.vhd was successful.
+# Compile of fpadd_stage6_struct.vhd was successful.
+# Compile of fpalign_struct.vhd was successful.
+# Compile of fpinvert_fpinvert.vhd was successful.
+# Compile of fplzc_fplzc.vhd was successful.
+# Compile of fpselcomplement_fpselcomplement.vhd was successful.
+# Compile of fpswap_fpswap.vhd was successful.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_fir.v was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir
+# vsim -gui -t ns work.tb_fir 
+# Start time: 11:48:38 on Nov 23,2021
+# Loading work.tb_fir
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading work.fpmul(pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.fpmul_stage1(struct)
+# Loading work.unpackfp(unpackfp)
+# Loading work.fpmul_stage2(struct)
+# Loading work.fpmul_stage3(struct)
+# Loading work.fpnormalize(fpnormalize)
+# Loading work.fpround(fpround)
+# Loading work.fpmul_stage4(struct)
+# Loading work.packfp(packfp)
+# Loading work.data_sink(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /tb_fir/UUT/I2/EXP_neg_stage2 has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint  \
+sim:/tb_fir/CLK_i \
+sim:/tb_fir/RST_n_i \
+sim:/tb_fir/VIN_i \
+sim:/tb_fir/VOUT_i \
+sim:/tb_fir/END_SIM_i \
+sim:/tb_fir/DIN_i \
+sim:/tb_fir/DOUT_i
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
+#           Attempting to use alternate WLF file "./wlftzebdrt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzebdrt
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+quit -sim
+# End time: 11:52:02 on Nov 23,2021, Elapsed time: 0:03:24
+# Errors: 0, Warnings: 22
+# Compile of fd.vhd was successful.
+# Compile of fpmul_pipeline.vhd was successful.
+# Compile of fpmul_stage1_struct.vhd was successful.
+# Compile of fpmul_stage2_struct.vhd was successful.
+# Compile of fpmul_stage3_struct.vhd was successful.
+# Compile of fpmul_stage4_struct.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of fpadd_normalize_struct.vhd was successful.
+# Compile of fpadd_pipeline.vhd was successful.
+# Compile of fpadd_stage1_struct.vhd was successful.
+# Compile of fpadd_stage2_struct.vhd was successful.
+# Compile of fpadd_stage3_struct.vhd was successful.
+# Compile of fpadd_stage4_struct.vhd was successful.
+# Compile of fpadd_stage5_struct.vhd was successful.
+# Compile of fpadd_stage6_struct.vhd was successful.
+# Compile of fpalign_struct.vhd was successful.
+# Compile of fpinvert_fpinvert.vhd was successful.
+# Compile of fplzc_fplzc.vhd was successful.
+# Compile of fpselcomplement_fpselcomplement.vhd was successful.
+# Compile of fpswap_fpswap.vhd was successful.
+# Compile of fpnormalize_fpnormalize.vhd was successful.
+# Compile of fpround_fpround.vhd was successful.
+# Compile of packfp_packfp.vhd was successful.
+# Compile of unpackfp_unpackfp.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_fir.v was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui -t ns work.tb_fir
+# vsim -gui -t ns work.tb_fir 
+# Start time: 11:52:21 on Nov 23,2021
+# Loading work.tb_fir
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_maker(beh)
+# Loading work.fpmul(pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.reg(arch)
+# Loading work.fd(synch)
+# Loading work.fpmul_stage1(struct)
+# Loading work.unpackfp(unpackfp)
+# Loading work.fpmul_stage2(struct)
+# Loading work.fpmul_stage3(struct)
+# Loading work.fpnormalize(fpnormalize)
+# Loading work.fpround(fpround)
+# Loading work.fpmul_stage4(struct)
+# Loading work.packfp(packfp)
+# Loading work.data_sink(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /tb_fir/UUT/I2/EXP_neg_stage2 has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint  \
+sim:/tb_fir/CLK_i \
+sim:/tb_fir/RST_n_i \
+sim:/tb_fir/VIN_i \
+sim:/tb_fir/VOUT_i \
+sim:/tb_fir/END_SIM_i \
+sim:/tb_fir/DIN_i \
+sim:/tb_fir/DOUT_i
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
+#           Attempting to use alternate WLF file "./wlftgndz0k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgndz0k
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 3  Instance: /tb_fir/UUT/I2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11

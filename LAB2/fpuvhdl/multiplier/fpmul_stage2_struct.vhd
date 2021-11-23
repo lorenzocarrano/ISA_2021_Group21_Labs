@@ -21,6 +21,7 @@ ENTITY FPmul_stage2 IS
       B_SIG           : IN     std_logic_vector (31 DOWNTO 0);
       SIGN_out_stage1 : IN     std_logic;
       clk             : IN     std_logic;
+      RST_n           : IN     std_logic;
       isINF_stage1    : IN     std_logic;
       isNaN_stage1    : IN     std_logic;
       isZ_tab_stage1  : IN     std_logic;
@@ -61,22 +62,51 @@ ARCHITECTURE struct OF FPmul_stage2 IS
    -- Architecture declarations
 
    -- Internal signal declarations
-   SIGNAL EXP_in_int  : std_logic_vector(7 DOWNTO 0);
-   SIGNAL EXP_neg_int : std_logic;
-   SIGNAL EXP_pos_int : std_logic;
-   SIGNAL SIG_in_int  : std_logic_vector(27 DOWNTO 0);
+   SIGNAL EXP_in_int, EXP_in_reg  : std_logic_vector(7 DOWNTO 0);
+   SIGNAL EXP_neg_int, EXP_neg_stage2_reg : std_logic;
+   SIGNAL EXP_pos_int, EXP_pos_stage2_reg : std_logic;
+   SIGNAL SIG_in_int, SIG_in_reg : std_logic_vector(27 DOWNTO 0);
+   SIGNAL SIGN_out_stage2_reg, isINF_stage2_reg, isNaN_stage2_reg, isZ_tab_stage2_reg : std_logic;
    SIGNAL dout        : std_logic;
    SIGNAL dout1       : std_logic_vector(7 DOWNTO 0);
    SIGNAL prod        : std_logic_vector(63 DOWNTO 0);
 
+   component REG is
 
+      Generic (NBIT: integer:= 32);
+   
+      Port (	D:	In	std_logic_vector(NBIT-1 downto 0);
+            CK:	In	std_logic;
+            RESET:	In	std_logic;
+            ENABLE: In 	std_logic;
+            Q:	Out	std_logic_vector(NBIT-1 downto 0));
+   
+   end component;
+
+   component FD is
+      Port (	
+            D:	In	std_logic;
+            CK:	In	std_logic;
+            RESET:	In	std_logic;
+            ENABLE: In std_logic;	
+            Q:	Out	std_logic);
+   end component;
 
 BEGIN
    -- Architecture concurrent statements
    -- HDL Embedded Text Block 1 sig
    -- eb1 1
    SIG_in_int <= prod(47 DOWNTO 20);
+   
+   reg1 : REG generic map (NBIT => 28) port map (SIG_in_reg, clk, RST_n, '1', SIG_in);
+   reg2 : REG generic map (NBIT => 8) port map (EXP_in_reg, clk, RST_n, '1', EXP_in);
 
+   fd1  : FD port map(EXP_neg_stage2_reg, clk, RST_n, '1', EXP_neg_int);
+   fd2  : FD port map(EXP_pos_stage2_reg, clk, RST_n, '1', EXP_pos_stage2);
+   fd3  : FD port map(SIGN_out_stage2_reg, clk, RST_n, '1', SIGN_out_stage2);
+   fd4  : FD port map(isINF_stage2_reg, clk, RST_n, '1', isINF_stage2);
+   fd5  : FD port map(isNaN_stage2_reg, clk, RST_n, '1', isNaN_stage2);
+   fd6  : FD port map(isZ_tab_stage2_reg, clk, RST_n, '1', isZ_tab_stage2);
    -- HDL Embedded Text Block 2 inv
    -- eb5 5
    EXP_in_int <= (NOT dout1(7)) & dout1(6 DOWNTO 0);
@@ -87,10 +117,10 @@ BEGIN
    PROCESS(clk)
    BEGIN
       IF RISING_EDGE(clk) THEN
-         EXP_in <= EXP_in_int;
-         SIG_in <= SIG_in_int;
-         EXP_pos_stage2 <= EXP_pos_int;
-         EXP_neg_stage2 <= EXP_neg_int;
+         EXP_in_reg <= EXP_in_int;
+         SIG_in_reg <= SIG_in_int;
+         EXP_pos_stage2_reg <= EXP_pos_int;
+         EXP_neg_stage2_reg <= EXP_neg_int;
       END IF;
    END PROCESS;
 
@@ -99,10 +129,10 @@ BEGIN
    PROCESS(clk)
    BEGIN
       IF RISING_EDGE(clk) THEN
-         isINF_stage2 <= isINF_stage1;
-         isNaN_stage2 <= isNaN_stage1;
-         isZ_tab_stage2 <= isZ_tab_stage1;
-         SIGN_out_stage2 <= SIGN_out_stage1;
+         isINF_stage2_reg <= isINF_stage1;
+         isNaN_stage2_reg <= isNaN_stage1;
+         isZ_tab_stage2_reg <= isZ_tab_stage1;
+         SIGN_out_stage2_reg <= SIGN_out_stage1;
       END IF;
    END PROCESS;
 

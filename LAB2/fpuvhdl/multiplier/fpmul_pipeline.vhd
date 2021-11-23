@@ -100,6 +100,7 @@ ARCHITECTURE pipeline OF FPmul IS
       B_SIG           : IN     std_logic_vector (31 DOWNTO 0);
       SIGN_out_stage1 : IN     std_logic ;
       CLK             : IN     std_logic ;
+      RST_n           : IN     std_logic ;
       isINF_stage1    : IN     std_logic ;
       isNaN_stage1    : IN     std_logic ;
       isZ_tab_stage1  : IN     std_logic ;
@@ -178,7 +179,7 @@ ARCHITECTURE pipeline OF FPmul IS
    FOR ALL : FPmul_stage4 USE ENTITY work.FPmul_stage4;
    -- pragma synthesis_on
    signal FP_A_sig, FP_B_sig: std_logic_vector(31 downto 0);
-   signal VOUT_sig: std_logic_vector(5 downto 0);
+   signal VOUT_sig: std_logic_vector(6 downto 0);
 BEGIN
 
    -- Instance port mappings.
@@ -187,10 +188,10 @@ BEGIN
    reg2 : REG port map (FP_B, CLK, RST_n, '1', FP_B_sig);
 
    VOUT_sig(0) <= VIN;
-   FF_GEN : FOR i in 0 to 4 GENERATE
+   FF_GEN : FOR i in 0 to 5 GENERATE
       FF:  FD port map (VOUT_sig(i), CLK, RST_n, '1', VOUT_sig(i+1));
    END GENERATE;
-   VOUT <= VOUT_sig(5);
+   VOUT <= VOUT_sig(6);
 
    I1 : FPmul_stage1
       PORT MAP (
@@ -214,6 +215,7 @@ BEGIN
          B_SIG           => B_SIG,
          SIGN_out_stage1 => SIGN_out_stage1,
          clk             => CLK,
+         RST_n           => RST_n,
          isINF_stage1    => isINF_stage1,
          isNaN_stage1    => isNaN_stage1,
          isZ_tab_stage1  => isZ_tab_stage1,

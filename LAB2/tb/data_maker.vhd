@@ -26,7 +26,7 @@ architecture beh of data_maker is
 begin  -- beh
 
   process (CLK, RST_n)
-    file fp : text open read_mode is "C:\Users\nicola\OneDrive\Desktop\ISA\ISAL2\tb\fp_samples.hex";
+    file fp : text open read_mode is "../tb/fp_samples.hex";
     variable ptr : line;
     variable val : std_logic_vector(31 downto 0);
   begin  -- process
