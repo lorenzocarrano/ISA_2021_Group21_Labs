@@ -1,0 +1,295 @@
+C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpalign_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpalign_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPalign
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling architecture struct of FPalign
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul_stage4
+-- Compiling architecture struct of FPmul_stage4
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity FPnormalize
+-- Loading entity PackFP
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/fpnormalize_fpnormalize.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/fpnormalize_fpnormalize.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity FPnormalize
+-- Compiling architecture FPnormalize of FPnormalize
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage1_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage1_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_stage1
+-- Compiling architecture struct of FPadd_stage1
+-- Loading entity UnpackFP
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FD
+-- Compiling architecture SYNCH of FD
+-- Compiling architecture ASYNCH of FD
+-- Loading entity FD
+-- Compiling configuration CFG_FD_SYNCH
+-- Loading entity FD
+-- Loading architecture SYNCH of FD
+-- Compiling configuration CFG_FD_ASYNCH
+-- Loading entity FD
+-- Loading architecture ASYNCH of FD
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage3_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage3_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_stage3
+-- Compiling architecture struct of FPadd_stage3
+-- Loading entity FPinvert
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/tb/clk_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/tb/clk_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity clk_gen
+-- Compiling architecture beh of clk_gen
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpselcomplement_fpselcomplement.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpselcomplement_fpselcomplement.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity FPselComplement
+-- Compiling architecture FPselComplement of FPselComplement
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage5_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage5_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_stage5
+-- Compiling architecture struct of FPadd_stage5
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity FPnormalize
+-- Loading entity FPround
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul_stage1
+-- Compiling architecture struct of FPmul_stage1
+-- Loading entity UnpackFP
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/tb/data_sink.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/tb/data_sink.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity data_sink
+-- Compiling architecture beh of data_sink
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_pipeline.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_pipeline.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd
+-- Compiling architecture pipeline of FPadd
+-- Loading entity FPadd_stage1
+-- Loading entity FPadd_stage2
+-- Loading entity FPadd_stage3
+-- Loading entity FPadd_stage4
+-- Loading entity FPadd_stage5
+-- Loading entity FPadd_stage6
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul_stage3
+-- Compiling architecture struct of FPmul_stage3
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity FPnormalize
+-- Loading entity FPround
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fplzc_fplzc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fplzc_fplzc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPlzc
+-- Compiling architecture FPlzc of FPlzc
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/tb/data_maker.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/tb/data_maker.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity data_maker
+-- Compiling architecture beh of data_maker
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul
+-- Compiling architecture pipeline of FPmul
+-- Loading entity FPmul_stage1
+-- Loading entity FPmul_stage2
+-- Loading entity FPmul_stage3
+-- Loading entity FPmul_stage4
+** Error: C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd(174): Signal [mode IN port] "FP_A" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_arith.SIGNED.
+** Error: C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd(174): Signal "FP_A_sig" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_arith.SIGNED.
+** Error: C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd(175): Signal [mode IN port] "FP_B" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_arith.SIGNED.
+** Error: C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd(175): Signal "FP_B_sig" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_arith.SIGNED.
+** Note: C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_pipeline.vhd(245): VHDL Compiler exiting
+
+} {13.0 17.0} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/unpackfp_unpackfp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/unpackfp_unpackfp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity UnpackFP
+-- Compiling architecture UnpackFP of UnpackFP
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage2_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage2_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_stage2
+-- Compiling architecture struct of FPadd_stage2
+-- Loading entity FPalign
+-- Loading entity FPswap
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/tb/tb_mul.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/tb/tb_mul.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity tb_mul
+-- Compiling architecture ARCH of tb_mul
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpswap_fpswap.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpswap_fpswap.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPswap
+-- Compiling architecture FPswap of FPswap
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/packfp_packfp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/packfp_packfp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity PackFP
+-- Compiling architecture PackFP of PackFP
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage4_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage4_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_stage4
+-- Compiling architecture struct of FPadd_stage4
+-- Loading entity FPadd_normalize
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity FPselComplement
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_normalize_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_normalize_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_normalize
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling architecture struct of FPadd_normalize
+-- Loading entity FPlzc
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpinvert_fpinvert.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpinvert_fpinvert.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPinvert
+-- Compiling architecture FPinvert of FPinvert
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/fpround_fpround.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/common/fpround_fpround.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity FPround
+-- Compiling architecture FPround of FPround
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage2_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/multiplier/fpmul_stage2_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul_stage2
+-- Compiling architecture struct of FPmul_stage2
+
+} {} {}} C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage6_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/S290315/Desktop/LAB/ISAL2/fpuvhdl/adder/fpadd_stage6_struct.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_stage6
+-- Compiling architecture struct of FPadd_stage6
+-- Loading entity PackFP
+
+} {} {}}

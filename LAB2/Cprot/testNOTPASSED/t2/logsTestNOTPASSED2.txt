@@ -1,0 +1,260 @@
+generating std_logic_vector samples and expected output result
+read value: 0.235000
+input vector generation
+int: 0  dec: 0.235000
+integer bin encoding: 00000000000000000000000
+degP: 0.235000
+i: 0, DegP: 0.235000
+i: 1, DegP: 0.470000
+i: 2, DegP: 0.940000
+i: 3, DegP: 0.880000
+i: 4, DegP: 0.760000
+i: 5, DegP: 0.520000
+i: 6, DegP: 0.040000
+i: 7, DegP: 0.080000
+decimal bin encoding: 00111100
+intermediate string: 00000000000000000000000.00111100
+integ part: 0
+strictlynec: 1
+first i: 1
+string: 00.00111100
+cnt: 1  first1index:1
+
+x: -1
+Exponent Encoding: 01111110
+intermed STRING: 00000000000000000000000.00111100
+cnt interm value: 8
+cnt final value: 23
+MANTIX: 00111100000000000000000
+Final Encoding: 00111111000111100000000000000000
+converted
+wrote into file.
+corresponding expected output generation
+int: 0  dec: 0.055225
+integer bin encoding: 00000000000000000000000
+degP: 0.055225
+i: 0, DegP: 0.055225
+i: 1, DegP: 0.110450
+i: 2, DegP: 0.220900
+i: 3, DegP: 0.441800
+i: 4, DegP: 0.883600
+i: 5, DegP: 0.767200
+i: 6, DegP: 0.534400
+i: 7, DegP: 0.068800
+decimal bin encoding: 00001110
+intermediate string: 00000000000000000000000.00001110
+integ part: 0
+strictlynec: 1
+first i: 1
+string: 00.00001110
+cnt: 1  first1index:1
+
+x: -1
+Exponent Encoding: 01111110
+intermed STRING: 00000000000000000000000.00001110
+cnt interm value: 8
+cnt final value: 23
+MANTIX: 00001110000000000000000
+Final Encoding: 00111111000001110000000000000000
+converted
+wrote into file.
+read value: 11.220000
+input vector generation
+int: 11 dec: 0.220000
+integer bin encoding: 00000000000000000001011
+degP: 0.220000
+i: 0, DegP: 0.220000
+i: 1, DegP: 0.440001
+i: 2, DegP: 0.880001
+i: 3, DegP: 0.760002
+i: 4, DegP: 0.520004
+i: 5, DegP: 0.040009
+i: 6, DegP: 0.080017
+i: 7, DegP: 0.160034
+decimal bin encoding: 00111000
+intermediate string: 00000000000000000001011.00111000
+integ part: 11
+new cmp val: 2
+new cmp val: 4
+new cmp val: 8
+new cmp val: 16
+strictlynec: 5
+first i: 1
+string: 001011.00111000
+cnt: 5  first1index:1
+
+x: 3
+Exponent Encoding: 10000010
+intermed STRING: 00000000000000000001011.00111000
+cnt interm value: 11
+cnt final value: 23
+MANTIX: 01100111000000000000000
+Final Encoding: 01000001001100111000000000000000
+converted
+wrote into file.
+corresponding expected output generation
+int: 125        dec: 0.888405
+integer bin encoding: 00000000000000001111101
+degP: 0.888405
+i: 0, DegP: 0.888405
+i: 1, DegP: 0.776810
+i: 2, DegP: 0.553619
+i: 3, DegP: 0.107239
+i: 4, DegP: 0.214478
+i: 5, DegP: 0.428955
+i: 6, DegP: 0.857910
+i: 7, DegP: 0.715820
+decimal bin encoding: 11100011
+intermediate string: 00000000000000001111101.11100011
+integ part: 125
+new cmp val: 2
+new cmp val: 4
+new cmp val: 8
+new cmp val: 16
+new cmp val: 32
+new cmp val: 64
+new cmp val: 128
+strictlynec: 8
+first i: 1
+string: 001111101.11100011
+cnt: 8  first1index:1
+
+x: 6
+Exponent Encoding: 10000101
+intermed STRING: 00000000000000001111101.11100011
+cnt interm value: 14
+cnt final value: 23
+MANTIX: 11110111100011000000000
+Final Encoding: 01000010111110111100011000000000
+converted
+wrote into file.
+read value: 10.000000
+input vector generation
+int: 10 dec: 0.000000
+integer bin encoding: 00000000000000000001010
+degP: 0.000000
+i: 0, DegP: 0.000000
+i: 1, DegP: 0.000000
+i: 2, DegP: 0.000000
+i: 3, DegP: 0.000000
+i: 4, DegP: 0.000000
+i: 5, DegP: 0.000000
+i: 6, DegP: 0.000000
+i: 7, DegP: 0.000000
+decimal bin encoding: 00000000
+intermediate string: 00000000000000000001010.00000000
+integ part: 10
+new cmp val: 2
+new cmp val: 4
+new cmp val: 8
+new cmp val: 16
+strictlynec: 5
+first i: 1
+string: 001010.00000000
+cnt: 5  first1index:1
+
+x: 3
+Exponent Encoding: 10000010
+intermed STRING: 00000000000000000001010.00000000
+cnt interm value: 11
+cnt final value: 23
+MANTIX: 01000000000000000000000
+Final Encoding: 01000001001000000000000000000000
+converted
+wrote into file.
+corresponding expected output generation
+int: 100        dec: 0.000000
+integer bin encoding: 00000000000000001100100
+degP: 0.000000
+i: 0, DegP: 0.000000
+i: 1, DegP: 0.000000
+i: 2, DegP: 0.000000
+i: 3, DegP: 0.000000
+i: 4, DegP: 0.000000
+i: 5, DegP: 0.000000
+i: 6, DegP: 0.000000
+i: 7, DegP: 0.000000
+decimal bin encoding: 00000000
+intermediate string: 00000000000000001100100.00000000
+integ part: 100
+new cmp val: 2
+new cmp val: 4
+new cmp val: 8
+new cmp val: 16
+new cmp val: 32
+new cmp val: 64
+new cmp val: 128
+strictlynec: 8
+first i: 1
+string: 001100100.00000000
+cnt: 8  first1index:1
+
+x: 6
+Exponent Encoding: 10000101
+intermed STRING: 00000000000000001100100.00000000
+cnt interm value: 14
+cnt final value: 23
+MANTIX: 10010000000000000000000
+Final Encoding: 01000010110010000000000000000000
+converted
+wrote into file.
+read value: 0.989000
+input vector generation
+int: 0  dec: 0.989000
+integer bin encoding: 00000000000000000000000
+degP: 0.989000
+i: 0, DegP: 0.989000
+i: 1, DegP: 0.978000
+i: 2, DegP: 0.956000
+i: 3, DegP: 0.912000
+i: 4, DegP: 0.824000
+i: 5, DegP: 0.648001
+i: 6, DegP: 0.296001
+i: 7, DegP: 0.592003
+decimal bin encoding: 11111101
+intermediate string: 00000000000000000000000.11111101
+integ part: 0
+strictlynec: 1
+first i: 1
+string: 00.11111101
+cnt: 1  first1index:1
+
+x: -1
+Exponent Encoding: 01111110
+intermed STRING: 00000000000000000000000.11111101
+cnt interm value: 8
+cnt final value: 23
+MANTIX: 11111101000000000000000
+Final Encoding: 00111111011111101000000000000000
+converted
+wrote into file.
+corresponding expected output generation
+int: 0  dec: 0.978121
+integer bin encoding: 00000000000000000000000
+degP: 0.978121
+i: 0, DegP: 0.978121
+i: 1, DegP: 0.956242
+i: 2, DegP: 0.912484
+i: 3, DegP: 0.824968
+i: 4, DegP: 0.649937
+i: 5, DegP: 0.299873
+i: 6, DegP: 0.599747
+i: 7, DegP: 0.199493
+decimal bin encoding: 11111010
+intermediate string: 00000000000000000000000.11111010
+integ part: 0
+strictlynec: 1
+first i: 1
+string: 00.11111010
+cnt: 1  first1index:1
+
+x: -1
+Exponent Encoding: 01111110
+intermed STRING: 00000000000000000000000.11111010
+cnt interm value: 8
+cnt final value: 23
+MANTIX: 11111010000000000000000
+Final Encoding: 00111111011111010000000000000000
+converted
+wrote into file.
+done.

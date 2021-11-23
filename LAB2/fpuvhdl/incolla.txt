@@ -1,0 +1,6 @@
+fpmul_pipeline.vhd
+fpmul_single_cycle.vhd
+fpmul_stage1_struct.vhd
+fpmul_stage2_struct.vhd
+fpmul_stage3_struct.vhd
+fpmul_stage4_struct.vhd

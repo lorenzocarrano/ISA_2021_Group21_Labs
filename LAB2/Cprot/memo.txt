@@ -1,0 +1,37 @@
+Testando simManager mi rendo conto che funziona correttamente tranne che con due samples:
+0.324 e 1.2938
+La motivazione per la quale il risultato fornito in questi due casi non è corretto non è da
+cercare nell'implementazione logica, ma potrebbe risiedere in alcune scelte effettuate.
+Ad esempio, nel fatto che uso come stringa di appoggio per la parte
+immaginaria una stringa di 8 caratteri (9 contando il '\0'), dunque capace di rappresentare 
+correttamente valori fino a (0.)255.
+Poiché 0.324 e 1.2938 hanno dopo il '.' valori maggiori di 255, la rappresentazione non risulta corretta.
+
+Per testare quanto detto ho inserito i due valori 0.254 e 1.238 in handwrittensamples.txt ma anche in questo
+caso non ottengo una rappresentazione corretta.
+Altro problema può dunque essere il fatto che l'esponepnte può essere sia positivo che negativo:
+potrei doverlo convertire diversamente nel caso in cui fosse negativo e questo potrebbe essere
+motivo di errore
+
+Cose da fare
+ 1.Aumentare la lunghezza della stringa di appoggio in modo da aumentare il valore massimo supportato
+   dopo la virgola.
+ 2.Eventualmente aggiungere un controllo che mi informa nel caso in cui un valore sia incompatibile
+   con la dimensione della stringa di appoggio, e in caso possa a)ignorarlo Oppure b)correggerlo
+ 3.Capire come convertire l'esponente nel caso in cui sia negativo (magari vedere nel documenti di ComputerArchitecture)
+
+
+ ___________________________________________________________________________________________________________________________________
+ Provare a cambiare approccio: 
+ in evaluatepow2exp provare a contare partendo dal punto.
+ xExp è pari al numero di bit strettamente necessari -1:
+
+ se avessi 1.011000101
+ xExp = 1 -1 = 0                                                          NO, non è questo il problema
+ se avesso 100101.101010001101
+ avrei nbit = 6
+ dunque xExp = 6-1 ----> xExp = 5
+___________________________________________________________________________________________________________________________________
+
+Punto della situazione: al momento sembra non funzionare con numeri inferiori di 3.
+Con valori di input >=3 tutto funziona correttamente
