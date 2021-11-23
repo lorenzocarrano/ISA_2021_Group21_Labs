@@ -3,17 +3,15 @@ Presto compilation completed successfully.
 Warning: Design 'FPmul' was renamed to 'FPmul_1' to avoid
 	a conflict with another design that has the same name but
 different parameters. (LINK-17)
-Warning: Overwriting design file '/home/isa21_2021_2022/labs/ISAL2/syn/FPmul_1.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa21_2021_2022/labs/ISAL2/syn/FPmul_1.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa21_2021_2022/labs/ISAL2/syn/FPmul_1.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa21_2021_2022/labs/ISAL2/syn/FPmul_1.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa21_2021_2022/labs/ISAL2/syn/FPmul_1.db'. (DDB-24)
 Elaborated 1 design.
 Current design is now 'FPmul_1'.
 Information: Building the design 'REG' instantiated from design 'FPmul_1' with
 	the parameters "NBIT=32". (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'FPnormalize' instantiated from design 'FPmul_stage3' with
+	the parameters "SIG_width=28". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FPround' instantiated from design 'FPmul_stage3' with
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
 1
