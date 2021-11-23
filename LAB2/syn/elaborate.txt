@@ -8,6 +8,12 @@ Current design is now 'FPmul_1'.
 Information: Building the design 'REG' instantiated from design 'FPmul_1' with
 	the parameters "NBIT=32". (HDL-193)
 Presto compilation completed successfully.
+Information: Building the design 'REG' instantiated from design 'FPmul_stage2' with
+	the parameters "NBIT=28". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'REG' instantiated from design 'FPmul_stage2' with
+	the parameters "NBIT=8". (HDL-193)
+Presto compilation completed successfully.
 Information: Building the design 'FPnormalize' instantiated from design 'FPmul_stage3' with
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
