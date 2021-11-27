@@ -220,6 +220,19 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity data_maker
 -- Compiling architecture beh of data_maker
 
+} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/fpuvhdl/multiplier/fpmul_pipeline.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/fpuvhdl/multiplier/fpmul_pipeline.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul
+-- Compiling architecture pipeline of FPmul
+-- Loading entity FPmul_stage1
+-- Loading entity FPmul_stage2
+-- Loading entity FPmul_stage3
+-- Loading entity FPmul_stage4
+
 } {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/fpuvhdl/adder/fpadd_stage2_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/fpuvhdl/adder/fpadd_stage2_struct.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD

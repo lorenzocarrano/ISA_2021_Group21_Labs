@@ -564,3 +564,5 @@ run
 #    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 15 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+# End time: 12:43:50 on Nov 23,2021, Elapsed time: 0:51:29
+# Errors: 0, Warnings: 22
