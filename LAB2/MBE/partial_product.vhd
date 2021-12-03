@@ -26,23 +26,28 @@ BEGIN
     Sign_bit <= Select_bits(2);
 
     Select_case <= Sign_ext XOR Select_bits(1 DOWNTO 0);        
-
-    CASE Select_case IS
-
-        WHEN "00" =>  PP_exit_mux <= "0";
-        WHEN "01" =>  PP_exit_mux <= '0' & Multiplicand;
-        WHEN "10" =>  PP_exit_mux <= '0' & Multiplicand;
-        WHEN "11" =>  PP_exit_mux <= Multiplicand & '0';
-        WHEN OTHERS => PP_exit_mux <= "X";
+    PROCESS (Select_case, Sign_ext)
     
-    END CASE;
+    BEGIN
+    
+        CASE Select_case IS
 
-    CASE Sign_ext(0) IS
+            WHEN "00" =>  PP_exit_mux <= (OTHERS => '0');
+            WHEN "01" =>  PP_exit_mux <= '0' & Multiplicand;
+            WHEN "10" =>  PP_exit_mux <= '0' & Multiplicand;
+            WHEN "11" =>  PP_exit_mux <= Multiplicand & '0';
+            WHEN OTHERS => PP_exit_mux <= (OTHERS => 'X');
+    
+        END CASE;
 
-        WHEN '1' => partial_product_i <= NOT(PP_exit_mux);
-        WHEN '0' => partial_product_i <= PP_exit_mux;
-        WHEN OTHERS => partial_product_i <= "X";
+        CASE Sign_ext(0) IS
 
-    END CASE;
+            WHEN '1' => partial_product_i <= NOT(PP_exit_mux);
+            WHEN '0' => partial_product_i <= PP_exit_mux;
+            WHEN OTHERS => partial_product_i <= (OTHERS => 'X');
+
+        END CASE;
+
+    END PROCESS;
 
 END arch;
