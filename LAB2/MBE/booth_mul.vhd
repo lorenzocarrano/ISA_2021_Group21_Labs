@@ -17,7 +17,7 @@ ARCHITECTURE arch OF booth_mul IS
     COMPONENT dadda_adder_stage1 IS
 
         PORT(
-            Partial_product_0 : IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_0 : IN std_logic_vector(27 DOWNTO 0);
             Partial_product_1 : IN std_logic_vector(28 DOWNTO 0);
             Partial_product_2 : IN std_logic_vector(28 DOWNTO 0);
             Partial_product_3 : IN std_logic_vector(28 DOWNTO 0);
@@ -28,8 +28,8 @@ ARCHITECTURE arch OF booth_mul IS
             Partial_product_8 : IN std_logic_vector(28 DOWNTO 0);
             Partial_product_9 : IN std_logic_vector(28 DOWNTO 0);
             Partial_product_10: IN std_logic_vector(28 DOWNTO 0);
-            Partial_product_11: IN std_logic_vector(28 DOWNTO 0);
-            Partial_product_12: IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_11: IN std_logic_vector(27 DOWNTO 0);
+            Partial_product_12: IN std_logic_vector(25 DOWNTO 0);
 
             
         );
@@ -49,8 +49,9 @@ ARCHITECTURE arch OF booth_mul IS
 
     SIGNAL Multiplier_ext: std_logic_vector(26 DOWNTO 0) := (OTHERS => '0');
     SIGNAL Sign_pp: std_logic_vector(12 DOWNTO 0);
-    SIGNAL pp_0, pp_1, pp_2, pp_3, pp_4, pp_5, pp_6, pp_7, pp_8, pp_9, pp_10, pp_11, pp_12 : std_logic_vector(28 DOWNTO 0) := (OTHERS => '0');
-
+    SIGNAL pp_1, pp_2, pp_3, pp_4, pp_5, pp_6, pp_7, pp_8, pp_9, pp_10: std_logic_vector(28 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL pp_0, pp_11: std_logic_vector(27 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL pp_12: std_logic_vector(25 DOWNTO 0) := (OTHERS => '0');
 BEGIN
 
     Multiplier_ext(24 DOWNTO 1) <= Multiplier_cut;
@@ -101,7 +102,7 @@ BEGIN
 
     pp_11(0) <= Sign_pp(10);
     pp_11(27)<= NOT(Sign_pp(11));
-    pp_11(28)<= '1';
+    --pp_11(28)<= '1';
 
     pp_12(0) <= Sign_pp(11);
 
