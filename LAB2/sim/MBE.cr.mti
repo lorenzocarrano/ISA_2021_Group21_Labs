@@ -7,34 +7,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity MBE
 -- Compiling architecture arch of MBE
 
-} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/ha.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/ha.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity HA
--- Compiling architecture BEHAVIORAL of HA
-
-} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/dadda_adder.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/dadda_adder.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Compiling entity dadda_adder
-** Error: C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/dadda_adder.vhd(23): near ")": (vcom-1576) expecting IDENTIFIER.
-
-} {8.0 9.0} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Compiling entity booth_mul
--- Compiling architecture arch of booth_mul
-** Error: C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd(35): near ")": (vcom-1576) expecting IDENTIFIER.
-
-} {9.0 10.0} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/partial_product.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/partial_product.vhd
+} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/partial_product.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/partial_product.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -42,6 +15,23 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_arith
 -- Compiling entity partial_product
 -- Compiling architecture arch of partial_product
+
+} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity booth_mul
+-- Compiling architecture arch of booth_mul
+
+} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/ha.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/ha.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity HA
+-- Compiling architecture BEHAVIORAL of HA
 
 } {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/rca.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/rca.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -53,6 +43,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity RCA
 -- Compiling architecture STRUCTURAL of RCA
 
+} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/fa.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/fa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FA
+-- Compiling architecture BEHAVIORAL of FA
+
 } {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/adder_row.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/adder_row.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -61,13 +59,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_arith
 -- Compiling entity Addend_row
 -- Compiling architecture arch of Addend_row
-
-} {} {}} C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/fa.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/MBE/fa.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity FA
--- Compiling architecture BEHAVIORAL of FA
 
 } {} {}}

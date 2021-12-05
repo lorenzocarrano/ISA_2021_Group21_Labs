@@ -1,73 +1,63 @@
-# Compile of booth_mul.vhd failed with 15 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd failed with 2 errors.
-# 3 compiles, 2 failed with 17 errors.
-# Compile of booth_mul.vhd failed with 15 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd failed with 2 errors.
-# 3 compiles, 2 failed with 17 errors.
-# Compile of booth_mul.vhd failed with 15 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd failed with 2 errors.
-# 3 compiles, 2 failed with 17 errors.
-# Compile of booth_mul.vhd failed with 15 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd was successful with warnings.
-# 3 compiles, 1 failed with 15 errors.
-# Compile of booth_mul.vhd failed with 14 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd was successful with warnings.
-# 3 compiles, 1 failed with 14 errors.
-# Compile of booth_mul.vhd failed with 14 errors.
+# Compile of booth_mul.vhd failed with 1 errors.
 # Compile of MBE.vhd was successful.
 # Compile of partial_product.vhd was successful.
-# 3 compiles, 1 failed with 14 errors.
+# Compile of adder_row.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of dadda_adder_stage1.vhd failed with 1 errors.
+# 8 compiles, 2 failed with 2 errors.
+# Compile of booth_mul.vhd failed with 1 errors.
+# Compile of MBE.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of adder_row.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of dadda_adder_stage1.vhd failed with 1 errors.
+# 8 compiles, 2 failed with 2 errors.
+# Compile of booth_mul.vhd failed with 1 errors.
+# Compile of MBE.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of adder_row.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of dadda_adder_stage1.vhd failed with 7 errors.
+# 8 compiles, 2 failed with 8 errors.
 # Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
 # Compile of partial_product.vhd was successful.
-# 3 compiles, 0 failed with no errors.
-# Compile of booth_mul.vhd failed with 1 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd was successful.
 # Compile of adder_row.vhd was successful.
-# Compile of dadda_adder.vhd failed with 1 errors.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
 # Compile of rca.vhd was successful.
-# 8 compiles, 2 failed with 2 errors.
-# Compile of booth_mul.vhd failed with 1 errors.
+# Compile of dadda_adder_stage1.vhd failed with 7 errors.
+# 8 compiles, 1 failed with 7 errors.
+# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
 # Compile of partial_product.vhd was successful.
 # Compile of adder_row.vhd was successful.
-# Compile of dadda_adder.vhd failed with 1 errors.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of rca.vhd failed with 4 errors.
-# 8 compiles, 3 failed with 6 errors.
-# Compile of booth_mul.vhd failed with 1 errors.
+# Compile of rca.vhd was successful.
+# Compile of dadda_adder_stage1.vhd failed with 5 errors.
+# 8 compiles, 1 failed with 5 errors.
+# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
 # Compile of partial_product.vhd was successful.
 # Compile of adder_row.vhd was successful.
-# Compile of dadda_adder.vhd failed with 1 errors.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
 # Compile of rca.vhd was successful.
-# 8 compiles, 2 failed with 2 errors.
-# Compile of booth_mul.vhd failed with 1 errors.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd was successful.
-# Compile of adder_row.vhd failed with 18 errors.
-# Compile of dadda_adder.vhd failed with 1 errors.
-# Compile of fa.vhd was successful.
-# Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# 8 compiles, 3 failed with 20 errors.
-# Compile of booth_mul.vhd failed with 1 errors.
+# Compile of dadda_adder_stage1.vhd failed with 2 errors.
+# 8 compiles, 1 failed with 2 errors.
+# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
 # Compile of partial_product.vhd was successful.
 # Compile of adder_row.vhd was successful.
-# Compile of dadda_adder.vhd failed with 1 errors.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
 # Compile of rca.vhd was successful.
-# 8 compiles, 2 failed with 2 errors.
+# Compile of dadda_adder_stage1.vhd was successful.
+# 8 compiles, 0 failed with no errors.
