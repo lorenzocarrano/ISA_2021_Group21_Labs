@@ -14,7 +14,7 @@ ENTITY dadda_adder_stage3 IS
             stage3_pp4  : IN std_logic_vector(5 DOWNTO 0);
             stage3_pp5  : IN std_logic_vector(28 DOWNTO 0);
             stage3_pp6  : IN std_logic_vector(27 DOWNTO 0);
-            stage3_pp7  : IN std_logic_vector(0 DOWNTO 0);
+            stage3_pp7  : IN std_logic;
             stage3_pp8  : IN std_logic_vector(28 DOWNTO 0);
             stage3_pp9  : IN std_logic_vector(4 DOWNTO 0);
             stage3_pp10 : IN std_logic_vector(7 DOWNTO 0);
@@ -25,12 +25,11 @@ ENTITY dadda_adder_stage3 IS
             stage4_pp1  : OUT std_logic_vector(45 DOWNTO 0);
             stage4_pp2  : OUT std_logic_vector(40 DOWNTO 0);
             stage4_pp3  : OUT std_logic_vector(39 DOWNTO 0);
-            stage4_pp4  : OUT std_logic_vector(0 DOWNTO 0);
-            stage4_pp5  : OUT std_logic_vector(0 DOWNTO 0);
+            stage4_pp4  : OUT std_logic;
+            stage4_pp5  : OUT std_logic;
             stage4_pp10 : OUT std_logic_vector(1 DOWNTO 0);
             stage4_pp11 : OUT std_logic_vector(3 DOWNTO 0);
             stage4_pp12 : OUT std_logic_vector(4 DOWNTO 0)
-
         );
 
 END dadda_adder_stage3;
@@ -103,7 +102,7 @@ BEGIN
 
     op6(0)                  <= stage3_pp6(0);
     op6(1)                  <= stage3_pp5(3);
-    op6(2)                  <= stage3_pp7(0);
+    op6(2)                  <= stage3_pp7;
     op6(3)                  <= stage3_pp6(3);
     op6(4)                  <= stage3_pp8(0);
     op6(26 DOWNTO 5)        <= stage3_pp8(26 DOWNTO 5);

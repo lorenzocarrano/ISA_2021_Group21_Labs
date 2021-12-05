@@ -48,6 +48,63 @@ ARCHITECTURE arch OF booth_mul IS
 
     END COMPONENT;
 
+    COMPONENT dadda_adder_stage3 IS
+
+        PORT(
+            stage3_pp0  : IN std_logic_vector(40 DOWNTO 0);
+            stage3_pp1  : IN std_logic_vector(41 DOWNTO 0);
+            stage3_pp2  : IN std_logic_vector(36 DOWNTO 0);
+            stage3_pp3  : IN std_logic_vector(35 DOWNTO 0);
+            stage3_pp4  : IN std_logic_vector(5 DOWNTO 0);
+            stage3_pp5  : IN std_logic_vector(28 DOWNTO 0);
+            stage3_pp6  : IN std_logic_vector(27 DOWNTO 0);
+            stage3_pp7  : IN std_logic_vector(0 DOWNTO 0);
+            stage3_pp8  : IN std_logic_vector(28 DOWNTO 0);
+            stage3_pp9  : IN std_logic_vector(4 DOWNTO 0);
+            stage3_pp10 : IN std_logic_vector(7 DOWNTO 0);
+            stage3_pp11 : IN std_logic_vector(9 DOWNTO 0);
+            stage3_pp12 : IN std_logic_vector(10 DOWNTO 0);
+
+            stage4_pp0  : OUT std_logic_vector(44 DOWNTO 0);
+            stage4_pp1  : OUT std_logic_vector(45 DOWNTO 0);
+            stage4_pp2  : OUT std_logic_vector(40 DOWNTO 0);
+            stage4_pp3  : OUT std_logic_vector(39 DOWNTO 0);
+            stage4_pp4  : OUT std_logic_vector(0 DOWNTO 0);
+            stage4_pp5  : OUT std_logic_vector(0 DOWNTO 0);
+            stage4_pp10 : OUT std_logic_vector(1 DOWNTO 0);
+            stage4_pp11 : OUT std_logic_vector(3 DOWNTO 0);
+            stage4_pp12 : OUT std_logic_vector(4 DOWNTO 0)
+        );
+
+    END COMPONENT;
+
+    COMPONENT dadda_adder_stage4 IS
+
+        PORT(
+            stage4_pp0  : IN std_logic_vector(44 DOWNTO 0);
+            stage4_pp1  : IN std_logic_vector(45 DOWNTO 0);
+            stage4_pp2  : IN std_logic_vector(40 DOWNTO 0);
+            stage4_pp3  : IN std_logic_vector(39 DOWNTO 0);
+            stage4_pp4  : IN std_logic_vector(0 DOWNTO 0);
+            stage4_pp5  : IN std_logic_vector(0 DOWNTO 0);
+            stage4_pp6 : IN std_logic_vector(1 DOWNTO 0);
+            stage4_pp7 : IN std_logic_vector(3 DOWNTO 0);
+            stage4_pp8 : IN std_logic_vector(4 DOWNTO 0);
+
+            stage5_pp0  : OUT std_logic_vector(46 DOWNTO 0);
+            stage5_pp1  : OUT std_logic_vector(47 DOWNTO 0);
+            stage5_pp2  : OUT std_logic_vector(3 DOWNTO 0);
+            stage5_pp3  : OUT std_logic_vector(38 DOWNTO 0);
+            stage5_pp4  : OUT std_logic;
+            stage5_pp5  : OUT std_logic;
+            stage5_pp6  : OUT std_logic;
+            stage5_pp7  : OUT std_logic_vector(4 DOWNTO 0)
+            
+        );
+
+    END COMPONENT;
+
+
     COMPONENT dadda_adder_stage5 IS
 
         PORT(

@@ -70,15 +70,15 @@ BEGIN
 
     row1 : Addend_row GENERIC MAP (N => 43) PORT MAP (op1, op2, op3, somma1, carry1);
 
-    stage4_pp0      <= somma1 & stage3_pp0(5 DOWNTO 0);
-    stage4_pp1      <= carry1 & '0' & stage3_pp1(5 DOWNTO 0);
-    stage4_pp2      <= somma2 & stage3_pp2(5 DOWNTO 0);
-    stage4_pp3      <= carry2 & '0' & stage3_pp3(3 DOWNTO 0);
-    stage4_pp4      <= stage3_pp4(0);
-    stage4_pp5      <= stage3_pp5(0);
-    stage4_pp6     <= stage3_pp10(7 DOWNTO 6);
-    stage4_pp7     <= stage3_pp11(9 DOWNTO 6);
-    stage4_pp8     <= stage3_pp12(10 DOWNTO 6);
+    --stage4_pp0      <= somma1 & stage3_pp0(5 DOWNTO 0);
+    --stage4_pp1      <= carry1 & '0' & stage3_pp1(5 DOWNTO 0);
+    --stage4_pp2      <= somma2 & stage3_pp2(5 DOWNTO 0);
+    --stage4_pp3      <= carry2 & '0' & stage3_pp3(3 DOWNTO 0);
+    --stage4_pp4      <= stage3_pp4(0);
+    --stage4_pp5      <= stage3_pp5(0);
+    --stage4_pp6     <= stage3_pp10(7 DOWNTO 6);
+    --stage4_pp7     <= stage3_pp11(9 DOWNTO 6);
+    --stage4_pp8     <= stage3_pp12(10 DOWNTO 6);
 
     stage5_pp0      <= somma1 & stage4_pp0(3 DOWNTO 0);
     stage5_pp1      <= carry1 & '0' & stage4_pp1(3 DOWNTO 0);
