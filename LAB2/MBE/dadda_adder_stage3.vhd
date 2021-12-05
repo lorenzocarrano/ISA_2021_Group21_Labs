@@ -66,17 +66,17 @@ BEGIN
     op1(36)                 <= stage3_pp8(28);
     op1(38 DOWNTO 37)       <= stage3_pp9(4 DOWNTO 3);
 
-    op2(4 DOWNTO 0)         <= stage3_pp2(9 DOWNTO 6);
-    op2(5)                  <= stage3_pp3(8);
-    op2(34 DOWNTO 6)        <= stage3_pp2(40 DOWNTO 11);
+    op2(3 DOWNTO 0)         <= stage3_pp2(9 DOWNTO 6);
+    op2(4)                  <= stage3_pp3(8);
+    op2(34 DOWNTO 5)        <= stage3_pp1(40 DOWNTO 11);
     op2(35)                 <= stage3_pp8(27);
     op2(36)                 <= stage3_pp9(2);
     op2(38 DOWNTO 37)       <= stage3_pp10(5 DOWNTO 4);
 
-    op3(1 DOWNTO 0)         <= stage3_pp3(7 DOWNTO 6);
-    op3(2)                  <= stage3_pp4(6);
-    op3(30 DOWNTO 3)        <= stage3_pp3(36 DOWNTO 9);
-    op3(31)                 <= stage3_pp4(35);
+    op3(1 DOWNTO 0)         <= stage3_pp2(7 DOWNTO 6);
+    op3(2)                  <= stage3_pp3(6);
+    op3(30 DOWNTO 3)        <= stage3_pp2(36 DOWNTO 9);
+    op3(31)                 <= stage3_pp3(35);
     op3(33 DOWNTO 32)       <= stage3_pp9(1 DOWNTO 0);
     op3(34)                 <= stage3_pp10(3);
     op3(35)                 <= stage3_pp11(5);
