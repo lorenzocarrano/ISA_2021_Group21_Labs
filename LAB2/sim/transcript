@@ -61,3 +61,23 @@
 # Compile of rca.vhd was successful.
 # Compile of dadda_adder_stage1.vhd was successful.
 # 8 compiles, 0 failed with no errors.
+# Compile of booth_mul.vhd failed with 1 errors.
+# Compile of MBE.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of adder_row.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage5.vhd failed with 1 errors.
+# 9 compiles, 2 failed with 2 errors.
+# Compile of booth_mul.vhd was successful.
+# Compile of MBE.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of adder_row.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# 9 compiles, 0 failed with no errors.

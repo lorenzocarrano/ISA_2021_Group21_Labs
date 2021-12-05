@@ -48,6 +48,24 @@ ARCHITECTURE arch OF booth_mul IS
 
     END COMPONENT;
 
+    COMPONENT dadda_adder_stage5 IS
+
+        PORT(
+            Partial_product_0 : IN std_logic_vector(46 DOWNTO 0);
+            Partial_product_1 : IN std_logic_vector(47 DOWNTO 0);
+            Partial_product_2 : IN std_logic_vector(3 DOWNTO 0);
+            Partial_product_3 : IN std_logic_vector(38 DOWNTO 0);
+            Partial_product_4 : IN std_logic;
+            Partial_product_5 : IN std_logic;
+            Partial_product_6 : IN std_logic;
+            Partial_product_7 : IN std_logic_vector(4 DOWNTO 0);
+
+            stage6_pp0  : OUT std_logic_vector(47 DOWNTO 0);
+            stage6_pp1  : OUT std_logic_vector(48 DOWNTO 0)
+        );
+
+    END COMPONENT;
+
     COMPONENT partial_product IS
 
         PORT(
