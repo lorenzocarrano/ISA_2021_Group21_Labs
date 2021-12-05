@@ -35,7 +35,7 @@ ENTITY dadda_adder_stage3 IS
 
 END dadda_adder_stage3;
 
-RCHITECTURE arch OF dadda_adder_stage1 IS
+ARCHITECTURE arch OF dadda_adder_stage3 IS
 
     COMPONENT Addend_row IS
 
