@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-ENTITY dadda_adder IS
+ENTITY dadda_adder_stage1 IS
 
         PORT(
             Partial_product_0 : IN std_logic_vector(28 DOWNTO 0);
@@ -22,4 +22,4 @@ ENTITY dadda_adder IS
             
         );
 
-END dadda_adder;
+END dadda_adder_stage1;

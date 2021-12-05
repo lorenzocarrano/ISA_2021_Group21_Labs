@@ -14,7 +14,7 @@ END booth_mul;
 
 ARCHITECTURE arch OF booth_mul IS
 
-    COMPONENT dadda_adder IS
+    COMPONENT dadda_adder_stage1 IS
 
         PORT(
             Partial_product_0 : IN std_logic_vector(28 DOWNTO 0);
