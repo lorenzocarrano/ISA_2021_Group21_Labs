@@ -62,7 +62,7 @@ Architecture arch of dadda_adder_stage1 is
         op3(23 downto 22) <= Partial_product_6(25 downto 24);
         op3(24) <= Partial_product_7(24);
         op3(26 downto 25) <= Partial_product_8(24 downto 23);
-        op3(26) <= Partial_product_9(23);
+        op3(27) <= Partial_product_9(23);
 
 
 end Architecture;
