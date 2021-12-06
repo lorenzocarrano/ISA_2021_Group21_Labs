@@ -164,7 +164,8 @@ Architecture arch of dadda_adder_stage1 is
         stage3_pp2 <= somma2 & Partial_product_2(9 DOWNTO 0);
         stage3_pp3 <= carry2 & '0' & Partial_product_3(7 DOWNTO 0);
         stage3_pp4 <= Partial_product_4(5 DOWNTO 0);
-        stage3_pp5 <= Partial_product_5(28 downto 27) & "0000" & somma3 & Partial_product_5(11 downto 0);
-        stage3_pp6 <= Partial_product_6(28 downto 24) & "00" &  carry3 & '0' & Partial_product_6(9 downto 0);
-
+        stage3_pp5 <= somma3 & Partial_product_5(5 downto 0);
+        stage3_pp6 <= carry3 & '0' & Partial_product_6(3 downto 0);
+        stage3_pp7 <= (others => '0') & Partial_product_7(0);
+        stage3_pp8 <= Partial_product_8(28 downto 27) & (others => '0') &  Partial_product_8(0);
 end Architecture;
