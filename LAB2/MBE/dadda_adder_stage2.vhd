@@ -74,7 +74,7 @@ Architecture arch of dadda_adder_stage1 is
         op3(23 downto 22) <= Partial_product_6(25 downto 24);
         op3(24)           <= Partial_product_7(24);
         op3(26 downto 25) <= Partial_product_8(24 downto 23);
-        op3(27) <= Partial_product_9(23);
+        op3(27)           <= Partial_product_9(23);
 
         row1 : Addend_row GENERIC MAP (N => 31) PORT MAP (op1, op2, op3, somma1, carry1);
 
@@ -109,37 +109,37 @@ Architecture arch of dadda_adder_stage1 is
 
         row2 : Addend_row GENERIC MAP (N => 27) PORT MAP (op4, op5, op6, somma2, carry2);
 
-        op7(1 downto 0) <= Partial_product_6(5 downto 4);
-        op7(2) <= Partial_product_7(4);
-        op7(3) <= Partial_product_6(7);
-        op7(4) <= Partial_product_5(8);
-        op7(5) <= Partial_product_7(7);
-        op7(6) <= Partial_product_9(4);
-        op7(14 downto 7) <= Partial_product_8(14 downto 7);
-        op7(15) <= Partial_product_9(13);
+        op7(1 downto 0)   <= Partial_product_6(5 downto 4);
+        op7(2)            <= Partial_product_7(4);
+        op7(3)            <= Partial_product_6(7);
+        op7(4)            <= Partial_product_5(8);
+        op7(5)            <= Partial_product_7(7);
+        op7(6)            <= Partial_product_9(4);
+        op7(14 downto 7)  <= Partial_product_8(14 downto 7);
+        op7(15)           <= Partial_product_9(13);
         op7(21 downto 16) <= Partial_product_10(17 downto 12);
-        op7(22) <= Partial_product_11(16);
+        op7(22)           <= Partial_product_11(16);
 
-        op8(1 downto 0) <= Partial_product_7(5 downto 4);
-        op8(2) <= Partial_product_8(4);
-        op8(3) <= Partial_product_7(7);
-        op8(4) <= Partial_product_6(8);
-        op8(5) <= Partial_product_8(7);
-        op8(6) <= Partial_product_10(4);
-        op8(14 downto 7) <= Partial_product_9(14 downto 7);
-        op8(15) <= Partial_product_10(13);
+        op8(1 downto 0)   <= Partial_product_7(5 downto 4);
+        op8(2)            <= Partial_product_8(4);
+        op8(3)            <= Partial_product_7(7);
+        op8(4)            <= Partial_product_6(8);
+        op8(5)            <= Partial_product_8(7);
+        op8(6)            <= Partial_product_10(4);
+        op8(14 downto 7)  <= Partial_product_9(14 downto 7);
+        op8(15)           <= Partial_product_10(13);
         op8(21 downto 16) <= Partial_product_11(17 downto 12);
-        op8(22) <= Partial_product_12(16);
+        op8(22)           <= Partial_product_12(16);
 
-        op9(0) <= Partial_product_9(0);
-        op9(1) <= Partial_product_8(3);
-        op9(2) <= Partial_product_10(0);
-        op9(3) <= Partial_product_9(3);
-        op9(4) <= Partial_product_11(0);
-        op9(5) <= Partial_product_10(3);
-        op9(6) <= Partial_product_12(0);
-        op9(7) <= Partial_product_11(3);
-        op9(19 downto 8) <= Partial_product_12(13 downto 2);
+        op9(0)            <= Partial_product_9(0);
+        op9(1)            <= Partial_product_8(3);
+        op9(2)            <= Partial_product_10(0);
+        op9(3)            <= Partial_product_9(3);
+        op9(4)            <= Partial_product_11(0);
+        op9(5)            <= Partial_product_10(3);
+        op9(6)            <= Partial_product_12(0);
+        op9(7)            <= Partial_product_11(3);
+        op9(19 downto 8)  <= Partial_product_12(13 downto 2);
 
         row3 : Addend_row GENERIC MAP (N => 23) PORT MAP (op4, op5, op6, somma2, carry2);
 
