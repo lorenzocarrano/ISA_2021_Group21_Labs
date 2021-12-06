@@ -44,11 +44,11 @@ Architecture arch of dadda_adder_stage1 is
         Generic (N: integer:= 32);
 
         Port( 
-            Addend_1       : IN     std_logic_vector (N-1 DOWNTO 0);
-            Addend_2       : IN     std_logic_vector (N-1 DOWNTO 0);
-            Addend_3       : IN     std_logic_vector (N-4 DOWNTO 0);
-            Sum            : OUT    std_logic_vector (N-1 DOWNTO 0);
-            Carry          : OUT    std_logic_vector (N-1 DOWNTO 0)  
+            Addend_1    : IN     std_logic_vector (N-1 DOWNTO 0);
+            Addend_2    : IN     std_logic_vector (N-1 DOWNTO 0);
+            Addend_3    : IN     std_logic_vector (N-4 DOWNTO 0);
+            Sum         : OUT    std_logic_vector (N-1 DOWNTO 0);
+            Carry       : OUT    std_logic_vector (N-1 DOWNTO 0)  
         );
 
     end Component;
@@ -159,13 +159,18 @@ Architecture arch of dadda_adder_stage1 is
         row3 : Addend_row GENERIC MAP (N => 23) PORT MAP (op4, op5, op6, somma2, carry2);
 
         --Outputs assignmets 
-        stage3_pp0 <= somma1 & Partial_product_0(9 downto 0);
-        stage3_pp1 <= carry1 & '0' & Partial_product_1(9 downto 0);
-        stage3_pp2 <= somma2 & Partial_product_2(9 DOWNTO 0);
-        stage3_pp3 <= carry2 & '0' & Partial_product_3(7 DOWNTO 0);
-        stage3_pp4 <= Partial_product_4(5 DOWNTO 0);
-        stage3_pp5 <= somma3 & Partial_product_5(5 downto 0);
-        stage3_pp6 <= carry3 & '0' & Partial_product_6(3 downto 0);
-        stage3_pp7 <= (others => '0') & Partial_product_7(0);
-        stage3_pp8 <= Partial_product_8(28 downto 27) & (others => '0') &  Partial_product_8(0);
+        stage3_pp0         <= somma1 & Partial_product_0(9 downto 0);
+        stage3_pp1         <= carry1 & '0' & Partial_product_1(9 downto 0);
+        stage3_pp2         <= somma2 & Partial_product_2(9 DOWNTO 0);
+        stage3_pp3         <= carry2 & '0' & Partial_product_3(7 DOWNTO 0);
+        stage3_pp4         <= Partial_product_4(5 DOWNTO 0);
+        stage3_pp5         <= somma3 & Partial_product_5(5 downto 0);
+        stage3_pp6         <= carry3 & '0' & Partial_product_6(3 downto 0);
+        stage3_pp7         <= (others => '0') & Partial_product_7(0);
+        stage3_pp8         <= Partial_product_8(28 downto 27) & (others => '0') &  Partial_product_8(0);
+        stage3_pp9         <= Partial_product_9(28 downto 24) & (others => '0');
+        stage3_pp10        <= Partial_product_10(30 downto 23 ) & (others => '0');
+        stage3_pp11        <= Partial_product_11(29 downto 20) & (others => '0');
+        stage3_pp12        <= Partial_product_12(31 downto 21) & (others => '0');
+
 end Architecture;
