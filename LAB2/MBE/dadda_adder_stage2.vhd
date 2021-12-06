@@ -45,6 +45,8 @@ Architecture arch of dadda_adder_stage1 is
 
     SIGNAL op4, op5     : std_logic_vector(26 DOWNTO 0);
     SIGNAL op6          : std_logic_vector(23 DOWNTO 0);
+    SIGNAL somma2       : std_logic_vector(26 DOWNTO 0);
+    SIGNAL carry2       : std_logic_vector(26 DOWNTO 0);
 
     
     begin
@@ -101,5 +103,6 @@ Architecture arch of dadda_adder_stage1 is
         op6(22) <= Partial_product_10(18);
         op6(23) <= Partial_product_11(17);
 
+        row2 : Addend_row GENERIC MAP (N => 27) PORT MAP (op4, op5, op6, somma2, carry2);
 
 end Architecture;
