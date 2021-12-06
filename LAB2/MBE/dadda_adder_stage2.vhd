@@ -49,8 +49,9 @@ Architecture arch of dadda_adder_stage1 is
     SIGNAL carry2       : std_logic_vector(26 DOWNTO 0);
 
     SIGNAL op7, op8     : std_logic_vector(22 DOWNTO 0);
-
-
+    SIGNAL op3          : std_logic_vector(19 DOWNTO 0);
+    SIGNAL somma3       : std_logic_vector(22 DOWNTO 0);
+    SIGNAL carry3       : std_logic_vector(22 DOWNTO 0);
     
     begin
 
@@ -129,6 +130,16 @@ Architecture arch of dadda_adder_stage1 is
         op8(15) <= Partial_product_10(13);
         op8(21 downto 16) <= Partial_product_11(17 downto 12);
         op8(22) <= Partial_product_12(16);
+
+        op9(0) <= Partial_product_9(0);
+        op9(1) <= Partial_product_8(3);
+        op9(2) <= Partial_product_10(0);
+        op9(3) <= Partial_product_9(3);
+        op9(4) <= Partial_product_11(0);
+        op9(5) <= Partial_product_10(3);
+        op9(6) <= Partial_product_12(0);
+        op9(7) <= Partial_product_11(3);
+        op9(19 downto 8) <= Partial_product_12(13 downto 2);
 
 
 end Architecture;
