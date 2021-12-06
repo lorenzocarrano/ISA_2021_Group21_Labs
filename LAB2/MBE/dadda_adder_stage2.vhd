@@ -158,5 +158,9 @@ Architecture arch of dadda_adder_stage1 is
 
         row3 : Addend_row GENERIC MAP (N => 23) PORT MAP (op4, op5, op6, somma2, carry2);
 
+        --Outputs assignmets 
+        stage3_pp0 <= somma1 & Partial_product_0(9 downto 0);
+        stage3_pp1 <= carry1 & '0' & Partial_product_1(9 downto 0);
+        stage3_pp2 <= somma2 & Partial_product_2(9 DOWNTO 0);
 
 end Architecture;
