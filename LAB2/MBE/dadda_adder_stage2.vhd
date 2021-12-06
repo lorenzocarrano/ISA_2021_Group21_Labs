@@ -17,7 +17,22 @@ Entity dadda_adder_stage2 IS
             Partial_product_9 : IN std_logic_vector(28 DOWNTO 0);
             Partial_product_10: IN std_logic_vector(28 DOWNTO 0);
             Partial_product_11: IN std_logic_vector(27 DOWNTO 0);
-            Partial_product_12: IN std_logic_vector(25 DOWNTO 0);          
+            Partial_product_12: IN std_logic_vector(25 DOWNTO 0);
+            
+            --OUTPUTS
+            stage3_pp0        : OUT std_logic_vector(40 DOWNTO 0);
+            stage3_pp1        : OUT std_logic_vector(41 DOWNTO 0);
+            stage3_pp2        : OUT std_logic_vector(36 DOWNTO 0);
+            stage3_pp3        : OUT std_logic_vector(35 DOWNTO 0);
+            stage3_pp4        : OUT std_logic_vector(5 DOWNTO 0);
+            stage3_pp5        : OUT std_logic_vector(28 DOWNTO 0);
+            stage3_pp6        : OUT std_logic_vector(27 DOWNTO 0);
+            stage3_pp7        : OUT std_logic;
+            stage3_pp8        : OUT std_logic_vector(28 DOWNTO 0);
+            stage3_pp9        : OUT std_logic_vector(4 DOWNTO 0);
+            stage3_pp10       : OUT std_logic_vector(7 DOWNTO 0);
+            stage3_pp11       : OUT std_logic_vector(9 DOWNTO 0);
+            stage3_pp12       : OUT std_logic_vector(10 DOWNTO 0);
         );
 
 end dadda_adder_stage2;
