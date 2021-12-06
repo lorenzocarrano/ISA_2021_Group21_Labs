@@ -32,12 +32,12 @@ Entity dadda_adder_stage2 IS
             stage3_pp9        : OUT std_logic_vector(4 DOWNTO 0);
             stage3_pp10       : OUT std_logic_vector(7 DOWNTO 0);
             stage3_pp11       : OUT std_logic_vector(9 DOWNTO 0);
-            stage3_pp12       : OUT std_logic_vector(10 DOWNTO 0);
+            stage3_pp12       : OUT std_logic_vector(10 DOWNTO 0)
         );
 
 end dadda_adder_stage2;
 
-Architecture arch of dadda_adder_stage1 is
+Architecture arch of dadda_adder_stage2 is
 
     Component Addend_row is
 
@@ -64,7 +64,7 @@ Architecture arch of dadda_adder_stage1 is
     SIGNAL carry2       : std_logic_vector(26 DOWNTO 0);
 
     SIGNAL op7, op8     : std_logic_vector(22 DOWNTO 0);
-    SIGNAL op3          : std_logic_vector(19 DOWNTO 0);
+    SIGNAL op9          : std_logic_vector(19 DOWNTO 0);
     SIGNAL somma3       : std_logic_vector(22 DOWNTO 0);
     SIGNAL carry3       : std_logic_vector(22 DOWNTO 0);
     
@@ -74,7 +74,7 @@ Architecture arch of dadda_adder_stage1 is
         op1(25)           <= Partial_product_1(35);
         op1(26)           <= Partial_product_5(28);
         op1(28 downto 27) <= Partial_product_6(28 downto 27);
-        op1(29 downto 30) <= Partial_product_6(28 downto 27);
+        op1(30 downto 29) <= Partial_product_6(28 downto 27);
 
         op2(24 downto 0)  <= Partial_product_1(34 downto 10);
         op2(25)           <= Partial_product_2(33);
@@ -166,7 +166,7 @@ Architecture arch of dadda_adder_stage1 is
         stage3_pp4         <= Partial_product_4(5 DOWNTO 0);
         stage3_pp5         <= somma3 & Partial_product_5(5 downto 0);
         stage3_pp6         <= carry3 & '0' & Partial_product_6(3 downto 0);
-        stage3_pp7         <= (others => '0') & Partial_product_7(0);
+        stage3_pp7         <= Partial_product_7(0);
         stage3_pp8         <= Partial_product_8(28 downto 27) & (others => '0') &  Partial_product_8(0);
         stage3_pp9         <= Partial_product_9(28 downto 24) & (others => '0');
         stage3_pp10        <= Partial_product_10(30 downto 23 ) & (others => '0');
