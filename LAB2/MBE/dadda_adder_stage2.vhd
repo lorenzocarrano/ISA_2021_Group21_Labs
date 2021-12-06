@@ -162,5 +162,7 @@ Architecture arch of dadda_adder_stage1 is
         stage3_pp0 <= somma1 & Partial_product_0(9 downto 0);
         stage3_pp1 <= carry1 & '0' & Partial_product_1(9 downto 0);
         stage3_pp2 <= somma2 & Partial_product_2(9 DOWNTO 0);
+        stage3_pp3 <= <= carry2 & '0' & Partial_product_3(7 DOWNTO 0);
+        stage3_pp4 <= <= Partial_product_4(5 DOWNTO 0);
 
 end Architecture;
