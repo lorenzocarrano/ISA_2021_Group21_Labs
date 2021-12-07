@@ -1,6 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
---- USE ieee.std_logic_arith.all;
+USE ieee.std_logic_arith.all;
 USE IEEE.numeric_std.all;
 
 ENTITY booth_mul IS
@@ -227,7 +227,7 @@ ARCHITECTURE arch OF booth_mul IS
     signal stage6_pp0_s : std_logic_vector(47 DOWNTO 0);
     signal stage6_pp1_s : std_logic_vector(48 DOWNTO 0);
 
-    signal Result_cut_s : unsigned(48 DOWNTO 0);
+    signal Result_cut_s : unsigned(49 DOWNTO 0);
 
 BEGIN
 
