@@ -11,8 +11,8 @@ ENTITY dadda_adder_stage4 IS
             stage4_pp1  : IN std_logic_vector(45 DOWNTO 0);
             stage4_pp2  : IN std_logic_vector(40 DOWNTO 0);
             stage4_pp3  : IN std_logic_vector(39 DOWNTO 0);
-            stage4_pp4  : IN std_logic_vector(0 DOWNTO 0);
-            stage4_pp5  : IN std_logic_vector(0 DOWNTO 0);
+            stage4_pp4  : IN std_logic;
+            stage4_pp5  : IN std_logic;
             stage4_pp6 : IN std_logic_vector(1 DOWNTO 0);
             stage4_pp7 : IN std_logic_vector(3 DOWNTO 0);
             stage4_pp8 : IN std_logic_vector(4 DOWNTO 0);
@@ -74,8 +74,8 @@ BEGIN
     stage5_pp1      <= carry1 & '0' & stage4_pp1(3 DOWNTO 0);
     stage5_pp2      <= stage4_pp2(3 DOWNTO 0);
     stage5_pp3      <= stage4_pp3(38 DOWNTO 0);
-    stage5_pp4      <= stage4_pp4(0);
-    stage5_pp5      <= stage4_pp5(0);
+    stage5_pp4      <= stage4_pp4;
+    stage5_pp5      <= stage4_pp5;
     stage5_pp6      <= stage4_pp7(3);
     stage5_pp7      <= stage4_pp8;
 

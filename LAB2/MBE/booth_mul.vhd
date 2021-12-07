@@ -1,6 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
+---USE ieee.std_logic_arith.all;
+use IEEE.numeric_std.all;
 
 ENTITY booth_mul IS
 
@@ -48,6 +49,41 @@ ARCHITECTURE arch OF booth_mul IS
 
     END COMPONENT;
 
+    COMPONENT dadda_adder_stage2 IS
+
+        Port(
+            Partial_product_0 : IN std_logic_vector(34 DOWNTO 0);
+            Partial_product_1 : IN std_logic_vector(35 DOWNTO 0);
+            Partial_product_2 : IN std_logic_vector(30 DOWNTO 0);
+            Partial_product_3 : IN std_logic_vector(29 DOWNTO 0);
+            Partial_product_4 : IN std_logic_vector(11 DOWNTO 0);
+            Partial_product_5 : IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_6 : IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_7 : IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_8 : IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_9 : IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_10: IN std_logic_vector(28 DOWNTO 0);
+            Partial_product_11: IN std_logic_vector(27 DOWNTO 0);
+            Partial_product_12: IN std_logic_vector(25 DOWNTO 0);
+            
+            --OUTPUTS
+            stage3_pp0        : OUT std_logic_vector(40 DOWNTO 0);
+            stage3_pp1        : OUT std_logic_vector(41 DOWNTO 0);
+            stage3_pp2        : OUT std_logic_vector(36 DOWNTO 0);
+            stage3_pp3        : OUT std_logic_vector(35 DOWNTO 0);
+            stage3_pp4        : OUT std_logic_vector(5 DOWNTO 0);
+            stage3_pp5        : OUT std_logic_vector(28 DOWNTO 0);
+            stage3_pp6        : OUT std_logic_vector(27 DOWNTO 0);
+            stage3_pp7        : OUT std_logic;
+            stage3_pp8        : OUT std_logic_vector(28 DOWNTO 0);
+            stage3_pp9        : OUT std_logic_vector(4 DOWNTO 0);
+            stage3_pp10       : OUT std_logic_vector(7 DOWNTO 0);
+            stage3_pp11       : OUT std_logic_vector(9 DOWNTO 0);
+            stage3_pp12       : OUT std_logic_vector(10 DOWNTO 0)
+        );
+
+    END COMPONENT;
+
     COMPONENT dadda_adder_stage3 IS
 
         PORT(
@@ -58,7 +94,7 @@ ARCHITECTURE arch OF booth_mul IS
             stage3_pp4  : IN std_logic_vector(5 DOWNTO 0);
             stage3_pp5  : IN std_logic_vector(28 DOWNTO 0);
             stage3_pp6  : IN std_logic_vector(27 DOWNTO 0);
-            stage3_pp7  : IN std_logic_vector(0 DOWNTO 0);
+            stage3_pp7  : IN std_logic;
             stage3_pp8  : IN std_logic_vector(28 DOWNTO 0);
             stage3_pp9  : IN std_logic_vector(4 DOWNTO 0);
             stage3_pp10 : IN std_logic_vector(7 DOWNTO 0);
@@ -69,8 +105,8 @@ ARCHITECTURE arch OF booth_mul IS
             stage4_pp1  : OUT std_logic_vector(45 DOWNTO 0);
             stage4_pp2  : OUT std_logic_vector(40 DOWNTO 0);
             stage4_pp3  : OUT std_logic_vector(39 DOWNTO 0);
-            stage4_pp4  : OUT std_logic_vector(0 DOWNTO 0);
-            stage4_pp5  : OUT std_logic_vector(0 DOWNTO 0);
+            stage4_pp4  : OUT std_logic;
+            stage4_pp5  : OUT std_logic;
             stage4_pp10 : OUT std_logic_vector(1 DOWNTO 0);
             stage4_pp11 : OUT std_logic_vector(3 DOWNTO 0);
             stage4_pp12 : OUT std_logic_vector(4 DOWNTO 0)
@@ -85,8 +121,8 @@ ARCHITECTURE arch OF booth_mul IS
             stage4_pp1  : IN std_logic_vector(45 DOWNTO 0);
             stage4_pp2  : IN std_logic_vector(40 DOWNTO 0);
             stage4_pp3  : IN std_logic_vector(39 DOWNTO 0);
-            stage4_pp4  : IN std_logic_vector(0 DOWNTO 0);
-            stage4_pp5  : IN std_logic_vector(0 DOWNTO 0);
+            stage4_pp4  : IN std_logic;
+            stage4_pp5  : IN std_logic;
             stage4_pp6 : IN std_logic_vector(1 DOWNTO 0);
             stage4_pp7 : IN std_logic_vector(3 DOWNTO 0);
             stage4_pp8 : IN std_logic_vector(4 DOWNTO 0);
@@ -191,6 +227,8 @@ ARCHITECTURE arch OF booth_mul IS
     signal stage6_pp0_s : std_logic_vector(47 DOWNTO 0);
     signal stage6_pp1_s : std_logic_vector(48 DOWNTO 0);
 
+    signal Result_cut_s : unsinged(49 DOWNTO 0);
+
 BEGIN
 
     Multiplier_ext(24 DOWNTO 1) <= Multiplier_cut;
@@ -262,19 +300,19 @@ BEGIN
 	
     STAGE1:
         dadda_adder_stage1 PORT MAP (
-            Partial_product0 => Sign_pp(0),
-            Partial_product1 => Sign_pp(1),
-            Partial_product2 => Sign_pp(2),
-            Partial_product3 => Sign_pp(3),
-            Partial_product4 => Sign_pp(4),
-            Partial_product5 => Sign_pp(5),
-            Partial_product6 => Sign_pp(6),
-            Partial_product7 => Sign_pp(7),
-            Partial_product8 => Sign_pp(8),
-            Partial_product9 => Sign_pp(9),
-            Partial_product10 => Sign_pp(10),
-            Partial_product11 => Sign_pp(11),
-            Partial_product12 => Sign_pp(12),
+            Partial_product_0 => pp_0,
+            Partial_product_1 => pp_1,
+            Partial_product_2 => pp_2,
+            Partial_product_3 => pp_3,
+            Partial_product_4 => pp_4,
+            Partial_product_5 => pp_5,
+            Partial_product_6 => pp_6,
+            Partial_product_7 => pp_7,
+            Partial_product_8 => pp_8,
+            Partial_product_9 => pp_9,
+            Partial_product_10 => pp_10,
+            Partial_product_11 => pp_11,
+            Partial_product_12 => pp_12(25 DOWNTO 0),
 
             stage2_pp0 => stage2_pp0_s,
             stage2_pp1 => stage2_pp1_s,
@@ -293,7 +331,7 @@ BEGIN
 
         
         STAGE2:
-            dadda_adder_2 PORT MAP (
+            dadda_adder_stage2 PORT MAP (
                 Partial_product_0 => stage2_pp0_s,
                 Partial_product_1 => stage2_pp1_s,
                 Partial_product_2 => stage2_pp2_s,
@@ -324,7 +362,7 @@ BEGIN
             );
 
         STAGE3:
-            dadda_adder_3 PORT MAP (
+            dadda_adder_stage3 PORT MAP (
                 stage3_pp0 => stage3_pp0_s,
                 stage3_pp1 => stage3_pp1_s,
                 stage3_pp2 => stage3_pp2_s,
@@ -352,7 +390,7 @@ BEGIN
 
 
         STAGE4:
-            dadda_adder_4 PORT MAP (
+            dadda_adder_stage4 PORT MAP (
                 stage4_pp0 => stage4_pp0_s,
                 stage4_pp1 => stage4_pp1_s,
                 stage4_pp2 => stage4_pp2_s,
@@ -375,7 +413,7 @@ BEGIN
 
     
         STAGE5:
-            dadda_adder_5 PORT MAP (
+            dadda_adder_stage5 PORT MAP (
                 Partial_product_0 => stage5_pp0_s,
                 Partial_product_1 => stage5_pp1_s,
                 Partial_product_2 => stage5_pp2_s,
@@ -389,6 +427,8 @@ BEGIN
                 stage6_pp1 => stage6_pp1_s
             );
 
-    Result_cut <= std_logic_vector(unsigned(stage6_pp0(47 DOWNTO 1)+unsigned(stage6_pp1)));
+    
+    Result_cut_s <= unsigned(stage6_pp1_s)+unsigned('0' & stage6_pp0_s);
+    Result_cut <= std_logic_vector(Result_cut_s(47 DOWNTO 0));
 
 END arch;
