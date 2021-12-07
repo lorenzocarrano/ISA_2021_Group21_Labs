@@ -74,10 +74,10 @@ Architecture arch of dadda_adder_stage2 is
         op1(25)           <= Partial_product_1(35);
         op1(26)           <= Partial_product_5(28);
         op1(28 downto 27) <= Partial_product_6(28 downto 27);
-        op1(30 downto 29) <= Partial_product_6(28 downto 27);
+        op1(30 downto 29) <= Partial_product_7(28 downto 27);
 
-        op2(5 downto 0) <= Partial_product_1(15 downto 10);
-        op2(6) <= Partial_product_2(14);
+        op2(5 downto 0)   <= Partial_product_1(15 downto 10);
+        op2(6)            <= Partial_product_2(14);
         op2(24 downto 7)  <= Partial_product_1(34 downto 17);
         op2(25)           <= Partial_product_5(27);
         op2(26)           <= Partial_product_6(26);
@@ -110,18 +110,18 @@ Architecture arch of dadda_adder_stage2 is
         op5(6)            <= Partial_product_6(8);
         op5(18 downto 7)  <= Partial_product_5(22 downto 11);
         op5(19)           <= Partial_product_6(21);
-        op5(23 downto 20)           <= Partial_product_8(21 downto 18);
-        op5(24) <= Partial_product_9(20);
-        op5(26 downto 25)           <= Partial_product_10(20 downto 19);
+        op5(23 downto 20) <= Partial_product_8(21 downto 18);
+        op5(24)           <= Partial_product_9(20);
+        op5(26 downto 25) <= Partial_product_10(20 downto 19);
 
         op6(1 downto 0)   <= Partial_product_5(7 downto 6);
-        op6(2)            <=  Partial_product_6(6);
+        op6(2)            <= Partial_product_6(6);
         op6(3)            <= Partial_product_5(9);
         op6(4)            <= Partial_product_7(6);
         op6(5)            <= Partial_product_6(9);
         op6(6)            <= Partial_product_8(6);
         op6(16 downto 7)  <= Partial_product_6(20 downto 11);
-        op6(21 downto 17)  <= Partial_product_9(19 downto 15);
+        op6(21 downto 17) <= Partial_product_9(19 downto 15);
         op6(22)           <= Partial_product_10(18);
         op6(23)           <= Partial_product_11(17);
 
