@@ -207,8 +207,187 @@ BEGIN
     Partial_product_11   :  partial_product PORT MAP (Multiplicand_cut, Multiplier_ext(24 DOWNTO 22), pp_11(26 DOWNTO 2), Sign_pp(11));
     Partial_product_12   :  partial_product PORT MAP (Multiplicand_cut, Multiplier_ext(26 DOWNTO 24), pp_12(26 DOWNTO 2), Sign_pp(12));
 
+    signal stage2_pp0_s : std_logic_vector(34 DOWNTO 0);
+    signal stage2_pp1_s : std_logic_vector(35 DOWNTO 0);
+    signal stage2_pp2_s : std_logic_vector(30 DOWNTO 0);
+    signal stage2_pp3_s : std_logic_vector(29 DOWNTO 0);
+    signal stage2_pp4_s : std_logic_vector(11 DOWNTO 0);
+    signal stage2_pp5_s : std_logic_vector(28 DOWNTO 0);
+    signal stage2_pp6_s : std_logic_vector(28 DOWNTO 0);
+    signal stage2_pp7_s : std_logic_vector(28 DOWNTO 0);
+    signal stage2_pp8_s : std_logic_vector(28 DOWNTO 0);
+    signal stage2_pp9_s : std_logic_vector(28 DOWNTO 0);
+    signal stage2_pp10_s : std_logic_vector(28 DOWNTO 0);
+    signal stage2_pp11_s : std_logic_vector(27 DOWNTO 0);
+    signal stage2_pp12_s : std_logic_vector(25 DOWNTO 0);
+    
+	
+    STAGE1:
+        dadd_adder_stage1 PORT MAP (
+            Partial_product0 => Sign_pp(0);
+            Partial_product1 => Sign_pp(1);
+            Partial_product2 => Sign_pp(2);
+            Partial_product3 => Sign_pp(3);
+            Partial_product4 => Sign_pp(4);
+            Partial_product5 => Sign_pp(5);
+            Partial_product6 => Sign_pp(6);
+            Partial_product7 => Sign_pp(7);
+            Partial_product8 => Sign_pp(8);
+            Partial_product9 => Sign_pp(9);
+            Partial_product10 => Sign_pp(10);
+            Partial_product11 => Sign_pp(11);
+            Partial_product12 => Sign_pp(12);
+
+            stage2_pp0 => stage2_pp0_s;
+            stage2_pp1 => stage2_pp1_s;
+            stage2_pp2 => stage2_pp2_s;
+            stage2_pp3 => stage2_pp3_s;
+            stage2_pp4 => stage2_pp4_s;
+            stage2_pp5 => stage2_pp5_s;
+            stage2_pp6 => stage2_pp6_s;
+            stage2_pp7 => stage2_pp7_s;
+            stage2_pp8 => stage2_pp8_s;
+            stage2_pp9 => stage2_pp9_s;
+            stage2_pp10 => stage2_pp10_s;
+            stage2_pp11 => stage2_pp11_s;
+            stage2_pp12 => stage2_pp12_s;
+        )
+
+    
+        signal stage3_pp0_s : std_logic_vector(40 DOWNTO 0);
+        signal stage3_pp1_s : std_logic_vector(41 DOWNTO 0);
+        signal stage3_pp2_s : std_logic_vector(36 DOWNTO 0);
+        signal stage3_pp3_s : std_logic_vector(35 DOWNTO 0);
+        signal stage3_pp4_s : std_logic_vector(5 DOWNTO 0);
+        signal stage3_pp5_s : std_logic_vector(28 DOWNTO 0);
+        signal stage3_pp6_s : std_logic_vector(27 DOWNTO 0);
+        signal stage3_pp7_s : std_logic;
+        signal stage3_pp8_s : std_logic_vector(28 DOWNTO 0);
+        signal stage3_pp9_s : std_logic_vector(4 DOWNTO 0);
+        signal stage3_pp10_s : std_logic_vector(7 DOWNTO 0);
+        signal stage3_pp11_s : std_logic_vector(9 DOWNTO 0);
+        signal stage3_pp12_s : std_logic_vector(10 DOWNTO 0);
+        
+        STAGE2:
+            dadd_adder_2 PORT MAP (
+                Partial_product_0 => stage2_pp0_s;
+                Partial_product_1 => stage2_pp1_s;
+                Partial_product_2 => stage2_pp2_s;
+                Partial_product_3 => stage2_pp3_s;
+                Partial_product_4 => stage2_pp4_s;
+                Partial_product_5 => stage2_pp5_s;
+                Partial_product_6 => stage2_pp6_s;
+                Partial_product_7 => stage2_pp7_s;
+                Partial_product_8 => stage2_pp8_s;
+                Partial_product_9 => stage2_pp9_s;
+                Partial_product_10 => stage2_pp10_s;
+                Partial_product_11 => stage2_pp11_s;
+                Partial_product_12 => stage2_pp12_s;
+    
+                stage3_pp0 => stage3_pp0_s;
+                stage3_pp1 => stage3_pp1_s;
+                stage3_pp2 => stage3_pp2_s;
+                stage3_pp3 => stage3_pp3_s;
+                stage3_pp4 => stage3_pp4_s;
+                stage3_pp5 => stage3_pp5_s;
+                stage3_pp6 => stage3_pp6_s;
+                stage3_pp7 => stage3_pp7_s;
+                stage3_pp8 => stage3_pp8_s;
+                stage3_pp9 => stage3_pp9_s;
+                stage3_pp10 => stage3_pp10_s;
+                stage3_pp11 => stage3_pp11_s;
+                stage3_pp12 => stage3_pp12_s;
+            )
+
+        
+        signal stage4_pp0_s : std_logic_vector(44 DOWNTO 0);
+        signal stage4_pp1_s : std_logic_vector(45 DOWNTO 0);
+        signal stage4_pp2_s : std_logic_vector(40 DOWNTO 0);
+        signal stage4_pp3_s : std_logic_vector(39 DOWNTO 0);
+        signal stage4_pp4_s : std_logic;
+        signal stage4_pp5_s : std_logic;
+        signal stage4_pp10_s : std_logic_vector(1 DOWNTO 0);
+        signal stage4_pp11_s : std_logic_vector(3 DOWNTO 0);
+        signal stage4_pp12_s : std_logic_vector(4 DOWNTO 0);
+
+        STAGE3:
+            dadd_adder_3 PORT MAP (
+                stage3_pp0 => stage3_pp0_s;
+                stage3_pp1 => stage3_pp1_s;
+                stage3_pp2 => stage3_pp2_s;
+                stage3_pp3 => stage3_pp3_s;
+                stage3_pp4 => stage3_pp4_s;
+                stage3_pp5 => stage3_pp5_s;
+                stage3_pp6 => stage3_pp6_s;
+                stage3_pp7 => stage3_pp7_s;
+                stage3_pp8 => stage3_pp8_s;
+                stage3_pp9 => stage3_pp9_s;
+                stage3_pp10 => stage3_pp10_s;
+                stage3_pp11 => stage3_pp11_s;
+                stage3_pp12 => stage3_pp12_s;
+    
+                stage4_pp0 => stage4_pp0_s;
+                stage4_pp1 => stage4_pp1_s;
+                stage4_pp2 => stage4_pp2_s;
+                stage4_pp3 => stage4_pp3_s;
+                stage4_pp4 => stage4_pp4_s;
+                stage4_pp5 => stage4_pp5_s;
+                stage4_pp10 => stage4_pp10_s;
+                stage4_pp11 => stage4_pp11_s;
+                stage4_pp12 => stage4_pp12_s;
+            )
 
 
+        signal stage5_pp0_s : std_logic_vector(46 DOWNTO 0);
+        signal stage5_pp1_s : std_logic_vector(47 DOWNTO 0);
+        signal stage5_pp2_s : std_logic_vector(3 DOWNTO 0);
+        signal stage5_pp3_s : std_logic_vector(38 DOWNTO 0);
+        signal stage5_pp4_s : std_logic;
+        signal stage5_pp5_s : std_logic;
+        signal stage5_pp6_s : std_logic;
+        signal stage5_pp7_s : std_logic_vector(4 DOWNTO 0);
+    
+        STAGE4:
+            dadd_adder_4 PORT MAP (
+                stage4_pp0 => stage4_pp0_s;
+                stage4_pp1 => stage4_pp1_s;
+                stage4_pp2 => stage4_pp2_s;
+                stage4_pp3 => stage4_pp3_s;
+                stage4_pp4 => stage4_pp4_s;
+                stage4_pp5 => stage4_pp5_s;
+                stage4_pp6 => stage4_pp10_s;
+                stage4_pp7 => stage4_pp11_s;
+                stage4_pp8 => stage4_pp12_s;
+    
+                stage5_pp0 => stage5_pp0_s;
+                stage5_pp1 => stage5_pp1_s;
+                stage5_pp2 => stage5_pp2_s;
+                stage5_pp3 => stage5_pp3_s;
+                stage5_pp4 => stage5_pp4_s;
+                stage5_pp5 => stage5_pp5_s;
+                stage5_pp6 => stage5_pp6_s;
+                stage5_pp7 => stage5_pp7_s;
+            )
 
+
+        signal stage6_pp0_s : std_logic_vector(47 DOWNTO 0);
+        signal stage6_pp1_s : std_logic_vector(48 DOWNTO 0);
+    
+        STAGE5:
+            dadd_adder_5 PORT MAP (
+                Partial_product_0 => stage5_pp0_s;
+                Partial_product_1 => stage5_pp1_s;
+                Partial_product_2 => stage5_pp2_s;
+                Partial_product_3 => stage5_pp3_s;
+                Partial_product_4 => stage5_pp4_s;
+                Partial_product_5 => stage5_pp5_s;
+                Partial_product_6 => stage5_pp6_s;
+                Partial_product_7 => stage5_pp7_s;
+    
+                stage6_pp0 => stage6_pp0_s;
+                stage6_pp1 => stage6_pp1_s;
+            )
+
+    Result_cut <= std_logic_vector(unsigned(stage6_pp0(47 DOWNTO 1)+unsigned(stage6_pp1)));
 
 END arch;
