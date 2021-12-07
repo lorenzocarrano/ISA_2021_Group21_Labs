@@ -101,23 +101,24 @@ Architecture arch of dadda_adder_stage2 is
         op4(24)           <= Partial_product_8(22);
         op4(26 downto 25) <= Partial_product_9(22 downto 21);
 
-        op5(3 downto 0)   <= Partial_product_4(11 downto 8);
-        op5(4)            <= Partial_product_5(10);
-        op5(5)            <= Partial_product_4(13);
-        op5(6)            <= Partial_product_6(10);
-        op5(20 downto 7)  <= Partial_product_4(28 downto 15);
-        op5(23 downto 21) <= Partial_product_8(23 downto 21);
-        op5(24)           <= Partial_product_9(22);
-        op5(26 downto 25) <= Partial_product_10(22 downto 21);
+        op5(3 downto 0)   <= Partial_product_4(9 downto 6);
+        op5(4)            <= Partial_product_5(8);
+        op5(5)            <= Partial_product_4(11);
+        op5(6)            <= Partial_product_6(8);
+        op5(18 downto 7)  <= Partial_product_5(22 downto 11);
+        op5(19)           <= Partial_product_6(21);
+        op5(23 downto 20)           <= Partial_product_8(21 downto 18);
+        op5(24) <= Partial_product_9(20);
+        op5(26 downto 25)           <= Partial_product_10(19 downto 18);
 
-        op6(1 downto 0)   <= Partial_product_5(7 downto 0);
+        op6(1 downto 0)   <= Partial_product_5(7 downto 6);
         op6(2)            <=  Partial_product_6(6);
         op6(3)            <= Partial_product_5(9);
         op6(4)            <= Partial_product_7(6);
         op6(5)            <= Partial_product_6(9);
         op6(6)            <= Partial_product_8(6);
         op6(16 downto 7)  <= Partial_product_6(20 downto 11);
-        op6(21 downto 8)  <= Partial_product_9(19 downto 15);
+        op6(21 downto 17)  <= Partial_product_9(19 downto 15);
         op6(22)           <= Partial_product_10(18);
         op6(23)           <= Partial_product_11(17);
 
@@ -166,10 +167,10 @@ Architecture arch of dadda_adder_stage2 is
         stage3_pp5         <= somma3 & Partial_product_5(5 downto 0);
         stage3_pp6         <= carry3 & '0' & Partial_product_6(3 downto 0);
         stage3_pp7         <= Partial_product_7(0);
-        stage3_pp8         <= Partial_product_8(28 downto 27) & (others => '0') &  Partial_product_8(0);
-        stage3_pp9         <= Partial_product_9(28 downto 24) & (others => '0');
-        stage3_pp10        <= Partial_product_10(30 downto 23 ) & (others => '0');
-        stage3_pp11        <= Partial_product_11(29 downto 20) & (others => '0');
-        stage3_pp12        <= Partial_product_12(31 downto 21) & (others => '0');
+        stage3_pp8         <= Partial_product_8(28 downto 27) & "00000000000000000000000000" &  Partial_product_8(0);
+        stage3_pp9         <= Partial_product_9(28 downto 24);
+        stage3_pp10        <= Partial_product_10(28 downto 21 );
+        stage3_pp11        <= Partial_product_11(27 downto 18);
+        stage3_pp12        <= Partial_product_12(25 downto 15);
 
 end Architecture;
