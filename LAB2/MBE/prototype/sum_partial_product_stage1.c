@@ -9,7 +9,7 @@
 #define M 50
 
 // function definition
-unsigned long long int convert(char n[32]) {
+unsigned long long int convert(char n[M]) {
     unsigned long long int dec = 0;
     int i;
     int max = strlen(n)-1;
@@ -34,7 +34,7 @@ unsigned long long int convert(char n[32]) {
 int main() {
 
     FILE *fp = NULL;
-    fp = fopen("partial_product.txt", "r");
+    fp = fopen("partial_product_stage1.txt", "r");
     if (fp == NULL) {
         printf("ERRORE apertura file\n");
         return -1;
