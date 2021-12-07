@@ -63,7 +63,7 @@ int main() {
     sum = sum + (partial[11] << 20);
     sum = sum + (partial[12] << 22);
     
-    printf("\n\nFINE: %llu\n", sum);
+    printf("FINE stage 2: %llu\n", sum);
 
     fclose(fp);
     return 0;

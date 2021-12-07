@@ -58,7 +58,7 @@ int main() {
     sum = sum + (partial[6] << 47);
     sum = sum + (partial[7] << 43);
     
-    printf("\n\nFINE: %llu\n", sum);
+    printf("FINE stage 5: %llu\n", sum);
 
     fclose(fp);
     return 0;
