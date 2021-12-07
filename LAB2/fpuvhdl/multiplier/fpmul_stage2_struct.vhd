@@ -92,6 +92,16 @@ ARCHITECTURE struct OF FPmul_stage2 IS
             Q:	Out	std_logic);
    end component;
 
+   component MBE IS
+
+      PORT( 
+         Multiplicand       : IN     std_logic_vector (31 DOWNTO 0);
+         Multiplier         : IN     std_logic_vector (31 DOWNTO 0);
+         Result             : OUT    std_logic_vector (63 DOWNTO 0)
+      );
+
+   END component;
+
 BEGIN
    -- Architecture concurrent statements
    -- HDL Embedded Text Block 1 sig
@@ -158,13 +168,13 @@ BEGIN
    END PROCESS I4combo;
 
    -- ModuleWare code(v1.1) for instance 'I2' of 'mult'
-   I2combo : PROCESS (A_SIG, B_SIG)
-   VARIABLE dtemp : unsigned(63 DOWNTO 0);
-   BEGIN
-      dtemp := (unsigned(A_SIG) * unsigned(B_SIG));
-      prod <= std_logic_vector(dtemp);
-   END PROCESS I2combo;
-
+   --I2combo : PROCESS (A_SIG, B_SIG)
+   --VARIABLE dtemp : unsigned(63 DOWNTO 0);
+   --BEGIN
+      --dtemp := (unsigned(A_SIG) * unsigned(B_SIG));
+      --prod <= std_logic_vector(dtemp);
+   --END PROCESS I2combo;
+   mul: MBE port map (A_SIG, B_SIG, prod);
    -- ModuleWare code(v1.1) for instance 'I6' of 'vdd'
    dout <= '1';
 
