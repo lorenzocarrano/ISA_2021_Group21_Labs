@@ -1,72 +1,128 @@
-# Compile of booth_mul.vhd was successful.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd was successful.
 # Compile of adder_row.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of dadda_adder_stage3.vhd failed with 7 errors.
-# Compile of dadda_adder_stage4.vhd failed with 29 errors.
-# 11 compiles, 2 failed with 36 errors.
-# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
 # Compile of partial_product.vhd was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.tb_mbe(arch) -t ns
+# vsim -gui work.tb_mbe(arch) -t ns 
+# Start time: 20:29:07 on Dec 07,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tb_mbe(arch)
+# Loading work.mbe(arch)
+# Loading ieee.numeric_std(body)
+# Loading work.booth_mul(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe/A_s \
+sim:/tb_mbe/B_s \
+sim:/tb_mbe/C_s
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
+#           Attempting to use alternate WLF file "./wlftzw6miz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzw6miz
+run
+run
+add wave -position insertpoint  \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_0 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_1 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_2 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_3 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_4 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_5 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_6 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_7 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_8 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_9 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_10 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_11 \
+sim:/tb_mbe/DUT/MUL/STAGE1/Partial_product_12
+run
 # Compile of adder_row.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of dadda_adder_stage3.vhd failed with 7 errors.
-# Compile of dadda_adder_stage4.vhd failed with 29 errors.
-# 11 compiles, 2 failed with 36 errors.
-# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
 # Compile of partial_product.vhd was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe(arch)
+# Loading work.mbe(arch)
+# Loading work.booth_mul(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+run
 # Compile of adder_row.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd failed with 1 errors.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of dadda_adder_stage3.vhd failed with 6 errors.
-# Compile of dadda_adder_stage4.vhd failed with 29 errors.
-# 11 compiles, 2 failed with 35 errors.
-# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
 # Compile of partial_product.vhd was successful.
+# 12 compiles, 1 failed with 1 error.
 # Compile of adder_row.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of dadda_adder_stage3.vhd failed with 5 errors.
-# Compile of dadda_adder_stage4.vhd failed with 29 errors.
-# 11 compiles, 2 failed with 34 errors.
-# Compile of booth_mul.vhd was successful.
 # Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
 # Compile of partial_product.vhd was successful.
-# Compile of adder_row.vhd was successful.
-# Compile of fa.vhd was successful.
-# Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of dadda_adder_stage3.vhd failed with 5 errors.
-# Compile of dadda_adder_stage4.vhd failed with 4 errors.
-# 11 compiles, 2 failed with 9 errors.
-# Compile of booth_mul.vhd was successful.
-# Compile of MBE.vhd was successful.
-# Compile of partial_product.vhd was successful.
-# Compile of adder_row.vhd was successful.
-# Compile of fa.vhd was successful.
-# Compile of ha.vhd was successful.
-# Compile of rca.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of dadda_adder_stage3.vhd failed with 5 errors.
-# Compile of dadda_adder_stage4.vhd failed with 2 errors.
-# 11 compiles, 2 failed with 7 errors.
+# 12 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe(arch)
+# Loading work.mbe(arch)
+# Loading work.booth_mul(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+run
