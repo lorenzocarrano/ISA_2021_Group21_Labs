@@ -84,15 +84,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture struct of FPadd_stage6
 -- Loading entity PackFP
 
-} {} {}} C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/MBE/booth_mul.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity booth_mul
--- Compiling architecture arch of booth_mul
-
 } {} {}} C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -123,6 +114,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity FPadd_stage1
 -- Compiling architecture struct of FPadd_stage1
 -- Loading entity UnpackFP
+
+} {} {}} C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/tb/tb_fir.v {1 {vlog -work work -stats=none C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/tb/tb_fir.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_fir
+
+Top level modules:
+	tb_fir
 
 } {} {}} C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/MBE/MBE.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/monca/Documents/Politecnico/ISA/ISA_2021_Group21_Labs/LAB2/MBE/MBE.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
