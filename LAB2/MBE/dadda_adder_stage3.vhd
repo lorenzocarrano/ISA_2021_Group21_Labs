@@ -66,8 +66,8 @@ BEGIN
     op1(36)                 <= stage3_pp8(28);
     op1(38 DOWNTO 37)       <= stage3_pp9(4 DOWNTO 3);
 
-    op2(3 DOWNTO 0)         <= stage3_pp2(9 DOWNTO 6);
-    op2(4)                  <= stage3_pp3(8);
+    op2(3 DOWNTO 0)         <= stage3_pp1(9 DOWNTO 6);
+    op2(4)                  <= stage3_pp2(8);
     op2(34 DOWNTO 5)        <= stage3_pp1(40 DOWNTO 11);
     op2(35)                 <= stage3_pp8(27);
     op2(36)                 <= stage3_pp9(2);
@@ -81,7 +81,7 @@ BEGIN
     op3(34)                 <= stage3_pp10(3);
     op3(35)                 <= stage3_pp11(5);
 
-    row1 : Addend_row GENERIC MAP (N => 19) PORT MAP (op1, op2, op3, somma1, carry1);
+    row1 : Addend_row GENERIC MAP (N => 39) PORT MAP (op1, op2, op3, somma1, carry1);
 
     op4(1 DOWNTO 0)         <= stage3_pp3(5 DOWNTO 4);
     op4(2)                  <= stage3_pp4(4);
@@ -92,7 +92,7 @@ BEGIN
     op4(34)                 <= stage3_pp11(4);
 
     op5(1 DOWNTO 0)         <= stage3_pp4(3 DOWNTO 2);
-    op5(2)                  <= stage3_pp5(3);
+    op5(2)                  <= stage3_pp5(2); -- prima era 3
     op5(3)                  <= stage3_pp4(5);
     op5(4)                  <= stage3_pp6(2);
     op5(28 DOWNTO 5)        <= stage3_pp5(28 DOWNTO 5);
@@ -105,7 +105,7 @@ BEGIN
     op6(2)                  <= stage3_pp7;
     op6(3)                  <= stage3_pp6(3);
     op6(4)                  <= stage3_pp8(0);
-    op6(26 DOWNTO 5)        <= stage3_pp8(26 DOWNTO 5);
+    op6(26 DOWNTO 5)        <= stage3_pp6(26 DOWNTO 5);
     op6(31 DOWNTO 27)       <= stage3_pp12(4 DOWNTO 0);
 
     row2 : Addend_row GENERIC MAP (N => 35) PORT MAP (op4, op5, op6, somma2, carry2);

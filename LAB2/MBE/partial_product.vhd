@@ -16,7 +16,7 @@ END partial_product;
 ARCHITECTURE arch OF partial_product IS
 
     SIGNAL Sign_ext, Select_case : std_logic_vector(1 DOWNTO 0);
-    SIGNAL PP_exit_mux: std_logic_vector(24 DOWNTO 0);
+    SIGNAL PP_exit_mux, partial_product_sig: std_logic_vector(24 DOWNTO 0);
 
 BEGIN 
 
@@ -26,7 +26,33 @@ BEGIN
     Sign_bit <= Select_bits(2);
 
     Select_case <= Sign_ext XOR Select_bits(1 DOWNTO 0);        
-    PROCESS (Select_case, Sign_ext)
+    
+    --PROCESS (Select_bits(2))
+
+    --BEGIN
+
+    --partial_product_sig <= (OTHERS => '0');
+
+   -- CASE Select_bits(2) IS
+
+        --WHEN "01" => partial_product_sig <= NOT(PP_exit_mux);
+      --  WHEN '1' => partial_product_sig <= NOT(PP_exit_mux);
+      --  WHEN '0' => partial_product_sig <= PP_exit_mux;
+        --WHEN "10" => partial_product_sig <= PP_exit_mux;
+       -- WHEN OTHERS => partial_product_sig <= (OTHERS => '0');
+
+   -- END CASE;
+
+    --END PROCESS;
+
+    WITH Select_bits(2) SELECT 
+        partial_product_sig <= NOT(PP_exit_mux) WHEN '1',
+        PP_exit_mux WHEN '0',
+        (OTHERS => 'X') WHEN OTHERS;
+    
+    
+    
+    PROCESS (Select_case)
     
     BEGIN
     
@@ -40,14 +66,8 @@ BEGIN
     
         END CASE;
 
-        CASE Sign_ext(0) IS
-
-            WHEN '1' => partial_product_i <= NOT(PP_exit_mux);
-            WHEN '0' => partial_product_i <= PP_exit_mux;
-            WHEN OTHERS => partial_product_i <= (OTHERS => 'X');
-
-        END CASE;
-
     END PROCESS;
+
+    partial_product_i <= partial_product_sig;
 
 END arch;

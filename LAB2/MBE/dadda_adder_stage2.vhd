@@ -76,7 +76,10 @@ Architecture arch of dadda_adder_stage2 is
         op1(28 downto 27) <= Partial_product_6(28 downto 27);
         op1(30 downto 29) <= Partial_product_6(28 downto 27);
 
-        op2(25 downto 0)  <= Partial_product_1(35 downto 10);
+        op2(5 downto 0) <= Partial_product_1(15 downto 10);
+        op2(6) <= Partial_product_2(14);
+        op2(24 downto 7)  <= Partial_product_1(34 downto 17);
+        op2(25)           <= Partial_product_5(27);
         op2(26)           <= Partial_product_6(26);
         op2(28 downto 27) <= Partial_product_7(26 downto 25);
         op2(30 downto 29) <= Partial_product_8(26 downto 25);
@@ -156,7 +159,7 @@ Architecture arch of dadda_adder_stage2 is
         op9(7)            <= Partial_product_11(3);
         op9(19 downto 8)  <= Partial_product_12(13 downto 2);
 
-        row3 : Addend_row GENERIC MAP (N => 23) PORT MAP (op4, op5, op6, somma2, carry2);
+        row3 : Addend_row GENERIC MAP (N => 23) PORT MAP (op7, op8, op9, somma3, carry3);
 
         --Outputs assignmets 
         stage3_pp0         <= somma1 & Partial_product_0(9 downto 0);
