@@ -45,6 +45,13 @@ BEGIN
 
     --END PROCESS;
 
+    WITH Select_case SELECT
+        PP_exit_mux <= (OTHERS => '0') WHEN "00",
+          '0' & Multiplicand WHEN "01",
+          '0' & Multiplicand WHEN "10",
+          Multiplicand & '0' WHEN "11",
+          (OTHERS => 'X') WHEN OTHERS;
+
     WITH Select_bits(2) SELECT 
         partial_product_sig <= NOT(PP_exit_mux) WHEN '1',
         PP_exit_mux WHEN '0',
@@ -52,21 +59,21 @@ BEGIN
     
     
     
-    PROCESS (Select_case)
+    --PROCESS (Select_case)
     
-    BEGIN
+    --BEGIN
     
-        CASE Select_case IS
+      --  CASE Select_case IS
 
-            WHEN "00" =>  PP_exit_mux <= (OTHERS => '0');
-            WHEN "01" =>  PP_exit_mux <= '0' & Multiplicand;
-            WHEN "10" =>  PP_exit_mux <= '0' & Multiplicand;
-            WHEN "11" =>  PP_exit_mux <= Multiplicand & '0';
-            WHEN OTHERS => PP_exit_mux <= (OTHERS => 'X');
+         --   WHEN "00" =>  PP_exit_mux <= (OTHERS => '0');
+        --    WHEN "01" =>  PP_exit_mux <= '0' & Multiplicand;
+       --     WHEN "10" =>  PP_exit_mux <= '0' & Multiplicand;
+         --   WHEN "11" =>  PP_exit_mux <= Multiplicand & '0';
+        --    WHEN OTHERS => PP_exit_mux <= (OTHERS => 'X');
     
-        END CASE;
+       -- END CASE;
 
-    END PROCESS;
+   -- END PROCESS;
 
     partial_product_i <= partial_product_sig;
 
