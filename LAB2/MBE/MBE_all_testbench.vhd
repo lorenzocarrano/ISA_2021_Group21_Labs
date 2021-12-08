@@ -430,17 +430,17 @@ STAGE1:
 
     Result_cut_s <= unsigned(stage6_pp1_s)+unsigned('0' & stage6_pp0_s);
 
-    A_s <= "00111110100111100011011101111010";
-    B_s <= "00111110100111100011011101111010";
+    A_s <= "00000000000000000000000000011111";
+    B_s <= "00000000000111110000000000000000";
 
 
     process
-        file res_fp1 : text open WRITE_MODE is "./prototype/partial_product_stage1.txt";
-        file res_fp2 : text open WRITE_MODE is "./prototype/partial_product_stage2.txt";
-        file res_fp3 : text open WRITE_MODE is "./prototype/partial_product_stage3.txt";
-        file res_fp4 : text open WRITE_MODE is "./prototype/partial_product_stage4.txt";
-        file res_fp5 : text open WRITE_MODE is "./prototype/partial_product_stage5.txt";
-        file res_fp6 : text open WRITE_MODE is "./prototype/partial_product_stage6.txt";
+        file res_fp1 : text open WRITE_MODE is "partial_product_stage1.txt";
+        file res_fp2 : text open WRITE_MODE is "partial_product_stage2.txt";
+        file res_fp3 : text open WRITE_MODE is "partial_product_stage3.txt";
+        file res_fp4 : text open WRITE_MODE is "partial_product_stage4.txt";
+        file res_fp5 : text open WRITE_MODE is "partial_product_stage5.txt";
+        file res_fp6 : text open WRITE_MODE is "partial_product_stage6.txt";
         variable line_out : line;    
     begin
         wait for 30 ns;

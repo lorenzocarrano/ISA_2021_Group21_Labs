@@ -1,5 +1,4 @@
 # Compile of adder_row.vhd was successful.
-# Compile of booth_mul.vhd was successful.
 # Compile of dadda_adder_stage1.vhd was successful.
 # Compile of dadda_adder_stage2.vhd was successful.
 # Compile of dadda_adder_stage3.vhd was successful.
@@ -7,14 +6,282 @@
 # Compile of dadda_adder_stage5.vhd was successful.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of MBE.vhd was successful.
 # Compile of MBE_all_testbench.vhd was successful.
-# Compile of MBE_testbench.vhd was successful.
 # Compile of partial_product.vhd was successful.
-# 13 compiles, 0 failed with no errors.
-vsim -gui -t ns work.tb_mbe(arch)
-# vsim -gui -t ns work.tb_mbe(arch) 
-# Start time: 21:51:55 on Dec 07,2021
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.tb_mbe_all
+# vsim -gui work.tb_mbe_all 
+# Start time: 11:27:27 on Dec 08,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tb_mbe_all(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe_all/Result_cut_s
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 6  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 6  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 7  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 7  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 8  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 8  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 9  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 9  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 10  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 10  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 12  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 12  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 14  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 14  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 15  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 15  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 17  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 17  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 18  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 18  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 19  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 19  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 20  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 20  Instance: /tb_mbe_all
+# Compile of adder_row.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of MBE_all_testbench.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f -nolist -nowave -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe_all(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe_all/Result_cut_s
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 6  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 6  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 7  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 7  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 8  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 8  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 9  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 9  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 10  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 10  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 12  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 12  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 14  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 14  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 15  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 15  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 17  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 17  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 18  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 18  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 19  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 19  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 20  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 20  Instance: /tb_mbe_all
+# Compile of adder_row.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of MBE_all_testbench.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f -nolist -nowave -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe_all(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe_all/Result_cut_s
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 5  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 6  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 6  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 7  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 7  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 8  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 8  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 9  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 9  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 10  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 10  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 12  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 12  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 14  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 14  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 15  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 15  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 17  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 17  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 18  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 18  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 19  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 19  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 20  Instance: /tb_mbe_all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 20  Instance: /tb_mbe_all
+quit -sim
+# End time: 11:32:41 on Dec 08,2021, Elapsed time: 0:05:14
+# Errors: 0, Warnings: 31
+# Compile of adder_row.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.tb_mbe(arch)
+# vsim -gui work.tb_mbe(arch) 
+# Start time: 11:33:19 on Dec 08,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -32,18 +299,13 @@ vsim -gui -t ns work.tb_mbe(arch)
 # Loading work.dadda_adder_stage3(arch)
 # Loading work.dadda_adder_stage4(arch)
 # Loading work.dadda_adder_stage5(arch)
-run
 add wave -position insertpoint  \
 sim:/tb_mbe/A_s \
 sim:/tb_mbe/B_s \
 sim:/tb_mbe/C_s
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
-#           Attempting to use alternate WLF file "./wlftg70arq".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftg70arq
+run
+run
 # Compile of adder_row.vhd was successful.
-# Compile of booth_mul.vhd was successful.
 # Compile of dadda_adder_stage1.vhd was successful.
 # Compile of dadda_adder_stage2.vhd was successful.
 # Compile of dadda_adder_stage3.vhd was successful.
@@ -51,51 +313,15 @@ sim:/tb_mbe/C_s
 # Compile of dadda_adder_stage5.vhd was successful.
 # Compile of fa.vhd was successful.
 # Compile of ha.vhd was successful.
-# Compile of MBE.vhd was successful.
-# Compile of MBE_all_testbench.vhd was successful.
-# Compile of MBE_testbench.vhd failed with 4 errors.
 # Compile of partial_product.vhd was successful.
-# 13 compiles, 1 failed with 4 errors.
-# Compile of adder_row.vhd was successful.
 # Compile of booth_mul.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage2.vhd was successful.
-# Compile of dadda_adder_stage3.vhd was successful.
-# Compile of dadda_adder_stage4.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of fa.vhd was successful.
-# Compile of ha.vhd was successful.
 # Compile of MBE.vhd was successful.
-# Compile of MBE_all_testbench.vhd was successful.
-# Compile of MBE_testbench.vhd failed with 4 errors.
-# Compile of partial_product.vhd was successful.
-# 13 compiles, 1 failed with 4 errors.
-# Compile of adder_row.vhd was successful.
-# Compile of booth_mul.vhd was successful.
-# Compile of dadda_adder_stage1.vhd was successful.
-# Compile of dadda_adder_stage2.vhd was successful.
-# Compile of dadda_adder_stage3.vhd was successful.
-# Compile of dadda_adder_stage4.vhd was successful.
-# Compile of dadda_adder_stage5.vhd was successful.
-# Compile of fa.vhd was successful.
-# Compile of ha.vhd was successful.
-# Compile of MBE.vhd was successful.
-# Compile of MBE_all_testbench.vhd was successful.
 # Compile of MBE_testbench.vhd was successful.
-# Compile of partial_product.vhd was successful.
-# 13 compiles, 0 failed with no errors.
-vsim -gui -t ns work.tb_mbe(arch)
-# End time: 21:57:41 on Dec 07,2021, Elapsed time: 0:05:46
-# Errors: 0, Warnings: 10
-# vsim -gui -t ns work.tb_mbe(arch) 
-# Start time: 21:57:41 on Dec 07,2021
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
+# 12 compiles, 0 failed with no errors.
+restart -f -nolist -nowave -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.tb_mbe(arch)
 # Loading work.mbe(arch)
-# Loading ieee.numeric_std(body)
 # Loading work.booth_mul(arch)
 # Loading work.partial_product(arch)
 # Loading work.dadda_adder_stage1(arch)
@@ -106,15 +332,106 @@ vsim -gui -t ns work.tb_mbe(arch)
 # Loading work.dadda_adder_stage3(arch)
 # Loading work.dadda_adder_stage4(arch)
 # Loading work.dadda_adder_stage5(arch)
-run
-restart -f
 add wave -position insertpoint  \
 sim:/tb_mbe/A_s \
 sim:/tb_mbe/B_s \
 sim:/tb_mbe/C_s
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: S290315  Hostname: AZIMUT222A  ProcessID: 9288
-#           Attempting to use alternate WLF file "./wlftgb1yim".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftgb1yim
 run
+# Compile of adder_row.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f -nolist -nowave -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe(arch)
+# Loading work.mbe(arch)
+# Loading work.booth_mul(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe/A_s \
+sim:/tb_mbe/B_s \
+sim:/tb_mbe/C_s
+run
+# Compile of adder_row.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f -nolist -nowave -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe(arch)
+# Loading work.mbe(arch)
+# Loading work.booth_mul(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe/A_s \
+sim:/tb_mbe/B_s \
+sim:/tb_mbe/C_s
+run
+# Compile of adder_row.vhd was successful.
+# Compile of dadda_adder_stage1.vhd was successful.
+# Compile of dadda_adder_stage2.vhd was successful.
+# Compile of dadda_adder_stage3.vhd was successful.
+# Compile of dadda_adder_stage4.vhd was successful.
+# Compile of dadda_adder_stage5.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of partial_product.vhd was successful.
+# Compile of booth_mul.vhd was successful.
+# Compile of MBE.vhd was successful.
+# Compile of MBE_testbench.vhd was successful.
+# 12 compiles, 0 failed with no errors.
+restart -f -nolist -nowave -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_mbe(arch)
+# Loading work.mbe(arch)
+# Loading work.booth_mul(arch)
+# Loading work.partial_product(arch)
+# Loading work.dadda_adder_stage1(arch)
+# Loading work.addend_row(arch)
+# Loading work.ha(behavioral)
+# Loading work.fa(behavioral)
+# Loading work.dadda_adder_stage2(arch)
+# Loading work.dadda_adder_stage3(arch)
+# Loading work.dadda_adder_stage4(arch)
+# Loading work.dadda_adder_stage5(arch)
+add wave -position insertpoint  \
+sim:/tb_mbe/A_s \
+sim:/tb_mbe/B_s \
+sim:/tb_mbe/C_s
+run
+# End time: 11:43:46 on Dec 08,2021, Elapsed time: 0:10:27
+# Errors: 0, Warnings: 1
