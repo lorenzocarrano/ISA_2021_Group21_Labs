@@ -37,8 +37,8 @@ int main(int argc, char* argv[]){
         case TEST_INIT_MODE:
             fpin = fopen("handwrittensamples.txt", "r");
             //fpin = fopen("testSamples.txt", "r");
-            fpout1 = fopen("./simulation_inputs.txt", "w");
-            fpout2 = fopen("./expected_outputs.txt", "w");
+            fpout1 = fopen("./simulation_inputs.hex", "w");
+            fpout2 = fopen("./expected_outputs.hex", "w");
             uint32_t convVal;
             if(NULL == fpin){
             printf("samples file not found\n");
