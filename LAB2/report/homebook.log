@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  12 DEC 2021 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  12 DEC 2021 00:05
 entering extended mode
 **"c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB2/report/homebook.tex"
 (c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB2/report/homebook.tex
@@ -271,20 +271,20 @@ LaTeX Warning: Unused global option(s):
 (homebook.aux)
 \openout1 = `homebook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
 \c@lstlisting=\count286
  (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -335,7 +335,7 @@ Option `squaren' provided!
 <./logopoli_new.png, id=1, 346.6551pt x 310.0383pt>
 File: ./logopoli_new.png Graphic file (type png)
 <use ./logopoli_new.png>
-Package pdftex.def Info: ./logopoli_new.png  used on input line 122.
+Package pdftex.def Info: ./logopoli_new.png  used on input line 146.
 (pdftex.def)             Requested size: 71.13188pt x 63.61502pt.
 [1
 
@@ -372,10 +372,10 @@ Chapter 3.
 
 ] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 6896 strings out of 478927
- 101069 string characters out of 2852060
- 605710 words of memory out of 3000000
- 24625 multiletter control sequences out of 15000+600000
+ 6901 strings out of 478927
+ 101145 string characters out of 2852060
+ 606290 words of memory out of 3000000
+ 24630 multiletter control sequences out of 15000+600000
  408715 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,5n,70p,360b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
