@@ -78,9 +78,9 @@
 # Compile of data_sink.vhd was successful.
 # Compile of tb_fir.v was successful.
 # 39 compiles, 0 failed with no errors.
-vsim -gui -t ps work.tb_fir
-# vsim -gui -t ps work.tb_fir 
-# Start time: 14:18:31 on Dec 08,2021
+vsim -gui work.tb_fir -t ns
+# vsim -gui work.tb_fir -t ns 
+# Start time: 11:03:21 on Dec 11,2021
 # Loading work.tb_fir
 # Loading std.standard
 # Loading std.textio(body)
@@ -118,30 +118,30 @@ vsim -gui -t ps work.tb_fir
 # This port will contribute value (U) to the signal network.
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I3/I11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /tb_fir/UUT/I2
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /tb_fir/UUT/I2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 75 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+#    Time: 0 ns  Iteration: 1  Instance: /tb_fir/UUT/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 75 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
-# End time: 14:21:56 on Dec 08,2021, Elapsed time: 0:03:25
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 4  Instance: /tb_fir/UUT/I3/I11
+# End time: 11:43:20 on Dec 11,2021, Elapsed time: 0:39:59
 # Errors: 0, Warnings: 24
