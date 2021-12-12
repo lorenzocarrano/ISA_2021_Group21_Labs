@@ -491,6 +491,13 @@ INPUT .\chapters\chap1.tex
 INPUT chapters\chap1.tex
 INPUT C:\Users\Utente\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss17.tfm
 INPUT C:\Users\Utente\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\chapters\chap1images\\lab2_SimulationFlow.jpg
+INPUT .\chapters\chap1images\\lab2_SimulationFlow.jpg
+INPUT chapters\chap1images\\lab2_SimulationFlow.jpg
+INPUT .\chapters\chap1images\\lab2_SimulationFlow.jpg
+INPUT .\chapters\chap1images\\lab2_SimulationFlow.jpg
+INPUT .\chapters\chap1images\\lab2_SimulationFlow.jpg
+INPUT .\chapters\chap1images\\lab2_SimulationFlow.jpg
 INPUT C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty

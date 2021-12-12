@@ -5,7 +5,7 @@
 % chapter 1
 \chapter{Prototype}
 \label{chap1}
-%%\graphicspath{ {./chapters/chap1images/} }
+\graphicspath{ {./chapters/chap1images/} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % you can organize a chapter using sections -> \section{Simulating an inverter}
 % or subsections -> \subsection{simulating a particular type of inverter}
@@ -28,8 +28,8 @@ The flow of the simulation is the following:
 -the bash script executes the C program passing -i as command line parameter in order to generate the input vectors for the simulation and the file storing the expected results.
 -Modelsim is launched and the effective output file is generated
 -the C program is executed passing -v as command line parameter in order to compare the simulation results with the expected ones
-
-\section{C script}
+\includegraphics[height=12cm]{{lab2_SimulationFlow.jpg}}
+\section{C script - Key Aspects}
 Since IEEE754 is the standard encoding that is normally used to store floating point data inside a flash memory, to convert a floating point value in its equivalent hexadecimal 
 encoding it's sufficient to use the   \textbf{union}  C data type.
 \textbf{union} data type allows to store multiple-encoding data variables in the same memory location, thus it is sufficient read a value from the handwrittensamples.hex file 
