@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  12 DEC 2021 01:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  12 DEC 2021 01:13
 entering extended mode
 **"c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB2/report/homebook.tex"
 (c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB2/report/homebook.tex
@@ -362,7 +362,7 @@ Chapter 1.
 <./chapters/chap1images//lab2_SimulationFlow.jpg, id=16, 282.05376pt x 522.95375pt>
 File: ./chapters/chap1images//lab2_SimulationFlow.jpg Graphic file (type jpg)
 <use ./chapters/chap1images//lab2_SimulationFlow.jpg>
-Package pdftex.def Info: ./chapters/chap1images//lab2_SimulationFlow.jpg  used on input line 31.
+Package pdftex.def Info: ./chapters/chap1images//lab2_SimulationFlow.jpg  used on input line 37.
 (pdftex.def)             Requested size: 184.15479pt x 341.43306pt.
 [1
 
@@ -372,12 +372,12 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 39.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 45.
  (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 ) (chapters/chap2.tex [2 <./chapters/chap1images//lab2_SimulationFlow.jpg>] [3]
 Chapter 2.
 ) (chapters/chap3.tex [4
@@ -388,17 +388,17 @@ Chapter 3.
 
 ] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 7292 strings out of 478927
- 105355 string characters out of 2852060
+ 7295 strings out of 478927
+ 105391 string characters out of 2852060
  667371 words of memory out of 3000000
- 25009 multiletter control sequences out of 15000+600000
- 409270 words of font info for 49 fonts, out of 8000000 for 9000
+ 25011 multiletter control sequences out of 15000+600000
+ 409605 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,11n,70p,435b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on homebook.pdf (7 pages, 372259 bytes).
+ <C:\Users\Utente\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on homebook.pdf (7 pages, 374236 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
