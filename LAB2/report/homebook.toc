@@ -7,4 +7,8 @@
 \contentsline {chapter}{\numberline {2}Testbench}{3}{}%
 \contentsline {section}{\numberline {2.1}Design modification}{3}{}%
 \contentsline {section}{\numberline {2.2}Simulation}{3}{}%
-\contentsline {chapter}{\numberline {3}All Multiplier}{4}{}%
+\contentsline {chapter}{\numberline {3}MBE Multiplier}{4}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{4}{}%
+\contentsline {section}{\numberline {3.2}Partial Products Generation}{4}{}%
+\contentsline {section}{\numberline {3.3}Sign Extension}{4}{}%
+\contentsline {section}{\numberline {3.4}Dadda-Tree}{5}{}%
