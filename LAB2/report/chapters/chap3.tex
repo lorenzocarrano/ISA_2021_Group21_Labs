@@ -48,7 +48,11 @@ where S is the sign of the operand.
 % image
 
 \section{Dadda-Tree}
-
+The final step for the computation of the result is to sum the partial products together. To compute this additions a Dadda adder was implemented. This component
+achieves the solution by adding the operands by columns instead of rows. In particular, the Dadda implementation needs the number of rows to reduce to a specific value
+each iteration; full adders and half adders are utilized to sum bits of the same column, thus reducing the number of rows. Contrary to the Wallace adder, the Dadda is
+an "as late as possible" algorithm, meaning that the full and half adders are positioned as close as possible to the end of the operation. 
+In order to visualize the positioning of the adders, schematics representing the operands were needed; the following picture is an example.
 
 
 
