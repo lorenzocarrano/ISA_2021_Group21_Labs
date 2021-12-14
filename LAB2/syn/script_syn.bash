@@ -1,7 +1,5 @@
 #!bin/bash
-rm -r work
-rm *.{log,svf}
-rm elaborate.txt
+
 #reading source files from common, adder and multpiplier directories
 read_file -format vhdl ../fpuvhdl/common/fpnormalize_fpnormalize.vhd
 read_file -format vhdl ../fpuvhdl/common/fpround_fpround.vhd
@@ -30,6 +28,18 @@ read_file -format vhdl ../fpuvhdl/multiplier/fpmul_stage3_struct.vhd
 read_file -format vhdl ../fpuvhdl/multiplier/fpmul_stage4_struct.vhd
 read_file -format vhdl ../fpuvhdl/multiplier/fd.vhd
 read_file -format vhdl ../fpuvhdl/multiplier/register.vhd
+
+read_file -format vhdl ../MBE/adder_row.vhd
+read_file -format vhdl ../MBE/booth_mul.vhd
+read_file -format vhdl ../MBE/dadda_adder_stage1.vhd
+read_file -format vhdl ../MBE/dadda_adder_stage2.vhd
+read_file -format vhdl ../MBE/dadda_adder_stage3.vhd
+read_file -format vhdl ../MBE/dadda_adder_stage4.vhd
+read_file -format vhdl ../MBE/dadda_adder_stage5.vhd
+read_file -format vhdl ../MBE/fa.vhd
+read_file -format vhdl ../MBE/ha.vhd
+read_file -format vhdl ../MBE/MBE.vhd
+read_file -format vhdl ../MBE/partial_product.vhd
 ############################################
 
 analyze -library WORK -format vhdl ../fpuvhdl/common/fpnormalize_fpnormalize.vhd
@@ -60,6 +70,18 @@ analyze -library WORK -format vhdl ../fpuvhdl/multiplier/fpmul_stage4_struct.vhd
 analyze -library WORK -format vhdl ../fpuvhdl/multiplier/fd.vhd
 analyze -library WORK -format vhdl ../fpuvhdl/multiplier/register.vhd
 
+analyze -library WORK -format vhdl ../MBE/adder_row.vhd
+analyze -library WORK -format vhdl ../MBE/booth_mul.vhd
+analyze -library WORK -format vhdl ../MBE/dadda_adder_stage1.vhd
+analyze -library WORK -format vhdl ../MBE/dadda_adder_stage2.vhd
+analyze -library WORK -format vhdl ../MBE/dadda_adder_stage3.vhd
+analyze -library WORK -format vhdl ../MBE/dadda_adder_stage4.vhd
+analyze -library WORK -format vhdl ../MBE/dadda_adder_stage5.vhd
+analyze -library WORK -format vhdl ../MBE/fa.vhd
+analyze -library WORK -format vhdl ../MBE/ha.vhd
+analyze -library WORK -format vhdl ../MBE/MBE.vhd
+analyze -library WORK -format vhdl ../MBE/partial_product.vhd
+
 ############################################
 
 #synthesis commands:
@@ -67,7 +89,7 @@ set power_preserve_rtl_hier_names true
 elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
 uniquify
 link
-create_clock -name MY_CLK -period 1.4 CLK
+create_clock -name MY_CLK -period 1.53 CLK
 set_dont_touch_network MY_CLK
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] CLK]
@@ -79,8 +101,8 @@ ungroup -all -flatten
 #compile
 #optimize_registers
 compile_ultra
-report_timing > report_timing_1_4_optultra_reg.txt
-report_area > report_area_1_4_optultra_reg.txt
+report_timing > report_timing_1_53_MBE_ultra.txt
+report_area > report_area_1_53_MBE_ultra.txt
 #ungroup -all -flatten
 change_names -hierarchy -rules verilog
 write_sdf ../netlist/FPmul.sdf

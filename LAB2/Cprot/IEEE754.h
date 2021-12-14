@@ -1,6 +1,7 @@
 /*includes section*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 /*end of includes section*/
 
 /*define section*/
@@ -17,14 +18,10 @@
 					|   |31|      |30  23|   |22   0|  |
 					|  	sign	  exponent	  mantix   |
 					|__________________________________| 
- */
-
-void separate_integer_and_decimal_parts(float v, int *intPart, float *decPart);
-void convIntegPart2Bin(int IntP, char *convertedValue);
-void convDegPart2Bin(float DegP, char *convertedValue);
-void mountintegPartEncWithDegPartEncod(char *integ, char*deg, char*intermed);
-void evaluatepow2exp(char* intermed, int *xExp, int IntegPartValue);
-void convExp2bin(int realExp, char *convertedValue);
-void MantixEncoding(char* intermediateSTR, int xExp, char*mantixSTR);
-void IEEE754Encoder(float initial_value, char*mantixSTR, char* ExpSTR, char* finalSTR);
-void Float2IEEE754Conversion(float Value, char *EncodingSTR);
+*/
+union IEEE754conv 
+{
+	float f;
+	uint32_t ieee754Value;
+};
+uint32_t convFloatinIEEE754(float val);

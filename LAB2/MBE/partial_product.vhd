@@ -26,47 +26,18 @@ BEGIN
     Sign_bit <= Select_bits(2);
 
     Select_case <= Sign_ext XOR Select_bits(1 DOWNTO 0);        
-    
-    --PROCESS (Select_bits(2))
 
-    --BEGIN
-
-    --partial_product_sig <= (OTHERS => '0');
-
-   -- CASE Select_bits(2) IS
-
-        --WHEN "01" => partial_product_sig <= NOT(PP_exit_mux);
-      --  WHEN '1' => partial_product_sig <= NOT(PP_exit_mux);
-      --  WHEN '0' => partial_product_sig <= PP_exit_mux;
-        --WHEN "10" => partial_product_sig <= PP_exit_mux;
-       -- WHEN OTHERS => partial_product_sig <= (OTHERS => '0');
-
-   -- END CASE;
-
-    --END PROCESS;
+    WITH Select_case SELECT
+        PP_exit_mux <= (OTHERS => '0') WHEN "00",
+          '0' & Multiplicand WHEN "01",
+          '0' & Multiplicand WHEN "10",
+          Multiplicand & '0' WHEN "11",
+          (OTHERS => 'X') WHEN OTHERS;
 
     WITH Select_bits(2) SELECT 
         partial_product_sig <= NOT(PP_exit_mux) WHEN '1',
         PP_exit_mux WHEN '0',
         (OTHERS => 'X') WHEN OTHERS;
-    
-    
-    
-    PROCESS (Select_case)
-    
-    BEGIN
-    
-        CASE Select_case IS
-
-            WHEN "00" =>  PP_exit_mux <= (OTHERS => '0');
-            WHEN "01" =>  PP_exit_mux <= '0' & Multiplicand;
-            WHEN "10" =>  PP_exit_mux <= '0' & Multiplicand;
-            WHEN "11" =>  PP_exit_mux <= Multiplicand & '0';
-            WHEN OTHERS => PP_exit_mux <= (OTHERS => 'X');
-    
-        END CASE;
-
-    END PROCESS;
 
     partial_product_i <= partial_product_sig;
 

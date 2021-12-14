@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
 //#include <system.h>
 #include "IEEE754.h"
+
 enum testModes {TEST_INIT_MODE, TEST_VALIDATION_MODE, UNEXPECTED};
 int main(int argc, char* argv[]){
 
@@ -35,8 +37,9 @@ int main(int argc, char* argv[]){
         case TEST_INIT_MODE:
             fpin = fopen("handwrittensamples.txt", "r");
             //fpin = fopen("testSamples.txt", "r");
-            fpout1 = fopen("./simulation_inputs.txt", "w");
-            fpout2 = fopen("./expected_outputs.txt", "w");
+            fpout1 = fopen("./simulation_inputs.hex", "w");
+            fpout2 = fopen("./expected_outputs.hex", "w");
+            uint32_t convVal;
             if(NULL == fpin){
             printf("samples file not found\n");
             }
@@ -44,15 +47,15 @@ int main(int argc, char* argv[]){
             while(EOF != fscanf(fpin, "%f", &readValue)){
                 printf("read value: %f\n", readValue);
                 printf("input vector generation\n");
-                Float2IEEE754Conversion(readValue, IEEE754EncodingSTR);
+                convVal = convFloatinIEEE754(readValue);
                 printf("converted\n");
-                fprintf(fpout1, "%s\n", IEEE754EncodingSTR);
+                fprintf(fpout1, "%x\n", convVal);
                 printf("wrote into file.\n");
                 readValue = readValue*readValue;
                 printf("corresponding expected output generation\n");
-                Float2IEEE754Conversion(readValue, IEEE754EncodingSTR);
+                convVal = convFloatinIEEE754(readValue);
                 printf("converted\n");
-                fprintf(fpout2, "%s\n", IEEE754EncodingSTR);
+                fprintf(fpout2, "%x\n", convVal);
                 printf("wrote into file.\n");
             }
             printf("done.\n");

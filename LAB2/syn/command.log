@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Nov 23 13:56:04 2021
-#@ # Run by: ms21.5@localhost.localdomain
+#@ # Date:   Sun Dec 12 18:46:27 2021
+#@ # Run by: isa21_2021_2022@localhost.localdomain
 #@ 
 
 source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
@@ -6628,23 +6628,21 @@ source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 
-source /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/.synopsys_dc.setup
-#@ # -- Starting source /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/.synopsys_dc.setup
+source /home/isa21_2021_2022/labs/ISA_2021_Group21_Labs/LAB2/syn/.synopsys_dc.setup
+#@ # -- Starting source /home/isa21_2021_2022/labs/ISA_2021_Group21_Labs/LAB2/syn/.synopsys_dc.setup
 
 #@ define_design_lib WORK -path ./work
 #@ set search_path [list . /software/synopsys/syn_current_64.18/libraries/syn /software/dk/nangate45/synopsys ]
 #@ set link_library [list "*" "NangateOpenCellLibrary_typical_ecsm_nowlm.db" "dw_foundation.sldb" ]
 #@ set target_library [list "NangateOpenCellLibrary_typical_ecsm_nowlm.db" ]
 #@ set synthetic_library [list "dw_foundation.sldb" ]
-#@ # -- End source /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/.synopsys_dc.setup
+#@ # -- End source /home/isa21_2021_2022/labs/ISA_2021_Group21_Labs/LAB2/syn/.synopsys_dc.setup
 
-source -echo -verbose /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/script_syn.bash
-#@ # -- Starting source /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/script_syn.bash
+source -echo -verbose /home/isa21_2021_2022/labs/ISA_2021_Group21_Labs/LAB2/syn/script_syn.bash
+#@ # -- Starting source /home/isa21_2021_2022/labs/ISA_2021_Group21_Labs/LAB2/syn/script_syn.bash
 
 #@ #!bin/bash
-#@ rm -r work
-#@ rm *.{log,svf}
-#@ rm elaborate.txt
+#@ 
 #@ #reading source files from common, adder and multpiplier directories
 #@ read_file -format vhdl ../fpuvhdl/common/fpnormalize_fpnormalize.vhd
 #@ read_file -format vhdl ../fpuvhdl/common/fpround_fpround.vhd
@@ -6673,6 +6671,18 @@ source -echo -verbose /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/sc
 #@ read_file -format vhdl ../fpuvhdl/multiplier/fpmul_stage4_struct.vhd
 #@ read_file -format vhdl ../fpuvhdl/multiplier/fd.vhd
 #@ read_file -format vhdl ../fpuvhdl/multiplier/register.vhd
+#@ 
+#@ read_file -format vhdl ../MBE/adder_row.vhd
+#@ read_file -format vhdl ../MBE/booth_mul.vhd
+#@ read_file -format vhdl ../MBE/dadda_adder_stage1.vhd
+#@ read_file -format vhdl ../MBE/dadda_adder_stage2.vhd
+#@ read_file -format vhdl ../MBE/dadda_adder_stage3.vhd
+#@ read_file -format vhdl ../MBE/dadda_adder_stage4.vhd
+#@ read_file -format vhdl ../MBE/dadda_adder_stage5.vhd
+#@ read_file -format vhdl ../MBE/fa.vhd
+#@ read_file -format vhdl ../MBE/ha.vhd
+#@ read_file -format vhdl ../MBE/MBE.vhd
+#@ read_file -format vhdl ../MBE/partial_product.vhd
 #@ ############################################
 #@ 
 #@ analyze -library WORK -format vhdl ../fpuvhdl/common/fpnormalize_fpnormalize.vhd
@@ -6703,6 +6713,18 @@ source -echo -verbose /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/sc
 #@ analyze -library WORK -format vhdl ../fpuvhdl/multiplier/fd.vhd
 #@ analyze -library WORK -format vhdl ../fpuvhdl/multiplier/register.vhd
 #@ 
+#@ analyze -library WORK -format vhdl ../MBE/adder_row.vhd
+#@ analyze -library WORK -format vhdl ../MBE/booth_mul.vhd
+#@ analyze -library WORK -format vhdl ../MBE/dadda_adder_stage1.vhd
+#@ analyze -library WORK -format vhdl ../MBE/dadda_adder_stage2.vhd
+#@ analyze -library WORK -format vhdl ../MBE/dadda_adder_stage3.vhd
+#@ analyze -library WORK -format vhdl ../MBE/dadda_adder_stage4.vhd
+#@ analyze -library WORK -format vhdl ../MBE/dadda_adder_stage5.vhd
+#@ analyze -library WORK -format vhdl ../MBE/fa.vhd
+#@ analyze -library WORK -format vhdl ../MBE/ha.vhd
+#@ analyze -library WORK -format vhdl ../MBE/MBE.vhd
+#@ analyze -library WORK -format vhdl ../MBE/partial_product.vhd
+#@ 
 #@ ############################################
 #@ 
 #@ #synthesis commands:
@@ -6710,7 +6732,7 @@ source -echo -verbose /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/sc
 #@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
 #@ uniquify
 #@ link
-#@ create_clock -name MY_CLK -period 1.4 CLK
+#@ create_clock -name MY_CLK -period 1.53 CLK
 #@ set_dont_touch_network MY_CLK
 #@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 #@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] CLK]
@@ -6722,8 +6744,8 @@ source -echo -verbose /home/ms21.5/Desktop/STE/ISA_2021_Group21_Labs/LAB2/syn/sc
 #@ #compile
 #@ #optimize_registers
 #@ compile_ultra
-#@ report_timing > report_timing_1_4_optultra_reg.txt
-#@ report_area > report_area_1_4_optultra_reg.txt
+#@ report_timing > report_timing_1_53_MBE_ultra.txt
+#@ report_area > report_area_1_53_MBE_ultra.txt
 #@ #ungroup -all -flatten
 #@ change_names -hierarchy -rules verilog
 #@ write_sdf ../netlist/FPmul.sdf

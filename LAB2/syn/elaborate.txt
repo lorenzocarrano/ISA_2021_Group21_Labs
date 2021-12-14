@@ -20,4 +20,37 @@ Presto compilation completed successfully.
 Information: Building the design 'FPround' instantiated from design 'FPmul_stage3' with
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage1' with
+	the parameters "N=19". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage1' with
+	the parameters "N=15". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage1' with
+	the parameters "N=11". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage1' with
+	the parameters "N=7". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage2' with
+	the parameters "N=31". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage2' with
+	the parameters "N=27". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage2' with
+	the parameters "N=23". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage3' with
+	the parameters "N=39". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage3' with
+	the parameters "N=35". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage4' with
+	the parameters "N=43". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Addend_row' instantiated from design 'dadda_adder_stage5' with
+	the parameters "N=47". (HDL-193)
+Presto compilation completed successfully.
 1
