@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  14 DEC 2021 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  19 DEC 2021 10:48
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB2/report/homebook.tex
@@ -338,32 +338,29 @@ Package pdftex.def Info: ./logopoli_new.png  used on input line 146.
 
 
 
-{C:/Users/monca/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli_new.png>]
-No file homebook.toc.
+{C:/Users/monca/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli_new.png>] (homebook.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
 \openout4 = `homebook.toc'.
 
-[1
+ [1
 
 ] (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (chapters/chap1.tex
 Chapter 1.
-
-LaTeX Warning: File `{lab2_SimulationFlow.jpg}' not found on input line 37.
-
-
-chapters/chap1.tex:37: Package pdftex.def Error: File `lab2_SimulationFlow.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 ...cs[height=12cm]{{lab2_SimulationFlow.jpg}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<./schematic/lab2_SimulationFlow.jpg, id=16, 282.05376pt x 522.95375pt>
+File: ./schematic/lab2_SimulationFlow.jpg Graphic file (type jpg)
+<use ./schematic/lab2_SimulationFlow.jpg>
+Package pdftex.def Info: ./schematic/lab2_SimulationFlow.jpg  used on input line 37.
+(pdftex.def)             Requested size: 184.15479pt x 341.43306pt.
 [1
 
 
@@ -378,21 +375,13 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
-) (chapters/chap2.tex [2] [3]
+) (chapters/chap2.tex [2 <./schematic/lab2_SimulationFlow.jpg>] [3]
 Chapter 2.
 <./schematic/FPmul_schematic.png, id=31, 362.35374pt x 186.6975pt>
 File: ./schematic/FPmul_schematic.png Graphic file (type png)
 <use ./schematic/FPmul_schematic.png>
 Package pdftex.def Info: ./schematic/FPmul_schematic.png  used on input line 35.
 (pdftex.def)             Requested size: 169.34993pt x 87.25499pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
-(C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
- (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 <./schematic/testbench.jpg, id=32, 443.6575pt x 251.94125pt>
 File: ./schematic/testbench.jpg Graphic file (type jpg)
 <use ./schematic/testbench.jpg>
@@ -402,25 +391,37 @@ Package pdftex.def Info: ./schematic/testbench.jpg  used on input line 40.
 
  <./schematic/FPmul_schematic.png> <./schematic/testbench.jpg>]
 Chapter 3.
+<./schematic/wallace_standard.jpg, id=37, 503.63156pt x 243.91125pt>
+File: ./schematic/wallace_standard.jpg Graphic file (type jpg)
+<use ./schematic/wallace_standard.jpg>
+Package pdftex.def Info: ./schematic/wallace_standard.jpg  used on input line 46.
+(pdftex.def)             Requested size: 441.02234pt x 170.7181pt.
 [5
 
-]) [6] (homebook.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ <./schematic/wallace_standard.jpg>]
+<./schematic/wallace_signext.jpg, id=46, 507.39563pt x 237.88875pt>
+File: ./schematic/wallace_signext.jpg Graphic file (type jpg)
+<use ./schematic/wallace_signext.jpg>
+Package pdftex.def Info: ./schematic/wallace_signext.jpg  used on input line 63.
+(pdftex.def)             Requested size: 441.02805pt x 170.72438pt.
+<./schematic/stage_adder.jpg, id=47, 1184.92688pt x 217.5628pt>
+File: ./schematic/stage_adder.jpg Graphic file (type jpg)
+<use ./schematic/stage_adder.jpg>
+Package pdftex.def Info: ./schematic/stage_adder.jpg  used on input line 76.
+(pdftex.def)             Requested size: 441.01967pt x 170.72742pt.
+) [6 <./schematic/wallace_signext.jpg>] [7 <./schematic/stage_adder.jpg>] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 7688 strings out of 478699
- 118232 string characters out of 2846961
- 667849 words of memory out of 3000000
- 25620 multiletter control sequences out of 15000+600000
- 409773 words of font info for 51 fonts, out of 8000000 for 9000
+ 7676 strings out of 478699
+ 118326 string characters out of 2846961
+ 669038 words of memory out of 3000000
+ 25616 multiletter control sequences out of 15000+600000
+ 409605 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,67p,398b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on homebook.pdf (8 pages, 417052 bytes).
+ <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on homebook.pdf (9 pages, 670709 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
