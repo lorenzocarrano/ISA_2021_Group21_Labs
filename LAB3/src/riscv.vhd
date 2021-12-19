@@ -86,6 +86,10 @@ architecture ARCH of risc_core is
     signal MEM_WB_read_2, MEM_WB_read_2_Next: std_logic_vector(M-1 DOWNTO 0);
     signal MEM_WB_write_addr_f, MEM_WB_write_addr_f_Next: std_logic_vector(4 DOWNTO 0);
 
+    -- WRITE BACK
+    -- choose if write back data from Data memory or from ALU result
+    signal WB_select: std_logic;
+
 begin
 
     Reg: process(clk)
@@ -156,6 +160,7 @@ begin
     -- DECODE part 
     read_addr_f1 <= IF_ID_instr(19 DOWNTO 15);
     read_addr_f2 <= IF_ID_instr(24 DOWNTO 20);
+    writa_addr_f <= MEM_WB_write_addr_f;
     RF: Register
             -- generic map (
             --     N               => 5;
@@ -193,10 +198,19 @@ begin
     -- PIPELINE memory
     MEM_WB_read_data_Next <= read_data;
     MEM_WB_read_2_Next <= EX_MEM_wrEX_MEM_read_2;
-    MEM_WB_write_addr_f <= EX_MEM_write_addr_f;
+    MEM_WB_write_addr_f_Next <= EX_MEM_write_addr_f;
 
 
     -- WRITE BACK part
-    -- PIPELINE write back
+    Write_Back: process(MEM_WB_read_data, MEM_WB_read_2, WB_select)
+    begin
+        -- chose data to write back
+        case( WB_select ) is
+            when 0 =>
+                writa_data_f <= MEM_WB_read_data;        
+            when others =>
+                writa_data_f <= MEM_WB_read_2;
+        end case ;
+    end process Fetch;
 
 end ARCH;
