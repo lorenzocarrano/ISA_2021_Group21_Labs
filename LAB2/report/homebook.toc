@@ -7,9 +7,9 @@
 \contentsline {chapter}{\numberline {2}Testbench}{4}{}%
 \contentsline {section}{\numberline {2.1}Design modification}{4}{}%
 \contentsline {section}{\numberline {2.2}Simulation}{4}{}%
-\contentsline {chapter}{\numberline {3}MBE Multiplier}{5}{}%
-\contentsline {section}{\numberline {3.1}Introduction}{5}{}%
-\contentsline {section}{\numberline {3.2}Partial Products Generation}{6}{}%
-\contentsline {section}{\numberline {3.3}Sign Extension}{6}{}%
-\contentsline {section}{\numberline {3.4}Dadda-Tree}{7}{}%
-\contentsline {chapter}{\numberline {4}Comparison Between Architectures}{8}{}%
+\contentsline {chapter}{\numberline {3}MBE Multiplier}{6}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{6}{}%
+\contentsline {section}{\numberline {3.2}Partial Products Generation}{7}{}%
+\contentsline {section}{\numberline {3.3}Sign Extension}{7}{}%
+\contentsline {section}{\numberline {3.4}Dadda-Tree}{8}{}%
+\contentsline {chapter}{\numberline {4}Comparison Between Architectures}{9}{}%
