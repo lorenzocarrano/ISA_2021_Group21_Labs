@@ -12,6 +12,7 @@ entity Register is
             Write_register:     In  std_logic_vector(N_address-1 downto 0);
             Write_data:         In  std_logic_vector(N_tot-1 downto 0);
 			Reset:	            In	std_logic;
+            Clk:	            In	std_logic;
 			Enable:             In 	std_logic;
             Read_data_1:        Out std_logic_vector(N_tot-1 downto 0);
             Read_data_2:        Out std_logic_vector(N_tot-1 downto 0));
