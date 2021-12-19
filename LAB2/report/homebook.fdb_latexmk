@@ -4,7 +4,7 @@
   (generated)
   "homebook.ilg"
   "homebook.ind"
-["pdflatex"] 1639907799 "c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB2/report/homebook.tex" "homebook.pdf" "homebook" 1639907799
+["pdflatex"] 1639907849 "c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB2/report/homebook.tex" "homebook.pdf" "homebook" 1639907849
   "C:/Users/Utente/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1637411859 11548 0439c02dd926232b3168e6f2173e7145 ""
   "C:/Users/Utente/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1637404997 9715859 8b20c8b4b18986db8d80a241fdcf8496 ""
   "C:/Users/Utente/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1637490340 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -96,7 +96,7 @@
   "chapters/chap1.tex" 1639907793 4409 66dc92f9ce1d52847e1fb7072eaa01fb ""
   "chapters/chap2.tex" 1639334454 1978 79f451d9bfd21eb0a44212d464c92aef ""
   "chapters/chap3.tex" 1639907793 3856 251ffbfaadec85be71d898336a8515a1 ""
-  "homebook.aux" 1639907799 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "homebook.aux" 1639907849 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "homebook.ind" 0 -1 0 "makeindex homebook.idx"
   "homebook.tex" 1639263934 5196 3cc3019d9777d890f2cda7a1e98996ff ""
   "homebook.toc" 0 -1 0 "pdflatex"
@@ -109,8 +109,8 @@
   "titlesec.sty" 1639239130 37821 64ad863c8c12f6a697080a369b2f9f4d ""
   "{./schematic/lab2_SimulationFlow.jpg}" 0 -1 0 ""
   (generated)
-  "homebook.pdf"
-  "homebook.idx"
-  "homebook.toc"
   "homebook.log"
+  "homebook.idx"
   "homebook.aux"
+  "homebook.pdf"
+  "homebook.toc"
