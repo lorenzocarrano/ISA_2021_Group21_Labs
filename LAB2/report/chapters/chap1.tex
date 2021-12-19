@@ -13,8 +13,8 @@
 \section{Introduction}
 In order to better and easier simulate the architecture, two scripts have been used:
 A bash script to control the simulation from high level: it is in charge to invoke the C script with the right command line argument during the proper simulation phase and to 
-run modelsim;
-A C script in charge to perfrom various operations during different steps of the simulation, manipulating different files.
+run Modelsim;
+A C script in charge to perform various operations during different steps of the simulation, manipulating different files.
 For simplicity, a single value is assigned to both operands each simulation cycle, de facto using the multiplier as a square-evaluation circuit.
 \section{General simulation flow}
 The C script can accepts an additional command line parameter:\begin{itemize}
@@ -34,7 +34,7 @@ The flow of the simulation is the following:
     \item the C program is executed passing -v as command line parameter in order to compare the simulation results with the expected ones
     \end{enumerate} 
 
-    \includegraphics[height=12cm]{{lab2_SimulationFlow.jpg}}
+    \includegraphics[height=12cm]{{./schematic/lab2_SimulationFlow.jpg}}
 \section{C script - Key Aspects}
 Since IEEE754 is the standard encoding that is normally used to store floating point data inside a flash memory, to convert a floating point value in its equivalent hexadecimal 
 encoding it's sufficient to use the   \textbf{union}  C data type.
@@ -49,7 +49,7 @@ and store it as a float variable inside the previously declared memory location,
 
 \end{lstlisting}
 
-The previously described operation is trivially implemented by the following procedure, that is very convenient both in terms synthax and in terms of CPU time, since what is done is just a couple of memory accesses:
+The previously described operation is trivially implemented by the following procedure, that is very convenient both in terms syntax and in terms of CPU time, since what is done is just a couple of memory accesses:
 \begin{lstlisting}[style=CStyle]
     uint32_t convFloatinIEEE754(float val)
     {
