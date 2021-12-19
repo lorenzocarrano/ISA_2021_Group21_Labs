@@ -12,19 +12,29 @@
     | >{\centering\arraybackslash}X 
     | >{\centering\arraybackslash}X| }
    \hline
-    & Frequency & Area \\
+    & \textbf{Frequency} & \textbf{Area} \\ 
    \hline
-   000  & 0 \\
-   001  & a \\
-   010  & a \\
-   011  & 2a \\
-   100  & -2a \\
-   101  & -a \\
-   110  & -a \\
-   111  & 0 \\
+   Base Architecture  & 625.00MHz & 4104.1 \\
+   \hline
+   CSA Multiplier & 223.21 MHz & 4906.9\\
+   \hline
+   PPARCH Multiplier & 641.03MHz & 4182.8\\
+   \hline
+   Optimized with registers  & 1.08GHz & 4656.9 \\
+   \hline
+   Compiled with compile ultra  & 714.29 MHz & 4478.9 \\
+   \hline
+   MBE Standard Multiplier  & 357.14 MHz & 4824.2 \\
+   \hline
+   MBE opt. with registers  & 1.12 GHz & 6318.3 \\ 
+   \hline
+   MBE compiled with compile ultra  & 653.59MHz & 4661.6 \\
   \hline
 \end{tabularx}
 \end{center}
 
-
-
+In general, it can be noticed that the best performance is obtained by means of optimization using registers.
+Compiling with compile ultra command returns a solution that is a good compromise betweenn performance and total area.
+For example, compiling the base architecture using compile ultra, it can be achieved a performance growth of, 14\% at the cost of 9\% of additional area, while
+modifying the base architecture inserting registers, a growth of 73\% of performance is achieved, at the cost of about 13\% of additional area.
+Thus, in general, if  the area constraints are not so critical, optimizing by means of registers can be strongly efficient in terms of performance.
