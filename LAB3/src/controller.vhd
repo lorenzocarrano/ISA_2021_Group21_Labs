@@ -16,9 +16,15 @@ entity Controller is
 		OPCODE                  : IN std_logic_vector(OP_CODE_SIZE-1 downto 0);
         FUNCT3                  : IN std_logic_vector(FUNC3_SIZE-1 downto 0);
         FUNCT7                  : IN std_logic_vector(FUNC7_SIZE-1 downto 0);
+        -- Execute
         EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
-        MEMORY_CONTROL_SIGNALS  : OUT std_logic_vector(MEMORY_CONTROL_SIZE - 1 downto 0);
-        WB_CONTROL_SIGNALS      : OUT std_logic_vector(WB_CONTROL_SIZE - 1 downto 0)
+        -- Memory
+        MemWrite                : OUT std_logic;
+        MemRead                 : OUT std_logic;
+        Branch                  : OUT std_logic;
+        -- Write Back
+        RegWrite                : OUT std_logic;
+        MemToReg                : OUT std_logic;
     );
 
 end Controller;
@@ -31,12 +37,16 @@ begin
     Controll: Process(OPCODE, FUNCT3)
     begin
         -- default write always back into register file
-        WB_CONTROL_SIZE <= '0';
-		MEMORY_CONTROL_SIGNALS <= '0';
-
+        MemWrite <= '0';
+		MemRead <= '0';
+        Branch <= '0';
+		RegWrite <= '0';
+        MemToReg <= '0';
+		
         case( to_integer(unsigned(OPCODE)) ) is
             -- same OPCODE for all R-Type instructions
             when RTYPE_ADD_OPCODE =>
+                RegWrite <= '1';
                 -- same FUNCT7 for all R-Type instructions
                 case(FUNCT3) is
                     when RTYPE_ADD_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
@@ -47,6 +57,7 @@ begin
 
             -- same OPCODE for all these I-Type instructions 
             when ITYPE_ADDI_OPCODE =>
+                RegWrite <= '1';
                 case(FUNCT3) is
                     when ITYPE_ADDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
                     when ITYPE_ANDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SRA;
@@ -56,8 +67,9 @@ begin
             
             -- doesn't need FUNCT3
             when ITYPE_LW_OPCODE =>
-				-- activate write back only with load instruction
-				WB_CONTROL_SIZE <= '1';
+                MemRead <= '1';
+                RegWrite <= '1';
+                MemToReg <= '1';
 				-- calculate address from read
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
@@ -73,17 +85,19 @@ begin
 			-- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest
 			-- 12 bits with zeros.
             when UTYPE_LUI =>
-				-- activate write back only with load instruction
-				WB_CONTROL_SIZE <= '1';
-				-- calculate address from read
+				RegWrite <= '1';
+				-- shift value to left
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
             when JTYPE_JAL_OPCODE =>
+                Branch <= '1';
+
             when BTYPE_BEQ_OPCODE =>
+                Branch <= '1';
 
             when STYPE_SW_OPCODE =>
 				-- activate write dara memory only with store instruction
-				MEMORY_CONTROL_SIGNALS <= '1';
+				MemWrite <= '1';
 				-- calculate address from read
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
         
