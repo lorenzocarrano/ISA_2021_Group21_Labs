@@ -6,16 +6,13 @@ entity Controller is
     Generic (
         OP_CODE_SIZE        : integer := OP_CODE_SIZE7;
         FUNC7_SIZE          : integer := FUNC7_SIZE;
-        FUNC3_SIZE          : integer := FUNC3_SIZE;
-        ALU_OPCODE_SIZE     : integer := 2;
-        EXECUTE_CONTROL_SIZE: integer := 2;
-        MEMORY_CONTROL_SIZE : integer := 2;
-        WB_CONTROL_SIZE     : integer := 1
+        FUNC3_SIZE          : integer := FUNC3_SIZE
     );
 	Port (
 		OPCODE                  : IN std_logic_vector(OP_CODE_SIZE-1 downto 0);
         FUNCT3                  : IN std_logic_vector(FUNC3_SIZE-1 downto 0);
         FUNCT7                  : IN std_logic_vector(FUNC7_SIZE-1 downto 0);
+        STALL                   : OUT std_logic;
         -- Execute
         EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
         -- Memory

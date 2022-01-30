@@ -14,13 +14,13 @@ entity Datapath is
         -- to stall the pipelined
         STALL               : In  std_logic;
         -- data memory
-        ADRESS_DATA         : Out std_logic_vector(N-1 DOWNTO 0);
+        DATA_ADDRESS        : Out std_logic_vector(N-1 DOWNTO 0);
         DATA_READ           : In  std_logic_vector(M-1 DOWNTO 0);
-        DATA                : Out std_logic_vector(M-1 DOWNTO 0);
-        ADRESS              : Out std_logic_vector(N-1 DOWNTO 0);
-        WRITE_DATA          : Out std_logic_vector;
-        -- Fetch
-        PC_address          : Out std_logic_vector(N-1 DOWNTO 0);
+        DATA_WRITE          : Out std_logic_vector(M-1 DOWNTO 0);
+        DATA_WRITE_EN       : Out std_logic_vector;
+        DATA_READ_EN        : Out std_logic_vector;
+        -- instruction memory
+        IR_ADDRESS          : Out std_logic_vector(N-1 DOWNTO 0);
         Instruction         : In  std_logic_vector(M-1 DOWNTO 0);
         -- Decode
         -- Execute
@@ -215,6 +215,7 @@ begin
     end process;
 
     -- FETCH part
+    IR_ADDRESS <= PC;
     Fetch: process(PC, PC_mux, EX_MEM_Jump_PC)
     begin
         -- upgrade PC value properly
@@ -276,8 +277,8 @@ begin
     EX_MEM_FowardB_Next <= ID_EX_read_2; -- put value of ForwardB mux here
     EX_MEM_RD_Next <= ID_EX_RD;
     -- Memory controll signal
-    EX_MEM_MemWrite_next <= ID_EX_MemWrite;
     EX_MEM_MemRead_next <= ID_EX_MemRead;
+    EX_MEM_MemWrite_next <= ID_EX_MemWrite;
     EX_MEM_Branch_next <= ID_EX_Branch;
     -- Write Back controll signal
     EX_MEM_RegWrite_next <= ID_EX_RegWrite;
@@ -286,9 +287,12 @@ begin
     -- MEMORY paty
     -- ADD MEMORY DATA
     -- PIPELINE memory
-    Address_data_memory <= EX_MEM_ALU_result;
-    MEM_WB_read_data_Next <= read_data;  -- read from data memory
-    write_data <= EX_MEM_FowardB;        -- write on data memory
+    DATA_ADDRESS <= EX_MEM_ALU_result;
+    DATA_READ_EN <= EX_MEM_MemRead;
+    MEM_WB_read_data_Next <= DATA_READ;  -- read from data memory
+    DATA_WRTIE_EN <= EX_MEM_MemWrite;
+    DATA_WRITE <= EX_MEM_FowardB;        -- write on data memory
+    PC_mux <= EX_MEM_Branch AND EX_MEM_ALU_result(0); -- for branch equal
     MEM_WB_ALU_result_Next <= EX_MEM_ALU_result;
     MEM_WB_RD_Next <= EX_MEM_RD;
     -- Write Back controll signal
