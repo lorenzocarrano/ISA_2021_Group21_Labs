@@ -28,7 +28,9 @@ end Controller;
 
 
 architecture ARCH of Controller is
-    
+    signal start_stall, stall_s: std_logic;
+    type state is (s0, s1, s2);
+    signal current_state, next_state: state;
 begin
 
     Controll: Process(OPCODE, FUNCT3)
@@ -39,6 +41,7 @@ begin
         Branch <= '0';
 		RegWrite <= '0';
         MemToReg <= '0';
+        start_stall <= '0';
 		
         case( to_integer(unsigned(OPCODE)) ) is
             -- same OPCODE for all R-Type instructions
@@ -87,9 +90,11 @@ begin
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
             when JTYPE_JAL_OPCODE =>
+                start_stall <= '1';
                 Branch <= '1';
 
             when BTYPE_BEQ_OPCODE =>
+                start_stall <= '1';
                 Branch <= '1';
 
             when STYPE_SW_OPCODE =>
@@ -102,5 +107,43 @@ begin
         
         end case ;    
     end Controll;
+
+
+    -- CONTROLL HAZARD
+
+    STALL <= start_stall OR stall_s;
+
+    Reg: process(clk)
+    begin
+        if(clk = '1')
+            if (rst = '1') then
+                current_state <= s0;
+            else
+                current_state <= next_state;
+            end if;
+        end if;
+    end Reg;
+
+    CountStall: process(current_state, start_stall)
+    begin
+        stall_s <= '1'
+        case current_state is
+            when s0 =>
+            stall_s <= '0'
+                if (start_stall = '0') then
+                    next_state <= s0;
+                else
+                    next_state <= s1;
+                end if;
+            
+            -- jump into execute
+            when s1 =>
+                next_state <= s2;
+            
+            -- jump into write back, here the JUMP_MUX is 1 if jal or can depend if BEQ
+            when s2 =>
+                next_state <= s0;
+        end case;     
+    end CountStall;
 
 end ARCH;

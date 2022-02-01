@@ -23,6 +23,9 @@ entity Datapath is
         IR_ADDRESS          : Out std_logic_vector(N-1 DOWNTO 0);
         Instruction         : In  std_logic_vector(M-1 DOWNTO 0);
         -- Decode
+        OPCODE              : OUT  std_logic_vector(OP_CODE_SIZE-1 DOWNTO 0);
+        FUNC7               : OUT  std_logic_vector(FUNC7_SIZE-1 DOWNTO 0);
+        FUNC3               : OUT  std_logic_vector(FUNC3_SIZE-1 DOWNTO 0);
         -- Execute
         EXECUTE_CONTROL_SIGNALS : IN std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
         -- Memory
@@ -123,7 +126,6 @@ architecture ARCH of Datapath is
 
     -- WRITE BACK
     -- choose if write back data from Data memory or from ALU result
-    signal WB_select: std_logic;
 
 begin
 
@@ -176,20 +178,30 @@ begin
                     IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION_next;
                 else
                     PC <= PC;
-                    IF_ID_INSTRUCTION <= NOPE_INSTRUCTION; -- decode addi x0, x0, 0
+                    IF_ID_INSTRUCTION <= std_logic_vector(to_unsigned(NOP_INSTRUCTION, NOP_INSTRUCTION'length));
                 end if;
                 -- DECODE
                 ID_EX_PC <= ID_EX_PC_next;
                 ID_EX_read_1 <= ID_EX_read_1_Next;
                 ID_EX_read_2 <= ID_EX_read_2_Next;
                 ID_EX_RD <= ID_EX_RD_Next;
-                -- controll
-                ID_EX_EXECUTE_CONTROL_SIGNALS <= ID_EX_EXECUTE_CONTROL_SIGNALS_Next;
-                ID_EX_MemWrite <= ID_EX_MemWrite_next;
-                ID_EX_MemRead <= ID_EX_MemRead_next;
-                ID_EX_Branch <= ID_EX_Branch_next;
-                ID_EX_RegWrite <= ID_EX_RegWrite_next;
-                ID_EX_MemToReg <= ID_EX_MemToReg_next;
+                -- can't neead this if if control drive the nop
+                if (STALL = '0') then
+                    -- controll
+                    ID_EX_EXECUTE_CONTROL_SIGNALS <= ID_EX_EXECUTE_CONTROL_SIGNALS_Next;
+                    ID_EX_MemWrite <= ID_EX_MemWrite_next;
+                    ID_EX_MemRead <= ID_EX_MemRead_next;
+                    ID_EX_Branch <= ID_EX_Branch_next;
+                    ID_EX_RegWrite <= ID_EX_RegWrite_next;
+                    ID_EX_MemToReg <= ID_EX_MemToReg_next;
+                else
+                    ID_EX_EXECUTE_CONTROL_SIGNALS <=  NOP_INSTRUCTIONA_ALU;
+                    ID_EX_MemWrite <=  '0';
+                    ID_EX_MemRead <=  '0';
+                    ID_EX_Branch <= '0';
+                    ID_EX_RegWrite <=  '0';
+                    ID_EX_MemToReg <= '0';
+                end if;
                 -- EXECUTE
                 EX_MEM_Jump_PC <= EX_MEM_Jump_PC_Next;
                 EX_MEM_ALU_result_zero <= EX_MEM_ALU_result_zero_Next;
@@ -231,6 +243,7 @@ begin
     IF_ID_INSTRUCTION_next <= Instruction;
 
     -- DECODE part 
+    instruction_to_CU <= IF_ID_INSTRUCTION;
     read_addr_f1 <= IF_ID_INSTRUCTION(19 DOWNTO 15);
     read_addr_f2 <= IF_ID_INSTRUCTION(24 DOWNTO 20);
     writa_addr_f <= MEM_WB_RD;
@@ -257,15 +270,32 @@ begin
     ID_EX_RS1_Next    <= IF_ID_INSTRUCTION(19 DOWNTO 15);
     ID_EX_RS2_Next    <= IF_ID_INSTRUCTION(24 DOWNTO 20);
     ID_EX_RD_Next     <= IF_ID_INSTRUCTION(11 DOWNTO 7);
-    -- Execute controll signal
-    ID_EX_EXECUTE_CONTROL_SIGNALS_Next <= EXECUTE_CONTROL_SIGNALS;
-    -- Memory controll signal
-    ID_EX_MemWrite_next <= MemWrite;
-    ID_EX_MemRead_next <= MemRead;
-    ID_EX_Branch_next <= Branch;
-    -- Write Back controll signal
-    ID_EX_RegWrite_next <= RegWrite;
-    ID_EX_MemToReg_next <= MemToReg;
+    -- How stall the pipeline 
+    STALL: process(stall, EXECUTE_CONTROL_SIGNALS, MemWrite, MemRead, Branch, RegWrite, MemToReg)
+    begin
+        if (stall = '0') then
+            -- Execute controll signal
+            ID_EX_EXECUTE_CONTROL_SIGNALS_Next <= EXECUTE_CONTROL_SIGNALS;
+            -- Memory controll signal
+            ID_EX_MemWrite_next <= MemWrite;
+            ID_EX_MemRead_next <= MemRead;
+            ID_EX_Branch_next <= Branch;
+            -- Write Back controll signal
+            ID_EX_RegWrite_next <= RegWrite;
+            ID_EX_MemToReg_next <= MemToReg;
+        else
+            -- Execute controll signal
+            ID_EX_EXECUTE_CONTROL_SIGNALS_Next <= (others => '0');
+            -- Memory controll signal
+            ID_EX_MemWrite_next <= '0';
+            ID_EX_MemRead_next <= '0';
+            ID_EX_Branch_next <= '0';
+            -- Write Back controll signal
+            ID_EX_RegWrite_next <= '0';
+            ID_EX_MemToReg_next <= '0';
+        end if;
+    end process proc_name;
+    
     -- ADD IMMEDIATE OPERATION
 
     -- EXECUTE part

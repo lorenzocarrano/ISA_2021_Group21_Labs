@@ -8,6 +8,8 @@ package myTypes is
     constant FUNC3_SIZE   : integer :=  3;
 	constant FUNC7_SIZE   : integer :=  7; 
 
+	constant  NOP_INSTRUCTION : integer := 19; -- 0x13 this instruction do: addi x0, x0, 0
+
     -- R-Type instruction
     constant RTYPE_ADD_OPCODE : std_logic_vector(OP_CODE_SIZE - 1 downto 0)     := "0110011";
 	constant RTYPE_ADD_FUNC3  : std_logic_vector(FUNC3_SIZE - 1 downto 0) 	    := "000";
