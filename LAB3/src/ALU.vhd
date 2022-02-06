@@ -2,10 +2,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
+use work.myTypes;
 ---------------------------
 Entity ALU is
     Generic( NbitOperands : integer := 32 ); 
-    Port(
+    Port
+	(
         A    : in std_logic_vector(NbitOperands -1 downto 0); --Operand1
         B    : in std_logic_vector(NbitOperands -1 downto 0); --Operand2
         ctrl : in std_logic_vector(3 downto 0); --Control Signal
@@ -20,27 +22,27 @@ begin
     Computation: process(A, B, ctrl)
 	begin
 		case(ctrl) is
-		    when "0000" =>
+		    when ALU_OPCODE_SHL =>
 		    --SHIFT
 			--shl
 	        result <= std_logic_vector(unsigned(A) sll to_integer(unsigned(B))); --N must be B conv to natural
 
-		    when "0001" =>
+		    when ALU_OPCODE_SHR =>
 		        --shr
 		        result <= std_logic_vector(unsigned(A) srl to_integer(unsigned(B))); --N must be B conv to natural
 		    
-			when "0010" =>
+			when ALU_OPCODE_SRA =>
 		        --shrA (shift right arithmetic)
 		        
 		    --unused "0011"
 		    
 			--Arithmetic      
 
-			when "0100" =>
+			when ALU_OPCODE_ADD =>
 		        --Add
 		        result <= A+B;
 		    
-			when "0101" =>
+			when ALU_OPCODE_SUB =>
 		        --Sub
 		        result <= A-B;
 		    --unused "0111"
@@ -48,23 +50,23 @@ begin
 		    
 
 			--Logic    
-		    when "1001" =>
+		    when ALU_OPCODE_AND =>
 		        --And
 		        result <= A and B;
 		    
 
-			when "1010" =>
+			when ALU_OPCODE_OR  =>
 		        --Or
 		        result <= A or B;
 		    
 
-			when "1011" =>
+			when ALU_OPCODE_XOR =>
 		        --Xor
 		        result <= A xor B;
 		    
 
 			--Cmp
-		    when "1100" =>
+		    when ALU_OPCODE_CMP =>
 		        --set min
 		        if(A<B) then
 		            result <= x"1" ;
