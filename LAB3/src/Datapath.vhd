@@ -68,6 +68,31 @@ architecture ARCH of Datapath is
                 Read_data_2:        Out std_logic_vector(N_tot-1 downto 0));
     
     end component;
+
+    Component mux is
+        Generic
+        (
+            Nbit : natural := 1
+        );
+        Port
+        (
+            A    : in  std_logic_vector(Nbit-1 downto 0);
+            B    : in  std_logic_vector(Nbit-1 downto 0);
+            sel  : in  std_logic;
+            Y    : out std_logic_vector(Nbit-1 downto 0)
+        );
+    end Component;
+
+    Component ALU is
+        Generic( NbitOperands : integer := 32 ); 
+        Port
+        (
+            A    : in std_logic_vector(NbitOperands -1 downto 0); --Operand1
+            B    : in std_logic_vector(NbitOperands -1 downto 0); --Operand2
+            ctrl : in std_logic_vector(3 downto 0); --Control Signal
+            Y    : out std_logic_vector(NbitOperands -1 downto 0) --Result
+        );
+    end Component;
     -- signals to connect to register file
     signal read_data_f1: std_logic_vector(M-1 DOWNTO 0);
     signal read_data_f2: std_logic_vector(M-1 DOWNTO 0);
@@ -94,6 +119,8 @@ architecture ARCH of Datapath is
     signal ID_EX_MemToReg, ID_EX_MemToReg_next : std_logic;
 
     -- EXECUTE signals
+    signal ALU_operand1: std_logic_vector(M-1 downto 0);
+    signal ALU_operand2: std_logic_vector(M-1 downto 0);
     signal ALU_result: std_logic_vector(M-1 DOWNTO 0);
     signal ALU_result_zero: std_logic_vector(M-1 DOWNTO 0);
     signal Jump_PC: std_logic_vector(M-1 DOWNTO 0);
@@ -208,6 +235,35 @@ begin
                 EX_MEM_ALU_result <= EX_MEM_ALU_result_Next;
                 EX_MEM_FowardB <= EX_MEM_FowardB_Next;
                 EX_MEM_RD <= EX_MEM_RD_Next;
+                muxALUop1: mux Generic Map()
+                                  Port Map
+                                  (
+                                    A    => ,
+                                    B    => ,
+                                    sel  => ,
+                                    Y    =>
+
+                               );
+                            
+                muxALUop2: mux
+                                Generic Map()
+                                   Port Map
+                                   (
+                                        A    => ,
+                                        B    => ,
+                                        sel  => ,
+                                        Y    =>
+
+                                   );
+
+                AritihmeticLogicUnit: ALU Generic Map(NbitOperands => M)
+                                            Port Map
+                                            (
+                                                A    => ,
+                                                B    => ,
+                                                ctrl => ,
+                                                Y    => 
+                                            );
                 -- controll
                 EX_MEM_MemWrite <= EX_MEM_MemWrite_next;
                 EX_MEM_MemRead <= EX_MEM_MemRead_next;

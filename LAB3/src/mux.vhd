@@ -11,7 +11,7 @@ Entity mux is
 	(
 		A    : in  std_logic_vector(Nbit-1 downto 0);
 		B    : in  std_logic_vector(Nbit-1 downto 0);
-	        sel  : in  std_logic;
+		sel  : in  std_logic;
 		Y    : out std_logic_vector(Nbit-1 downto 0)
 	);
 end mux;

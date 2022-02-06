@@ -5,7 +5,8 @@ use ieee.numeric_std.all;
 ---------------------------
 Entity ALU is
     Generic( NbitOperands : integer := 32 ); 
-    Port(
+    Port
+	(
         A    : in std_logic_vector(NbitOperands -1 downto 0); --Operand1
         B    : in std_logic_vector(NbitOperands -1 downto 0); --Operand2
         ctrl : in std_logic_vector(3 downto 0); --Control Signal
