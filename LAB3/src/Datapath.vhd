@@ -94,6 +94,23 @@ architecture ARCH of Datapath is
             Y    : out std_logic_vector(NbitOperands -1 downto 0) --Result
         );
     end Component;
+
+    Component ForwardingUnit is
+        Generic
+        (
+            NbitRegAddressing: natural := 5
+        );
+        Port
+        (
+    
+            Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+            Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+            RdinExcStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
+            RdinMemStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
+            ForwardA      : out std_logic_vector(1 downto 0);
+            ForwardB      : out std_logic_vector(1 downto 0);
+        );
+    end Component;
     -- signals to connect to register file
     signal read_data_f1: std_logic_vector(M-1 DOWNTO 0);
     signal read_data_f2: std_logic_vector(M-1 DOWNTO 0);
@@ -110,7 +127,8 @@ architecture ARCH of Datapath is
     signal ID_EX_RS1, ID_EX_RS1_Next: std_logic_vector(R-1 DOWNTO 0);
     signal ID_EX_RS2, ID_EX_RS2_Next: std_logic_vector(R-1 DOWNTO 0);
     -- Execute controll signal
-    signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+    signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+    ForwardAmuxSelector, ForwardBmuxSelector : std_logic_vector(1 downto 0);
     -- Memory controll signal
     signal ID_EX_MemWrite, ID_EX_MemWrite_next : std_logic;
     signal ID_EX_MemRead, ID_EX_MemRead_next : std_logic;
@@ -236,37 +254,53 @@ begin
                 EX_MEM_ALU_result <= EX_MEM_ALU_result_Next;
                 EX_MEM_FowardB <= EX_MEM_FowardB_Next;
                 EX_MEM_RD <= EX_MEM_RD_Next;
-                muxALUop1: mux3to1 Generic Map()
+                ForwardingAMux: mux3to1 Generic Map()
                                   Port Map
                                   (
                                     A    => ,
                                     B    => ,
                                     C    => ,
-                                    sel  => ,
-                                    Y    =>
+                                    sel  => ForwardAmuxSelector,
+                                    Y    => ALU_operand1
 
                                );
                             
-                muxALUop2: mux3to1
+                ForwardingBMux: mux3to1
                                 Generic Map()
                                    Port Map
                                    (
                                         A    => ,
                                         B    => ,
                                         C    => ,
-                                        sel  => ,
-                                        Y    =>
+                                        sel  => ForwardBmuxSelector,
+                                        Y    => ALU_operand2
 
                                    );
 
                 AritihmeticLogicUnit: ALU Generic Map(NbitOperands => M)
                                             Port Map
                                             (
-                                                A    => ,
-                                                B    => ,
+                                                A    => ALU_operand1,
+                                                B    => ALU_operand2,
                                                 ctrl => ,
-                                                Y    => 
+                                                Y    => ALU_result
                                             );
+
+                ForwardingUnitComponent: ForwardingUnit
+                    Generic Map(NbitRegAddressing => 5)
+                    Port Map
+                    (
+                
+                        Rs1           => ,
+                        Rs2           => ,
+                        RdinExcStage  => ,
+                        RdinMemStage  => ,
+                        ForwardA      => ForwardAmuxSelector,
+                        ForwardB      => ForwardBmuxSelector
+                    );
+                        
+                    
+                    
                 -- controll
                 EX_MEM_MemWrite <= EX_MEM_MemWrite_next;
                 EX_MEM_MemRead <= EX_MEM_MemRead_next;
