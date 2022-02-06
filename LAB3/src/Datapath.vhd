@@ -128,7 +128,8 @@ architecture ARCH of Datapath is
     signal ID_EX_RS2, ID_EX_RS2_Next: std_logic_vector(R-1 DOWNTO 0);
     -- Execute controll signal
     signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
-    ForwardAmuxSelector, ForwardBmuxSelector : std_logic_vector(1 downto 0);
+    signal ForwardAmuxSelector, ForwardBmuxSelector : std_logic_vector(1 downto 0);
+    signal ID_EX_read_2_or_Immediate: std_logic_vector(M-1 downto 0);
     -- Memory controll signal
     signal ID_EX_MemWrite, ID_EX_MemWrite_next : std_logic;
     signal ID_EX_MemRead, ID_EX_MemRead_next : std_logic;
@@ -257,44 +258,44 @@ begin
                 ForwardingAMux: mux3to1 Generic Map()
                                   Port Map
                                   (
-                                    A    => ,
-                                    B    => ,
-                                    C    => ,
+                                    A    => ID_EX_read_1,
+                                    B    => writa_data_f,
+                                    C    => EX_MEM_ALU_result,
                                     sel  => ForwardAmuxSelector,
                                     Y    => ALU_operand1
 
                                );
                             
                 ForwardingBMux: mux3to1
-                                Generic Map()
+                                Generic Map(Nbit => 32)
                                    Port Map
                                    (
-                                        A    => ,
-                                        B    => ,
-                                        C    => ,
+                                        A    => ID_EX_read_2_or_Immediate,
+                                        B    => writa_data_f,
+                                        C    => EX_MEM_ALU_result,
                                         sel  => ForwardBmuxSelector,
                                         Y    => ALU_operand2
 
                                    );
 
-                AritihmeticLogicUnit: ALU Generic Map(NbitOperands => M)
+                ArithmeticLogicUnit: ALU Generic Map(NbitOperands => M)
                                             Port Map
                                             (
                                                 A    => ALU_operand1,
                                                 B    => ALU_operand2,
-                                                ctrl => ,
+                                                ctrl => EXECUTE_CONTROL_SIGNALS,
                                                 Y    => ALU_result
                                             );
 
                 ForwardingUnitComponent: ForwardingUnit
-                    Generic Map(NbitRegAddressing => 5)
+                    Generic Map(NbitRegAddressing => R)
                     Port Map
                     (
                 
-                        Rs1           => ,
-                        Rs2           => ,
-                        RdinMemStage  => ,
-                        RdinWrbStage  => ,
+                        Rs1           => ID_EX_RS1,
+                        Rs2           => ID_EX_RS2,
+                        RdinMemStage  => EX_MEM_RD,
+                        RdinWrbStage  => MEM_WB_RD,
                         ForwardA      => ForwardAmuxSelector,
                         ForwardB      => ForwardBmuxSelector
                     );

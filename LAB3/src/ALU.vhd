@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
+use work.myTypes;
 ---------------------------
 Entity ALU is
     Generic( NbitOperands : integer := 32 ); 
@@ -37,7 +38,7 @@ begin
 		    
 			--Arithmetic      
 
-			when "0100" =>
+			when ALU_OPCODE_ADD =>
 		        --Add
 		        result <= A+B;
 		    

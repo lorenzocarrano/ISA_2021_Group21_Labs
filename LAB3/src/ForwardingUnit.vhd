@@ -24,23 +24,25 @@ begin
 
 	DriveForwardA_MUXselector: process(Rs1, Rs2, RdinExcStage, RdinMemStage)
 	begin
-		if RdinWrbStage = Rs1 then
-			ForwardA <= "10";
-		else if RdinMemStage = Rs1 then
-			ForwardA <= "01";	
+		if RdinMemStage = Rs1 then
+			ForwardA <= "10";	
+		else if RdinWrbStage = Rs1 then
+			ForwardA <= "01";
 		else 
 			ForwardA <= "00";
+		end if;
 
 	end process;
 
 	DriveForwardB_MUXselector: process(Rs1, Rs2, RdinExcStage, RdinMemStage)
 	begin
-		if RdinWrbStage = Rs2 then
-			ForwardB <= "10";
-		else if RdinMemStage = Rs2 then
-			ForwardB <= "01";	
+		if RdinMemStage = Rs2 then
+			ForwardB <= "10";	
+		else if RdinWrbStage = Rs2 then
+			ForwardB <= "01";
 		else 
-			ForwardB <= "00";	
+			ForwardB <= "00";
+		end if;	
 	end process;
-
+	
 end Architecture;
