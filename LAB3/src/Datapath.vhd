@@ -69,7 +69,7 @@ architecture ARCH of Datapath is
     
     end component;
 
-    Component mux is
+    Component mux3to1 is
         Generic
         (
             Nbit : natural := 1
@@ -77,8 +77,9 @@ architecture ARCH of Datapath is
         Port
         (
             A    : in  std_logic_vector(Nbit-1 downto 0);
-            B    : in  std_logic_vector(Nbit-1 downto 0);
-            sel  : in  std_logic;
+            B    : in  std_logic_vector(Nbit-1 downto 0);	
+            C    : in  std_logic_vector(Nbit-1 downto 0);	
+            sel  : in  std_logic_vector(1 downto 0);
             Y    : out std_logic_vector(Nbit-1 downto 0)
         );
     end Component;
@@ -235,22 +236,24 @@ begin
                 EX_MEM_ALU_result <= EX_MEM_ALU_result_Next;
                 EX_MEM_FowardB <= EX_MEM_FowardB_Next;
                 EX_MEM_RD <= EX_MEM_RD_Next;
-                muxALUop1: mux Generic Map()
+                muxALUop1: mux3to1 Generic Map()
                                   Port Map
                                   (
                                     A    => ,
                                     B    => ,
+                                    C    => ,
                                     sel  => ,
                                     Y    =>
 
                                );
                             
-                muxALUop2: mux
+                muxALUop2: mux3to1
                                 Generic Map()
                                    Port Map
                                    (
                                         A    => ,
                                         B    => ,
+                                        C    => ,
                                         sel  => ,
                                         Y    =>
 
