@@ -105,8 +105,8 @@ architecture ARCH of Datapath is
     
             Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
             Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
-            RdinExcStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
             RdinMemStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
+            RdinWrbStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
             ForwardA      : out std_logic_vector(1 downto 0);
             ForwardB      : out std_logic_vector(1 downto 0);
         );
@@ -293,8 +293,8 @@ begin
                 
                         Rs1           => ,
                         Rs2           => ,
-                        RdinExcStage  => ,
                         RdinMemStage  => ,
+                        RdinWrbStage  => ,
                         ForwardA      => ForwardAmuxSelector,
                         ForwardB      => ForwardBmuxSelector
                     );
