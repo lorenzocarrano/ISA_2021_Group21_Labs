@@ -6,26 +6,41 @@ Entity ForwardingUnit is
 	Generic
 	(
 		NbitRegAddressing: natural := 5
-		NbitOperands               : natural := 1
 	);
 	Port
 	(
 
-		Rs1              : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
-		Rs2              : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
-		DatafromExcStage : in std_logic_vector(NbitOperands-1 downto 0);
-		DatafromMemStage : in std_logic_vector(NbitOperands-1 downto 0);
-		ForwardA         : out std_logic;
-		ForwardB         : out std_logic;
+		Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+		Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+		RdinExcStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
+		RdinMemStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
+		ForwardA      : out std_logic_vector(1 downto 0);
+		ForwardB      : out std_logic_vector(1 downto 0);
 	);
 end ForwardingUnit;
 
 Architecture Behavioral of ForwardingUnit is
 begin
 
-	process(Rs1, Rs2)
+	DriveForwardA_MUXselector: process(Rs1, Rs2, RdinExcStage, RdinMemStage)
 	begin
-		
+		if RdinMemStage = Rs1 then
+			ForwardA <= "10";
+		else if RdinExcStage = Rs1 then
+			ForwardA <= "01";	
+		else 
+			ForwardA <= "00";
+
+	end process;
+
+	DriveForwardB_MUXselector: process(Rs1, Rs2, RdinExcStage, RdinMemStage)
+	begin
+		if RdinMemStage = Rs2 then
+			ForwardB <= "10";
+		else if RdinExcStage = Rs2 then
+			ForwardB <= "01";	
+		else 
+			ForwardB <= "00";	
 	end process;
 
 end Architecture;
