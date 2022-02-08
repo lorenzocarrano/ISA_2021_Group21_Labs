@@ -26,8 +26,12 @@ entity Datapath is
         OPCODE              : OUT  std_logic_vector(OP_CODE_SIZE-1 DOWNTO 0);
         FUNC7               : OUT  std_logic_vector(FUNC7_SIZE-1 DOWNTO 0);
         FUNC3               : OUT  std_logic_vector(FUNC3_SIZE-1 DOWNTO 0);
+        IF_ID_RS1_out           : OUT std_logic_vector(R-1 DOWNTO 0);
+        IF_ID_RS3_out           : OUT std_logic_vector(R-1 DOWNTO 0);
         -- Execute
         EXECUTE_CONTROL_SIGNALS : IN std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+        ID_EX_RD_out            : OUT std_logic_vector(R-1 DOWNTO 0);
+        ID_EX_MemRead_out       : OUT std_logic;
         -- Memory
         MemWrite                : IN std_logic;
         MemRead                 : IN std_logic;
@@ -336,10 +340,12 @@ begin
     IF_ID_PC_Next  <= PC;
     IF_ID_INSTRUCTION_next <= Instruction;
 
-    -- DECODE part 
+    -- DECODE part
     instruction_to_CU <= IF_ID_INSTRUCTION;
     read_addr_f1 <= IF_ID_INSTRUCTION(19 DOWNTO 15);
     read_addr_f2 <= IF_ID_INSTRUCTION(24 DOWNTO 20);
+    IF_ID_RS1_out <= read_addr_f1;
+    IF_ID_RS1_out <= read_addr_f2;
     writa_addr_f <= MEM_WB_RD;
     RF: Register
             -- generic map (
@@ -393,6 +399,8 @@ begin
     -- ADD IMMEDIATE OPERATION
 
     -- EXECUTE part
+    ID_EX_MemRead_out <= ID_EX_MemRead;
+    ID_EX_RD_out <= ID_EX_RD;
     -- link ALU, mux and add for change PC in case of jump
     -- PIPELINE execute
     EX_MEM_Jump_PC_Next <= Jump_PC; -- calculate value of pc if jump

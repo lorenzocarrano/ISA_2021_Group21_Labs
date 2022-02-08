@@ -85,30 +85,54 @@ begin
             OPCODE              : OUT  std_logic_vector(OP_CODE_SIZE-1 DOWNTO 0);
             FUNC7               : OUT  std_logic_vector(FUNC7_SIZE-1 DOWNTO 0);
             FUNC3               : OUT  std_logic_vector(FUNC3_SIZE-1 DOWNTO 0);
+            IF_ID_RS1_out           : OUT std_logic_vector(R-1 DOWNTO 0);
+            IF_ID_RS3_out           : OUT std_logic_vector(R-1 DOWNTO 0);
             -- Execute
             EXECUTE_CONTROL_SIGNALS : IN std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+            ID_EX_RD_out            : OUT std_logic_vector(R-1 DOWNTO 0);
+            ID_EX_MemRead_out       : OUT std_logic;
             -- Memory
             MemWrite                : IN std_logic;
             MemRead                 : IN std_logic;
             Branch                  : IN std_logic;
             -- Write Back
             RegWrite                : IN std_logic;
-            MemToReg                : IN std_logic  
+            MemToReg                : IN std_logic;  
         );
     
     end component;
 
+    component DataHazardUnit is
+        Generic
+        (
+            NbitRegAddressing: natural := 5
+        );
+        Port
+        (
+            CLK           : In  std_logic;
+            RST           : In  std_logic;
+            Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+            Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+            Rd            : in std_logic_vector(NbitRegAddressing-1 downto 0);
+            MemRead       : in std_logic;
+            stall         : out std_logic
+        );
+    end component;
+
     signal MemWrite, MemRead, Branch, RegWrite, MemToReg, Stall: std_logic;
+    signal ID_EX_MemRead, Stall_1, Stall_2: std_logic;
     signal EXECUTE_CONTROL_SIGNALS : std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
     signal Opcode: std_logic_vector(OP_CODE_SIZE-1 downto 0);
     signal Func7: std_logic_vector(FUNC7_SIZE-1 downto 0);
     signal Func3: std_logic_vector(FUNC3_SIZE-1 downto 0);
 
+    signal IF_ID_RS1, IF_ID_RS1, ID_EX_Rd: std_logic_vector(R-1 downto 0);
+
     CU: Controller PORT MAP (
         OPCODE                  <= OPCODE,
         FUNCT3                  <= FUNCT3,
         FUNCT7                  <= FUNCT7,
-        STALL                   <= STALL,
+        STALL                   <= STALL_2,
         EXECUTE_CONTROL_SIGNALS <= EXECUTE_CONTROL_SIGNALS,
         MemWrite                <= MemWrite,
         MemRead                 <= MemRead,
@@ -117,6 +141,8 @@ begin
         MemToReg                <= MemToReg
     );
 
+    stall <= stall_1 OR stall_2;
+    
     DP: Datapath PORT MAP (
         CK                  <= CK,
         RST_n               <= RST_n,
@@ -131,7 +157,11 @@ begin
         OPCODE                  <= OPCODE,
         FUNCT3                  <= FUNCT3,
         FUNCT7                  <= FUNCT7,
+        IF_ID_RS1_out           <= IF_ID_RS1,
+        IF_ID_RS3_out           <= IF_ID_RS2,
         EXECUTE_CONTROL_SIGNALS <= EXECUTE_CONTROL_SIGNALS,
+        ID_EX_RD_out            <= ID_EX_Rd,
+        ID_EX_MemRead_out       <= ID_EX_MemRead,
         MemWrite                <= MemWrite,
         MemRead                 <= MemRead,
         Branch                  <= Branch,
@@ -140,4 +170,13 @@ begin
 
     );
 
+    DP: DataHazardUnit PORT MAP (
+        CK                  <= CK,
+        RST                 <= RST_n,
+        Rs1                 <= IF_ID_RS1,
+        Rs2                 <= IF_ID_RS1,
+        Rd                  <= ID_EX_Rd,
+        MemRead             <= ID_EX_MemRead,
+        STALL               <= STALL_1, -- put OR gate with data hazard stall
+    )
 end ARCH;
