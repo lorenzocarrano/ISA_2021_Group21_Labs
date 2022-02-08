@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Register is
+entity Register_file is
 
 	Generic (N_address: integer:= 5,
              N_tot:     integer:=32);
@@ -17,22 +17,40 @@ entity Register is
             Read_data_1:        Out std_logic_vector(N_tot-1 downto 0);
             Read_data_2:        Out std_logic_vector(N_tot-1 downto 0));
 
-end Register;
+end Register_file;
 
-architecture arch of Register is
+architecture arch of Register_file is
 
-    component REG is
-
-        Generic (NBIT: integer:= 8);
-    
-        Port (	D:	In	signed(NBIT-1 downto 0);
-                CK:	In	std_logic;
-                RESET:	In	std_logic;
-                ENABLE: In 	std_logic;
-                Q:	Out	signed(NBIT-1 downto 0));
-    
-    end component;
+    type matrix is array (N_tot -1 downto 0) of std_logic_vector(N_tot-1 downto 0); 
+    signal reg: matrix := (others => (others => '0'));
 
 begin
+
+    process (Clk, Reset, Read_register_1, Read_register_2, , Write_register, Write_data, Enable_Write)
+
+    begin
+
+        if (clk'event and clk = '0') then --negative edge
+
+            if reset = '0' then
+                
+                reg <= (others => (others => '0'));
+            
+            else
+
+                if (Enable_Write = '1') then
+
+                    reg (to_integer(unsigned(Write_register))) <= Write_data;
+
+                end if;
+
+                Read_data_1 <= reg (to_integer(unsigned(Read_register_1)));
+                Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
+
+            end if;
+
+        end if;
+
+    end process;
 
 end arch;
