@@ -1,3 +1,7 @@
+library IEEE;
+use IEEE.std_logic_1164.all; 
+use work.myTypes;
+
 entity instruction_memory is
     generic (
         N_BIT: integer := 32
@@ -8,7 +12,7 @@ entity instruction_memory is
         Address     :    IN std_logic_vector(N_BIT-1 downto 0)
         Instruction :    OUT std_logic_vector(N_DATA-1 downto 0)
     );
-end entity instruction_memory;
+end instruction_memory;
 
 architecture Arch of instruction_memory is
     

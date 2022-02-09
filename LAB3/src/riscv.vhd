@@ -2,15 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all; 
 use work.myTypes;
 
-entity Controller is
+entity riscv is
     Generic (
         OP_CODE_SIZE        : integer := OP_CODE_SIZE7;
         FUNC7_SIZE          : integer := FUNC7_SIZE;
-        FUNC3_SIZE          : integer := FUNC3_SIZE;
-        ALU_OPCODE_SIZE     : integer := 2;
-        EXECUTE_CONTROL_SIZE: integer := 2;
-        MEMORY_CONTROL_SIZE : integer := 2;
-        WB_CONTROL_SIZE     : integer := 1
+        FUNC3_SIZE          : integer := FUNC3_SIZE
     );
 	Port (
         CK                  : In  std_logic;
@@ -26,7 +22,7 @@ entity Controller is
         Instruction         : In  std_logic_vector(M-1 DOWNTO 0);
     );
 
-end Controller;
+end riscv;
 
 architecture ARCH of Controller is
     
@@ -109,8 +105,6 @@ begin
         );
         Port
         (
-            CLK           : In  std_logic;
-            RST           : In  std_logic;
             Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
             Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
             Rd            : in std_logic_vector(NbitRegAddressing-1 downto 0);

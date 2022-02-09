@@ -27,7 +27,7 @@ entity Datapath is
         FUNC7               : OUT  std_logic_vector(FUNC7_SIZE-1 DOWNTO 0);
         FUNC3               : OUT  std_logic_vector(FUNC3_SIZE-1 DOWNTO 0);
         IF_ID_RS1_out           : OUT std_logic_vector(R-1 DOWNTO 0);
-        IF_ID_RS3_out           : OUT std_logic_vector(R-1 DOWNTO 0);
+        IF_ID_RS2_out           : OUT std_logic_vector(R-1 DOWNTO 0);
         -- Execute
         EXECUTE_CONTROL_SIGNALS : IN std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
         ALUSrc                  : IN std_logic;
@@ -314,8 +314,9 @@ begin
     instruction_to_CU <= IF_ID_INSTRUCTION;
     read_addr_f1 <= IF_ID_INSTRUCTION(19 DOWNTO 15);
     read_addr_f2 <= IF_ID_INSTRUCTION(24 DOWNTO 20);
+    -- signals for Data Hazard
     IF_ID_RS1_out <= read_addr_f1;
-    IF_ID_RS1_out <= read_addr_f2;
+    IF_ID_RS2_out <= read_addr_f2;
     writa_addr_f <= MEM_WB_RD;
     RF: Register
             -- generic map (
@@ -420,7 +421,6 @@ begin
         Generic Map(NbitRegAddressing => R)
         Port Map
         (
-
             Rs1           => ID_EX_RS1,
             Rs2           => ID_EX_RS2,
             RdinMemStage  => EX_MEM_RD,
@@ -428,7 +428,7 @@ begin
             ForwardA      => ForwardAmuxSelector,
             ForwardB      => ForwardBmuxSelector
         );
-    -- signal for data hazard
+    -- signals for Data Hazard
     ID_EX_MemRead_out <= ID_EX_MemRead;
     ID_EX_RD_out <= ID_EX_RD;
     -- PIPELINE execute
