@@ -4,10 +4,9 @@ use ieee.numeric_std.all;
 
 entity immediate_gen is
 
-	generic (n_address: integer:= 5,
-             n_tot:     integer:=32);
+	generic (n_tot:     integer:=32);
 
-	port (	instruction:    in	std_logic_vector(n_address-1 downto 0);
+	port (	instruction:    in	std_logic_vector(n_tot-1 downto 0);
             immediate:      out std_logic_vector(n_tot-1 downto 0));
 
 end immediate_gen;

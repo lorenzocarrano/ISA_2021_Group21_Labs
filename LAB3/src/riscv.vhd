@@ -141,12 +141,12 @@ begin
         MemToReg                <= MemToReg
     );
 
-    stall <= stall_1 OR stall_2;
-    
+    stall <= stall_1 OR stall_2; -- put OR gate with data hazard stall
+
     DP: Datapath PORT MAP (
         CK                  <= CK,
         RST_n               <= RST_n,
-        STALL               <= STALL, -- put OR gate with data hazard stall
+        STALL               <= STALL,
         DATA_ADDRESS        <= DATA_ADDRESS,
         DATA_READ           <= DATA_READ,
         DATA_WRITE          <= DATA_WRITE,

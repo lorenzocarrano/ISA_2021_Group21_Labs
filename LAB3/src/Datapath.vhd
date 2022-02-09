@@ -30,6 +30,7 @@ entity Datapath is
         IF_ID_RS3_out           : OUT std_logic_vector(R-1 DOWNTO 0);
         -- Execute
         EXECUTE_CONTROL_SIGNALS : IN std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+        ALUSrc                  : IN std_logic;
         ID_EX_RD_out            : OUT std_logic_vector(R-1 DOWNTO 0);
         ID_EX_MemRead_out       : OUT std_logic;
         -- Memory
@@ -73,6 +74,44 @@ architecture ARCH of Datapath is
     
     end component;
 
+    -- Immedaiate generator
+    component immediate_gen is
+
+        generic (n_tot:     integer:=32);
+        port (	instruction:    in	std_logic_vector(n_tot-1 downto 0);
+                immediate:      out std_logic_vector(n_tot-1 downto 0));
+    
+    end component;
+
+    -- signals to connect to register file
+    signal read_data_f1: std_logic_vector(M-1 DOWNTO 0);
+    signal read_data_f2: std_logic_vector(M-1 DOWNTO 0);
+    signal writa_data_f: std_logic_vector(M-1 DOWNTO 0);
+    signal read_addr_f1: std_logic_vector(4 DOWNTO 0);
+    signal read_addr_f2: std_logic_vector(4 DOWNTO 0);
+    signal writa_addr_f: std_logic_vector(4 DOWNTO 0);
+    -- miss immediate generator --
+    -- For pipelined this stage
+    signal ID_EX_read_1, ID_EX_read_1_Next: std_logic_vector(M-1 DOWNTO 0);
+    signal ID_EX_read_2, ID_EX_read_2_Next: std_logic_vector(M-1 DOWNTO 0);
+    signal ID_EX_immediate, ID_EX_immediate_next: std_logic_vector(M-1 DOWNTO 0);
+    signal ID_EX_PC, ID_EX_PC_Next: std_logic_vector(N-1 DOWNTO 0);
+    signal ID_EX_RD, ID_EX_RD_Next: std_logic_vector(R-1 DOWNTO 0);
+    signal ID_EX_RS1, ID_EX_RS1_Next: std_logic_vector(R-1 DOWNTO 0);
+    signal ID_EX_RS2, ID_EX_RS2_Next: std_logic_vector(R-1 DOWNTO 0);
+    -- Execute controll signal
+    signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+    signal ForwardAmuxSelector, ForwardBmuxSelector : std_logic_vector(1 downto 0);
+    signal ID_EX_read_2_or_Immediate: std_logic_vector(M-1 downto 0);
+    -- Memory controll signal
+    signal ID_EX_MemWrite, ID_EX_MemWrite_next : std_logic;
+    signal ID_EX_MemRead, ID_EX_MemRead_next : std_logic;
+    signal ID_EX_Branch, ID_EX_Branch_next : std_logic;
+    -- Write Back controll signal
+    signal ID_EX_RegWrite, ID_EX_RegWrite_next : std_logic;
+    signal ID_EX_MemToReg, ID_EX_MemToReg_next : std_logic;
+
+    -- EXECUTE signals
     Component mux3to1 is
         Generic
         (
@@ -115,39 +154,13 @@ architecture ARCH of Datapath is
             ForwardB      : out std_logic_vector(1 downto 0);
         );
     end Component;
-    -- signals to connect to register file
-    signal read_data_f1: std_logic_vector(M-1 DOWNTO 0);
-    signal read_data_f2: std_logic_vector(M-1 DOWNTO 0);
-    signal writa_data_f: std_logic_vector(M-1 DOWNTO 0);
-    signal read_addr_f1: std_logic_vector(4 DOWNTO 0);
-    signal read_addr_f2: std_logic_vector(4 DOWNTO 0);
-    signal writa_addr_f: std_logic_vector(4 DOWNTO 0);
-    -- miss immediate generator --
-    -- For pipelined this stage
-    signal ID_EX_read_1, ID_EX_read_1_Next: std_logic_vector(M-1 DOWNTO 0);
-    signal ID_EX_read_2, ID_EX_read_2_Next: std_logic_vector(M-1 DOWNTO 0);
-    signal ID_EX_PC, ID_EX_PC_Next: std_logic_vector(N-1 DOWNTO 0);
-    signal ID_EX_RD, ID_EX_RD_Next: std_logic_vector(R-1 DOWNTO 0);
-    signal ID_EX_RS1, ID_EX_RS1_Next: std_logic_vector(R-1 DOWNTO 0);
-    signal ID_EX_RS2, ID_EX_RS2_Next: std_logic_vector(R-1 DOWNTO 0);
-    -- Execute controll signal
-    signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
-    signal ForwardAmuxSelector, ForwardBmuxSelector : std_logic_vector(1 downto 0);
-    signal ID_EX_read_2_or_Immediate: std_logic_vector(M-1 downto 0);
-    -- Memory controll signal
-    signal ID_EX_MemWrite, ID_EX_MemWrite_next : std_logic;
-    signal ID_EX_MemRead, ID_EX_MemRead_next : std_logic;
-    signal ID_EX_Branch, ID_EX_Branch_next : std_logic;
-    -- Write Back controll signal
-    signal ID_EX_RegWrite, ID_EX_RegWrite_next : std_logic;
-    signal ID_EX_MemToReg, ID_EX_MemToReg_next : std_logic;
 
-    -- EXECUTE signals
     signal ALU_operand1: std_logic_vector(M-1 downto 0);
     signal ALU_operand2: std_logic_vector(M-1 downto 0);
     signal ALU_result: std_logic_vector(M-1 DOWNTO 0);
     signal ALU_result_zero: std_logic_vector(M-1 DOWNTO 0);
     signal Jump_PC: std_logic_vector(M-1 DOWNTO 0);
+    signal ID_EX_read_2_or_Immediate: std_logic_vector(M-1 DOWNTO 0);
     -- For pipelined this stage
     signal EX_MEM_Jump_PC, EX_MEM_Jump_PC_Next: std_logic_vector(M-1 DOWNTO 0);
     signal EX_MEM_ALU_result_zero, EX_MEM_ALU_result_zero_Next: std_logic_vector(M-1 DOWNTO 0);
@@ -195,6 +208,7 @@ begin
                 ID_EX_RD <= (Others => '0');
                 ID_EX_RS1 <= (Others => '0');
                 ID_EX_RS2 <= (Others => '0');
+                ID_EX_immediate <= (others => '0')
                 -- controll
                 ID_EX_EXECUTE_CONTROL_SIGNALS <= ID_EX_EXECUTE_CONTROL_SIGNALS_Next;
                 ID_EX_MemWrite <= (others => '0');
@@ -236,6 +250,7 @@ begin
                 ID_EX_read_1 <= ID_EX_read_1_Next;
                 ID_EX_read_2 <= ID_EX_read_2_Next;
                 ID_EX_RD <= ID_EX_RD_Next;
+                ID_EX_immediate <= ID_EX_immediate_next;
                 -- can't neead this if if control drive the nop
                 if (STALL = '0') then
                     -- controll
@@ -258,52 +273,7 @@ begin
                 EX_MEM_ALU_result_zero <= EX_MEM_ALU_result_zero_Next;
                 EX_MEM_ALU_result <= EX_MEM_ALU_result_Next;
                 EX_MEM_FowardB <= EX_MEM_FowardB_Next;
-                EX_MEM_RD <= EX_MEM_RD_Next;
-                ForwardingAMux: mux3to1 Generic Map()
-                                  Port Map
-                                  (
-                                    A    => ID_EX_read_1,
-                                    B    => writa_data_f,
-                                    C    => EX_MEM_ALU_result,
-                                    sel  => ForwardAmuxSelector,
-                                    Y    => ALU_operand1
-
-                               );
-                            
-                ForwardingBMux: mux3to1
-                                Generic Map(Nbit => 32)
-                                   Port Map
-                                   (
-                                        A    => ID_EX_read_2_or_Immediate,
-                                        B    => writa_data_f,
-                                        C    => EX_MEM_ALU_result,
-                                        sel  => ForwardBmuxSelector,
-                                        Y    => ALU_operand2
-
-                                   );
-
-                ArithmeticLogicUnit: ALU Generic Map(NbitOperands => M)
-                                            Port Map
-                                            (
-                                                A    => ALU_operand1,
-                                                B    => ALU_operand2,
-                                                ctrl => EXECUTE_CONTROL_SIGNALS,
-                                                Y    => ALU_result
-                                            );
-
-                ForwardingUnitComponent: ForwardingUnit
-                    Generic Map(NbitRegAddressing => R)
-                    Port Map
-                    (
-                
-                        Rs1           => ID_EX_RS1,
-                        Rs2           => ID_EX_RS2,
-                        RdinMemStage  => EX_MEM_RD,
-                        RdinWrbStage  => MEM_WB_RD,
-                        ForwardA      => ForwardAmuxSelector,
-                        ForwardB      => ForwardBmuxSelector
-                    );
-                        
+                EX_MEM_RD <= EX_MEM_RD_Next;                     
                     
                     
                 -- controll
@@ -355,14 +325,23 @@ begin
             port map (
                 Reset           => RST_n;
                 Clk             => CK;
-                Read_register_1 => read_addr_f1;
-                Read_register_2 => read_addr_f2;
-                Write_register  => writa_addr_f;
-                Write_data      => writa_data_f;
-                Enable_Write    => MEM_WB_RegWrite;
-                Read_data_1     => read_data_f1;
+                Read_register_1 => read_addr_f1,
+                Read_register_2 => read_addr_f2,
+                Write_register  => writa_addr_f,
+                Write_data      => writa_data_f,
+                Enable_Write    => MEM_WB_RegWrite,
+                Read_data_1     => read_data_f1,
                 Read_data_2     => read_data_f2
             );
+
+    IM: immediate_gen 
+            generic map
+                (N_tot  <= 32);
+            port map
+                (	
+                    instruction => IF_ID_INSTRUCTION,
+                    immediate   => ID_EX_immediate_next
+                )
     -- PIPELINE decode
     ID_EX_read_1_Next <= read_data_f1;
     ID_EX_read_2_Next <= read_data_f2;
@@ -399,14 +378,65 @@ begin
     -- ADD IMMEDIATE OPERATION
 
     -- EXECUTE part
+    Rs2ORImm: process (ID_EX_immediate, ID_EX_RS2, ALUSrc)
+    begin
+        if (ALUSrc = '0') then
+            ID_EX_read_2_or_Immediate <= ID_EX_RS2;
+        else
+            ID_EX_read_2_or_Immediate <= ID_EX_immediate;
+        end if;
+    end process;
+    -- ALU component
+    ForwardingAMux: mux3to1 Generic Map()
+        Port Map
+        (
+        A    => ID_EX_read_1,
+        B    => writa_data_f,
+        C    => EX_MEM_ALU_result,
+        sel  => ForwardAmuxSelector,
+        Y    => ALU_operand1);
+
+    -- here better choose an 4muxto1 for immediate
+    ForwardingBMux: mux3to1
+        Generic Map(Nbit => 32)
+        Port Map
+        (
+            A    => ID_EX_read_2_or_Immediate,
+            B    => writa_data_f,
+            C    => EX_MEM_ALU_result,
+            sel  => ForwardBmuxSelector,
+            Y    => ALU_operand2);
+
+    ArithmeticLogicUnit: ALU
+        Generic Map(NbitOperands => M)
+        Port Map
+        (
+            A    => ALU_operand1,
+            B    => ALU_operand2,
+            ctrl => EXECUTE_CONTROL_SIGNALS,
+            Y    => ALU_result);
+
+    ForwardingUnitComponent: ForwardingUnit
+        Generic Map(NbitRegAddressing => R)
+        Port Map
+        (
+
+            Rs1           => ID_EX_RS1,
+            Rs2           => ID_EX_RS2,
+            RdinMemStage  => EX_MEM_RD,
+            RdinWrbStage  => MEM_WB_RD,
+            ForwardA      => ForwardAmuxSelector,
+            ForwardB      => ForwardBmuxSelector
+        );
+    -- signal for data hazard
     ID_EX_MemRead_out <= ID_EX_MemRead;
     ID_EX_RD_out <= ID_EX_RD;
-    -- link ALU, mux and add for change PC in case of jump
     -- PIPELINE execute
-    EX_MEM_Jump_PC_Next <= Jump_PC; -- calculate value of pc if jump
+    -- calculate value of pc if jump, shifting to left by one
+    EX_MEM_Jump_PC_Next <= ID_EX_Jump + (ID_EX_immediate(M-2 donwto 1) & '0');
     EX_MEM_ALU_result_zero_Next <= ALU_result_zero;
     EX_MEM_ALU_result_Next <= ALU_result;
-    EX_MEM_FowardB_Next <= ID_EX_read_2; -- put value of ForwardB mux here
+    EX_MEM_FowardB_Next <= ALU_operand2;
     EX_MEM_RD_Next <= ID_EX_RD;
     -- Memory controll signal
     EX_MEM_MemRead_next <= ID_EX_MemRead;

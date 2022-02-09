@@ -17,6 +17,7 @@ entity Controller is
         STALL                   : OUT std_logic;
         -- Execute
         EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+        ALUSrc                  : OUT std_logic;
         -- Memory
         MemWrite                : OUT std_logic;
         MemRead                 : OUT std_logic;
@@ -44,6 +45,7 @@ begin
 		RegWrite <= '0';
         MemToReg <= '0';
         start_stall <= '0';
+        ALUSrc <= '0';
 		
         case( to_integer(unsigned(OPCODE)) ) is
             -- same OPCODE for all R-Type instructions
@@ -59,6 +61,7 @@ begin
 
             -- same OPCODE for all these I-Type instructions 
             when ITYPE_ADDI_OPCODE =>
+                ALUSrc <= '1';
                 RegWrite <= '1';
                 case(FUNCT3) is
                     when ITYPE_ADDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
@@ -69,6 +72,7 @@ begin
             
             -- doesn't need FUNCT3
             when ITYPE_LW_OPCODE =>
+                ALUSrc <= '1';
                 MemRead <= '1';
                 RegWrite <= '1';
                 MemToReg <= '1';
@@ -87,19 +91,23 @@ begin
 			-- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest
 			-- 12 bits with zeros.
             when UTYPE_LUI =>
+                ALUSrc <= '1';
 				RegWrite <= '1';
 				-- shift value to left
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
             when JTYPE_JAL_OPCODE =>
+                ALUSrc <= '1';
                 start_stall <= '1';
                 Branch <= '1';
 
             when BTYPE_BEQ_OPCODE =>
+                ALUSrc <= '1';
                 start_stall <= '1';
                 Branch <= '1';
 
             when STYPE_SW_OPCODE =>
+                ALUSrc <= '1';
 				-- activate write dara memory only with store instruction
 				MemWrite <= '1';
 				-- calculate address from read
