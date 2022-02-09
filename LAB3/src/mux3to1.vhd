@@ -18,19 +18,17 @@ Entity mux3to1 is
 end mux3to1;
 
 Architecture Behavioral of mux3to1 is
-	
-	process(sel)
+begin	
+	process(sel, A, B, C)
 	begin
 		if sel = "00" then 
 			Y <= A;
-		
-		else if sel = "01"
+		elsif sel = "01" then
 			Y <= B;
-		
 		else 
 			Y <= C;
 		end if;
 	
 	end process;
 
-end Architecture;
+end Behavioral;

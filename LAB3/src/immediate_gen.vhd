@@ -38,7 +38,7 @@ begin
                                 immediate (4 downto 1) <= instruction(11 downto 8);
                                 immediate (10 downto 5) <= instruction(30 downto 25);
                                 immediate (11) <= instruction(7);
-                                immediate (31 downto 12) <= instruction(31);
+                                immediate (31 downto 12) <= instruction(31 downto 12);
             when "0100011" =>   immediate (4 downto 0) <= instruction(11 downto 7);--S-Type
                                 immediate (11 downto 5) <= instruction(31 downto 25);
                                 immediate (31 downto 12) <= (others => instruction(31));
@@ -48,4 +48,4 @@ begin
 
     end process;
     
-end architecture arch;
+end arch;

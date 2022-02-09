@@ -1,15 +1,17 @@
 library IEEE;
 use IEEE.std_logic_1164.all; 
+use IEEE.numeric_std.all; 
 use work.myTypes;
 
 entity instruction_memory is
     generic (
-        N_BIT: integer := 32
-    )
+        N_BIT: integer := 32;
+        N_DATA: integer := 32
+    );
     port (
         RST         :    IN std_logic;
         CLK         :    IN std_logic;
-        Address     :    IN std_logic_vector(N_BIT-1 downto 0)
+        Address     :    IN std_logic_vector(N_BIT-1 downto 0);
         Instruction :    OUT std_logic_vector(N_DATA-1 downto 0)
     );
 end instruction_memory;
@@ -17,7 +19,7 @@ end instruction_memory;
 architecture Arch of instruction_memory is
     
     type mem_array is array (0 to 21) of std_logic_vector (N_BIT - 1 downto 0); 
-	signal memory : mem_array = (
+	signal memory : mem_array := (
 		x"00700813",
         x"0fc10217",
         x"ffc20213",
@@ -47,7 +49,7 @@ begin
     process(CLK)
     begin
         if (CLK = '1') then
-            Instruction <= memory(conv_integer(unsigned(Address(6 downto 2))));		
+            Instruction <= memory(to_integer(unsigned(Address(6 downto 2))));		
         end if;
     end process;
     

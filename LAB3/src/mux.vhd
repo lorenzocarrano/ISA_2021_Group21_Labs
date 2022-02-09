@@ -19,7 +19,7 @@ end mux;
 Architecture Behavioral of mux is
 begin
 
-	process(sel)
+	process(sel, A, B)
 	begin
 		if sel = '0' then 
 			Y <= A;

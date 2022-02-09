@@ -1,13 +1,14 @@
 library IEEE;
 use IEEE.std_logic_1164.all; 
-use work.myTypes;
+use IEEE.numeric_std.all; 
+use work.myTypes.all;
 
 entity data_memory is
     generic (
         N_ADDRESS: integer := 10;
         N_DATA: integer := 32;
         MEMORY_SIZE: integer := 1024
-    )
+    );
     port (
         RST      :    IN std_logic;
         CLK      :    IN std_logic;
@@ -42,9 +43,11 @@ begin
                     "00000000000000000000000000000000"); 
             else
                 if (ReadMem = '1') then 
-                    memory(conv_integer(unsigned(Address(N_DATA - 1 downto 2)))) <= Data_in; 
+                    memory(to_integer(unsigned(Address(N_DATA - 1 downto 2)))) <= Data_in; 
+                end if;
+
                 if (WriteMem = '1') then
-                    Data_out <= memory(conv_integer(unsigned(Address(N_DATA - 1 downto 2))));
+                    Data_out <= memory(to_integer(unsigned(Address(N_DATA - 1 downto 2))));
                 end if;
             end if;
         end if; 

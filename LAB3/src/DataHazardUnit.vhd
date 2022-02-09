@@ -1,17 +1,18 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+library IEEE;
+use IEEE.std_logic_1164.all; 
+use IEEE.numeric_std.all;
+use work.myTypes.all;
 
 Entity DataHazardUnit is
 	Generic
 	(
-		NbitRegAddressing: natural := 5
+		M: natural := 5
 	);
 	Port
 	(
-		Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
-		Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
-		Rd            : in std_logic_vector(NbitRegAddressing-1 downto 0);
+		Rs1           : in std_logic_vector(M-1 downto 0);
+		Rs2           : in std_logic_vector(M-1 downto 0);
+		Rd            : in std_logic_vector(M-1 downto 0);
 		MemRead       : in std_logic;
 		stall         : out std_logic
 	);
@@ -26,6 +27,6 @@ begin
         else
             stall <= '0';
         end if;    
-    end ;
+    end process;
 	
 end Arch;

@@ -1,16 +1,17 @@
 library IEEE;
 use IEEE.std_logic_1164.all; 
-use work.myTypes;
+use IEEE.numeric_std.all;
+use work.myTypes.all;
 
 entity Controller is
     Generic (
-        OP_CODE_SIZE        : integer := OP_CODE_SIZE7;
+        OP_CODE_SIZE        : integer := OP_CODE_SIZE;
         FUNC7_SIZE          : integer := FUNC7_SIZE;
         FUNC3_SIZE          : integer := FUNC3_SIZE
     );
 	Port (
-        CK                      : In  std_logic;
-        RST_n                   : In  std_logic;
+        CLK                     : In  std_logic;
+        RST                     : In  std_logic;
 		OPCODE                  : IN std_logic_vector(OP_CODE_SIZE-1 downto 0);
         FUNCT3                  : IN std_logic_vector(FUNC3_SIZE-1 downto 0);
         FUNCT7                  : IN std_logic_vector(FUNC7_SIZE-1 downto 0);
@@ -24,7 +25,7 @@ entity Controller is
         Branch                  : OUT std_logic;
         -- Write Back
         RegWrite                : OUT std_logic;
-        MemToReg                : OUT std_logic;
+        MemToReg                : OUT std_logic
     );
 
 end Controller;
@@ -47,7 +48,7 @@ begin
         start_stall <= '0';
         ALUSrc <= '0';
 		
-        case( to_integer(unsigned(OPCODE)) ) is
+        case OPCODE is
             -- same OPCODE for all R-Type instructions
             when RTYPE_ADD_OPCODE =>
                 RegWrite <= '1';
@@ -56,7 +57,7 @@ begin
                     when RTYPE_ADD_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
                     when RTYPE_XOR_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_XOR;
                     when RTYPE_SLT_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SLT;
-                    when others =>
+                    when others          => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
                 end case ;
 
             -- same OPCODE for all these I-Type instructions 
@@ -67,7 +68,7 @@ begin
                     when ITYPE_ADDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
                     when ITYPE_ANDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SRA;
                     when ITYPE_SRAI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_AND;
-                    when others => 
+                    when others           => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_AND; 
                 end case ;
             
             -- doesn't need FUNCT3
@@ -90,7 +91,7 @@ begin
 			-- LUI (load upper immediate) is used to build 32-bit constants and uses the U-type format. LUI
 			-- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest
 			-- 12 bits with zeros.
-            when UTYPE_LUI =>
+            when UTYPE_LUI_OPCODE =>
                 ALUSrc <= '1';
 				RegWrite <= '1';
 				-- shift value to left
@@ -116,7 +117,7 @@ begin
             when others =>
         
         end case ;    
-    end Controll;
+    end process Controll;
 
 
     -- CONTROLL HAZARD
@@ -125,21 +126,21 @@ begin
 
     Reg: process(clk)
     begin
-        if(clk = '1')
+        if(clk = '1') then
             if (rst = '1') then
                 current_state <= s0;
             else
                 current_state <= next_state;
             end if;
         end if;
-    end Reg;
+    end process Reg;
 
     CountStall: process(current_state, start_stall)
     begin
-        stall_s <= '1'
+        stall_s <= '1';
         case current_state is
             when s0 =>
-            stall_s <= '0'
+                stall_s <= '0';
                 if (start_stall = '0') then
                     next_state <= s0;
                 else
@@ -154,6 +155,6 @@ begin
             when s2 =>
                 next_state <= s0;
         end case;     
-    end CountStall;
+    end process CountStall;
 
 end ARCH;

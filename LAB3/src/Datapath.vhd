@@ -1,5 +1,8 @@
 library IEEE;
-use IEEE.std_logic_1164.all; 
+use IEEE.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use work.myTypes.all;
 
 entity Datapath is
     Generic (
@@ -9,16 +12,16 @@ entity Datapath is
         R: natural := 5         -- register adress
     );
 	Port (
-		CK                  : In  std_logic;
-        RST_n               : In  std_logic;
+		CLK                 : In  std_logic;
+        RST                 : In  std_logic;
         -- to stall the pipelined
         STALL               : In  std_logic;
         -- data memory
         DATA_ADDRESS        : Out std_logic_vector(N-1 DOWNTO 0);
         DATA_READ           : In  std_logic_vector(M-1 DOWNTO 0);
         DATA_WRITE          : Out std_logic_vector(M-1 DOWNTO 0);
-        DATA_WRITE_EN       : Out std_logic_vector;
-        DATA_READ_EN        : Out std_logic_vector;
+        DATA_WRITE_EN       : Out std_logic;
+        DATA_READ_EN        : Out std_logic;
         -- instruction memory
         IR_ADDRESS          : Out std_logic_vector(N-1 DOWNTO 0);
         Instruction         : In  std_logic_vector(M-1 DOWNTO 0);
@@ -39,7 +42,7 @@ entity Datapath is
         Branch                  : IN std_logic;
         -- Write Back
         RegWrite                : IN std_logic;
-        MemToReg                : IN std_logic;       
+        MemToReg                : IN std_logic      
     );
 
 end Datapath;
@@ -47,27 +50,26 @@ end Datapath;
 
 architecture ARCH of Datapath is
     -- FETCH signals --
+    signal PC_MUX     : std_logic;
     -- PC register that point the instruction adress target operation
     signal PC, PCNext : std_logic_vector(N-1 DOWNTO 0);
-    -- select how to assign the PC adress value
-    signal Jump_PC std_logic:
     -- For pipelined this stage
     signal IF_ID_PC, IF_ID_PC_Next                   : std_logic_vector(N-1 DOWNTO 0);
     signal IF_ID_INSTRUCTION, IF_ID_INSTRUCTION_next : std_logic_vector(M-1 DOWNTO 0);
 
     -- DECODE signals --
     -- Register File. Read always, write only when needed
-    component Register is
+    component Register_file is
 
-        Generic (N_address: integer:= 5,
+        Generic (N_address: integer:= 5;
                  N_tot:     integer:=32);
     
         Port (	Read_register_1:	In	std_logic_vector(N_address-1 downto 0);
                 Read_register_2:	In	std_logic_vector(N_address-1 downto 0);
                 Write_register:     In  std_logic_vector(N_address-1 downto 0);
                 Write_data:         In  std_logic_vector(N_tot-1 downto 0);
-                Clk:	            In	std_logic;
                 Reset:	            In	std_logic;
+                Clk:	            In	std_logic;
                 Enable_Write:       In 	std_logic;
                 Read_data_1:        Out std_logic_vector(N_tot-1 downto 0);
                 Read_data_2:        Out std_logic_vector(N_tot-1 downto 0));
@@ -100,9 +102,8 @@ architecture ARCH of Datapath is
     signal ID_EX_RS1, ID_EX_RS1_Next: std_logic_vector(R-1 DOWNTO 0);
     signal ID_EX_RS2, ID_EX_RS2_Next: std_logic_vector(R-1 DOWNTO 0);
     -- Execute controll signal
-    signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
+    signal ID_EX_EXECUTE_CONTROL_SIGNALS, ID_EX_EXECUTE_CONTROL_SIGNALS_Next: std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
     signal ForwardAmuxSelector, ForwardBmuxSelector : std_logic_vector(1 downto 0);
-    signal ID_EX_read_2_or_Immediate: std_logic_vector(M-1 downto 0);
     -- Memory controll signal
     signal ID_EX_MemWrite, ID_EX_MemWrite_next : std_logic;
     signal ID_EX_MemRead, ID_EX_MemRead_next : std_logic;
@@ -146,12 +147,12 @@ architecture ARCH of Datapath is
         Port
         (
     
-            Rs1           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
-            Rs2           : in  std_logic_vetor(NbitRegAddressing-1 downto 0);
+            Rs1           : in std_logic_vector(NbitRegAddressing-1 downto 0);
+            Rs2           : in std_logic_vector(NbitRegAddressing-1 downto 0);
             RdinMemStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
             RdinWrbStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
             ForwardA      : out std_logic_vector(1 downto 0);
-            ForwardB      : out std_logic_vector(1 downto 0);
+            ForwardB      : out std_logic_vector(1 downto 0)
         );
     end Component;
 
@@ -159,8 +160,7 @@ architecture ARCH of Datapath is
     signal ALU_operand2: std_logic_vector(M-1 downto 0);
     signal ALU_result: std_logic_vector(M-1 DOWNTO 0);
     signal ALU_result_zero: std_logic_vector(M-1 DOWNTO 0);
-    signal Jump_PC: std_logic_vector(M-1 DOWNTO 0);
-    signal ID_EX_read_2_or_Immediate: std_logic_vector(M-1 DOWNTO 0);
+    signal EX_read_2_or_Immediate: std_logic_vector(M-1 DOWNTO 0);
     -- For pipelined this stage
     signal EX_MEM_Jump_PC, EX_MEM_Jump_PC_Next: std_logic_vector(M-1 DOWNTO 0);
     signal EX_MEM_ALU_result_zero, EX_MEM_ALU_result_zero_Next: std_logic_vector(M-1 DOWNTO 0);
@@ -195,12 +195,12 @@ begin
 
     Reg: process(clk)
     begin
-        if(clk = '1')
-            if (rst = '1')
+        if(clk = '1') then
+            if (rst = '1') then
                 -- FETCH
                 PC <= (Others => '0');
                 IF_ID_PC <= (Others => '0');
-                IF_ID_instr <= (Others => '0');
+                IF_ID_INSTRUCTION <= (Others => '0');
                 -- DECODE
                 ID_EX_PC <= (Others => '0');
                 ID_EX_read_1 <= (Others => '0');
@@ -208,14 +208,14 @@ begin
                 ID_EX_RD <= (Others => '0');
                 ID_EX_RS1 <= (Others => '0');
                 ID_EX_RS2 <= (Others => '0');
-                ID_EX_immediate <= (others => '0')
+                ID_EX_immediate <= (others => '0');
                 -- controll
-                ID_EX_EXECUTE_CONTROL_SIGNALS <= ID_EX_EXECUTE_CONTROL_SIGNALS_Next;
-                ID_EX_MemWrite <= (others => '0');
-                ID_EX_MemRead <= (others => '0');
-                ID_EX_Branch <= (others => '0');
-                ID_EX_RegWrite <= (others => '0');
-                ID_EX_MemToReg <= (others => '0');
+                ID_EX_EXECUTE_CONTROL_SIGNALS <= (others => '0');
+                ID_EX_MemWrite <= '0';
+                ID_EX_MemRead <= '0';
+                ID_EX_Branch <= '0';
+                ID_EX_RegWrite <= '0';
+                ID_EX_MemToReg <= '0';
                 -- EXECUTE
                 EX_MEM_Jump_PC  <= (Others => '0');
                 EX_MEM_ALU_result_zero <= (Others => '0');
@@ -223,18 +223,18 @@ begin
                 EX_MEM_FowardB <= (Others => '0');
                 EX_MEM_RD <= (Others => '0');
                 -- controll
-                EX_MEM_MemWrite <= (others => '0');
-                EX_MEM_MemRead <= (others => '0');
-                EX_MEM_Branch <= (others => '0');
-                EX_MEM_RegWrite <= (others => '0');
-                EX_MEM_MemToReg <= (others => '0');
+                EX_MEM_MemWrite <= '0';
+                EX_MEM_MemRead <= '0';
+                EX_MEM_Branch <= '0';
+                EX_MEM_RegWrite <= '0';
+                EX_MEM_MemToReg <= '0';
                 -- MEMORY
-                MEM_WB_read_data <= (others => '0')
+                MEM_WB_read_data <= (others => '0');
                 MEM_WB_ALU_result <= (Others => '0');
                 MEM_WB_RD <= (Others => '0');
                 -- controll
-                MEM_WB_RegWrite <= (others => '0');
-                MEM_WB_MemToReg <= (others => '0');
+                MEM_WB_RegWrite <= '0';
+                MEM_WB_MemToReg <= '0';
             else
                 -- FETCH
                 -- PCWrite and  IF/IDWrite
@@ -243,7 +243,7 @@ begin
                     IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION_next;
                 else
                     PC <= PC;
-                    IF_ID_INSTRUCTION <= std_logic_vector(to_unsigned(NOP_INSTRUCTION, NOP_INSTRUCTION'length));
+                    IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION;
                 end if;
                 -- DECODE
                 ID_EX_PC <= ID_EX_PC_next;
@@ -251,31 +251,18 @@ begin
                 ID_EX_read_2 <= ID_EX_read_2_Next;
                 ID_EX_RD <= ID_EX_RD_Next;
                 ID_EX_immediate <= ID_EX_immediate_next;
-                -- can't neead this if if control drive the nop
-                if (STALL = '0') then
-                    -- controll
-                    ID_EX_EXECUTE_CONTROL_SIGNALS <= ID_EX_EXECUTE_CONTROL_SIGNALS_Next;
-                    ID_EX_MemWrite <= ID_EX_MemWrite_next;
-                    ID_EX_MemRead <= ID_EX_MemRead_next;
-                    ID_EX_Branch <= ID_EX_Branch_next;
-                    ID_EX_RegWrite <= ID_EX_RegWrite_next;
-                    ID_EX_MemToReg <= ID_EX_MemToReg_next;
-                else
-                    ID_EX_EXECUTE_CONTROL_SIGNALS <=  NOP_INSTRUCTIONA_ALU;
-                    ID_EX_MemWrite <=  '0';
-                    ID_EX_MemRead <=  '0';
-                    ID_EX_Branch <= '0';
-                    ID_EX_RegWrite <=  '0';
-                    ID_EX_MemToReg <= '0';
-                end if;
+                ID_EX_EXECUTE_CONTROL_SIGNALS <= ID_EX_EXECUTE_CONTROL_SIGNALS_Next;
+                ID_EX_MemWrite <= ID_EX_MemWrite_next;
+                ID_EX_MemRead <= ID_EX_MemRead_next;
+                ID_EX_Branch <= ID_EX_Branch_next;
+                ID_EX_RegWrite <= ID_EX_RegWrite_next;
+                ID_EX_MemToReg <= ID_EX_MemToReg_next;
                 -- EXECUTE
                 EX_MEM_Jump_PC <= EX_MEM_Jump_PC_Next;
                 EX_MEM_ALU_result_zero <= EX_MEM_ALU_result_zero_Next;
                 EX_MEM_ALU_result <= EX_MEM_ALU_result_Next;
                 EX_MEM_FowardB <= EX_MEM_FowardB_Next;
-                EX_MEM_RD <= EX_MEM_RD_Next;                     
-                    
-                    
+                EX_MEM_RD <= EX_MEM_RD_Next;       
                 -- controll
                 EX_MEM_MemWrite <= EX_MEM_MemWrite_next;
                 EX_MEM_MemRead <= EX_MEM_MemRead_next;
@@ -300,7 +287,7 @@ begin
     begin
         -- upgrade PC value properly
         case(PC_mux) is
-            when 0 =>
+            when '0' =>
                 PCNext <= PC + 4;        
             when others =>
                 PCNext <= EX_MEM_Jump_PC;
@@ -311,38 +298,35 @@ begin
     IF_ID_INSTRUCTION_next <= Instruction;
 
     -- DECODE part
-    instruction_to_CU <= IF_ID_INSTRUCTION;
     read_addr_f1 <= IF_ID_INSTRUCTION(19 DOWNTO 15);
     read_addr_f2 <= IF_ID_INSTRUCTION(24 DOWNTO 20);
     -- signals for Data Hazard
     IF_ID_RS1_out <= read_addr_f1;
     IF_ID_RS2_out <= read_addr_f2;
     writa_addr_f <= MEM_WB_RD;
-    RF: Register
-            -- generic map (
-            --     N               => 5;
-            --     N_tot           => 32
-            -- )
-            port map (
-                Reset           => RST_n;
-                Clk             => CK;
-                Read_register_1 => read_addr_f1,
-                Read_register_2 => read_addr_f2,
-                Write_register  => writa_addr_f,
-                Write_data      => writa_data_f,
-                Enable_Write    => MEM_WB_RegWrite,
-                Read_data_1     => read_data_f1,
-                Read_data_2     => read_data_f2
-            );
+    RF: Register_file
+        -- generic map (
+        --     N               => 5;
+        --     N_tot           => 32
+        -- )
+        port map (
+            Reset           => RST,
+            Clk             => Clk,
+            Read_register_1 => read_addr_f1,
+            Read_register_2 => read_addr_f2,
+            Write_register  => writa_addr_f,
+            Write_data      => writa_data_f,
+            Enable_Write    => MEM_WB_RegWrite,
+            Read_data_1     => read_data_f1,
+            Read_data_2     => read_data_f2);
 
-    IM: immediate_gen 
-            generic map
-                (N_tot  <= 32);
-            port map
-                (	
-                    instruction => IF_ID_INSTRUCTION,
-                    immediate   => ID_EX_immediate_next
-                )
+    IMMEDIATE_GENERATOR: immediate_gen 
+        -- generic map
+        --     (N_tot  => 32);
+        port map (	
+            instruction => IF_ID_INSTRUCTION,
+            immediate   => ID_EX_immediate_next);
+                
     -- PIPELINE decode
     ID_EX_read_1_Next <= read_data_f1;
     ID_EX_read_2_Next <= read_data_f2;
@@ -351,7 +335,7 @@ begin
     ID_EX_RS2_Next    <= IF_ID_INSTRUCTION(24 DOWNTO 20);
     ID_EX_RD_Next     <= IF_ID_INSTRUCTION(11 DOWNTO 7);
     -- How stall the pipeline 
-    STALL: process(stall, EXECUTE_CONTROL_SIGNALS, MemWrite, MemRead, Branch, RegWrite, MemToReg)
+    STALL_CONTROL_SIGNAL: process(stall, EXECUTE_CONTROL_SIGNALS, MemWrite, MemRead, Branch, RegWrite, MemToReg)
     begin
         if (stall = '0') then
             -- Execute controll signal
@@ -365,6 +349,7 @@ begin
             ID_EX_MemToReg_next <= MemToReg;
         else
             -- Execute controll signal
+            -- ID_EX_EXECUTE_CONTROL_SIGNALS_Next <=  NOP_INSTRUCTIONA_ALU;  -- maybe all zero instruction
             ID_EX_EXECUTE_CONTROL_SIGNALS_Next <= (others => '0');
             -- Memory controll signal
             ID_EX_MemWrite_next <= '0';
@@ -374,35 +359,36 @@ begin
             ID_EX_RegWrite_next <= '0';
             ID_EX_MemToReg_next <= '0';
         end if;
-    end process proc_name;
+    end process;
     
-    -- ADD IMMEDIATE OPERATION
-
     -- EXECUTE part
+    -- choose immediate or Rs2 value
     Rs2ORImm: process (ID_EX_immediate, ID_EX_RS2, ALUSrc)
     begin
         if (ALUSrc = '0') then
-            ID_EX_read_2_or_Immediate <= ID_EX_RS2;
+            EX_read_2_or_Immediate <= ID_EX_RS2;
         else
-            ID_EX_read_2_or_Immediate <= ID_EX_immediate;
+            EX_read_2_or_Immediate <= ID_EX_immediate;
         end if;
     end process;
-    -- ALU component
-    ForwardingAMux: mux3to1 Generic Map()
+
+    -- ALU component for operation and forwarding
+    ForwardingAMux: mux3to1
+        Generic Map(Nbit => 32)
         Port Map
         (
-        A    => ID_EX_read_1,
-        B    => writa_data_f,
-        C    => EX_MEM_ALU_result,
-        sel  => ForwardAmuxSelector,
-        Y    => ALU_operand1);
+            A    => ID_EX_read_1,
+            B    => writa_data_f,
+            C    => EX_MEM_ALU_result,
+            sel  => ForwardAmuxSelector,
+            Y    => ALU_operand1);
 
     -- here better choose an 4muxto1 for immediate
     ForwardingBMux: mux3to1
         Generic Map(Nbit => 32)
         Port Map
         (
-            A    => ID_EX_read_2_or_Immediate,
+            A    => EX_read_2_or_Immediate,
             B    => writa_data_f,
             C    => EX_MEM_ALU_result,
             sel  => ForwardBmuxSelector,
@@ -433,8 +419,8 @@ begin
     ID_EX_RD_out <= ID_EX_RD;
     -- PIPELINE execute
     -- calculate value of pc if jump, shifting to left by one
-    EX_MEM_Jump_PC_Next <= ID_EX_Jump + (ID_EX_immediate(M-2 donwto 1) & '0');
-    EX_MEM_ALU_result_zero_Next <= ALU_result_zero;
+    EX_MEM_Jump_PC_Next <= ID_EX_PC + (ID_EX_immediate(M-2 downto 1) & '0');
+    EX_MEM_ALU_result_zero_Next <= ALU_result_zero; -- bho
     EX_MEM_ALU_result_Next <= ALU_result;
     EX_MEM_FowardB_Next <= ALU_operand2;
     EX_MEM_RD_Next <= ID_EX_RD;
@@ -452,7 +438,7 @@ begin
     DATA_ADDRESS <= EX_MEM_ALU_result;
     DATA_READ_EN <= EX_MEM_MemRead;
     MEM_WB_read_data_Next <= DATA_READ;  -- read from data memory
-    DATA_WRTIE_EN <= EX_MEM_MemWrite;
+    DATA_WRITE_EN <= EX_MEM_MemWrite;
     DATA_WRITE <= EX_MEM_FowardB;        -- write on data memory
     PC_mux <= EX_MEM_Branch AND EX_MEM_ALU_result(0); -- for branch equal
     MEM_WB_ALU_result_Next <= EX_MEM_ALU_result;
@@ -466,11 +452,11 @@ begin
     begin
         -- chose data to write back
         case(MEM_WB_MemToReg) is
-            when 1 =>
+            when '1' =>
                 writa_data_f <= MEM_WB_read_data;        
             when others =>
                 writa_data_f <= MEM_WB_ALU_result;
         end case ;
-    end process Fetch;
+    end process;
 
 end ARCH;

@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity Register_file is
 
-	Generic (N_address: integer:= 5,
+	Generic (N_address: integer:= 5;
              N_tot:     integer:=32);
 
 	Port (	Read_register_1:	In	std_logic_vector(N_address-1 downto 0);
@@ -26,7 +26,7 @@ architecture arch of Register_file is
 
 begin
 
-    process (Clk, Reset, Read_register_1, Read_register_2, , Write_register, Write_data, Enable_Write)
+    process (Clk, Reset, Read_register_1, Read_register_2, Write_register, Write_data, Enable_Write)
 
     begin
 
