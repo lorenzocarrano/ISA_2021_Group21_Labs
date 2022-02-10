@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all; 
+use ieee.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
 use work.myTypes.all;
 
@@ -12,8 +13,9 @@ entity Controller is
 	Port (
         CLK                     : In  std_logic;
         RST                     : In  std_logic;
-		OPCODE                  : IN std_logic_vector(OP_CODE_SIZE-1 downto 0);
-        FUNCT3                  : IN std_logic_vector(FUNC3_SIZE-1 downto 0);
+        -- no work if put myType vaiable for vector lenght
+		OPCODE                  : IN std_logic_vector(6 downto 0);
+        FUNCT3                  : IN std_logic_vector(2 downto 0);
         FUNCT7                  : IN std_logic_vector(FUNC7_SIZE-1 downto 0);
         STALL                   : OUT std_logic;
         -- Execute
@@ -37,21 +39,21 @@ architecture ARCH of Controller is
     signal current_state, next_state: state;
 begin
 
-    Controll: Process(OPCODE, FUNCT3)
+    process(OPCODE, FUNCT3)
     begin
         -- default write always back into register file
-        MemWrite <= '0';
-		MemRead <= '0';
-        Branch <= '0';
-		RegWrite <= '0';
-        MemToReg <= '0';
+        MemWrite    <= '0';
+		MemRead     <= '0';
+        Branch      <= '0';
+		RegWrite    <= '0';
+        MemToReg    <= '0';
         start_stall <= '0';
-        ALUSrc <= '0';
+        ALUSrc      <= '0';
 		
-        case OPCODE is
+        case (OPCODE) is
             -- same OPCODE for all R-Type instructions
             when RTYPE_ADD_OPCODE =>
-                RegWrite <= '1';
+                RegWrite   <= '1';
                 -- same FUNCT7 for all R-Type instructions
                 case(FUNCT3) is
                     when RTYPE_ADD_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
@@ -62,8 +64,8 @@ begin
 
             -- same OPCODE for all these I-Type instructions 
             when ITYPE_ADDI_OPCODE =>
-                ALUSrc <= '1';
-                RegWrite <= '1';
+                ALUSrc     <= '1';
+                RegWrite   <= '1';
                 case(FUNCT3) is
                     when ITYPE_ADDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
                     when ITYPE_ANDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SRA;
@@ -73,10 +75,10 @@ begin
             
             -- doesn't need FUNCT3
             when ITYPE_LW_OPCODE =>
-                ALUSrc <= '1';
-                MemRead <= '1';
-                RegWrite <= '1';
-                MemToReg <= '1';
+                ALUSrc     <= '1';
+                MemRead    <= '1';
+                RegWrite   <= '1';
+                MemToReg   <= '1';
 				-- calculate address from read
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
@@ -92,32 +94,32 @@ begin
 			-- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest
 			-- 12 bits with zeros.
             when UTYPE_LUI_OPCODE =>
-                ALUSrc <= '1';
-				RegWrite <= '1';
+                ALUSrc      <= '1';
+				RegWrite    <= '1';
 				-- shift value to left
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
             when JTYPE_JAL_OPCODE =>
-                ALUSrc <= '1';
+                ALUSrc      <= '1';
                 start_stall <= '1';
-                Branch <= '1';
+                Branch      <= '1';
 
             when BTYPE_BEQ_OPCODE =>
-                ALUSrc <= '1';
+                ALUSrc      <= '1';
                 start_stall <= '1';
-                Branch <= '1';
+                Branch      <= '1';
 
             when STYPE_SW_OPCODE =>
-                ALUSrc <= '1';
+                ALUSrc      <= '1';
 				-- activate write dara memory only with store instruction
-				MemWrite <= '1';
+				MemWrite    <= '1';
 				-- calculate address from read
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
         
-            when others =>
+            when others => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
         
-        end case ;    
-    end process Controll;
+        end case;    
+    end process;
 
 
     -- CONTROLL HAZARD
