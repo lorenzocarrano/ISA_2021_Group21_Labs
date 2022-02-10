@@ -35,6 +35,7 @@ begin
 		        --shrA (shift right arithmetic)
 		        
 		    --unused "0011"
+				result <= std_logic_vector(shift_right(signed(A),to_integer(unsigned(B))));
 		    
 			--Arithmetic      
 
