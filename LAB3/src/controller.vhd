@@ -20,6 +20,7 @@ entity Controller is
         -- Execute
         EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
         ALUSrc                  : OUT std_logic;
+        ALUSrc_PC               : OUT std_logic;
         -- Memory
         MemWrite                : OUT std_logic;
         MemRead                 : OUT std_logic;
@@ -46,6 +47,7 @@ begin
 		RegWrite    <= '0';
         MemToReg    <= '0';
         ALUSrc      <= '0';
+        ALUSrc_PC   <= '0';
 		
         case (OPCODE) is
             -- same OPCODE for all R-Type instructions
@@ -85,7 +87,11 @@ begin
 			-- rd.
             -- doesn't need FUNCT3		
             when UTYPE_AUIPC_OPCODE =>
-				-- don't do nothing, Hazard detection unit will change the mux for PC (one nope must be add)
+                -- don't do nothing, Hazard detection unit will change the mux for PC (one nope must be add)
+                ALUSrc     <= '1';
+                ALUSrc_PC  <= '1';
+                RegWrite   <= '1';
+                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD; 
 			
 			-- LUI (load upper immediate) is used to build 32-bit constants and uses the U-type format. LUI
 			-- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest

@@ -43,6 +43,7 @@ architecture ARCH of riscv is
             -- Execute
             EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
             ALUSrc                  : OUT std_logic;
+            ALUSrc_PC               : OUT std_logic;
             -- Memory
             MemWrite                : OUT std_logic;
             MemRead                 : OUT std_logic;
@@ -85,6 +86,7 @@ architecture ARCH of riscv is
             -- Execute
             EXECUTE_CONTROL_SIGNALS : IN std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
             ALUSrc                  : IN std_logic;
+            ALUSrc_PC               : IN std_logic;
             ID_EX_RD_out            : OUT std_logic_vector(R-1 DOWNTO 0);
             ID_EX_MemRead_out       : OUT std_logic;
             -- Memory
@@ -114,7 +116,7 @@ architecture ARCH of riscv is
         );
     end component;
 
-    signal MemWrite, MemRead, Branch, Branch_j, RegWrite, MemToReg, Stall, ALUSrc: std_logic;
+    signal MemWrite, MemRead, Branch, Branch_j, RegWrite, MemToReg, Stall, ALUSrc, ALUSrc_PC: std_logic;
     signal ID_EX_MemRead: std_logic;
     signal EXECUTE_CONTROL_SIGNALS : std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
     signal Opcode: std_logic_vector(OP_CODE_SIZE-1 downto 0);
@@ -138,8 +140,8 @@ begin
         Branch_j               => Branch_j,
         RegWrite               => RegWrite,
         MemToReg               => MemToReg,
-        ALUSrc                 => ALUSrc
-    );
+        ALUSrc                 => ALUSrc,
+        ALUSrc_PC              => ALUSrc_PC);
 
     DP: Datapath PORT MAP (
         CLK                => CLK,
@@ -166,7 +168,8 @@ begin
         Branch_j               => Branch_j,
         RegWrite               => RegWrite,
         MemToReg               => MemToReg,
-        ALUSrc                 => ALUSrc);
+        ALUSrc                 => ALUSrc,
+        ALUSrc_PC              => ALUSrc_PC);
 
     DH: DataHazardUnit PORT MAP (
         Rs1                => IF_ID_RS1,

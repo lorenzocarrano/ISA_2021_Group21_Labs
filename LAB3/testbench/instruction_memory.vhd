@@ -41,19 +41,20 @@ architecture Arch of instruction_memory is
         x"fd5ff0ef",
         x"00d2a023",
         x"000000ef",
-        x"00000016",
-        x"00000016",
-        x"00000016",
+        x"00000013",
+        x"00000013",
+        x"00000013",
         x"00000013"
 	);
 
 begin
     
-    process(CLK)
+    process(CLK, Address)
     begin
-        if (CLK = '1') then
+        if (CLK = '0') then
             Instruction <= memory(to_integer(unsigned(Address(6 downto 2))));		
         end if;
     end process;
+    	
     
 end architecture Arch;
