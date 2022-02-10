@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
+use ieee.std_logic_signed.all;
 use ieee.numeric_std.all;
 use work.myTypes.all;
 ---------------------------
@@ -78,7 +78,7 @@ begin
 			-- Slr
 			when ALU_OPCODE_SLT =>
 				--set min
-		        if(A < B) then
+		        if(signed(A) < signed(B)) then
 		            result <= x"00000001";
 				else
 		            result <= x"00000000";
