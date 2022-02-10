@@ -78,7 +78,7 @@ begin
 			-- Slr
 			when ALU_OPCODE_SLT =>
 				--set min
-		        if(signed(A) < signed(B)) then
+		        if(A < B) then
 		            result <= x"00000001";
 				else
 		            result <= x"00000000";

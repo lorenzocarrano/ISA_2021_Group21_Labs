@@ -40,12 +40,30 @@ begin
 
                 if (Enable_Write = '1') then
 
-                    reg (to_integer(unsigned(Write_register))) <= Write_data;
+                    if (Read_register_1 = Write_register) THEN
+
+                        Read_data_1 <= Write_data;
+                        reg (to_integer(unsigned(Write_register))) <= Write_data;
+                    
+                    elsif (Read_register_2 = Write_register) THEN
+
+                        Read_data_2 <= Write_data;
+                        reg (to_integer(unsigned(Write_register))) <= Write_data;
+
+                    else
+
+                        reg (to_integer(unsigned(Write_register))) <= Write_data;
+                        Read_data_1 <= reg (to_integer(unsigned(Read_register_1)));
+                        Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
+
+                    end if;
+
+                else
+
+                    Read_data_1 <= reg (to_integer(unsigned(Read_register_1)));
+                    Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
 
                 end if;
-
-                Read_data_1 <= reg (to_integer(unsigned(Read_register_1)));
-                Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
 
             end if;
 
