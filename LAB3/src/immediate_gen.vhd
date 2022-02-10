@@ -32,6 +32,7 @@ begin
             when "1101111" =>   --J-Type
                                 immediate (0) <= '0';
                                 immediate (10 downto 1) <= instruction(30 downto 21);
+                                immediate (11) <= instruction(20);
                                 immediate (19 downto 12) <= instruction(19 downto 12);
                                 immediate (31 downto 20) <= (others => instruction(31));
             when "1100011" =>   --B-Type
