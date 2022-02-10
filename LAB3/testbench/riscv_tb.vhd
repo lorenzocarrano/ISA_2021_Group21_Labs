@@ -32,9 +32,9 @@ architecture testbench of riscv_tb is
 
     component data_memory is
         generic (
-            N_ADDRESS: integer := 10;
-            N_DATA: integer := 32;
-            MEMORY_SIZE: integer := 1024
+            N_ADDRESS:      integer := 32;
+            N_DATA:         integer := 32;
+            MEMORY_SIZE:    integer := 1024
         );
         port (
             RST      :    IN std_logic;
@@ -77,12 +77,12 @@ begin
     CLK_GEN : process
     begin
         clk <= '0';
-        wait for clk_period;		
+        wait for clk_period/2;		
         clk <= '1';
-        wait for clk_period;
+        wait for clk_period/2;
     end process;
 
-    Rst <= '1', '0' after clk_period/2;
+    Rst <= '1', '0' after clk_period*3/2;
 
     UUT: riscv
         port map (

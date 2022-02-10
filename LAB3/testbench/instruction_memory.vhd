@@ -18,7 +18,7 @@ end instruction_memory;
 
 architecture Arch of instruction_memory is
     
-    type mem_array is array (0 to 21) of std_logic_vector (N_BIT - 1 downto 0); 
+    type mem_array is array (0 to 24) of std_logic_vector (N_BIT - 1 downto 0); 
 	signal memory : mem_array := (
 		x"00700813",
         x"0fc10217",
@@ -41,6 +41,9 @@ architecture Arch of instruction_memory is
         x"fd5ff0ef",
         x"00d2a023",
         x"000000ef",
+        x"00000016",
+        x"00000016",
+        x"00000016",
         x"00000013"
 	);
 

@@ -1,12 +1,12 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
+use ieee.std_logic_signed.all;
 use ieee.numeric_std.all;
 use work.myTypes.all;
 
 entity Datapath is
     Generic (
-        N: natural := 10;
+        N: natural := 32;
         K: natural := 1024;
         M: natural := 32;
         R: natural := 5         -- register adress
@@ -40,6 +40,7 @@ entity Datapath is
         MemWrite                : IN std_logic;
         MemRead                 : IN std_logic;
         Branch                  : IN std_logic;
+        Branch_j                : IN std_logic;
         -- Write Back
         RegWrite                : IN std_logic;
         MemToReg                : IN std_logic      
@@ -50,7 +51,7 @@ end Datapath;
 
 architecture ARCH of Datapath is
     -- FETCH signals --
-    signal PC_MUX     : std_logic;
+    signal PC_MUX:  std_logic;
     -- PC register that point the instruction adress target operation
     signal PC, PCNext : std_logic_vector(N-1 DOWNTO 0);
     -- For pipelined this stage
@@ -89,14 +90,15 @@ architecture ARCH of Datapath is
     signal read_data_f1: std_logic_vector(M-1 DOWNTO 0);
     signal read_data_f2: std_logic_vector(M-1 DOWNTO 0);
     signal writa_data_f: std_logic_vector(M-1 DOWNTO 0);
-    signal read_addr_f1: std_logic_vector(4 DOWNTO 0);
-    signal read_addr_f2: std_logic_vector(4 DOWNTO 0);
-    signal writa_addr_f: std_logic_vector(4 DOWNTO 0);
+    signal read_addr_f1: std_logic_vector(R-1 DOWNTO 0);
+    signal read_addr_f2: std_logic_vector(R-1 DOWNTO 0);
+    signal writa_addr_f: std_logic_vector(R-1 DOWNTO 0);
     -- miss immediate generator --
     -- For pipelined this stage
     signal ID_EX_read_1, ID_EX_read_1_Next: std_logic_vector(M-1 DOWNTO 0);
     signal ID_EX_read_2, ID_EX_read_2_Next: std_logic_vector(M-1 DOWNTO 0);
     signal ID_EX_immediate, ID_EX_immediate_next: std_logic_vector(M-1 DOWNTO 0);
+    signal Jump_PC: std_logic_vector(M-1 DOWNTO 0);
     signal ID_EX_PC, ID_EX_PC_Next: std_logic_vector(N-1 DOWNTO 0);
     signal ID_EX_RD, ID_EX_RD_Next: std_logic_vector(R-1 DOWNTO 0);
     signal ID_EX_RS1, ID_EX_RS1_Next: std_logic_vector(R-1 DOWNTO 0);
@@ -159,14 +161,12 @@ architecture ARCH of Datapath is
     signal ALU_operand1: std_logic_vector(M-1 downto 0);
     signal ALU_operand2: std_logic_vector(M-1 downto 0);
     signal ALU_result: std_logic_vector(M-1 DOWNTO 0);
-    signal ALU_result_zero: std_logic_vector(M-1 DOWNTO 0);
     signal EX_read_2_or_Immediate: std_logic_vector(M-1 DOWNTO 0);
     -- For pipelined this stage
-    signal EX_MEM_Jump_PC, EX_MEM_Jump_PC_Next: std_logic_vector(M-1 DOWNTO 0);
     signal EX_MEM_ALU_result_zero, EX_MEM_ALU_result_zero_Next: std_logic_vector(M-1 DOWNTO 0);
     signal EX_MEM_ALU_result, EX_MEM_ALU_result_Next: std_logic_vector(M-1 DOWNTO 0);
     signal EX_MEM_FowardB_Next, EX_MEM_FowardB: std_logic_vector(M-1 DOWNTO 0);
-    signal EX_MEM_RD, EX_MEM_RD_Next: std_logic_vector(4 DOWNTO 0);
+    signal EX_MEM_RD, EX_MEM_RD_Next: std_logic_vector(R-1 DOWNTO 0);
     -- Memory controll signal
     signal EX_MEM_MemWrite, EX_MEM_MemWrite_next : std_logic;
     signal EX_MEM_MemRead, EX_MEM_MemRead_next : std_logic;
@@ -217,7 +217,6 @@ begin
                 ID_EX_RegWrite <= '0';
                 ID_EX_MemToReg <= '0';
                 -- EXECUTE
-                EX_MEM_Jump_PC  <= (Others => '0');
                 EX_MEM_ALU_result_zero <= (Others => '0');
                 EX_MEM_ALU_result <= (Others => '0');
                 EX_MEM_FowardB <= (Others => '0');
@@ -237,13 +236,24 @@ begin
                 MEM_WB_MemToReg <= '0';
             else
                 -- FETCH
-                -- PCWrite and  IF/IDWrite
-                if (STALL = '0') then
+
+                -- emulat PCWrite, IF/IDWrite
+                if (STALL = '0' and Branch_j = '0' and PC_MUX = '0') then
                     PC <= PCNext;
                     IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION_next;
                 else
-                    PC <= PC;
-                    IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION;
+                    if (Stall = '1') then
+                        -- whens stall
+                        PC <= PC;
+                        IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION;
+                    elsif (PC_MUX = '1') then
+                        -- whens branch taken
+                        PC <= PCNext;
+                        IF_ID_INSTRUCTION <= NOP_INSTRUCTION;
+                    else 
+                        PC <= PCNext;
+                        IF_ID_INSTRUCTION <= IF_ID_INSTRUCTION_next;
+                    end if;
                 end if;
                 -- DECODE
                 ID_EX_PC <= ID_EX_PC_next;
@@ -258,7 +268,6 @@ begin
                 ID_EX_RegWrite <= ID_EX_RegWrite_next;
                 ID_EX_MemToReg <= ID_EX_MemToReg_next;
                 -- EXECUTE
-                EX_MEM_Jump_PC <= EX_MEM_Jump_PC_Next;
                 EX_MEM_ALU_result_zero <= EX_MEM_ALU_result_zero_Next;
                 EX_MEM_ALU_result <= EX_MEM_ALU_result_Next;
                 EX_MEM_FowardB <= EX_MEM_FowardB_Next;
@@ -275,35 +284,38 @@ begin
                 MEM_WB_RD <= MEM_WB_RD_Next;
                 -- controll
                 MEM_WB_RegWrite <= MEM_WB_RegWrite_next;
-                MEM_WB_MemToReg <= MEM_WB_MemToReg_next;
-                
+                MEM_WB_MemToReg <= MEM_WB_MemToReg_next; 
             end if;
         end if;  
     end process;
 
     -- FETCH part
     IR_ADDRESS <= PC;
-    Fetch: process(PC, PC_mux, EX_MEM_Jump_PC)
+    Fetch: process(PC, Jump_PC, PC_MUX)
     begin
         -- upgrade PC value properly
-        case(PC_mux) is
-            when '0' =>
-                PCNext <= PC + 4;        
-            when others =>
-                PCNext <= EX_MEM_Jump_PC;
-        end case ;
+        if (PC_MUX = '0') then
+            PCNext <= PC + 4;
+        else
+            PCNext <= Jump_PC;
+        end if;
     end process Fetch;
     -- PIPELINE fetch
     IF_ID_PC_Next  <= PC;
     IF_ID_INSTRUCTION_next <= Instruction;
 
     -- DECODE part
+    OPCODE       <= IF_ID_INSTRUCTION(6 DOWNTO 0);
+    FUNC3        <= IF_ID_INSTRUCTION(14 DOWNTO 12);
+    FUNC7        <= IF_ID_INSTRUCTION(31 DOWNTO 25);
     read_addr_f1 <= IF_ID_INSTRUCTION(19 DOWNTO 15);
     read_addr_f2 <= IF_ID_INSTRUCTION(24 DOWNTO 20);
     -- signals for Data Hazard
     IF_ID_RS1_out <= read_addr_f1;
     IF_ID_RS2_out <= read_addr_f2;
-    writa_addr_f <= MEM_WB_RD;
+    writa_addr_f  <= MEM_WB_RD;
+    -- calcuate address
+    Jump_PC       <= IF_ID_PC + (ID_EX_immediate_next(M-2 downto 1) & '0');
     RF: Register_file
         -- generic map (
         --     N               => 5;
@@ -326,15 +338,38 @@ begin
         port map (	
             instruction => IF_ID_INSTRUCTION,
             immediate   => ID_EX_immediate_next);
-                
+    
+    COMP_REG: process(read_data_f1, read_data_f2, Branch_j, Branch, EX_MEM_RD, ID_EX_RD)
+    begin
+        if (Branch_j = '1') then
+            PC_MUX <= '1';
+        elsif (Branch = '1') then
+            if (EX_MEM_RD /= read_addr_f1 and  EX_MEM_RD /= read_addr_f2 and read_data_f1 = read_data_f2)  then
+                PC_MUX <= '1';
+            elsif  (EX_MEM_RD = read_addr_f1 and  EX_MEM_RD /= read_addr_f2 and EX_MEM_ALU_result = read_data_f2) then
+                PC_MUX <= '1';
+            elsif  (EX_MEM_RD /= read_addr_f1 and  EX_MEM_RD = read_addr_f2 and read_data_f1 = EX_MEM_ALU_result) then
+                PC_MUX <= '1';
+            elsif  (ID_EX_RD = read_addr_f1 and  ID_EX_RD /= read_addr_f2 and ALU_result = read_data_f2) then
+                PC_MUX <= '1';
+            elsif  (ID_EX_RD /= read_addr_f1 and  ID_EX_RD = read_addr_f2 and read_data_f1 = ALU_result) then
+                PC_MUX <= '1';
+            else
+                PC_MUX <= '0';
+            end if;
+        else
+            PC_MUX <= '0';
+        end if;
+    end process;
     -- PIPELINE decode
     ID_EX_read_1_Next <= read_data_f1;
     ID_EX_read_2_Next <= read_data_f2;
     ID_EX_PC_Next     <= IF_ID_PC;
-    ID_EX_RS1_Next    <= IF_ID_INSTRUCTION(19 DOWNTO 15);
-    ID_EX_RS2_Next    <= IF_ID_INSTRUCTION(24 DOWNTO 20);
+    ID_EX_RS1_Next    <= read_addr_f1;
+    ID_EX_RS2_Next    <= read_addr_f2;
     ID_EX_RD_Next     <= IF_ID_INSTRUCTION(11 DOWNTO 7);
-    -- How stall the pipeline 
+
+    -- How stall the pipeline, this is the mux for control signals
     STALL_CONTROL_SIGNAL: process(stall, EXECUTE_CONTROL_SIGNALS, MemWrite, MemRead, Branch, RegWrite, MemToReg)
     begin
         if (stall = '0') then
@@ -366,7 +401,7 @@ begin
     Rs2ORImm: process (ID_EX_immediate, ID_EX_RS2, ALUSrc)
     begin
         if (ALUSrc = '0') then
-            EX_read_2_or_Immediate <= ID_EX_RS2;
+            EX_read_2_or_Immediate <= ID_EX_read_2;
         else
             EX_read_2_or_Immediate <= ID_EX_immediate;
         end if;
@@ -418,9 +453,6 @@ begin
     ID_EX_MemRead_out <= ID_EX_MemRead;
     ID_EX_RD_out <= ID_EX_RD;
     -- PIPELINE execute
-    -- calculate value of pc if jump, shifting to left by one
-    EX_MEM_Jump_PC_Next <= ID_EX_PC + (ID_EX_immediate(M-2 downto 1) & '0');
-    EX_MEM_ALU_result_zero_Next <= ALU_result_zero; -- bho
     EX_MEM_ALU_result_Next <= ALU_result;
     EX_MEM_FowardB_Next <= ALU_operand2;
     EX_MEM_RD_Next <= ID_EX_RD;
@@ -440,7 +472,6 @@ begin
     MEM_WB_read_data_Next <= DATA_READ;  -- read from data memory
     DATA_WRITE_EN <= EX_MEM_MemWrite;
     DATA_WRITE <= EX_MEM_FowardB;        -- write on data memory
-    PC_mux <= EX_MEM_Branch AND EX_MEM_ALU_result(0); -- for branch equal
     MEM_WB_ALU_result_Next <= EX_MEM_ALU_result;
     MEM_WB_RD_Next <= EX_MEM_RD;
     -- Write Back controll signal

@@ -17,7 +17,6 @@ entity Controller is
 		OPCODE                  : IN std_logic_vector(6 downto 0);
         FUNCT3                  : IN std_logic_vector(2 downto 0);
         FUNCT7                  : IN std_logic_vector(FUNC7_SIZE-1 downto 0);
-        STALL                   : OUT std_logic;
         -- Execute
         EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
         ALUSrc                  : OUT std_logic;
@@ -25,6 +24,7 @@ entity Controller is
         MemWrite                : OUT std_logic;
         MemRead                 : OUT std_logic;
         Branch                  : OUT std_logic;
+        Branch_j                : OUT std_logic;
         -- Write Back
         RegWrite                : OUT std_logic;
         MemToReg                : OUT std_logic
@@ -34,9 +34,6 @@ end Controller;
 
 
 architecture ARCH of Controller is
-    signal start_stall, stall_s: std_logic;
-    type state is (s0, s1, s2);
-    signal current_state, next_state: state;
 begin
 
     process(OPCODE, FUNCT3)
@@ -45,9 +42,9 @@ begin
         MemWrite    <= '0';
 		MemRead     <= '0';
         Branch      <= '0';
+        Branch_j    <= '0';
 		RegWrite    <= '0';
         MemToReg    <= '0';
-        start_stall <= '0';
         ALUSrc      <= '0';
 		
         case (OPCODE) is
@@ -98,16 +95,18 @@ begin
 				RegWrite    <= '1';
 				-- shift value to left
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-
+            
+            -- need to save value in memoty
             when JTYPE_JAL_OPCODE =>
                 ALUSrc      <= '1';
-                start_stall <= '1';
-                Branch      <= '1';
+                Branch_j    <= '1';
+                MemWrite    <= '1';
+                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
             when BTYPE_BEQ_OPCODE =>
                 ALUSrc      <= '1';
-                start_stall <= '1';
                 Branch      <= '1';
+                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_CMP;
 
             when STYPE_SW_OPCODE =>
                 ALUSrc      <= '1';
@@ -120,43 +119,5 @@ begin
         
         end case;    
     end process;
-
-
-    -- CONTROLL HAZARD
-
-    STALL <= start_stall OR stall_s;
-
-    Reg: process(clk)
-    begin
-        if(clk = '1') then
-            if (rst = '1') then
-                current_state <= s0;
-            else
-                current_state <= next_state;
-            end if;
-        end if;
-    end process Reg;
-
-    CountStall: process(current_state, start_stall)
-    begin
-        stall_s <= '1';
-        case current_state is
-            when s0 =>
-                stall_s <= '0';
-                if (start_stall = '0') then
-                    next_state <= s0;
-                else
-                    next_state <= s1;
-                end if;
-            
-            -- jump into execute
-            when s1 =>
-                next_state <= s2;
-            
-            -- jump into write back, here the JUMP_MUX is 1 if jal or can depend if BEQ
-            when s2 =>
-                next_state <= s0;
-        end case;     
-    end process CountStall;
 
 end ARCH;

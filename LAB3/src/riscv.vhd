@@ -37,10 +37,9 @@ architecture ARCH of riscv is
         Port (
             CLK                     : In  std_logic;
             RST                     : In  std_logic;
-            OPCODE                  : IN std_logic_vector(OP_CODE_SIZE-1 downto 0);
-            FUNCT3                  : IN std_logic_vector(FUNC3_SIZE-1 downto 0);
+            OPCODE                  : IN std_logic_vector(6 downto 0);
+            FUNCT3                  : IN std_logic_vector(2 downto 0);
             FUNCT7                  : IN std_logic_vector(FUNC7_SIZE-1 downto 0);
-            STALL                   : OUT std_logic;
             -- Execute
             EXECUTE_CONTROL_SIGNALS : OUT std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
             ALUSrc                  : OUT std_logic;
@@ -48,6 +47,7 @@ architecture ARCH of riscv is
             MemWrite                : OUT std_logic;
             MemRead                 : OUT std_logic;
             Branch                  : OUT std_logic;
+            Branch_j                : OUT std_logic;
             -- Write Back
             RegWrite                : OUT std_logic;
             MemToReg                : OUT std_logic
@@ -57,7 +57,7 @@ architecture ARCH of riscv is
 
     component Datapath is
         Generic (
-            N: natural := 10;
+            N: natural := 32;
             K: natural := 1024;
             M: natural := 32;
             R: natural := 5         -- register adress
@@ -91,6 +91,7 @@ architecture ARCH of riscv is
             MemWrite                : IN std_logic;
             MemRead                 : IN std_logic;
             Branch                  : IN std_logic;
+            Branch_j                : IN std_logic;
             -- Write Back
             RegWrite                : IN std_logic;
             MemToReg                : IN std_logic      
@@ -113,8 +114,8 @@ architecture ARCH of riscv is
         );
     end component;
 
-    signal MemWrite, MemRead, Branch, RegWrite, MemToReg, Stall, ALUSrc: std_logic;
-    signal ID_EX_MemRead, Stall_1, Stall_2: std_logic;
+    signal MemWrite, MemRead, Branch, Branch_j, RegWrite, MemToReg, Stall, ALUSrc: std_logic;
+    signal ID_EX_MemRead: std_logic;
     signal EXECUTE_CONTROL_SIGNALS : std_logic_vector(EXECUTE_CONTROL_SIZE - 1 downto 0);
     signal Opcode: std_logic_vector(OP_CODE_SIZE-1 downto 0);
     signal Funct7: std_logic_vector(FUNC7_SIZE-1 downto 0);
@@ -130,17 +131,15 @@ begin
         OPCODE                 => OPCODE,
         FUNCT3                 => FUNCT3,
         FUNCT7                 => FUNCT7,
-        STALL                  => STALL_2,
         EXECUTE_CONTROL_SIGNALS=> EXECUTE_CONTROL_SIGNALS,
         MemWrite               => MemWrite,
         MemRead                => MemRead,
         Branch                 => Branch,
+        Branch_j               => Branch_j,
         RegWrite               => RegWrite,
         MemToReg               => MemToReg,
         ALUSrc                 => ALUSrc
     );
-
-    stall <= stall_1 OR stall_2; -- put OR gate with data hazard stall
 
     DP: Datapath PORT MAP (
         CLK                => CLK,
@@ -164,6 +163,7 @@ begin
         MemWrite               => MemWrite,
         MemRead                => MemRead,
         Branch                 => Branch,
+        Branch_j               => Branch_j,
         RegWrite               => RegWrite,
         MemToReg               => MemToReg,
         ALUSrc                 => ALUSrc);
@@ -173,6 +173,6 @@ begin
         Rs2                => IF_ID_RS2,
         Rd                 => ID_EX_Rd,
         MemRead            => ID_EX_MemRead,
-        STALL              => STALL_1);
+        STALL              => STALL);
 
 end ARCH;

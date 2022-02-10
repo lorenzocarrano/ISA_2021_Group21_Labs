@@ -12,7 +12,8 @@ package myTypes is
 	constant DATA_BIT             : integer :=  32; 
 	constant REGISTER_ADDRESS     : integer :=  5; 
 
-	constant  NOP_INSTRUCTION : integer := 19; -- 0x13 this instruction do: addi x0, x0, 0
+	-- 0x13 this instruction do: addi x0, x0, 0
+	constant  NOP_INSTRUCTION : std_logic_vector(31 downto 0)                   := x"00000013"; 
 
     -- R-Type instruction
     constant RTYPE_ADD_OPCODE : std_logic_vector(OP_CODE_SIZE - 1 downto 0)     := "0110011";

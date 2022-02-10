@@ -68,12 +68,21 @@ begin
 			--Cmp
 		    when ALU_OPCODE_CMP =>
 		        --set min
-		        if(A<B) then
-		            result <= x"1" ;
-		           else
-		            result <= x"0";
+		        if(A = B) then
+		            result <= x"00000001";
+				else
+		            result <= x"00000000";
 		        end if; 
-		
+				
+			-- Slr
+			when ALU_OPCODE_SLT =>
+				--set min
+		        if(A < B) then
+		            result <= x"00000001";
+				else
+		            result <= x"00000000";
+		        end if; 
+
 			when others => result <= A + B ; 
 		end case;
     end process;

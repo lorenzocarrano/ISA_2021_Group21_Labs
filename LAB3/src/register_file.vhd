@@ -26,13 +26,13 @@ architecture arch of Register_file is
 
 begin
 
-    process (Clk, Reset, Read_register_1, Read_register_2, Write_register, Write_data, Enable_Write)
+    process (Clk, Reset)
 
     begin
 
         if (clk'event and clk = '0') then --negative edge
 
-            if reset = '0' then
+            if reset = '1' then
                 
                 reg <= (others => (others => '0'));
             
