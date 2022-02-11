@@ -34,7 +34,8 @@ begin
 
             if reset = '1' then
                 
-                reg <= (others => (others => '0'));
+                reg         <= (others => (others => '0'));
+                reg(2)      <= x"7fffeffc";
                 Read_data_1 <= (others => '0');
                 Read_data_2 <= (others => '0');
 
@@ -56,6 +57,8 @@ begin
                 Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
             end if;
             
+            -- Always zero
+            reg(0) <= (others => '0');
 
         end if;
 

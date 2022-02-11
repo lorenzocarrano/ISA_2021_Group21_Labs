@@ -118,18 +118,37 @@ architecture ARCH of Datapath is
     signal ID_EX_MemToReg, ID_EX_MemToReg_next : std_logic;
 
     -- EXECUTE signals
-    Component mux3to1 is
+    Component mux3to1_A is
         Generic
         (
             Nbit : natural := 1
         );
         Port
         (
-            A    : in  std_logic_vector(Nbit-1 downto 0);
-            B    : in  std_logic_vector(Nbit-1 downto 0);	
-            C    : in  std_logic_vector(Nbit-1 downto 0);	
-            sel  : in  std_logic_vector(1 downto 0);
+            A          : in  std_logic_vector(Nbit-1 downto 0);
+            B          : in  std_logic_vector(Nbit-1 downto 0);	
+            C          : in  std_logic_vector(Nbit-1 downto 0);
+            D          : in  std_logic_vector(Nbit-1 downto 0);	
+            sel        : in  std_logic_vector(1 downto 0);
+            ALUSrc_PC  : in  std_logic;
             Y    : out std_logic_vector(Nbit-1 downto 0)
+        );
+    end Component;
+
+    Component mux3to1_B is
+        Generic
+        (
+            Nbit : natural := 1
+        );
+        Port
+        (
+            A          : in  std_logic_vector(Nbit-1 downto 0);
+            B          : in  std_logic_vector(Nbit-1 downto 0);	
+            C          : in  std_logic_vector(Nbit-1 downto 0);
+            D          : in  std_logic_vector(Nbit-1 downto 0);	
+            sel        : in  std_logic_vector(1 downto 0);
+            ALUSrc     : in  std_logic;
+            Y          : out std_logic_vector(Nbit-1 downto 0)
         );
     end Component;
 
@@ -165,7 +184,6 @@ architecture ARCH of Datapath is
     signal ALU_operand1: std_logic_vector(M-1 downto 0);
     signal ALU_operand2: std_logic_vector(M-1 downto 0);
     signal ALU_result: std_logic_vector(M-1 DOWNTO 0);
-    signal EX_read_2_or_Immediate, EX_read_1_or_PC: std_logic_vector(M-1 DOWNTO 0);
     -- For pipelined this stage
     signal EX_MEM_ALU_result, EX_MEM_ALU_result_Next: std_logic_vector(M-1 DOWNTO 0);
     signal EX_MEM_FowardB_Next, EX_MEM_FowardB: std_logic_vector(M-1 DOWNTO 0);
@@ -420,46 +438,30 @@ begin
     end process;
     
     -- EXECUTE part
-    -- choose immediate or Rs2 value
-    Rs2ORImm: process (ID_EX_immediate, ID_EX_read_2, ID_EX_ALUSrc)
-    begin
-        if (ID_EX_ALUSrc = '0') then
-            EX_read_2_or_Immediate <= ID_EX_read_2;
-        else
-            EX_read_2_or_Immediate <= ID_EX_immediate;
-        end if;
-    end process;
-    -- choose PC or Rs2 value
-    Rs1ORPC: process (ID_EX_PC, ID_EX_read_1, ID_EX_ALUSrc_PC)
-    begin
-        if (ID_EX_ALUSrc_PC = '0') then
-            EX_read_1_or_PC <= ID_EX_read_1;
-        else
-            EX_read_1_or_PC <= ID_EX_PC;
-        end if;
-    end process;
 
     -- ALU component for operation and forwarding
-    -- here better choose an 4muxto1 for immediate
-    ForwardingAMux: mux3to1
-        Generic Map(Nbit => 32)
+    ForwardingAMux: mux3to1_A
+        Generic Map(Nbit => M)
         Port Map
         (
-            A    => EX_read_1_or_PC,
+            A    => ID_EX_read_1,
             B    => writa_data_f,
             C    => EX_MEM_ALU_result,
+            D    => ID_EX_PC,
             sel  => ForwardAmuxSelector,
+            ALUSrc_PC => ID_EX_ALUSrc_PC,
             Y    => ALU_operand1);
 
-    -- here better choose an 4muxto1 for immediate
-    ForwardingBMux: mux3to1
-        Generic Map(Nbit => 32)
+    ForwardingBMux: mux3to1_B
+        Generic Map(Nbit => M)
         Port Map
         (
-            A    => EX_read_2_or_Immediate,
+            A    => ID_EX_read_2,
             B    => writa_data_f,
             C    => EX_MEM_ALU_result,
+            D    => ID_EX_immediate,
             sel  => ForwardBmuxSelector,
+            ALUSrc => ID_EX_ALUSrc,
             Y    => ALU_operand2);
 
     ArithmeticLogicUnit: ALU

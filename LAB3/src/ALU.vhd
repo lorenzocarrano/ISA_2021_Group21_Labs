@@ -33,8 +33,7 @@ begin
 		    
 			when ALU_OPCODE_SRA =>
 		        --shrA (shift right arithmetic)
-		        
-		    --unused "0011"
+		    	--unused "0011"
 				result <= std_logic_vector(shift_right(signed(A),to_integer(unsigned(B))));
 		    
 			--Arithmetic      
@@ -42,13 +41,10 @@ begin
 			when ALU_OPCODE_ADD =>
 		        --Add
 		        result <= A+B;
-		    
-			when ALU_OPCODE_SUB =>
-		        --Sub
-		        result <= A-B;
-		    --unused "0111"
-		    --unused "1000"
-		    
+
+			when ALU_OPCODE_ADD_PC =>
+				--Add + 4
+				result <= A+4;    
 
 			--Logic    
 		    when ALU_OPCODE_AND =>

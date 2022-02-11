@@ -104,13 +104,12 @@ begin
             
             -- need to save value in memoty
             when JTYPE_JAL_OPCODE =>
-                ALUSrc      <= '1';
+                ALUSrc_PC   <= '1';
+                RegWrite    <= '1';
                 Branch_j    <= '1';
-                MemWrite    <= '1';
-                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD_PC;
 
             when BTYPE_BEQ_OPCODE =>
-                ALUSrc      <= '1';
                 Branch      <= '1';
                 EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_CMP;
 
