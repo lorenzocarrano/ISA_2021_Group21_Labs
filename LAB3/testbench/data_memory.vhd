@@ -22,7 +22,7 @@ end data_memory;
 
 
 architecture Arch of data_memory is
-    type mem_array is array (0 to 9) of std_logic_vector (N_DATA-1downto 0); 
+    type mem_array is array (0 to 14) of std_logic_vector (N_DATA-1downto 0); 
 	signal memory : mem_array;  
 begin
     
@@ -38,6 +38,11 @@ begin
                     x"0000000F",  -- 15
                     x"0000001B",  -- 27
                     x"FFFFFFFC",  -- -4
+                    x"00000000",
+                    x"00000000",
+                    x"00000000",
+                    x"00000000",
+                    x"00000000",
                     x"00000000",
                     x"00000000",
                     x"00000000"); 

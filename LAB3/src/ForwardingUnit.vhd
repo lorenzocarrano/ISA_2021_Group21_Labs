@@ -22,7 +22,7 @@ end ForwardingUnit;
 Architecture Behavioral of ForwardingUnit is
 begin
 
-	DriveForwardA_MUXselector: process(Rs1, Rs2, RdinWrbStage, RdinMemStage)
+	DriveForwardA_MUXselector: process(Rs1, RdinWrbStage, RdinMemStage)
 	begin
 		if RdinMemStage = Rs1 then
 			ForwardA <= "10";	
@@ -33,7 +33,7 @@ begin
 		end if;
 	end process;
 
-	DriveForwardB_MUXselector: process(Rs1, Rs2, RdinWrbStage, RdinMemStage)
+	DriveForwardB_MUXselector: process(Rs2, RdinWrbStage, RdinMemStage)
 	begin
 		if RdinMemStage = Rs2 then
 			ForwardB <= "10";	

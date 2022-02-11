@@ -26,28 +26,36 @@ architecture arch of Register_file is
 
 begin
 
-    process (Clk, Reset)
+    process (Clk)
 
     begin
 
-        if (clk'event and clk = '0') then --negative edge
+        if (clk = '0') then --negative edge
 
             if reset = '1' then
                 
                 reg <= (others => (others => '0'));
-            
-            else
+                Read_data_1 <= (others => '0');
+                Read_data_2 <= (others => '0');
 
-                if (Enable_Write = '1') then
+            elsif (Enable_Write = '1') then
 
-                    reg (to_integer(unsigned(Write_register))) <= Write_data;
-
-                end if;
-
-                Read_data_1 <= reg (to_integer(unsigned(Read_register_1)));
-                Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
+                reg(to_integer(unsigned(Write_register))) <= Write_data;
 
             end if;
+
+            if (Write_register = Read_register_1) then
+                Read_data_1 <= Write_data;
+            else
+                Read_data_1 <= reg (to_integer(unsigned(Read_register_1)));
+            end if;
+
+            if (Write_register = Read_register_2) then
+                Read_data_2 <= Write_data;
+            else
+                Read_data_2 <= reg (to_integer(unsigned(Read_register_2)));
+            end if;
+            
 
         end if;
 

@@ -342,20 +342,36 @@ begin
             instruction => IF_ID_INSTRUCTION,
             immediate   => ID_EX_immediate_next);
     
-    COMP_REG: process(read_data_f1, read_data_f2, Branch_j, Branch, EX_MEM_RD, ID_EX_RD)
+    COMP_REG: process(read_data_f1, read_data_f2, read_addr_f1, read_addr_f2, ALU_result, EX_MEM_ALU_result, Branch_j, Branch, EX_MEM_RD, ID_EX_RD)
     begin
         if (Branch_j = '1') then
             PC_MUX <= '1';
         elsif (Branch = '1') then
-            if (EX_MEM_RD /= read_addr_f1 and  EX_MEM_RD /= read_addr_f2 and read_data_f1 = read_data_f2)  then
-                PC_MUX <= '1';
-            elsif  (EX_MEM_RD = read_addr_f1 and  EX_MEM_RD /= read_addr_f2 and EX_MEM_ALU_result = read_data_f2) then
-                PC_MUX <= '1';
-            elsif  (EX_MEM_RD /= read_addr_f1 and  EX_MEM_RD = read_addr_f2 and read_data_f1 = EX_MEM_ALU_result) then
-                PC_MUX <= '1';
-            elsif  (ID_EX_RD = read_addr_f1 and  ID_EX_RD /= read_addr_f2 and ALU_result = read_data_f2) then
-                PC_MUX <= '1';
-            elsif  (ID_EX_RD /= read_addr_f1 and  ID_EX_RD = read_addr_f2 and read_data_f1 = ALU_result) then
+            if  (ID_EX_RD = read_addr_f1 and  ID_EX_RD /= read_addr_f2) then
+                if (ALU_result = read_data_f2) then
+                    PC_MUX <= '1';
+                else
+                    PC_MUX <= '0';
+                end if;
+            elsif  (ID_EX_RD /= read_addr_f1 and  ID_EX_RD = read_addr_f2) then
+                if (read_data_f1 = ALU_result) then
+                    PC_MUX <= '1';
+                else
+                    PC_MUX <= '0';
+                end if;
+            elsif  (EX_MEM_RD = read_addr_f1 and  EX_MEM_RD /= read_addr_f2) then
+                if (EX_MEM_ALU_result = read_data_f2) then
+                    PC_MUX <= '1';
+                else
+                    PC_MUX <= '0';
+                end if;
+            elsif  (EX_MEM_RD /= read_addr_f1 and  EX_MEM_RD = read_addr_f2) then
+                if (read_data_f1 = EX_MEM_ALU_result) then
+                    PC_MUX <= '1';
+                else
+                    PC_MUX <= '0';
+                end if;
+            elsif (read_data_f1 = read_data_f2)  then
                 PC_MUX <= '1';
             else
                 PC_MUX <= '0';
@@ -462,7 +478,7 @@ begin
             Rs1           => ID_EX_RS1,
             Rs2           => ID_EX_RS2,
             RdinMemStage  => EX_MEM_RD,
-            RdinWrbStage  => MEM_WB_RD,
+            RdinWrbStage  => writa_addr_f,
             ForwardA      => ForwardAmuxSelector,
             ForwardB      => ForwardBmuxSelector
         );
