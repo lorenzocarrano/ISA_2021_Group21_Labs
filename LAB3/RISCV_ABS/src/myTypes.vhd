@@ -51,6 +51,9 @@ package myTypes is
 	-- S-Type instruction
 	constant STYPE_SW_OPCODE : std_logic_vector(OP_CODE_SIZE - 1 downto 0)      :=  "0100011"; 
 	constant STYPE_SW_FUNC3  : std_logic_vector(FUNC3_SIZE - 1 downto 0)        :=  "010";
+	
+	-- My ABS instruction 
+	constant MY_INSRT_ABS_OPCODE  : std_logic_vector(OP_CODE_SIZE - 1 downto 0)      :=  "1111111"; 
 
 	--ALU OPCODES
 	constant ALU_OPCODE_ADD 	: std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "0100";
@@ -58,10 +61,8 @@ package myTypes is
 	constant ALU_OPCODE_AND 	: std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "1001";
 	constant ALU_OPCODE_OR  	: std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "1010";
 	constant ALU_OPCODE_XOR		: std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "1011";
-	constant ALU_OPCODE_CMP     : std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "1100";
-	constant ALU_OPCODE_SHL     : std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "0000";
 	constant ALU_OPCODE_SLT     : std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "0110";
-	constant ALU_OPCODE_SHR     : std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "0001";
+	constant ALU_OPCODE_ABS     : std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "0001";
 	constant ALU_OPCODE_SRA     : std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0) := "0010"; --arithmetic shift right: unused at the moment
 
 end myTypes;
