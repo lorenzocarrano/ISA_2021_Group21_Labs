@@ -10,7 +10,7 @@ Entity ALU is
 	(
         A    : in std_logic_vector(NbitOperands -1 downto 0); --Operand1
         B    : in std_logic_vector(NbitOperands -1 downto 0); --Operand2
-        ctrl : in std_logic_vector(3 downto 0); --Control Signal
+        ctrl : in std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0); --Control Signal
         Y    : out std_logic_vector(NbitOperands -1 downto 0) --Result
     );
 end ALU;
@@ -27,6 +27,7 @@ Architecture Bhv of ALU is
 		Port
 		(
 			A          : in  std_logic_vector(Nbit-1 downto 0);
+			B          : in  std_logic_vector(Nbit-1 downto 0);
 			Y          : out std_logic_vector(Nbit-1 downto 0)
 		);
 	end component;
@@ -36,9 +37,10 @@ begin
 		generic map ( Nbit => NbitOperands)
 		port map (
 			A => A,
+			B => B,
 			Y => abs_result);
 
-    Computation: process(A, B, ctrl)
+    Computation: process(A, B, ctrl, abs_result)
 	begin
 		case(ctrl) is		    
 			when ALU_OPCODE_SRA =>

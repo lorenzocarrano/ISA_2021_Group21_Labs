@@ -10,18 +10,19 @@ Entity abs_component is
 	Port
 	(
 		A          : in  std_logic_vector(Nbit-1 downto 0);
+		B          : in  std_logic_vector(Nbit-1 downto 0);
 		Y          : out std_logic_vector(Nbit-1 downto 0)
 	);
 end abs_component;
 
 Architecture Behavioral of abs_component is
 begin	
-	process(A)
+	process(A, B)
 	begin
 		if (A(Nbit-1) = '1') then
-			Y <= Not(A) + 1;
+			Y <= Not(A) + 1 + B;
 		else
-            Y <= A;
+            Y <= A + B;
 		end if;
 	end process;
 

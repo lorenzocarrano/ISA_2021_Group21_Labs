@@ -121,6 +121,7 @@ begin
 
             when MY_INSRT_ABS_OPCODE =>
 				RegWrite    <= '1';
+                ALUSrc      <= '1';
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ABS;
         
             when others => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;

@@ -18,7 +18,7 @@ end instruction_memory;
 
 architecture Arch of instruction_memory is
     
-    type mem_array is array (0 to 24) of std_logic_vector (N_BIT - 1 downto 0); 
+    type mem_array is array (0 to 21) of std_logic_vector (N_BIT - 1 downto 0); 
 	signal memory : mem_array := (
 		x"00700813",
         x"0fc10217",
@@ -27,18 +27,24 @@ architecture Arch of instruction_memory is
         x"01028293",
         x"400006b7",
         x"fff68693",
-        x"02080863",
+        x"02080263",
         x"00022403",
-        x"41f45493",
-        x"00944533",
-        x"0014f493",
-        x"00950533",
+        -- x"41f45493",
+        -- x"00944533",
+        -- x"0014f493",
+        -- x"00950533",
+        -- this instructions has been sobstitute by 
+        -- out customize abs instruction
+        --  IMM   RS1  FUNC3   RD   OPCODE
+        -- 00..0 01000  000   01010 1111111
+        --- Rs = 8, Rd = 10, OPCODE = Abs
+        x"0004057F",
         x"00420213",
         x"fff80813",
         x"00d525b3",
-        x"fc058ee3",
+        x"fe0584e3",
         x"000506b3",
-        x"fd5ff0ef",
+        x"fe1ff0ef",
         x"00d2a023",
         x"000000ef",
         x"00000013",

@@ -25,6 +25,8 @@ begin
                                 immediate(31 downto 12) <= instruction(31 downto 12);
             when "0000011" =>   immediate (11 downto 0) <= instruction (31 downto 20);--I-Type LW
                                 immediate (31 downto 12) <= (others => instruction(31));
+            when "1111111" =>   immediate (11 downto 0) <= instruction (31 downto 20);--I-Type LW
+                                immediate (31 downto 12) <= (others => instruction(31));
             when "0010011" =>   immediate (11 downto 0) <= instruction (31 downto 20);--I-Type ANDI, ADDI, SRAI 
                                 immediate (31 downto 12) <= (others => instruction(31));
             when "0110111" =>   immediate (11 downto 0) <= (others => '0');--U-Type LUI
