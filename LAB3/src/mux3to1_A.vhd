@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-Entity mux3to1_A is
+Entity mux4to1_A is
 	Generic
 	(
 		Nbit : natural := 1
@@ -17,9 +17,9 @@ Entity mux3to1_A is
 		ALUSrc_PC  : in  std_logic;
 		Y          : out std_logic_vector(Nbit-1 downto 0)
 	);
-end mux3to1_A;
+end mux4to1_A;
 
-Architecture Behavioral of mux3to1_A is
+Architecture Behavioral of mux4to1_A is
 begin	
 	process(sel, ALUSrc_PC, A, B, C, D)
 	begin
@@ -34,7 +34,6 @@ begin
 				Y <= C;
 			end if;
 		end if;
-	
 	end process;
 
 end Behavioral;

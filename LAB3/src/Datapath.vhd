@@ -118,7 +118,7 @@ architecture ARCH of Datapath is
     signal ID_EX_MemToReg, ID_EX_MemToReg_next : std_logic;
 
     -- EXECUTE signals
-    Component mux3to1_A is
+    Component mux4to1_A is
         Generic
         (
             Nbit : natural := 1
@@ -145,9 +145,7 @@ architecture ARCH of Datapath is
             A          : in  std_logic_vector(Nbit-1 downto 0);
             B          : in  std_logic_vector(Nbit-1 downto 0);	
             C          : in  std_logic_vector(Nbit-1 downto 0);
-            D          : in  std_logic_vector(Nbit-1 downto 0);	
             sel        : in  std_logic_vector(1 downto 0);
-            ALUSrc     : in  std_logic;
             Y          : out std_logic_vector(Nbit-1 downto 0)
         );
     end Component;
@@ -338,10 +336,10 @@ begin
     -- calcuate address
     Jump_PC       <= IF_ID_PC + (ID_EX_immediate_next(M-2 downto 1) & '0');
     RF: Register_file
-        -- generic map (
-        --     N               => 5;
-        --     N_tot           => 32
-        -- )
+        generic map (
+            N_address       => R,
+            N_tot           => M
+        )
         port map (
             Reset           => RST,
             Clk             => Clk,
@@ -354,8 +352,8 @@ begin
             Read_data_2     => read_data_f2);
 
     IMMEDIATE_GENERATOR: immediate_gen 
-        -- generic map
-        --     (N_tot  => 32);
+        generic map
+            (N_tot  => M)
         port map (	
             instruction => IF_ID_INSTRUCTION,
             immediate   => ID_EX_immediate_next);
@@ -398,13 +396,6 @@ begin
             PC_MUX <= '0';
         end if;
     end process;
-    -- PIPELINE decode
-    ID_EX_read_1_Next <= read_data_f1;
-    ID_EX_read_2_Next <= read_data_f2;
-    ID_EX_PC_Next     <= IF_ID_PC;
-    ID_EX_RS1_Next    <= read_addr_f1;
-    ID_EX_RS2_Next    <= read_addr_f2;
-    ID_EX_RD_Next     <= IF_ID_INSTRUCTION(11 DOWNTO 7);
 
     -- How stall the pipeline, this is the mux for control signals
     STALL_CONTROL_SIGNAL: process(stall, EXECUTE_CONTROL_SIGNALS, MemWrite, MemRead, Branch, RegWrite, MemToReg, ALUSrc, ALUSrc_PC)
@@ -436,11 +427,20 @@ begin
             ID_EX_MemToReg_next <= '0';
         end if;
     end process;
+    -- PIPELINE decode
+    ID_EX_read_1_Next <= read_data_f1;
+    ID_EX_read_2_Next <= read_data_f2;
+    ID_EX_PC_Next     <= IF_ID_PC;
+    ID_EX_RS1_Next    <= read_addr_f1;
+    ID_EX_RS2_Next    <= read_addr_f2;
+    ID_EX_RD_Next     <= IF_ID_INSTRUCTION(11 DOWNTO 7);
     
     -- EXECUTE part
-
+    -- signals for Data Hazard
+    ID_EX_MemRead_out <= ID_EX_MemRead;
+    ID_EX_RD_out <= ID_EX_RD;
     -- ALU component for operation and forwarding
-    ForwardingAMux: mux3to1_A
+    ForwardingAMux: mux4to1_A
         Generic Map(Nbit => M)
         Port Map
         (
@@ -459,10 +459,17 @@ begin
             A    => ID_EX_read_2,
             B    => writa_data_f,
             C    => EX_MEM_ALU_result,
-            D    => ID_EX_immediate,
             sel  => ForwardBmuxSelector,
-            ALUSrc => ID_EX_ALUSrc,
-            Y    => ALU_operand2);
+            Y    => EX_MEM_FowardB_Next);
+
+    RS2_OR_IMM: process(ID_EX_ALUSrc, ID_EX_immediate, EX_MEM_FowardB_Next)
+    begin
+        if (ID_EX_ALUSrc = '0') then
+            ALU_operand2 <= EX_MEM_FowardB_Next;
+        else
+            ALU_operand2 <= ID_EX_immediate;
+        end if;
+    end process;
 
     ArithmeticLogicUnit: ALU
         Generic Map(NbitOperands => M)
@@ -482,14 +489,10 @@ begin
             RdinMemStage  => EX_MEM_RD,
             RdinWrbStage  => writa_addr_f,
             ForwardA      => ForwardAmuxSelector,
-            ForwardB      => ForwardBmuxSelector
-        );
-    -- signals for Data Hazard
-    ID_EX_MemRead_out <= ID_EX_MemRead;
-    ID_EX_RD_out <= ID_EX_RD;
+            ForwardB      => ForwardBmuxSelector);
+
     -- PIPELINE execute
     EX_MEM_ALU_result_Next <= ALU_result;
-    EX_MEM_FowardB_Next <= ALU_operand2;
     EX_MEM_RD_Next <= ID_EX_RD;
     -- Memory controll signal
     EX_MEM_MemRead_next <= ID_EX_MemRead;
@@ -499,8 +502,7 @@ begin
     EX_MEM_RegWrite_next <= ID_EX_RegWrite;
     EX_MEM_MemToReg_next <= ID_EX_MemToReg;
 
-    -- MEMORY paty
-    -- ADD MEMORY DATA
+    -- MEMORY part
     -- PIPELINE memory
     DATA_ADDRESS <= EX_MEM_ALU_result;
     DATA_READ_EN <= EX_MEM_MemRead;
