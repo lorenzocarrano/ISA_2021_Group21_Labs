@@ -1,0 +1,4 @@
+source /software/scripts/init_msim6.2g
+rm work
+vlib work
+vcom -93 -work ./work ../src/fd.vhd

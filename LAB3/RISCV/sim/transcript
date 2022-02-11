@@ -1,0 +1,69 @@
+# //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim work.riscv_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading work.mytypes
+# Loading work.riscv_tb(testbench)#1
+# Loading work.riscv(arch)#1
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.controller(arch)#1
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_signed(body)
+# Loading work.datapath(arch)#1
+# Loading work.register_file(arch)#1
+# Loading work.immediate_gen(arch)#1
+# Loading work.mux4to1_a(behavioral)#1
+# Loading work.mux3to1_b(behavioral)#1
+# Loading work.alu(bhv)#1
+# Loading work.forwardingunit(behavioral)#1
+# Loading work.datahazardunit(arch)#1
+# Loading work.data_memory(arch)#1
+# Loading work.instruction_memory(arch)#1
+add wave sim:/riscv_tb/uut/dp/*
+run 2500 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+restart
+add wave sim:/riscv_tb/uut/dp/rf/*
+run 2500 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /riscv_tb/uut/dp/arithmeticlogicunit

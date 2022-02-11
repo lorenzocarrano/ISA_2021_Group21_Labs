@@ -111,7 +111,6 @@ begin
 
             when BTYPE_BEQ_OPCODE =>
                 Branch      <= '1';
-                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_CMP;
 
             when STYPE_SW_OPCODE =>
                 ALUSrc      <= '1';
@@ -119,6 +118,10 @@ begin
 				MemWrite    <= '1';
 				-- calculate address from read
 				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+
+            when MY_INSRT_ABS_OPCODE =>
+				RegWrite    <= '1';
+				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ABS;
         
             when others => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
         
