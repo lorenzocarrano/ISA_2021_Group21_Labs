@@ -1,0 +1,126 @@
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'riscv'.
+Information: Building the design 'Controller' instantiated from design 'riscv' with
+	the parameters "OP_CODE_SIZE=7,FUNC7_SIZE=7,FUNC3_SIZE=3". (HDL-193)
+
+Statistics for case statements in always block at line 40 in file
+	'../src/controller.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+|            57            |    auto/auto     |
+|            68            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Datapath' instantiated from design 'riscv' with
+	the parameters "N=32,K=1024,M=32,R=5". (HDL-193)
+
+Statistics for case statements in always block at line 519 in file
+	'../src/Datapath.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           522            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Datapath_N32_K1024_M32_R5 line 211 in file
+		'../src/Datapath.vhd'.
+=========================================================================================
+|           Register Name           | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================
+|        MEM_WB_RegWrite_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        MEM_WB_MemToReg_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|              PC_reg               | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|           IF_ID_PC_reg            | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|       IF_ID_INSTRUCTION_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|           ID_EX_PC_reg            | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|         ID_EX_read_1_reg          | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|         ID_EX_read_2_reg          | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|           ID_EX_RD_reg            | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+|           ID_EX_RS1_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+|           ID_EX_RS2_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+|        ID_EX_immediate_reg        | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+| ID_EX_EXECUTE_CONTROL_SIGNALS_reg | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+|         ID_EX_ALUSrc_reg          | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        ID_EX_ALUSrc_PC_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        ID_EX_MemWrite_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|         ID_EX_MemRead_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        ID_EX_RegWrite_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        ID_EX_MemToReg_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       EX_MEM_ALU_result_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|        EX_MEM_FowardB_reg         | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|           EX_MEM_RD_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+|        EX_MEM_MemWrite_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        EX_MEM_MemRead_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        EX_MEM_RegWrite_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        EX_MEM_MemToReg_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       MEM_WB_read_data_reg        | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|       MEM_WB_ALU_result_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|           MEM_WB_RD_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+=========================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'DataHazardUnit' instantiated from design 'riscv' with
+	the parameters "M=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Register_file' instantiated from design 'Datapath_N32_K1024_M32_R5' with
+	the parameters "N_address=5,N_tot=32". (HDL-193)
+Warning:  ../src/register_file.vhd:25: The initial value for signal 'reg' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Inferred memory devices in process
+	in routine Register_file_N_address5_N_tot32 line 29 in file
+		'../src/register_file.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   Read_data_2_reg   | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|       reg_reg       | Latch | 1024  |  Y  | N  | N  | N  | -  | -  | -  |
+|   Read_data_1_reg   | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Statistics for MUX_OPs
+=========================================================================
+|          block name/line            | Inputs | Outputs | # sel inputs |
+=========================================================================
+| Register_file_N_address5_N_tot32/51 |   32   |   32    |      5       |
+| Register_file_N_address5_N_tot32/57 |   32   |   32    |      5       |
+=========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'immediate_gen' instantiated from design 'Datapath_N32_K1024_M32_R5' with
+	the parameters "n_tot=32". (HDL-193)
+
+Statistics for case statements in always block at line 18 in file
+	'../src/immediate_gen.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            22            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mux4to1_A' instantiated from design 'Datapath_N32_K1024_M32_R5' with
+	the parameters "Nbit=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux3to1_B' instantiated from design 'Datapath_N32_K1024_M32_R5' with
+	the parameters "Nbit=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU' instantiated from design 'Datapath_N32_K1024_M32_R5' with
+	the parameters "NbitOperands=32". (HDL-193)
+
+Statistics for case statements in always block at line 22 in file
+	'../src/ALU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            24            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ForwardingUnit' instantiated from design 'Datapath_N32_K1024_M32_R5' with
+	the parameters "NbitRegAddressing=5". (HDL-193)
+Presto compilation completed successfully.
+1
