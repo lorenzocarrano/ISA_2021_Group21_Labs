@@ -1,0 +1,23 @@
+/home/isa21_2021_2022/Desktop/ISA_2021_Group21_Labs/LAB3/ALUtb/vhdFiles/ALUtb.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/Desktop/ISA_2021_Group21_Labs/LAB3/ALUtb/vhdFiles/ALUtb.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity alutb
+-- Compiling architecture tst of alutb
+
+} {} {}} /home/isa21_2021_2022/Desktop/ISA_2021_Group21_Labs/LAB3/ALUtb/vhdFiles/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt /home/isa21_2021_2022/Desktop/ISA_2021_Group21_Labs/LAB3/ALUtb/vhdFiles/ALU.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package numeric_std
+-- Compiling entity alu
+-- Compiling architecture bhv of alu
+
+} {} {}}
