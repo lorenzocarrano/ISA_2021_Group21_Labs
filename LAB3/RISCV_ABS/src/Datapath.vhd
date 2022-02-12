@@ -212,7 +212,7 @@ begin
 
     Reg: process(clk)
     begin
-        if(clk = '1') then
+        if(clk'event and clk = '1') then
             if (rst = '1') then
                 -- FETCH
                 PC <= x"00400000";

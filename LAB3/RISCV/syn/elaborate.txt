@@ -14,9 +14,9 @@ Statistics for case statements in always block at line 40 in file
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            53            |    auto/auto     |
-|            58            |    auto/auto     |
+|            64            |    auto/auto     |
 |            69            |    auto/auto     |
+|            80            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -25,6 +25,7 @@ Inferred memory devices in process
 =======================================================================================
 |        Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 =======================================================================================
+| EXECUTE_CONTROL_SIGNALS_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
 |        MemWrite_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |         MemRead_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |         Branch_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
@@ -33,7 +34,6 @@ Inferred memory devices in process
 |        MemToReg_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |         ALUSrc_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |        ALUSrc_PC_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-| EXECUTE_CONTROL_SIGNALS_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
 =======================================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Datapath' instantiated from design 'riscv' with
