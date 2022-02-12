@@ -30,7 +30,6 @@
 # Loading work.datahazardunit(arch)#1
 # Loading work.data_memory(arch)#1
 # Loading work.instruction_memory(arch)#1
-add wave sim:/riscv_tb/uut/dp/*
 run 2500 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
@@ -44,12 +43,16 @@ run 2500 ns
 #    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 2  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 2  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 3  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
-restart
+add wave sim:/riscv_tb/uut/dp/*
+add dataflow sim:/riscv_tb/uut/dp/rf/*
 add wave sim:/riscv_tb/uut/dp/rf/*
+restart
 run 2500 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
@@ -63,7 +66,9 @@ run 2500 ns
 #    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 1  Instance: /riscv_tb/uut/dp
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 2  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 2  Instance: /riscv_tb/uut/dp/arithmeticlogicunit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 3  Instance: /riscv_tb/uut/dp/arithmeticlogicunit

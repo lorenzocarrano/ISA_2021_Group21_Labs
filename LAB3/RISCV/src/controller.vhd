@@ -39,6 +39,7 @@ begin
 
     process(OPCODE, FUNCT3)
     begin
+	if(clk'event and clk = '0') then
         -- default write always back into register file
         MemWrite    <= '0';
 		MemRead     <= '0';
@@ -121,7 +122,8 @@ begin
         
             when others => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
         
-        end case;    
+        end case;   
+	end if; 
     end process;
 
 end ARCH;

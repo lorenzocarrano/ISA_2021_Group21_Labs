@@ -1,10 +1,5 @@
 Information: Updating design information... (UID-85)
-Information: Timing loop detected. (OPT-150)
-	DP/IF_ID_INSTRUCTION_reg[18]/G DP/IF_ID_INSTRUCTION_reg[18]/Q DH/U2/B DH/U2/Z DH/U7/A1 DH/U7/ZN DH/U16/A1 DH/U16/ZN DH/U17/A2 DH/U17/ZN DP/U46/B2 DP/U46/ZN 
-Information: Timing loop detected. (OPT-150)
-	DP/IF_ID_INSTRUCTION_reg[19]/G DP/IF_ID_INSTRUCTION_reg[19]/Q DH/U4/B DH/U4/Z DH/U7/A2 DH/U7/ZN DH/U16/A1 DH/U16/ZN DH/U17/A2 DH/U17/ZN DP/U46/B2 DP/U46/ZN 
-Warning: Disabling timing arc between pins 'B2' and 'ZN' on cell 'DP/U46'
-         to break a timing loop. (OPT-314)
+Warning: Design 'riscv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
 Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
@@ -14,16 +9,18 @@ Report : timing
         -max_paths 1
 Design : riscv
 Version: O-2018.06-SP4
-Date   : Sat Feb 12 00:29:37 2022
+Date   : Sat Feb 12 12:00:52 2022
 ****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: DP/EX_MEM_RD_reg[3]
-              (positive level-sensitive latch clocked by MY_CLK)
-  Endpoint: DP/PC_reg[6]
-            (positive level-sensitive latch clocked by MY_CLK)
+  Startpoint: DP/MEM_WB_RD_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: DP/IF_ID_INSTRUCTION_reg[0]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
 
@@ -35,73 +32,65 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  DP/EX_MEM_RD_reg[3]/G (DLH_X2)                          0.00       0.00 r
-  DP/EX_MEM_RD_reg[3]/Q (DLH_X2)                          0.06       0.06 r
-  DP/ForwardingUnitComponent/RdinMemStage[3] (ForwardingUnit_NbitRegAddressing5)
-                                                          0.00       0.06 r
-  DP/ForwardingUnitComponent/U18/ZN (XNOR2_X1)            0.06       0.12 r
-  DP/ForwardingUnitComponent/U7/ZN (AND4_X1)              0.07       0.19 r
-  DP/ForwardingUnitComponent/U8/ZN (NAND2_X1)             0.03       0.22 f
-  DP/ForwardingUnitComponent/U11/ZN (NAND3_X1)            0.03       0.24 r
-  DP/ForwardingUnitComponent/U10/ZN (NOR2_X1)             0.03       0.27 f
+  DP/MEM_WB_RD_reg[2]/CK (SDFF_X1)                        0.00       0.00 r
+  DP/MEM_WB_RD_reg[2]/QN (SDFF_X1)                        0.08       0.08 f
+  DP/U211/ZN (INV_X1)                                     0.03       0.11 r
+  DP/ForwardingUnitComponent/RdinWrbStage[2] (ForwardingUnit_NbitRegAddressing5)
+                                                          0.00       0.11 r
+  DP/ForwardingUnitComponent/U12/ZN (XNOR2_X1)            0.06       0.17 r
+  DP/ForwardingUnitComponent/U10/ZN (AND3_X1)             0.05       0.22 r
+  DP/ForwardingUnitComponent/U3/ZN (NAND3_X1)             0.03       0.25 f
+  DP/ForwardingUnitComponent/U31/ZN (NOR2_X1)             0.04       0.29 r
   DP/ForwardingUnitComponent/ForwardB[0] (ForwardingUnit_NbitRegAddressing5)
-                                                          0.00       0.27 f
-  DP/ForwardingBMux/sel[0] (mux3to1_B_Nbit32)             0.00       0.27 f
-  DP/ForwardingBMux/U26/Z (BUF_X2)                        0.05       0.32 f
-  DP/ForwardingBMux/U16/ZN (AND2_X1)                      0.05       0.37 f
-  DP/ForwardingBMux/U92/ZN (AOI222_X1)                    0.11       0.48 r
-  DP/ForwardingBMux/U93/ZN (INV_X1)                       0.03       0.51 f
-  DP/ForwardingBMux/Y[19] (mux3to1_B_Nbit32)              0.00       0.51 f
-  DP/U61/ZN (AOI21_X1)                                    0.04       0.55 r
-  DP/U62/ZN (INV_X1)                                      0.03       0.58 f
-  DP/ArithmeticLogicUnit/B[19] (ALU_NbitOperands32)       0.00       0.58 f
-  DP/ArithmeticLogicUnit/U460/ZN (INV_X1)                 0.03       0.60 r
-  DP/ArithmeticLogicUnit/U462/ZN (NAND4_X1)               0.03       0.64 f
-  DP/ArithmeticLogicUnit/U463/ZN (NOR4_X1)                0.05       0.69 r
-  DP/ArithmeticLogicUnit/U393/ZN (AND2_X1)                0.06       0.75 r
-  DP/ArithmeticLogicUnit/U419/ZN (NAND2_X1)               0.04       0.79 f
-  DP/ArithmeticLogicUnit/U92/ZN (AND2_X2)                 0.06       0.85 f
-  DP/ArithmeticLogicUnit/U498/ZN (AOI211_X1)              0.08       0.93 r
-  DP/ArithmeticLogicUnit/U528/ZN (NAND2_X1)               0.03       0.96 f
-  DP/ArithmeticLogicUnit/U529/ZN (AOI221_X1)              0.09       1.04 r
-  DP/ArithmeticLogicUnit/U617/ZN (NAND3_X1)               0.05       1.10 f
-  DP/ArithmeticLogicUnit/Y[0] (ALU_NbitOperands32)        0.00       1.10 f
-  DP/U368/ZN (XNOR2_X1)                                   0.05       1.15 r
-  DP/U23/ZN (AND4_X1)                                     0.06       1.20 r
-  DP/U22/ZN (AND3_X1)                                     0.05       1.25 r
-  DP/U373/ZN (NAND4_X1)                                   0.04       1.29 f
-  DP/U109/ZN (AND2_X1)                                    0.05       1.34 f
-  DP/U847/ZN (NAND2_X1)                                   0.04       1.38 r
-  DP/U336/ZN (INV_X1)                                     0.04       1.43 f
-  DP/U893/ZN (AOI22_X1)                                   0.06       1.48 r
-  DP/U894/ZN (INV_X1)                                     0.02       1.50 f
-  DP/PC_reg[6]/D (DLH_X1)                                 0.01       1.51 f
+                                                          0.00       0.29 r
+  DP/ForwardingBMux/sel[0] (mux3to1_B_Nbit32)             0.00       0.29 r
+  DP/ForwardingBMux/U26/ZN (INV_X1)                       0.03       0.32 f
+  DP/ForwardingBMux/U9/Z (BUF_X2)                         0.05       0.37 f
+  DP/ForwardingBMux/U27/ZN (INV_X1)                       0.05       0.42 r
+  DP/ForwardingBMux/U68/ZN (NAND3_X1)                     0.04       0.46 f
+  DP/ForwardingBMux/U71/ZN (NAND3_X1)                     0.04       0.49 r
+  DP/ForwardingBMux/Y[9] (mux3to1_B_Nbit32)               0.00       0.49 r
+  DP/U664/ZN (OAI22_X1)                                   0.04       0.53 f
+  DP/U189/ZN (INV_X2)                                     0.06       0.59 r
+  DP/ArithmeticLogicUnit/B[9] (ALU_NbitOperands32)        0.00       0.59 r
+  DP/ArithmeticLogicUnit/r300/B[9] (ALU_NbitOperands32_DW01_add_10)
+                                                          0.00       0.59 r
+  DP/ArithmeticLogicUnit/r300/U388/ZN (NOR2_X1)           0.04       0.63 f
+  DP/ArithmeticLogicUnit/r300/U451/ZN (NOR2_X1)           0.06       0.68 r
+  DP/ArithmeticLogicUnit/r300/U544/ZN (NAND2_X1)          0.04       0.73 f
+  DP/ArithmeticLogicUnit/r300/U396/ZN (NOR2_X1)           0.05       0.77 r
+  DP/ArithmeticLogicUnit/r300/U569/ZN (AOI21_X1)          0.03       0.81 f
+  DP/ArithmeticLogicUnit/r300/U374/Z (BUF_X2)             0.05       0.85 f
+  DP/ArithmeticLogicUnit/r300/U683/ZN (OAI21_X1)          0.05       0.90 r
+  DP/ArithmeticLogicUnit/r300/U459/ZN (XNOR2_X1)          0.06       0.96 r
+  DP/ArithmeticLogicUnit/r300/SUM[28] (ALU_NbitOperands32_DW01_add_10)
+                                                          0.00       0.96 r
+  DP/ArithmeticLogicUnit/U672/ZN (OAI22_X1)               0.03       0.99 f
+  DP/ArithmeticLogicUnit/U673/ZN (INV_X1)                 0.04       1.03 r
+  DP/ArithmeticLogicUnit/Y[28] (ALU_NbitOperands32)       0.00       1.03 r
+  DP/U505/ZN (XNOR2_X1)                                   0.06       1.09 r
+  DP/U518/ZN (NAND4_X1)                                   0.04       1.13 f
+  DP/U520/ZN (NOR3_X1)                                    0.05       1.18 r
+  DP/U523/ZN (NAND4_X1)                                   0.05       1.23 f
+  DP/U43/ZN (OR2_X2)                                      0.07       1.30 f
+  DP/U42/ZN (AND4_X2)                                     0.05       1.35 f
+  DP/U221/Z (BUF_X2)                                      0.05       1.39 f
+  DP/U994/ZN (AOI221_X1)                                  0.09       1.48 r
+  DP/U995/ZN (INV_X1)                                     0.02       1.50 f
+  DP/IF_ID_INSTRUCTION_reg[0]/D (DFF_X1)                  0.01       1.51 f
   data arrival time                                                  1.51
 
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                      -0.07      -0.07
-  DP/PC_reg[6]/G (DLH_X1)                                 0.00      -0.07 r
-  time given to endpoint                                 -0.05      -0.12
-  data required time                                                -0.12
+  DP/IF_ID_INSTRUCTION_reg[0]/CK (DFF_X1)                 0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
   --------------------------------------------------------------------------
-  data required time                                                -0.12
+  data required time                                                -0.11
   data arrival time                                                 -1.51
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -1.63
-
-  Time Borrowing Information
-  --------------------------------------------------------------
-  MY_CLK nominal pulse width                              0.00   
-  library setup time                                     -0.05   
-  --------------------------------------------------------------
-  max time borrow                                        -0.05   
-  --------------------------------------------------------------
-  actual time borrow                                     -0.05   
-  clock uncertainty                                      -0.07   
-  --------------------------------------------------------------
-  time given to startpoint                               -0.12   
-  --------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.62
 
 
 1

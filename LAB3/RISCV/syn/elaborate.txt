@@ -18,54 +18,63 @@ Statistics for case statements in always block at line 40 in file
 |            57            |    auto/auto     |
 |            68            |    auto/auto     |
 ===============================================
+
+Inferred memory devices in process
+	in routine Controller_OP_CODE_SIZE7_FUNC7_SIZE7_FUNC3_SIZE3 line 40 in file
+		'../src/controller.vhd'.
+===================================================================================
+|        Register Name        | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| EXECUTE_CONTROL_SIGNALS_reg | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+===================================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Datapath' instantiated from design 'riscv' with
 	the parameters "N=32,K=1024,M=32,R=5". (HDL-193)
 
-Statistics for case statements in always block at line 519 in file
+Statistics for case statements in always block at line 523 in file
 	'../src/Datapath.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           522            |    auto/auto     |
+|           526            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine Datapath_N32_K1024_M32_R5 line 211 in file
+	in routine Datapath_N32_K1024_M32_R5 line 213 in file
 		'../src/Datapath.vhd'.
-=========================================================================================
-|           Register Name           | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
-=========================================================================================
-|        MEM_WB_RegWrite_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        MEM_WB_MemToReg_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|              PC_reg               | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|           IF_ID_PC_reg            | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|       IF_ID_INSTRUCTION_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|           ID_EX_PC_reg            | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|         ID_EX_read_1_reg          | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|         ID_EX_read_2_reg          | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|           ID_EX_RD_reg            | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
-|           ID_EX_RS1_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
-|           ID_EX_RS2_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
-|        ID_EX_immediate_reg        | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-| ID_EX_EXECUTE_CONTROL_SIGNALS_reg | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
-|         ID_EX_ALUSrc_reg          | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        ID_EX_ALUSrc_PC_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        ID_EX_MemWrite_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|         ID_EX_MemRead_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        ID_EX_RegWrite_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        ID_EX_MemToReg_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|       EX_MEM_ALU_result_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|        EX_MEM_FowardB_reg         | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|           EX_MEM_RD_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
-|        EX_MEM_MemWrite_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        EX_MEM_MemRead_reg         | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        EX_MEM_RegWrite_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|        EX_MEM_MemToReg_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-|       MEM_WB_read_data_reg        | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|       MEM_WB_ALU_result_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|           MEM_WB_RD_reg           | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
-=========================================================================================
+=============================================================================================
+|           Register Name           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================
+|        MEM_WB_MemToReg_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|              PC_reg               | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|           IF_ID_PC_reg            | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       IF_ID_INSTRUCTION_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|           ID_EX_PC_reg            | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         ID_EX_read_1_reg          | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         ID_EX_read_2_reg          | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|           ID_EX_RD_reg            | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|           ID_EX_RS1_reg           | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|           ID_EX_RS2_reg           | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        ID_EX_immediate_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| ID_EX_EXECUTE_CONTROL_SIGNALS_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|         ID_EX_ALUSrc_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        ID_EX_ALUSrc_PC_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        ID_EX_MemWrite_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         ID_EX_MemRead_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        ID_EX_RegWrite_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        ID_EX_MemToReg_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       EX_MEM_ALU_result_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        EX_MEM_FowardB_reg         | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|           EX_MEM_RD_reg           | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        EX_MEM_MemWrite_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        EX_MEM_MemRead_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        EX_MEM_RegWrite_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        EX_MEM_MemToReg_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       MEM_WB_read_data_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       MEM_WB_ALU_result_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|           MEM_WB_RD_reg           | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        MEM_WB_RegWrite_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=============================================================================================
 Presto compilation completed successfully.
 Information: Building the design 'DataHazardUnit' instantiated from design 'riscv' with
 	the parameters "M=5". (HDL-193)
@@ -77,13 +86,13 @@ Warning:  ../src/register_file.vhd:25: The initial value for signal 'reg' is not
 Inferred memory devices in process
 	in routine Register_file_N_address5_N_tot32 line 29 in file
 		'../src/register_file.vhd'.
-===========================================================================
-|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
-===========================================================================
-|   Read_data_2_reg   | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-|       reg_reg       | Latch | 1024  |  Y  | N  | N  | N  | -  | -  | -  |
-|   Read_data_1_reg   | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
-===========================================================================
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       reg_reg       | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+|   Read_data_1_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   Read_data_2_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
 Statistics for MUX_OPs
 =========================================================================
 |          block name/line            | Inputs | Outputs | # sel inputs |

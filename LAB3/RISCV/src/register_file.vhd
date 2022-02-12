@@ -30,7 +30,7 @@ begin
 
     begin
 
-        if (clk = '0') then --negative edge
+        if (clk'event and clk = '0') then --negative edge
 
             if reset = '1' then
                 
