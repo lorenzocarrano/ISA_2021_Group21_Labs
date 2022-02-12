@@ -1,6 +1,5 @@
 Information: Updating design information... (UID-85)
 Warning: Design 'riscv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
 Report : timing
@@ -9,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : riscv
 Version: O-2018.06-SP4
-Date   : Sat Feb 12 12:49:20 2022
+Date   : Sat Feb 12 23:34:38 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -19,7 +18,7 @@ Wire Load Model Mode: top
 
   Startpoint: DP/EX_MEM_RD_reg[2]
               (rising edge-triggered flip-flop clocked by MY_CLK)
-  Endpoint: DP/IF_ID_INSTRUCTION_reg[0]
+  Endpoint: DP/PC_reg[11]
             (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
@@ -32,89 +31,114 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  DP/EX_MEM_RD_reg[2]/CK (DFF_X1)                         0.00       0.00 r
-  DP/EX_MEM_RD_reg[2]/QN (DFF_X1)                         0.06       0.06 f
-  DP/U198/ZN (INV_X1)                                     0.03       0.10 r
+  DP/EX_MEM_RD_reg[2]/CK (SDFF_X1)                        0.00       0.00 r
+  DP/EX_MEM_RD_reg[2]/Q (SDFF_X1)                         0.07       0.07 r
   DP/ForwardingUnitComponent/RdinMemStage[2] (ForwardingUnit_NbitRegAddressing5)
-                                                          0.00       0.10 r
-  DP/ForwardingUnitComponent/U8/ZN (XNOR2_X1)             0.06       0.15 r
-  DP/ForwardingUnitComponent/U5/ZN (AND3_X1)              0.05       0.20 r
-  DP/ForwardingUnitComponent/U23/ZN (AND4_X2)             0.06       0.27 r
-  DP/ForwardingUnitComponent/ForwardA[1] (ForwardingUnit_NbitRegAddressing5)
-                                                          0.00       0.27 r
-  DP/ForwardingAMux/sel[1] (mux4to1_A_Nbit32)             0.00       0.27 r
-  DP/ForwardingAMux/U60/ZN (INV_X1)                       0.03       0.30 f
-  DP/ForwardingAMux/U17/ZN (AND3_X2)                      0.05       0.35 f
-  DP/ForwardingAMux/U32/Z (BUF_X2)                        0.05       0.40 f
-  DP/ForwardingAMux/U66/ZN (AOI22_X1)                     0.06       0.46 r
-  DP/ForwardingAMux/U20/ZN (NAND2_X1)                     0.04       0.50 f
-  DP/ForwardingAMux/Y[2] (mux4to1_A_Nbit32)               0.00       0.50 f
-  DP/ArithmeticLogicUnit/A[2] (ALU_NbitOperands32)        0.00       0.50 f
-  DP/ArithmeticLogicUnit/ABS_CP/A[2] (abs_component_Nbit32)
-                                                          0.00       0.50 f
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/B[2] (abs_component_Nbit32_DW01_sub_5)
-                                                          0.00       0.50 f
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/U267/ZN (NOR2_X1)
-                                                          0.05       0.55 r
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/U167/ZN (AND4_X1)
-                                                          0.07       0.62 r
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/U165/ZN (NAND2_X1)
-                                                          0.05       0.67 f
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/U304/ZN (NOR2_X1)
-                                                          0.05       0.73 r
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/U268/ZN (XNOR2_X1)
-                                                          0.05       0.77 f
-  DP/ArithmeticLogicUnit/ABS_CP/sub_2_root_sub_1_root_add_23_2/DIFF[18] (abs_component_Nbit32_DW01_sub_5)
-                                                          0.00       0.77 f
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/B[18] (abs_component_Nbit32_DW01_add_5)
-                                                          0.00       0.77 f
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U647/ZN (NAND2_X1)
-                                                          0.04       0.81 r
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U646/ZN (OAI21_X1)
-                                                          0.04       0.85 f
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U656/ZN (AOI21_X1)
-                                                          0.05       0.90 r
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U657/ZN (OAI21_X1)
-                                                          0.04       0.94 f
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U551/ZN (AOI21_X1)
-                                                          0.06       1.00 r
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U419/Z (BUF_X1)
-                                                          0.05       1.05 r
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U691/ZN (OAI21_X1)
-                                                          0.03       1.08 f
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/U617/ZN (XNOR2_X1)
-                                                          0.05       1.13 f
-  DP/ArithmeticLogicUnit/ABS_CP/add_0_root_sub_1_root_add_23_2/SUM[22] (abs_component_Nbit32_DW01_add_5)
-                                                          0.00       1.13 f
-  DP/ArithmeticLogicUnit/ABS_CP/U8/Z (MUX2_X1)            0.07       1.20 f
-  DP/ArithmeticLogicUnit/ABS_CP/Y[22] (abs_component_Nbit32)
-                                                          0.00       1.20 f
-  DP/ArithmeticLogicUnit/U574/ZN (NAND2_X1)               0.03       1.23 r
-  DP/ArithmeticLogicUnit/U117/ZN (NAND2_X1)               0.03       1.26 f
-  DP/ArithmeticLogicUnit/Y[22] (ALU_NbitOperands32)       0.00       1.26 f
-  DP/U505/ZN (XNOR2_X1)                                   0.05       1.31 r
-  DP/U180/ZN (AND4_X1)                                    0.07       1.37 r
-  DP/U479/ZN (NAND4_X1)                                   0.04       1.41 f
-  DP/U469/ZN (NOR2_X1)                                    0.05       1.46 r
-  DP/U192/ZN (NAND2_X1)                                   0.03       1.49 f
-  DP/U16/ZN (AND4_X1)                                     0.05       1.54 f
-  DP/U486/Z (BUF_X1)                                      0.05       1.59 f
-  DP/U199/ZN (AND2_X1)                                    0.04       1.63 f
-  DP/U76/ZN (OR3_X1)                                      0.07       1.70 f
-  DP/IF_ID_INSTRUCTION_reg[0]/D (DFF_X1)                  0.01       1.71 f
-  data arrival time                                                  1.71
+                                                          0.00       0.07 r
+  DP/ForwardingUnitComponent/U25/ZN (XNOR2_X1)            0.06       0.13 r
+  DP/ForwardingUnitComponent/U16/ZN (AND3_X1)             0.06       0.19 r
+  DP/ForwardingUnitComponent/U34/ZN (NAND4_X1)            0.03       0.22 f
+  DP/ForwardingUnitComponent/U2/ZN (AND2_X1)              0.05       0.27 f
+  DP/ForwardingUnitComponent/ForwardA[0] (ForwardingUnit_NbitRegAddressing5)
+                                                          0.00       0.27 f
+  DP/ForwardingAMux/sel[0] (mux4to1_A_Nbit32)             0.00       0.27 f
+  DP/ForwardingAMux/U41/ZN (INV_X1)                       0.03       0.30 r
+  DP/ForwardingAMux/U40/ZN (AOI21_X1)                     0.03       0.33 f
+  DP/ForwardingAMux/U44/ZN (AND2_X1)                      0.04       0.37 f
+  DP/ForwardingAMux/U131/ZN (AOI22_X1)                    0.05       0.42 r
+  DP/ForwardingAMux/U108/ZN (NAND2_X1)                    0.04       0.46 f
+  DP/ForwardingAMux/Y[0] (mux4to1_A_Nbit32)               0.00       0.46 f
+  DP/ArithmeticLogicUnit/A[0] (ALU_NbitOperands32)        0.00       0.46 f
+  DP/ArithmeticLogicUnit/U26/Z (BUF_X1)                   0.05       0.51 f
+  DP/ArithmeticLogicUnit/add_54/A[0] (ALU_NbitOperands32_DW01_add_1)
+                                                          0.00       0.51 f
+  DP/ArithmeticLogicUnit/add_54/U153/ZN (NAND2_X1)        0.03       0.54 r
+  DP/ArithmeticLogicUnit/add_54/U2/ZN (NAND3_X1)          0.04       0.58 f
+  DP/ArithmeticLogicUnit/add_54/U181/ZN (NAND2_X1)        0.04       0.62 r
+  DP/ArithmeticLogicUnit/add_54/U183/ZN (NAND3_X1)        0.04       0.66 f
+  DP/ArithmeticLogicUnit/add_54/U188/ZN (NAND2_X1)        0.03       0.69 r
+  DP/ArithmeticLogicUnit/add_54/U189/ZN (NAND3_X1)        0.04       0.73 f
+  DP/ArithmeticLogicUnit/add_54/U149/ZN (NAND2_X1)        0.04       0.76 r
+  DP/ArithmeticLogicUnit/add_54/U74/ZN (NAND3_X1)         0.04       0.80 f
+  DP/ArithmeticLogicUnit/add_54/U91/ZN (NAND2_X1)         0.04       0.84 r
+  DP/ArithmeticLogicUnit/add_54/U93/ZN (NAND3_X1)         0.04       0.88 f
+  DP/ArithmeticLogicUnit/add_54/U16/ZN (NAND2_X1)         0.03       0.92 r
+  DP/ArithmeticLogicUnit/add_54/U18/ZN (NAND3_X1)         0.04       0.96 f
+  DP/ArithmeticLogicUnit/add_54/U1_6/CO (FA_X1)           0.10       1.05 f
+  DP/ArithmeticLogicUnit/add_54/U118/ZN (NAND2_X1)        0.04       1.09 r
+  DP/ArithmeticLogicUnit/add_54/U120/ZN (NAND3_X1)        0.04       1.13 f
+  DP/ArithmeticLogicUnit/add_54/U124/ZN (NAND2_X1)        0.03       1.16 r
+  DP/ArithmeticLogicUnit/add_54/U126/ZN (NAND3_X1)        0.04       1.20 f
+  DP/ArithmeticLogicUnit/add_54/U1_9/CO (FA_X1)           0.10       1.29 f
+  DP/ArithmeticLogicUnit/add_54/U141/ZN (NAND2_X1)        0.04       1.34 r
+  DP/ArithmeticLogicUnit/add_54/U144/ZN (NAND3_X1)        0.04       1.38 f
+  DP/ArithmeticLogicUnit/add_54/U102/ZN (NAND2_X1)        0.03       1.41 r
+  DP/ArithmeticLogicUnit/add_54/U104/ZN (NAND3_X1)        0.04       1.44 f
+  DP/ArithmeticLogicUnit/add_54/U1_12/CO (FA_X1)          0.10       1.54 f
+  DP/ArithmeticLogicUnit/add_54/U225/ZN (NAND2_X1)        0.04       1.58 r
+  DP/ArithmeticLogicUnit/add_54/U227/ZN (NAND3_X1)        0.04       1.62 f
+  DP/ArithmeticLogicUnit/add_54/U231/ZN (NAND2_X1)        0.04       1.66 r
+  DP/ArithmeticLogicUnit/add_54/U233/ZN (NAND3_X1)        0.04       1.70 f
+  DP/ArithmeticLogicUnit/add_54/U195/ZN (NAND2_X1)        0.04       1.73 r
+  DP/ArithmeticLogicUnit/add_54/U196/ZN (NAND3_X1)        0.04       1.77 f
+  DP/ArithmeticLogicUnit/add_54/U201/ZN (NAND2_X1)        0.04       1.81 r
+  DP/ArithmeticLogicUnit/add_54/U81/ZN (NAND3_X1)         0.03       1.84 f
+  DP/ArithmeticLogicUnit/add_54/U84/ZN (NAND2_X1)         0.04       1.88 r
+  DP/ArithmeticLogicUnit/add_54/U87/ZN (NAND3_X1)         0.05       1.93 f
+  DP/ArithmeticLogicUnit/add_54/U31/ZN (NAND2_X1)         0.04       1.96 r
+  DP/ArithmeticLogicUnit/add_54/U39/ZN (NAND3_X1)         0.04       2.00 f
+  DP/ArithmeticLogicUnit/add_54/U158/ZN (NAND2_X1)        0.03       2.03 r
+  DP/ArithmeticLogicUnit/add_54/U62/ZN (NAND3_X1)         0.04       2.07 f
+  DP/ArithmeticLogicUnit/add_54/U65/ZN (NAND2_X1)         0.04       2.11 r
+  DP/ArithmeticLogicUnit/add_54/U61/ZN (NAND3_X1)         0.04       2.15 f
+  DP/ArithmeticLogicUnit/add_54/U164/ZN (NAND2_X1)        0.04       2.18 r
+  DP/ArithmeticLogicUnit/add_54/U167/ZN (NAND3_X1)        0.04       2.22 f
+  DP/ArithmeticLogicUnit/add_54/U205/ZN (NAND2_X1)        0.04       2.26 r
+  DP/ArithmeticLogicUnit/add_54/U208/ZN (NAND3_X1)        0.04       2.30 f
+  DP/ArithmeticLogicUnit/add_54/U214/ZN (NAND2_X1)        0.04       2.33 r
+  DP/ArithmeticLogicUnit/add_54/U215/ZN (NAND3_X1)        0.04       2.37 f
+  DP/ArithmeticLogicUnit/add_54/U219/ZN (NAND2_X1)        0.04       2.41 r
+  DP/ArithmeticLogicUnit/add_54/U221/ZN (NAND3_X1)        0.04       2.45 f
+  DP/ArithmeticLogicUnit/add_54/U108/ZN (NAND2_X1)        0.03       2.48 r
+  DP/ArithmeticLogicUnit/add_54/U111/ZN (NAND3_X1)        0.04       2.52 f
+  DP/ArithmeticLogicUnit/add_54/U1_26/CO (FA_X1)          0.10       2.61 f
+  DP/ArithmeticLogicUnit/add_54/U130/ZN (NAND2_X1)        0.04       2.65 r
+  DP/ArithmeticLogicUnit/add_54/U78/ZN (NAND3_X1)         0.04       2.69 f
+  DP/ArithmeticLogicUnit/add_54/U136/ZN (NAND2_X1)        0.04       2.73 r
+  DP/ArithmeticLogicUnit/add_54/U11/ZN (AND3_X1)          0.06       2.79 r
+  DP/ArithmeticLogicUnit/add_54/U10/Z (XOR2_X1)           0.03       2.82 f
+  DP/ArithmeticLogicUnit/add_54/SUM[29] (ALU_NbitOperands32_DW01_add_1)
+                                                          0.00       2.82 f
+  DP/ArithmeticLogicUnit/U74/ZN (AOI222_X1)               0.10       2.92 r
+  DP/ArithmeticLogicUnit/U73/ZN (NAND2_X1)                0.04       2.96 f
+  DP/ArithmeticLogicUnit/Y[29] (ALU_NbitOperands32)       0.00       2.96 f
+  DP/U270/ZN (XNOR2_X1)                                   0.05       3.01 r
+  DP/U248/ZN (NAND2_X1)                                   0.03       3.04 f
+  DP/U247/ZN (NOR2_X1)                                    0.03       3.07 r
+  DP/U264/ZN (AND2_X1)                                    0.04       3.11 r
+  DP/U17/ZN (NAND2_X1)                                    0.02       3.13 f
+  DP/U15/ZN (NOR2_X1)                                     0.04       3.17 r
+  DP/U288/ZN (NOR2_X1)                                    0.02       3.20 f
+  DP/U1085/ZN (OAI21_X1)                                  0.05       3.24 r
+  DP/U1082/ZN (AOI21_X1)                                  0.04       3.28 f
+  DP/U7/ZN (AND2_X2)                                      0.05       3.33 f
+  DP/U1018/Z (BUF_X2)                                     0.05       3.38 f
+  DP/U1062/ZN (AOI22_X1)                                  0.07       3.45 r
+  DP/U146/ZN (NAND2_X1)                                   0.03       3.48 f
+  DP/PC_reg[11]/D (DFF_X2)                                0.01       3.49 f
+  data arrival time                                                  3.49
 
-  clock MY_CLK (rise edge)                                0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                      -0.07      -0.07
-  DP/IF_ID_INSTRUCTION_reg[0]/CK (DFF_X1)                 0.00      -0.07 r
-  library setup time                                     -0.04      -0.11
-  data required time                                                -0.11
+  clock MY_CLK (rise edge)                                3.60       3.60
+  clock network delay (ideal)                             0.00       3.60
+  clock uncertainty                                      -0.07       3.53
+  DP/PC_reg[11]/CK (DFF_X2)                               0.00       3.53 r
+  library setup time                                     -0.04       3.49
+  data required time                                                 3.49
   --------------------------------------------------------------------------
-  data required time                                                -0.11
-  data arrival time                                                 -1.71
+  data required time                                                 3.49
+  data arrival time                                                 -3.49
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -1.82
+  slack (MET)                                                        0.00
 
 
 1

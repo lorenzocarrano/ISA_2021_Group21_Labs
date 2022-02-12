@@ -15,7 +15,7 @@ set power_preserve_rtl_hier_names true
 
 elaborate riscv -arch ARCH -lib WORK > elaborate.txt
 
-create_clock -name MY_CLK -period 0.0 CLK
+create_clock -name MY_CLK -period 3.6 CLK
 set_dont_touch_network MY_CLK
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 

@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sat Feb 12 12:46:38 2022
+#@ # Date:   Sat Feb 12 23:32:21 2022
 #@ # Run by: isa21_2021_2022@localhost.localdomain
 #@ 
 
@@ -6658,7 +6658,7 @@ source script.tcl
 #@ 
 #@ elaborate riscv -arch ARCH -lib WORK > elaborate.txt
 #@ 
-#@ create_clock -name MY_CLK -period 0.0 CLK
+#@ create_clock -name MY_CLK -period 3.6 CLK
 #@ set_dont_touch_network MY_CLK
 #@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 #@ 
