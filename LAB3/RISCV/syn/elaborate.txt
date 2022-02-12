@@ -14,19 +14,27 @@ Statistics for case statements in always block at line 40 in file
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            52            |    auto/auto     |
-|            57            |    auto/auto     |
-|            68            |    auto/auto     |
+|            53            |    auto/auto     |
+|            58            |    auto/auto     |
+|            69            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
 	in routine Controller_OP_CODE_SIZE7_FUNC7_SIZE7_FUNC3_SIZE3 line 40 in file
 		'../src/controller.vhd'.
-===================================================================================
-|        Register Name        | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
-===================================================================================
-| EXECUTE_CONTROL_SIGNALS_reg | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
-===================================================================================
+=======================================================================================
+|        Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================
+|        MemWrite_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         MemRead_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         Branch_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        Branch_j_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        RegWrite_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        MemToReg_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         ALUSrc_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        ALUSrc_PC_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| EXECUTE_CONTROL_SIGNALS_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Datapath' instantiated from design 'riscv' with
 	the parameters "N=32,K=1024,M=32,R=5". (HDL-193)

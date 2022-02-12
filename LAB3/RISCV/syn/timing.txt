@@ -9,7 +9,7 @@ Report : timing
         -max_paths 1
 Design : riscv
 Version: O-2018.06-SP4
-Date   : Sat Feb 12 12:00:52 2022
+Date   : Sat Feb 12 12:15:38 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -33,52 +33,52 @@ Wire Load Model Mode: top
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   DP/MEM_WB_RD_reg[2]/CK (SDFF_X1)                        0.00       0.00 r
-  DP/MEM_WB_RD_reg[2]/QN (SDFF_X1)                        0.08       0.08 f
-  DP/U211/ZN (INV_X1)                                     0.03       0.11 r
+  DP/MEM_WB_RD_reg[2]/QN (SDFF_X1)                        0.09       0.09 r
+  DP/U228/ZN (INV_X1)                                     0.02       0.11 f
   DP/ForwardingUnitComponent/RdinWrbStage[2] (ForwardingUnit_NbitRegAddressing5)
-                                                          0.00       0.11 r
-  DP/ForwardingUnitComponent/U12/ZN (XNOR2_X1)            0.06       0.17 r
-  DP/ForwardingUnitComponent/U10/ZN (AND3_X1)             0.05       0.22 r
-  DP/ForwardingUnitComponent/U3/ZN (NAND3_X1)             0.03       0.25 f
-  DP/ForwardingUnitComponent/U31/ZN (NOR2_X1)             0.04       0.29 r
+                                                          0.00       0.11 f
+  DP/ForwardingUnitComponent/U5/ZN (XNOR2_X1)             0.05       0.17 f
+  DP/ForwardingUnitComponent/U3/ZN (AND3_X1)              0.04       0.21 f
+  DP/ForwardingUnitComponent/U12/ZN (NAND3_X1)            0.03       0.24 r
+  DP/ForwardingUnitComponent/U28/ZN (NOR2_X1)             0.02       0.26 f
   DP/ForwardingUnitComponent/ForwardB[0] (ForwardingUnit_NbitRegAddressing5)
-                                                          0.00       0.29 r
-  DP/ForwardingBMux/sel[0] (mux3to1_B_Nbit32)             0.00       0.29 r
-  DP/ForwardingBMux/U26/ZN (INV_X1)                       0.03       0.32 f
-  DP/ForwardingBMux/U9/Z (BUF_X2)                         0.05       0.37 f
-  DP/ForwardingBMux/U27/ZN (INV_X1)                       0.05       0.42 r
-  DP/ForwardingBMux/U68/ZN (NAND3_X1)                     0.04       0.46 f
-  DP/ForwardingBMux/U71/ZN (NAND3_X1)                     0.04       0.49 r
-  DP/ForwardingBMux/Y[9] (mux3to1_B_Nbit32)               0.00       0.49 r
-  DP/U664/ZN (OAI22_X1)                                   0.04       0.53 f
-  DP/U189/ZN (INV_X2)                                     0.06       0.59 r
-  DP/ArithmeticLogicUnit/B[9] (ALU_NbitOperands32)        0.00       0.59 r
-  DP/ArithmeticLogicUnit/r300/B[9] (ALU_NbitOperands32_DW01_add_10)
-                                                          0.00       0.59 r
-  DP/ArithmeticLogicUnit/r300/U388/ZN (NOR2_X1)           0.04       0.63 f
-  DP/ArithmeticLogicUnit/r300/U451/ZN (NOR2_X1)           0.06       0.68 r
-  DP/ArithmeticLogicUnit/r300/U544/ZN (NAND2_X1)          0.04       0.73 f
-  DP/ArithmeticLogicUnit/r300/U396/ZN (NOR2_X1)           0.05       0.77 r
-  DP/ArithmeticLogicUnit/r300/U569/ZN (AOI21_X1)          0.03       0.81 f
-  DP/ArithmeticLogicUnit/r300/U374/Z (BUF_X2)             0.05       0.85 f
-  DP/ArithmeticLogicUnit/r300/U683/ZN (OAI21_X1)          0.05       0.90 r
-  DP/ArithmeticLogicUnit/r300/U459/ZN (XNOR2_X1)          0.06       0.96 r
+                                                          0.00       0.26 f
+  DP/ForwardingBMux/sel[0] (mux3to1_B_Nbit32)             0.00       0.26 f
+  DP/ForwardingBMux/U27/ZN (INV_X1)                       0.04       0.30 r
+  DP/ForwardingBMux/U26/Z (BUF_X2)                        0.05       0.35 r
+  DP/ForwardingBMux/U17/ZN (INV_X1)                       0.04       0.39 f
+  DP/ForwardingBMux/U88/ZN (OAI221_X1)                    0.07       0.46 r
+  DP/ForwardingBMux/U90/ZN (NAND2_X1)                     0.04       0.50 f
+  DP/ForwardingBMux/Y[14] (mux3to1_B_Nbit32)              0.00       0.50 f
+  DP/U687/ZN (OAI22_X1)                                   0.05       0.55 r
+  DP/U688/ZN (INV_X1)                                     0.04       0.59 f
+  DP/ArithmeticLogicUnit/B[14] (ALU_NbitOperands32)       0.00       0.59 f
+  DP/ArithmeticLogicUnit/r300/B[14] (ALU_NbitOperands32_DW01_add_10)
+                                                          0.00       0.59 f
+  DP/ArithmeticLogicUnit/r300/U574/ZN (NAND2_X1)          0.04       0.63 r
+  DP/ArithmeticLogicUnit/r300/U567/ZN (OAI21_X1)          0.03       0.66 f
+  DP/ArithmeticLogicUnit/r300/U614/ZN (AOI21_X1)          0.05       0.72 r
+  DP/ArithmeticLogicUnit/r300/U657/ZN (OAI21_X1)          0.03       0.75 f
+  DP/ArithmeticLogicUnit/r300/U575/ZN (AOI21_X1)          0.06       0.81 r
+  DP/ArithmeticLogicUnit/r300/U399/Z (BUF_X1)             0.06       0.87 r
+  DP/ArithmeticLogicUnit/r300/U685/ZN (OAI21_X1)          0.04       0.91 f
+  DP/ArithmeticLogicUnit/r300/U466/ZN (XNOR2_X1)          0.05       0.96 f
   DP/ArithmeticLogicUnit/r300/SUM[28] (ALU_NbitOperands32_DW01_add_10)
-                                                          0.00       0.96 r
-  DP/ArithmeticLogicUnit/U672/ZN (OAI22_X1)               0.03       0.99 f
-  DP/ArithmeticLogicUnit/U673/ZN (INV_X1)                 0.04       1.03 r
-  DP/ArithmeticLogicUnit/Y[28] (ALU_NbitOperands32)       0.00       1.03 r
-  DP/U505/ZN (XNOR2_X1)                                   0.06       1.09 r
-  DP/U518/ZN (NAND4_X1)                                   0.04       1.13 f
-  DP/U520/ZN (NOR3_X1)                                    0.05       1.18 r
-  DP/U523/ZN (NAND4_X1)                                   0.05       1.23 f
-  DP/U43/ZN (OR2_X2)                                      0.07       1.30 f
-  DP/U42/ZN (AND4_X2)                                     0.05       1.35 f
-  DP/U221/Z (BUF_X2)                                      0.05       1.39 f
-  DP/U994/ZN (AOI221_X1)                                  0.09       1.48 r
-  DP/U995/ZN (INV_X1)                                     0.02       1.50 f
-  DP/IF_ID_INSTRUCTION_reg[0]/D (DFF_X1)                  0.01       1.51 f
-  data arrival time                                                  1.51
+                                                          0.00       0.96 f
+  DP/ArithmeticLogicUnit/U703/ZN (OAI22_X1)               0.04       1.00 r
+  DP/ArithmeticLogicUnit/U704/ZN (INV_X1)                 0.03       1.03 f
+  DP/ArithmeticLogicUnit/Y[28] (ALU_NbitOperands32)       0.00       1.03 f
+  DP/U517/ZN (XNOR2_X1)                                   0.05       1.07 r
+  DP/U531/ZN (NAND4_X1)                                   0.04       1.12 f
+  DP/U533/ZN (NOR3_X1)                                    0.05       1.17 r
+  DP/U536/ZN (NAND4_X1)                                   0.04       1.21 f
+  DP/U196/ZN (OR2_X1)                                     0.07       1.28 f
+  DP/U135/ZN (AND3_X1)                                    0.05       1.33 f
+  DP/U146/Z (CLKBUF_X1)                                   0.05       1.38 f
+  DP/U1003/ZN (AOI221_X1)                                 0.09       1.46 r
+  DP/U1004/ZN (INV_X1)                                    0.02       1.49 f
+  DP/IF_ID_INSTRUCTION_reg[0]/D (DFF_X1)                  0.01       1.49 f
+  data arrival time                                                  1.49
 
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
@@ -88,9 +88,9 @@ Wire Load Model Mode: top
   data required time                                                -0.11
   --------------------------------------------------------------------------
   data required time                                                -0.11
-  data arrival time                                                 -1.51
+  data arrival time                                                 -1.49
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -1.62
+  slack (VIOLATED)                                                  -1.61
 
 
 1
