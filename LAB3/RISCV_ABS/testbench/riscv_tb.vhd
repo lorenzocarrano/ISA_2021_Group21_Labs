@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.std_logic_1164.all; 
 use work.myTypes.all;
 
-entity riscv_tb is
-end entity riscv_tb;
+entity riscv_abs_tb is
+end entity riscv_abs_tb;
 
-architecture testbench of riscv_tb is
+architecture testbench of riscv_abs_tb is
     component riscv is
         Generic (
             OP_CODE_SIZE        : integer := OP_CODE_SIZE;

@@ -37,93 +37,105 @@ end Controller;
 architecture ARCH of Controller is
 begin
 
-    process(OPCODE, FUNCT3)
+    process(CLK)
     begin
-	if(clk'event and clk = '0') then
-        -- default write always back into register file
-        MemWrite    <= '0';
-		MemRead     <= '0';
-        Branch      <= '0';
-        Branch_j    <= '0';
-		RegWrite    <= '0';
-        MemToReg    <= '0';
-        ALUSrc      <= '0';
-        ALUSrc_PC   <= '0';
-		
-        case (OPCODE) is
-            -- same OPCODE for all R-Type instructions
-            when RTYPE_ADD_OPCODE =>
-                RegWrite   <= '1';
-                -- same FUNCT7 for all R-Type instructions
-                case(FUNCT3) is
-                    when RTYPE_ADD_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-                    when RTYPE_XOR_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_XOR;
-                    when RTYPE_SLT_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SLT;
-                    when others          => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-                end case ;
+        if(CLK'event and CLK = '0') then
+            if RST = '1' then 
+                MemWrite    <= '0';
+                MemRead     <= '0';
+                Branch      <= '0';
+                Branch_j    <= '0';
+                RegWrite    <= '0';
+                MemToReg    <= '0';
+                ALUSrc      <= '0';
+                ALUSrc_PC   <= '0';
+                EXECUTE_CONTROL_SIGNALS <= (others => '0');
+            else
+                -- default write always back into register file
+                MemWrite    <= '0';
+                MemRead     <= '0';
+                Branch      <= '0';
+                Branch_j    <= '0';
+                RegWrite    <= '0';
+                MemToReg    <= '0';
+                ALUSrc      <= '0';
+                ALUSrc_PC   <= '0';
+                
+                case (OPCODE) is
+                    -- same OPCODE for all R-Type instructions
+                    when RTYPE_ADD_OPCODE =>
+                        RegWrite   <= '1';
+                        -- same FUNCT7 for all R-Type instructions
+                        case(FUNCT3) is
+                            when RTYPE_ADD_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                            when RTYPE_XOR_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_XOR;
+                            when RTYPE_SLT_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SLT;
+                            when others          => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                        end case ;
 
-            -- same OPCODE for all these I-Type instructions 
-            when ITYPE_ADDI_OPCODE =>
-                ALUSrc     <= '1';
-                RegWrite   <= '1';
-                case(FUNCT3) is
-                    when ITYPE_ADDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-                    when ITYPE_SRAI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SRA;
-                    when ITYPE_ANDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_AND;
-                    when others           => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_AND; 
-                end case ;
-            
-            -- doesn't need FUNCT3
-            when ITYPE_LW_OPCODE =>
-                ALUSrc     <= '1';
-                MemRead    <= '1';
-                RegWrite   <= '1';
-                MemToReg   <= '1';
-				-- calculate address from read
-				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                    -- same OPCODE for all these I-Type instructions 
+                    when ITYPE_ADDI_OPCODE =>
+                        ALUSrc     <= '1';
+                        RegWrite   <= '1';
+                        case(FUNCT3) is
+                            when ITYPE_ADDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                            when ITYPE_SRAI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_SRA;
+                            when ITYPE_ANDI_FUNC3 => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_AND;
+                            when others           => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_AND; 
+                        end case ;
+                    
+                    -- doesn't need FUNCT3
+                    when ITYPE_LW_OPCODE =>
+                        ALUSrc     <= '1';
+                        MemRead    <= '1';
+                        RegWrite   <= '1';
+                        MemToReg   <= '1';
+                        -- calculate address from read
+                        EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
 
-			-- AUIPC (add upper immediate to pc) is used to build pc-relative addresses and uses the U-type
-			-- format. AUIPC forms a 32-bit offset from the 20-bit U-immediate, filling in the lowest 12 bits with
-			-- zeros, adds this offset to the address of the AUIPC instruction, then places the result in register
-			-- rd.
-            -- doesn't need FUNCT3		
-            when UTYPE_AUIPC_OPCODE =>
-                -- don't do nothing, Hazard detection unit will change the mux for PC (one nope must be add)
-                ALUSrc     <= '1';
-                ALUSrc_PC  <= '1';
-                RegWrite   <= '1';
-                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD; 
-			
-			-- LUI (load upper immediate) is used to build 32-bit constants and uses the U-type format. LUI
-			-- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest
-			-- 12 bits with zeros.
-            when UTYPE_LUI_OPCODE =>
-                ALUSrc      <= '1';
-				RegWrite    <= '1';
-				-- shift value to left
-				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-            
-            -- need to save value in memoty
-            when JTYPE_JAL_OPCODE =>
-                ALUSrc_PC   <= '1';
-                RegWrite    <= '1';
-                Branch_j    <= '1';
-                EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD_PC;
+                    -- AUIPC (add upper immediate to pc) is used to build pc-relative addresses and uses the U-type
+                    -- format. AUIPC forms a 32-bit offset from the 20-bit U-immediate, filling in the lowest 12 bits with
+                    -- zeros, adds this offset to the address of the AUIPC instruction, then places the result in register
+                    -- rd.
+                    -- doesn't need FUNCT3		
+                    when UTYPE_AUIPC_OPCODE =>
+                        -- don't do nothing, Hazard detection unit will change the mux for PC (one nope must be add)
+                        ALUSrc     <= '1';
+                        ALUSrc_PC  <= '1';
+                        RegWrite   <= '1';
+                        EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD; 
+                    
+                    -- LUI (load upper immediate) is used to build 32-bit constants and uses the U-type format. LUI
+                    -- places the U-immediate value in the top 20 bits of the destination register rd, filling in the lowest
+                    -- 12 bits with zeros.
+                    when UTYPE_LUI_OPCODE =>
+                        ALUSrc      <= '1';
+                        RegWrite    <= '1';
+                        -- shift value to left
+                        EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                    
+                    -- need to save value in memoty
+                    when JTYPE_JAL_OPCODE =>
+                        ALUSrc_PC   <= '1';
+                        RegWrite    <= '1';
+                        Branch_j    <= '1';
+                        EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD_PC;
 
-            when BTYPE_BEQ_OPCODE =>
-                Branch      <= '1';
+                    when BTYPE_BEQ_OPCODE =>
+                        Branch      <= '1';
 
-            when STYPE_SW_OPCODE =>
-                ALUSrc      <= '1';
-				-- activate write dara memory only with store instruction
-				MemWrite    <= '1';
-				-- calculate address from read
-				EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-        
-            when others => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
-        
-        end case;   
-	end if; 
+                    when STYPE_SW_OPCODE =>
+                        ALUSrc      <= '1';
+                        -- activate write dara memory only with store instruction
+                        MemWrite    <= '1';
+                        -- calculate address from read
+                        EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                
+                    when others => EXECUTE_CONTROL_SIGNALS <= ALU_OPCODE_ADD;
+                
+                end case;   
+            end if;
+        end if; 
     end process;
 
 end ARCH;
