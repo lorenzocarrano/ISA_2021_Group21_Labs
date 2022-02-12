@@ -10,7 +10,7 @@ Entity ALU is
 	(
         A    : in std_logic_vector(NbitOperands -1 downto 0); --Operand1
         B    : in std_logic_vector(NbitOperands -1 downto 0); --Operand2
-        ctrl : in std_logic_vector(3 downto 0); --Control Signal
+        ctrl : in std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0); --Control Signal
         Y    : out std_logic_vector(NbitOperands -1 downto 0) --Result
     );
 end ALU;
@@ -21,19 +21,9 @@ begin
 
     Computation: process(A, B, ctrl)
 	begin
-		case(ctrl) is
-		    when ALU_OPCODE_SHL =>
-		    --SHIFT
-			--shl
-	        result <= std_logic_vector(unsigned(A) sll to_integer(unsigned(B))); --N must be B conv to natural
-
-		    when ALU_OPCODE_SHR =>
-		        --shr
-		        result <= std_logic_vector(unsigned(A) srl to_integer(unsigned(B))); --N must be B conv to natural
-		    
+		case(ctrl) is		    
 			when ALU_OPCODE_SRA =>
 		        --shrA (shift right arithmetic)
-		    	--unused "0011"
 				result <= std_logic_vector(shift_right(signed(A),to_integer(unsigned(B))));
 		    
 			--Arithmetic      
@@ -47,6 +37,7 @@ begin
 				result <= A+4;    
 
 			--Logic    
+
 		    when ALU_OPCODE_AND =>
 		        --And
 		        result <= A and B;
@@ -60,20 +51,9 @@ begin
 			when ALU_OPCODE_XOR =>
 		        --Xor
 		        result <= A xor B;
-		    
-
-			--Cmp
-		    when ALU_OPCODE_CMP =>
-		        --set min
-		        if(A = B) then
-		            result <= x"00000001";
-				else
-		            result <= x"00000000";
-		        end if; 
-				
-			-- Slr
+		
 			when ALU_OPCODE_SLT =>
-				--set min
+				--Slt
 		        if(A < B) then
 		            result <= x"00000001";
 				else

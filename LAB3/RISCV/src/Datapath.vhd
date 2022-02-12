@@ -156,7 +156,7 @@ architecture ARCH of Datapath is
         (
             A    : in std_logic_vector(NbitOperands -1 downto 0); --Operand1
             B    : in std_logic_vector(NbitOperands -1 downto 0); --Operand2
-            ctrl : in std_logic_vector(3 downto 0); --Control Signal
+            ctrl : in std_logic_vector(EXECUTE_CONTROL_SIZE-1 downto 0); --Control Signal
             Y    : out std_logic_vector(NbitOperands -1 downto 0) --Result
         );
     end Component;
@@ -173,6 +173,8 @@ architecture ARCH of Datapath is
             Rs2           : in std_logic_vector(NbitRegAddressing-1 downto 0);
             RdinMemStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
             RdinWrbStage  : in std_logic_vector(NbitRegAddressing-1 downto 0);
+            MEM_WB_RegWrite : in std_logic;
+            EX_MEM_RegWrite : in std_logic;
             ForwardA      : out std_logic_vector(1 downto 0);
             ForwardB      : out std_logic_vector(1 downto 0)
         );
@@ -484,12 +486,14 @@ begin
         Generic Map(NbitRegAddressing => R)
         Port Map
         (
-            Rs1           => ID_EX_RS1,
-            Rs2           => ID_EX_RS2,
-            RdinMemStage  => EX_MEM_RD,
-            RdinWrbStage  => writa_addr_f,
-            ForwardA      => ForwardAmuxSelector,
-            ForwardB      => ForwardBmuxSelector);
+            Rs1             => ID_EX_RS1,
+            Rs2             => ID_EX_RS2,
+            RdinMemStage    => EX_MEM_RD,
+            RdinWrbStage    => writa_addr_f,
+            MEM_WB_RegWrite => MEM_WB_RegWrite,
+            EX_MEM_RegWrite => EX_MEM_RegWrite,
+            ForwardA        => ForwardAmuxSelector,
+            ForwardB        => ForwardBmuxSelector);
 
     -- PIPELINE execute
     EX_MEM_ALU_result_Next <= ALU_result;
