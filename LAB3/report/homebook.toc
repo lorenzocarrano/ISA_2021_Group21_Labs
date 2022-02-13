@@ -14,3 +14,5 @@
 \contentsline {chapter}{\numberline {4}Hazards}{4}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Testbench}{5}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Synthesis and Place \& Route}{6}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Shynthesis}{6}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Place \& Route}{6}{section.6.2}%
