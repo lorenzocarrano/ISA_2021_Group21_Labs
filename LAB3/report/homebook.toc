@@ -1,7 +1,14 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Prototype}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Testbench}{2}{chapter.2}%
-\contentsline {chapter}{\numberline {3}MBE Multiplier}{3}{chapter.3}%
+\contentsline {chapter}{\numberline {2}Datapath}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fetch Stage}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Decode Stage}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Execute Stage}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Memory Stage}{2}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Write Back Stage}{2}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Control Unit}{3}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction}{3}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Comparison Between Architectures}{4}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Hazards}{4}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Testbench}{5}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Synthesis and Place \& Route}{6}{chapter.6}%
