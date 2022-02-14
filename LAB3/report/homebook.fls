@@ -758,14 +758,22 @@ INPUT .\chapters\chap1.tex
 INPUT .\chapters\chap1.tex
 INPUT chapters\chap1.tex
 INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss17.tfm
+INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT .\chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT .\chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT .\chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT .\chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT .\chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT .\chapters\chap1images\Immagine 2022-02-14 214305.jpg
+INPUT .\chapters\chap2.tex
+INPUT .\chapters\chap2.tex
+INPUT .\chapters\chap2.tex
+INPUT chapters\chap2.tex
+INPUT .\chapters\chap2.tex
+INPUT .\chapters\chap2.tex
+INPUT chapters\chap2.tex
 INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\chapters\chap2.tex
-INPUT .\chapters\chap2.tex
-INPUT .\chapters\chap2.tex
-INPUT chapters\chap2.tex
-INPUT .\chapters\chap2.tex
-INPUT .\chapters\chap2.tex
-INPUT chapters\chap2.tex
 INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\chapters\chap3.tex
@@ -797,7 +805,6 @@ INPUT .\chapters\chap6.tex
 INPUT .\chapters\chap6.tex
 INPUT chapters\chap6.tex
 INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Users\monca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT .\chapters\chap6images\riscv.jpg
 INPUT .\chapters\chap6images\riscv.jpg
 INPUT chapters\chap6images\riscv.jpg

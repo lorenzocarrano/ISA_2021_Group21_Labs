@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex homebook.idx"] 1644788752 "homebook.idx" "homebook.ind" "homebook" 1644788906
-  "homebook.idx" 1644788905 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex homebook.idx"] 1644874245 "homebook.idx" "homebook.ind" "homebook" 1644874517
+  "homebook.idx" 1644874516 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "homebook.ilg"
   "homebook.ind"
-["pdflatex"] 1644788903 "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB3/report/homebook.tex" "homebook.pdf" "homebook" 1644788906
+["pdflatex"] 1644874514 "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB3/report/homebook.tex" "homebook.pdf" "homebook" 1644874517
   "C:/Users/monca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1637250602 11548 1d46c81ce37239ea886528e94416f9cd ""
   "C:/Users/monca/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1637246193 9767274 b4c81d32ef04f750ad52b2a744e7bc4c ""
   "C:/Users/monca/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1639930263 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -110,25 +110,26 @@
   "C:/Users/monca/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1636710260 7147 5ac8a9ef36411064b1a501137af0fa54 ""
   "C:/Users/monca/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB3/report/homebook.tex" 1644788750 4620 03b78de015c6269a652978bd9af35ec7 ""
-  "chapters/chap1.tex" 1644745153 476 12800c6460314357cb2f18df532ee931 ""
+  "chapters/chap1.tex" 1644874509 3933 82e1b0743d9c25be0e6ed27f51eecba4 ""
+  "chapters/chap1images/Immagine 2022-02-14 214305.jpg" 1644871403 91110 0ec92ecc13944e31bd71805f35506915 ""
   "chapters/chap2.tex" 1644752848 378 0d9ad72dfeadc134a39e1c69d2d7482d ""
   "chapters/chap3.tex" 1644745153 238 a74b0cc57c932f810eb7630032997292 ""
   "chapters/chap4.tex" 1644746039 223 bee8d6506cf03d0c44fcec18939cce31 ""
   "chapters/chap5.tex" 1644745677 207 8539642f55ea2b0ceec9d896dfb2d388 ""
-  "chapters/chap6.tex" 1644788902 3181 eb9ba8f424da2b98bb6ec8422555c1f7 ""
+  "chapters/chap6.tex" 1644868107 3172 f3b9cf6820aecab7ed0caebbc156bcce ""
   "chapters/chap6images/riscv.jpg" 1644700499 444867 6beda602ae91173bd4c84ec9f6cd9eda ""
   "chapters/chap6images/riscv_abs.jpg" 1644701850 444993 cb414399ebe66970873da780b2a45793 ""
-  "homebook.aux" 1644788906 4298 75efe1762dc753a2df85b11a608f7a63 "pdflatex"
-  "homebook.ind" 1644788752 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
-  "homebook.out" 1644788906 1942 e44a0af13955442e80e08dbbd9d5c63d "pdflatex"
+  "homebook.aux" 1644874517 4336 def340c1b9a94ba145443377a15872d8 "pdflatex"
+  "homebook.ind" 1644874245 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
+  "homebook.out" 1644874517 1827 ec89d4a92b43a7d998e7ac7f72e4918e "pdflatex"
   "homebook.tex" 1644788750 4620 03b78de015c6269a652978bd9af35ec7 ""
-  "homebook.toc" 1644788906 1252 61d5f9586260a9ea03daf8c0ba808281 "pdflatex"
+  "homebook.toc" 1644874517 1180 6b05bc7555d0d80d1e95da24f833ad15 "pdflatex"
   "logopoli_new.png" 1639339806 268312 19b7b3b5d2bea6d36e5545454ae1f690 ""
   "titlesec.sty" 1639339806 37821 64ad863c8c12f6a697080a369b2f9f4d ""
   (generated)
-  "homebook.out"
   "homebook.idx"
-  "homebook.log"
   "homebook.aux"
   "homebook.toc"
+  "homebook.log"
   "homebook.pdf"
+  "homebook.out"
