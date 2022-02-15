@@ -5,6 +5,10 @@
 % chapter 3
 \chapter{Control Unit}
 \label{cha3}
-\section{Introduction}
+The control unit is the entity that regulates the functions of the pipeline. It receives as input the OPCODE, as well as the FUNC3 and FUNC7 when present. 
+According to those values it generates the correct control signals for the components present in the datapath. The signals are then pipelined in order to 
+arrive to the corresponding component exactly when they are needed. Specifically the OPCODE specifies what kind of instruction has to be executed, while the
+FUNC codes are used to control the operation performed by the ALU.
+
 
 
