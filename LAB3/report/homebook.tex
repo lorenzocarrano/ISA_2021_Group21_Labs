@@ -56,10 +56,36 @@
 \usepackage{fancyhdr}
 \usepackage{makeidx}
 \usepackage{titlesec}
-\usepackage{listings} 
+\usepackage{listings}
+\usepackage{xcolor} 
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{graphicx}
 
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
 
 \newenvironment{listato}{\footnotesize}
                         {\normalsize }
@@ -87,9 +113,12 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{tabularx}
+<<<<<<< HEAD
+=======
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{subcaption}
+>>>>>>> master
 \usepackage[mediumspace,mediumqspace,Grey,squaren]{SIunits}
 %\oddsidemargin -1.1cm
 
@@ -128,9 +157,9 @@
 \vspace{4cm}
 \centerline{\Huge\sf Laboratory 3}
 \bigskip
-\centerline{\Huge\bfseries\sf Design of a RISC-V-lite processor}
+\centerline{\Huge\bfseries\sf RISCV Processor}
 \vspace{2cm}
-\centerline{\LARGE Master degree in Electronic Engineering}
+\centerline{\LARGE Master degree in Electrical Engineering}
 \vspace{4.4cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % GROUP
@@ -149,7 +178,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{2cm}
-\centerline{\href{https://github.com/lorenzocarrano/ISA_2021_Group21_Labs}{GitHub Repository}}
+\centerline{\today}
 \vspace{1cm}
 %{\scriptsize Many thanks to Prof. Mariagrazia Graziano for providing us with this template.}
 \end{titlepage}
@@ -169,8 +198,6 @@
 \input{./chapters/chap2}
 \input{./chapters/chap3}
 \input{./chapters/chap4}
-\input{./chapters/chap5}
-\input{./chapters/chap6}
 % \input{./chapters/chap_name}
 % and so on
 %
