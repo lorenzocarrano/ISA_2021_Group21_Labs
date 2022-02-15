@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  13 FEB 2022 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  15 FEB 2022 01:12
 entering extended mode
 **"c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB3/report/homebook.tex"
 (c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB3/report/homebook.tex
@@ -271,20 +271,20 @@ LaTeX Warning: Unused global option(s):
 (homebook.aux)
 \openout1 = `homebook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
 \c@lstlisting=\count286
  (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -335,7 +335,7 @@ Option `squaren' provided!
 <./logopoli_new.png, id=1, 346.6551pt x 310.0383pt>
 File: ./logopoli_new.png Graphic file (type png)
 <use ./logopoli_new.png>
-Package pdftex.def Info: ./logopoli_new.png  used on input line 146.
+Package pdftex.def Info: ./logopoli_new.png  used on input line 147.
 (pdftex.def)             Requested size: 71.13188pt x 63.61502pt.
 [1
 
@@ -364,29 +364,29 @@ Chapter 1.
 
 ]
 Chapter 2.
-) (chapters/chap3.tex [2
+[2
 
-]
+]) (chapters/chap3.tex [3]
 Chapter 3.
-) (chapters/chap4.tex [3
+) (chapters/chap4.tex [4
 
 ]
 Chapter 4.
-) [4
+) [5
 
 ] (homebook.aux) ) 
 Here is how much of TeX's memory you used:
- 6911 strings out of 478927
- 101433 string characters out of 2852060
- 603298 words of memory out of 3000000
- 24637 multiletter control sequences out of 15000+600000
- 409320 words of font info for 49 fonts, out of 8000000 for 9000
+ 6913 strings out of 478927
+ 101454 string characters out of 2852060
+ 608298 words of memory out of 3000000
+ 24638 multiletter control sequences out of 15000+600000
+ 409666 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,5n,70p,341b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb>
-Output written on homebook.pdf (6 pages, 308233 bytes).
+ 61i,11n,70p,527b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on homebook.pdf (7 pages, 330695 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
