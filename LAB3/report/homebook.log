@@ -1,47 +1,40 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.20)  15 FEB 2022 01:12
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  14 FEB 2022 22:35
->>>>>>> master
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  15 FEB 2022 21:18
 entering extended mode
-**"c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB3/report/homebook.tex"
-(c:/Users/Utente/Documents/Magistrale/Integrated Systems Architecture/Laboratori/ISA_2021_Group21_Labs/LAB3/report/homebook.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-08-27> (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
-Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
-File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+**c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB3/report/homebook.tex
+(c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB3/report/homebook.tex
+LaTeX2e <2021-11-15>
+L3 programming layer <2021-11-12> (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
+(C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count182
-\c@chapter=\count183
-\c@section=\count184
-\c@subsection=\count185
-\c@subsubsection=\count186
-\c@paragraph=\count187
-\c@subparagraph=\count188
-\c@figure=\count189
-\c@table=\count190
+\c@part=\count183
+\c@chapter=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\c@figure=\count190
+\c@table=\count191
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2021/07/22 3.63 The Babel package
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2021/07/22 3.63 Babel common definitions
-\babel@savecnt=\count191
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/11/08 3.66 The Babel package
+\babel@savecnt=\count192
 \U@D=\dimen139
 \l@unhyphenated=\language79
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-)
-\bbl@dirlevel=\count192
+\bbl@dirlevel=\count193
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -49,7 +42,7 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+)) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip49
 \f@nch@O@elh=\skip50
@@ -60,56 +53,56 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@erf=\skip55
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
-Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 ) (titlesec.sty
 Package: titlesec 2001/01/23 v2.4 Sectioning titles
 \ttl@box=\box50
 \titlewidth=\dimen140
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-\lst@mode=\count193
+\lst@mode=\count194
 \lst@gtempboxa=\box51
 \lst@token=\toks17
-\lst@length=\count194
+\lst@length=\count195
 \lst@currlwidth=\dimen141
-\lst@column=\count195
-\lst@pos=\count196
+\lst@column=\count196
+\lst@pos=\count197
 \lst@lostspace=\dimen142
 \lst@width=\dimen143
-\lst@newlines=\count197
-\lst@lineno=\count198
+\lst@newlines=\count198
+\lst@lineno=\count199
 \lst@maxwidth=\dimen144
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count199
-\lst@skipnumbers=\count266
+\c@lstnumber=\count266
+\lst@skipnumbers=\count267
 \lst@framebox=\box52
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen145
 \lightrulewidth=\dimen146
@@ -121,56 +114,56 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen152
 \cmidrulekern=\dimen153
 \defaultaddspace=\dimen154
-\@cmidla=\count267
-\@cmidlb=\count268
+\@cmidla=\count268
+\@cmidlb=\count269
 \@aboverulesep=\dimen155
 \@belowrulesep=\dimen156
-\@thisruleclass=\count269
-\@lastruleclass=\count270
+\@thisruleclass=\count270
+\@lastruleclass=\count271
 \@thisrulewidth=\dimen157
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count271
+\multirow@cntb=\count272
 \multirow@dima=\skip59
 \bigstrutjot=\dimen158
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen159
 \Gin@req@width=\dimen160
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2021/04/20 v2.17j AMS math features
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+(C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen161
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen162
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count272
+\inf@bad=\count273
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count273
-\leftroot@=\count274
+\uproot@=\count274
+\leftroot@=\count275
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count275
-\DOTSCASE@=\count276
+\classnum@=\count276
+\DOTSCASE@=\count277
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -179,15 +172,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen163
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count277
-\c@MaxMatrixCols=\count278
+\macc@depth=\count278
+\c@MaxMatrixCols=\count279
 \dotsspace@=\muskip16
-\c@parentequation=\count279
-\dspbrk@lvl=\count280
+\c@parentequation=\count280
+\dspbrk@lvl=\count281
 \tag@help=\toks19
-\row@=\count281
-\column@=\count282
-\maxfields@=\count283
+\row@=\count282
+\column@=\count283
+\maxfields@=\count284
 \andhelp@=\toks20
 \eqnshift@=\dimen164
 \alignsep@=\dimen165
@@ -199,16 +192,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip61
 \multlinetaggap=\skip62
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -219,12 +212,12 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip64
 \thm@headsep=\skip65
 \dth@everypar=\toks28
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen170
 \ar@mcellbox=\box55
 \extrarowheight=\dimen171
@@ -238,11 +231,8 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \TX@old@col=\dimen174
 \TX@target=\dimen175
 \TX@delta=\dimen176
-\TX@cols=\count284
+\TX@cols=\count285
 \TX@ftn=\toks30
-<<<<<<< HEAD
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.sty
-=======
 ) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
@@ -370,14 +360,13 @@ Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 \c@subfigure=\count298
 \c@subtable=\count299
 ) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.sty
->>>>>>> master
 Package: SIunits 2007/12/02 v1.36 Support for the International System of units (MH)
 
 
-\@qskwidth=\skip68
+\@qskwidth=\skip69
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 46.
 \symgreek=\mathgroup6
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.cfg)
+(C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/siunits\SIunits.cfg)
 LaTeX Info: Redefining \usk on input line 576.
 
 Option `mediumspace' provided!
@@ -393,15 +382,9 @@ Package SIunits Warning: What is `Grey'?.
 
 
 Writing index file homebook.idx
-<<<<<<< HEAD
-(C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count285
-=======
 (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count300
->>>>>>> master
 \l__pdf_internal_box=\box57
 )
 
@@ -411,53 +394,24 @@ LaTeX Warning: Unused global option(s):
 (homebook.aux)
 \openout1 = `homebook.aux'.
 
-<<<<<<< HEAD
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-\c@lstlisting=\count286
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen177
-\scratchbox=\box58
-\nofMPsegments=\count288
-\nofMParguments=\count289
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen178
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
-=======
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
 \c@lstlisting=\count301
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -471,48 +425,20 @@ LaTeX Font Info:    ... okay on input line 119.
 \MPscratchDim=\dimen189
 \MPnumerator=\count306
 \makeMPintoPDFobject=\count307
->>>>>>> master
 \everyMPtoPDFconversion=\toks32
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)) (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+ (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-<<<<<<< HEAD
-Option `squaren' provided! 
- Command \squaren defined by SIunits package!
-
-<./logopoli_new.png, id=1, 346.6551pt x 310.0383pt>
-File: ./logopoli_new.png Graphic file (type png)
-<use ./logopoli_new.png>
-Package pdftex.def Info: ./logopoli_new.png  used on input line 147.
-=======
-Package hyperref Info: Link coloring OFF on input line 119.
+Package hyperref Info: Link coloring OFF on input line 145.
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -522,9 +448,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count308
 )
-LaTeX Info: Redefining \ref on input line 119.
-LaTeX Info: Redefining \pageref on input line 119.
-LaTeX Info: Redefining \nameref on input line 119.
+LaTeX Info: Redefining \ref on input line 145.
+LaTeX Info: Redefining \pageref on input line 145.
+LaTeX Info: Redefining \nameref on input line 145.
  (homebook.out) (homebook.out)
 \@outlinefile=\write4
 \openout4 = `homebook.out'.
@@ -535,25 +461,15 @@ Package caption Info: End \AtBeginDocument code.
 Option `squaren' provided! 
  Command \squaren defined by SIunits package!
 
-<./logopoli_new.png, id=67, 346.6551pt x 310.0383pt>
+<./logopoli_new.png, id=87, 346.6551pt x 310.0383pt>
 File: ./logopoli_new.png Graphic file (type png)
 <use ./logopoli_new.png>
-Package pdftex.def Info: ./logopoli_new.png  used on input line 124.
->>>>>>> master
+Package pdftex.def Info: ./logopoli_new.png  used on input line 150.
 (pdftex.def)             Requested size: 71.13188pt x 63.61502pt.
 [1
 
 
 
-<<<<<<< HEAD
-{C:/Users/Utente/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli_new.png>] (homebook.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
- (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-=======
 {C:/Users/monca/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logopoli_new.png>] (homebook.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -561,27 +477,22 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
->>>>>>> master
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-\tf@toc=\write4
-\openout4 = `homebook.toc'.
+\tf@toc=\write5
+\openout5 = `homebook.toc'.
 
-<<<<<<< HEAD
- [1
-=======
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \mainmatter
+l.187 \mainmatter
                   [1
->>>>>>> master
 
-] (C:\Users\Utente\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+] (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (chapters/chap1.tex
 Chapter 1.
-<chapters/chap1images/Immagine 2022-02-14 214305.jpg, id=101, 913.16156pt x 189.70876pt>
+<chapters/chap1images/Immagine 2022-02-14 214305.jpg, id=126, 913.16156pt x 189.70876pt>
 File: chapters/chap1images/Immagine 2022-02-14 214305.jpg Graphic file (type jpg)
 <use chapters/chap1images/Immagine 2022-02-14 214305.jpg>
 Package pdftex.def Info: chapters/chap1images/Immagine 2022-02-14 214305.jpg  used on input line 26.
@@ -591,75 +502,51 @@ Package pdftex.def Info: chapters/chap1images/Immagine 2022-02-14 214305.jpg  us
 
  <./chapters/chap1images/Immagine 2022-02-14 214305.jpg>]) (chapters/chap2.tex [2]
 Chapter 2.
-<<<<<<< HEAD
-[2
-=======
-) (chapters/chap3.tex [3
->>>>>>> master
+[3
 
-]) (chapters/chap3.tex [3]
+]) (chapters/chap3.tex [4]
 Chapter 3.
-) (chapters/chap4.tex [4
+) (chapters/chap4.tex [5
 
 ]
 Chapter 4.
-<<<<<<< HEAD
-) [5
-
-] (homebook.aux) ) 
-Here is how much of TeX's memory you used:
- 6913 strings out of 478927
- 101454 string characters out of 2852060
- 608298 words of memory out of 3000000
- 24638 multiletter control sequences out of 15000+600000
- 409666 words of font info for 50 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,11n,70p,527b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Utente/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on homebook.pdf (7 pages, 330695 bytes).
-PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-) (chapters/chap5.tex [5
+) (chapters/chap5.tex [6
 
 ]
 Chapter 5.
-) (chapters/chap6.tex [6
-
-]
-Chapter 6.
 [7
 
+]) (chapters/chap6.tex [8]
+Chapter 6.
+[9
+
 ]
-<chapters/chap6images/riscv.jpg, id=139, 545.03625pt x 544.28343pt>
+<chapters/chap6images/riscv.jpg, id=181, 545.03625pt x 544.28343pt>
 File: chapters/chap6images/riscv.jpg Graphic file (type jpg)
 <use chapters/chap6images/riscv.jpg>
 Package pdftex.def Info: chapters/chap6images/riscv.jpg  used on input line 70.
 (pdftex.def)             Requested size: 198.45662pt x 198.17595pt.
-<chapters/chap6images/riscv_abs.jpg, id=140, 547.2947pt x 544.28343pt>
+<chapters/chap6images/riscv_abs.jpg, id=182, 547.2947pt x 544.28343pt>
 File: chapters/chap6images/riscv_abs.jpg Graphic file (type jpg)
 <use chapters/chap6images/riscv_abs.jpg>
 Package pdftex.def Info: chapters/chap6images/riscv_abs.jpg  used on input line 74.
 (pdftex.def)             Requested size: 199.33817pt x 198.24239pt.
-) [8 <./chapters/chap6images/riscv.jpg> <./chapters/chap6images/riscv_abs.jpg>] (homebook.aux)
+) [10 <./chapters/chap6images/riscv.jpg> <./chapters/chap6images/riscv_abs.jpg>] (homebook.aux)
 Package rerunfilecheck Info: File `homebook.out' has not changed.
-(rerunfilecheck)             Checksum: EC89D4A92B43A7D998E7AC7F72E4918E;1827.
+(rerunfilecheck)             Checksum: 335ADF6491C3850B32D46F625BFE56D9;2416.
  ) 
 Here is how much of TeX's memory you used:
- 14370 strings out of 478699
- 231513 string characters out of 2846961
- 706124 words of memory out of 3000000
- 32197 multiletter control sequences out of 15000+600000
+ 15218 strings out of 478699
+ 240469 string characters out of 2846961
+ 718159 words of memory out of 3000000
+ 33023 multiletter control sequences out of 15000+600000
  410300 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,63p,334b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,63p,490b,1791s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on homebook.pdf (10 pages, 1362837 bytes).
+Output written on homebook.pdf (12 pages, 1379198 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> master
+ 249 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
