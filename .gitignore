@@ -1,6 +1,6 @@
 a.exe
 settings.json
-.vscode/c_cpp_properties.json
+.vscode/
 work/
 report/homebook.aux
 report/homebook.ind
@@ -18,3 +18,4 @@ LAB3/report/homebook.pdf
 LAB3/report/homebook.synctex.gz
 LAB3/report/homebook.toc
 LAB3/report/homebook.ilg
+
