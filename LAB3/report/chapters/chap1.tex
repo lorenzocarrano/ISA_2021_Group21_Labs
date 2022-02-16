@@ -68,14 +68,18 @@ In particular, the processor is required to support a subset of the RV32I ISA, w
     \end{itemize}
 \end{itemize}
 
-    The processor uses a 32-bit parallelism and is composed of 5 pipeline stages, instruction fetch, instruction decode, execute, access memory and write back.
-    The stages will be described in the following chapters, as well as the techniques utilized to avoid hazards and in general guarantee the correct operation of the processor. 
-    Finally, the memories are not included in the design, instead they are implemented in the testbench for simulation purposes.
+The processor uses a 32-bit parallelism and is composed of 5 pipeline stages, instruction fetch, instruction decode, execute, access memory and write back.
+The stages will be described in the following chapters, as well as the techniques utilized to avoid hazards and in general guarantee the correct operation of the processor. 
+Finally, the memories are not included in the design, instead they are implemented in the testbench for simulation purposes.
 
-    The following image shows the schematic of the RISCV processor
-    \begin{figure}[!h]
-        \centering
-            \includegraphics[width=\linewidth]{schematic/schematic.jpg}
-            \caption{\textbf{Schematic of the design}}
-    \end{figure}
+\clearpage
+
+\section{Schematic}
+
+The following image shows the schematic of the RISCV processor.
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=\linewidth]{schematic/schematic.jpg}
+        \caption{\textbf{Schematic of the design}}
+\end{figure}
         

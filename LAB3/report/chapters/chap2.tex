@@ -25,9 +25,8 @@ as it will discussed later.
 
 In decode stage the instruction that has been previously fetched is decoded by means of the bit-fields that compose it.
 Operands are decoded, be them a content of a register or an immediate value, and the control bits for the other components eventually employed in requested calculation 
-(e.g. multiplexers or the ALU) are prepared to be sent to next stage.
-Decode stage is crucial since some hazard can be detected only in this stage, by comparing the output of decoding with previous ones (currently in next stages), 
-for example in the case of data hazards and forwarding mechanism, as discussed in the dedicated section.
+(e.g. multiplexers or the ALU) are prepared to be sent to next stage through pipeline. In this stage stall or nope can be 
+added due to a data hazards or a branch instruction. This behavior is better explained in the section.
 
 \subsection{Register File}
 
@@ -44,6 +43,9 @@ An active-high reset signal is present, in order to clear the entire content of 
         \caption{\textbf{Register File}}
 \end{figure}
     
+Register File is composed of two read data port, for from at the same time from two sources, and one write data port.
+
+\clearpage
 
 \subsection{Immediate generator}
 
@@ -53,7 +55,7 @@ different ways to compose it. The immediate must be computed on 32 bits.
 \section{Execute Stage}
 
 During the execute stage, operands are sent to the ALU in order to perform the required computation. 
-In case of a Data Hazard, a forwarding mechanism has been implemented.
+The operand can be provided from different stage of the pipeline and a specific unit is incharged to feed ALU with the right value.
 
 \subsection{ALU}
 
@@ -64,8 +66,16 @@ to have a certain freedom during optimization.
 To better manage constants, sizes and opcodes, all meaningful values have been declared in the file \textit{myTypes.vhd}.
 The ALU is implemented using a process, in which inputs are employed into the proper computation by means of a control signal on 3 bits.
 Since the control unit is an hardwired one, this control signal is directly derived from original opcode of the decoded instruction.
-The inputs of the ALU have been multiplexed using two 3-to-1 multiplexers, in order to select the correct operands and to
-manage Data Hazards by eventually perform a forwarding.
+The operations that ALU can perform are:
+\begin{itemize}
+    \item addition, sum operand A and B;
+    \item addition PC, sum 4 to operand A;
+    \item arithmetic shift to right, arithmetic shift operant A to right of position number equal to B;
+    \item absolute function, elaborotate the absolute value of operand A and add B to it;
+    \item and, execute AND operation, bit by bit, between operand A and B;
+    \item or, execute OR operation, bit by bit, between operand A and B;
+    \item xor, execute XOR operation, bit by bit, between operand A and B.
+\end{itemize}
     
 
 \subsection{Absolute Module}
@@ -80,15 +90,17 @@ This component has been inserted into the ALU to increase its operational capaci
 
 \subsection{Forwarding Unit}
 
-As mentioned in previous section, the Forwarding Unit is a component with an important purpose: forward a previously computed result to one of the ALU inputs
-before it is effectively written in memory, in order to resolve a possible Data Hazard, avoiding a stall.
+Forwarding Unit is a component with an important purpose: forward a previously computed result to one of the ALU inputs
+before it is effectively written in registe file, in order to resolve a possible Data Hazard, avoiding a stall.
 The need to forward a certain value in one of the stages following the Execution one is detected by means of comparison between the encodings of the source registers 
 that are passed from Decode stage to the Execute Stage, and the encodings that are actually kept in Memory and Write-back stages.
 If an equivalence is found, this means that the instruction that has been decoded in previous clock cycle is asking as operand a result that is not yet available 
 in register file, but that has already been computed, thus it is possible to directly wire it to the proper ALU input via additional interconnections
-and a couple of multiplexer, as shown in figure.  
+couple of multiplexer, as shown in figure.  
 
-\clearpage
+Forwarding for multiplexer A is based also on the possibility to pick the value of Program Counter, it takes care about \textit{ALUSrc\_PC} signal.
+While the output of multiplexer B is the input of another one that chose between the source register and the immediate value, the decision is 
+taken through th control signal \textit{ALUSrc}. 
 
 \begin{figure}[!h]
     \centering
