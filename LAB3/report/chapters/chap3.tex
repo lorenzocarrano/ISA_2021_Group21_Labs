@@ -5,10 +5,25 @@
 % chapter 3
 \chapter{Control Unit}
 \label{cha3}
-The control unit is the entity that regulates the functions of the pipeline. It receives as input the OPCODE, as well as the FUNC3 and FUNC7 when present. 
+The control unit is the entity that regulates the control signals of the pipeline. It receives as input the OPCODE, as well as the FUNC3 and FUNC7 when present. 
 According to those values it generates the correct control signals for the components present in the datapath. The signals are then pipelined in order to 
 arrive to the corresponding component exactly when they are needed. Specifically the OPCODE specifies what kind of instruction has to be executed, while the
 FUNC codes are used to control the operation performed by the ALU.
+
+In case of stall the control unit sees nothing and external component switch the value of control signal.
+
+The control signals are:
+\begin{itemize}
+    \item branch, in case of conditional branch instruction, wait the computatio of the condition before to jump or not;
+    \item branch\_j, in case of unconditional instruction, jump always;
+    \item ALUSrc, to choose between value of source register two and immediate;
+    \item ALUSrc\_PC, to choose between value of source register one and program counter;
+    \item ALU\_control\_signals, to choose the ALU operation;
+    \item MemWrite, to write on data memory;
+    \item MemRead, to read from data memory;
+    \item RegWrite, to write in register file;
+    \item MemToReg, to decide if write value back from read data memory or from ALU result.
+\end{itemize}
 
 
 
