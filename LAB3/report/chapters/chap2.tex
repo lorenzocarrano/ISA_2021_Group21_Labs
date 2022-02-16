@@ -14,6 +14,13 @@ is encoded on 4 bytes and the instruction memory is byte-addressed, thus we have
 In case of branch instructions or jumps, the value of the program counter can be modified in other ways using various offsets and rules depending on the case, 
 as it will discussed later.
 
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=\linewidth]{schematic/InstructionMemory_withProgramCounter.jpg}
+        \caption{\textbf{Instruction Format}}
+\end{figure}
+    
+
 \section{Decode Stage}
 
 In decode stage the instruction that has been previously fetched is decoded by means of the bit-fields that compose it.
@@ -30,6 +37,13 @@ and that always stores a value of all zeros; other registers can be used during 
 The register file is synchronous with the falling edge of the clock signal and it is composed by a total of 32 registers, indexed by means of 5-bit address lines.
 It has been decided to keep the register file always able to provide data in reading, without any enable signal, while a dedicated signal is needed to allow writing operations.
 An active-high reset signal is present, in order to clear the entire content of the registers.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=0.2\linewidth]{schematic/RegisterFile.jpg}
+        \caption{\textbf{Register File}}
+\end{figure}
+    
 
 \subsection{Immediate generator}
 
@@ -52,6 +66,7 @@ The ALU is implemented using a process, in which inputs are employed into the pr
 Since the control unit is an hardwired one, this control signal is directly derived from original opcode of the decoded instruction.
 The inputs of the ALU have been multiplexed using two 3-to-1 multiplexers, in order to select the correct operands and to
 manage Data Hazards by eventually perform a forwarding.
+    
 
 \subsection{Absolute Module}
 
@@ -72,6 +87,15 @@ that are passed from Decode stage to the Execute Stage, and the encodings that a
 If an equivalence is found, this means that the instruction that has been decoded in previous clock cycle is asking as operand a result that is not yet available 
 in register file, but that has already been computed, thus it is possible to directly wire it to the proper ALU input via additional interconnections
 and a couple of multiplexer, as shown in figure.  
+
+\clearpage
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=\linewidth]{schematic/ALUwithForwardingUnit.jpg}
+        \caption{\textbf{ALU with Forwarding Unit}}
+\end{figure}
+    
 
 \section{Memory Stage}
 
