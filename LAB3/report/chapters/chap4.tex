@@ -8,36 +8,36 @@
 
 \section{Data Hazards Unit}
 
-The data Hazard Unit detect the needed of a value that has not been read from 
+The data Hazard Unit detects the need of a value that has not been read from 
 data memory yet. This problem is detected in the Decode stage, when one of the 
-two source register is the destination of a load instruction in the previous one. 
-To avoid this problem a stall is insert in the pipeline to waiting for load the data 
+two source register is the destination of a load instruction in the previous cycle. 
+To avoid this problem a stall is inserted in the pipeline to wait for the load of the data 
 from memory. 
 
 To insert the stall:
 \begin{itemize}
-    \item The program counter is not update;
-    \item The IF/ID pipeline is not update and keep storing the previous instruction;
-    \item All control signal are set to zero, regardless of the Control Unit, using a multiplexer.
+    \item The program counter is not updated;
+    \item The IF/ID pipeline is not updated and keeps storing the previous instruction;
+    \item All control signals are set to zero, regardless of the Control Unit, using a multiplexer.
 \end{itemize}
-The stall lest only one clock cycle.
+The stall lasts only one clock cycle.
 
 After reading the value from memory the forwarding unit will place it in the proper 
 position in Execution stage.
 
 \section{Branch Detection}
 
-The branches are Detected in Decode stage, where a dedicated adder will calculated always the new value where jump.
-Two situations exist:
+The branches are detected in Decode stage, where a dedicated adder will calculate always the new value where to jump.
+Two situations occur:
 \begin{itemize}
     \item unconditional branch, the jump is always taken and PC is always upgrade with the offset value;
     \item conditional branch, before proceeding with jump a condition must be verified, for this Laboratory
      exists only the possibility of the equivalence of two content registers. It takes care also about the fact that
-     some register value could be forwarding from other stages. 
+     some register value could be forwarded from other stages. 
 \end{itemize}
 
-If a branch is not take nothing happen and the following instruction will load like usual. 
+If a branch is not taken nothing happens and the following instruction will load like usual. 
 In case of branch taken the instruction before is flushed and substitute with a NOP, 
-in the next clock cycle, the instruction load will be the 
+in the next clock cycle, the instruction loaded will be the 
 one reached through the new offset program counter, calculated with the previous jump instruction.
 
