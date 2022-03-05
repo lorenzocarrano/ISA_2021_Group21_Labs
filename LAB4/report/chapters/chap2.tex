@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This will help you in writing your homebook
+% Remember that the character % is a comment in latex
+%
+% chapter 2
+ 
+\chapter{Datapath}
+\label{cha2}
+\section{Fetch Stage}
+During fetch stage, an instruction is read from the instruction register accordingly to the content of the Program Counter, a 32-bit register that stores the address 
+of the next instruction to be fetched. Fetched instructions are then passed to the next stage.
+Assuming the case of the execution of concurrent instructions, from one instruction to the next one the program counter is incremented by 4. This is because each instruction 
+is encoded on 4 bytes and the instruction memory is byte-addressed, thus we have an offset of 4 bits.
+In case of branch instructions or jumps, the value of the program counter can be modified in other ways using various offsets and rules depending on the case, 
+as it will discussed later.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=\linewidth]{schematic/InstructionMemory_withProgramCounter.jpg}
+        \caption{\textbf{Instruction Format}}
+\end{figure}
+    
+
+\section{Decode Stage}
+
+In decode stage the instruction that has been previously fetched is decoded by means of the bit-fields that compose it.
+Operands are decoded, be them a content of a register or an immediate value, and the control bits for the other components eventually employed in requested calculation 
+(e.g. multiplexers or the ALU) are prepared to be sent to next stage through pipeline. In this stage stall or nope can be 
+added due to a data hazards or a branch instruction. This behavior is better explained in the dedicated section.
+
+\subsection{Register File}
+
+The register file stores internal runtime values used during calculations.
+Some registers have specific purposes, such as the stack pointer, the thread pointer, the return address or the register r0, the only one that can't be overwritten 
+and that always stores a value of all zeros; other registers can be used during program execution, and are said to be \textbf{general purpose registers}.
+The register file is synchronous with the falling edge of the clock signal and it is composed by a total of 32 registers, indexed by means of 5-bit address lines.
+It has been decided to keep the register file always able to provide data in reading, without any enable signal, while a dedicated signal is needed to allow writing operations.
+An active-high reset signal is present, in order to clear the entire content of the registers.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=0.2\linewidth]{schematic/RegisterFile.jpg}
+        \caption{\textbf{Register File}}
+\end{figure}
+    
+Register File is composed of two read data port, able to access two sources at the same time, and one write data port.
+
+\clearpage
+
+\subsection{Immediate generator}
+
+When an instruction containing an immediate occurs this value must be extrapolated, and different opcodes require 
+different ways to compose it. The immediate must be computed on 32 bits.
+
+\section{Execute Stage}
+
+During the execute stage, operands are sent to the ALU in order to perform the required computation. 
+The operand can be provided from different stages of the pipeline and a specific unit is in charge of feeding ALU with the right value.
+
+\subsection{ALU}
+
+The Arithmetic Logic Unit is the computational core of the overall architecture.
+Since we chose to support 32 bits of parallelism for registers and data management, the ALU has been built with a parallelism of 32 bits too.
+The Arithmetic Logic Unit has been developed by means of standard arithmetic operations, implemented with behavioral VHDL language, in order to allow the compiler 
+to have a certain freedom during optimization.
+To better manage constants, sizes and opcodes, all meaningful values have been declared in the file \textit{myTypes.vhd}.
+The ALU is implemented using a process, in which inputs are employed into the proper computation by means of a control signal on 3 bits.
+Since the control unit is an hardwired one, this control signal is directly derived from original opcode of the decoded instruction.
+The operations that ALU can perform are:
+\begin{itemize}
+    \item addition, sum operand A and B;
+    \item addition PC, sum 4 to operand A;
+    \item arithmetic shift to right, arithmetic shift operant A to right of position number equal to B;
+    \item absolute function, elaborate the absolute value of operand A and add B to it;
+    \item and, execute AND operation, bit by bit, between operand A and B;
+    \item or, execute OR operation, bit by bit, between operand A and B;
+    \item xor, execute XOR operation, bit by bit, between operand A and B.
+\end{itemize}
+    
+
+\subsection{Absolute Module}
+
+An entity has been written in order to allow the computation of absolute value of an integer register.
+This module has two input ports and one output ports. The value on the first input port is the one to convert 
+through the absolute function. To achieve this result it sees the last bit of the signal if a zero is detected 
+no operations are performed, while if a 1 is detected all the bits are complemented and is added a one. 
+These are the steps to covert a number, in this case from a negative to a positive value, according absolute function.
+At the end the second input is summed to the convert one and the result is sent to the output.
+This component has been inserted into the ALU to increase its operational capacity.
+
+\subsection{Forwarding Unit}
+
+Forwarding Unit is a component with an important purpose: forward a previously computed result to one of the ALU inputs
+before it is effectively written in register file, in order to resolve a possible Data Hazard, avoiding a stall.
+The need to forward a certain value in one of the stages following the Execution one is detected by means of comparison between the encodings of the source registers 
+that are passed from Decode stage to the Execute Stage, and the encodings that are actually kept in Memory and Write-back stages.
+If an equivalence is found, this means that the instruction that has been decoded in previous clock cycle is asking as operand a result that is not yet available 
+in register file, but that has already been computed, thus it is possible to directly wire it to the proper ALU input via additional interconnections
+couple of multiplexer, as shown in figure.  
+
+Forwarding for multiplexer A is based also on the possibility to pick the value of Program Counter, it takes care about \textit{ALUSrc\_PC} signal.
+While the output of multiplexer B is the input of another one that chooses between the source register and the immediate value, the decision is 
+taken through the control signal \textit{ALUSrc}. 
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[width=\linewidth]{schematic/ALUwithForwardingUnit.jpg}
+        \caption{\textbf{ALU with Forwarding Unit}}
+\end{figure}
+    
+
+\section{Memory Stage}
+
+Memory stage is the step of the pipeline in which results are loaded/stored in the main memory.
+The memory is byte addressed and characterized to be Little Endian, i.e. the least significant byte is stored at a least address than the most significant one.
+The main memory is involved in load and store operations, that directly invoke it. It has a crucial role during when composite data need to be stored to guarantee 
+the program correctness.
+Since RISCV does not require stored words to be aligned in memory, their management is simpler and requires less hardware resources.
+
+\section{Write Back Stage}
+
+During Write-back stage, the register file is accessed in order to store the result of the previously performed calculation inside the destination register,
+determined during the past decoding phase of the instruction that has generated this value.
+As previously clarified, the register file needs in this case that the relative write-enable signal is set in order to be able to accept a new value inside one 
+of its locations, and the control unit is in charge of properly drive that enable signal.
