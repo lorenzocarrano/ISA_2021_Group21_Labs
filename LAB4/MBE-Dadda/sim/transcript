@@ -1,0 +1,82 @@
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim top 
+# Start time: 12:56:16 on Mar 05,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../tb/monitor.sv(49): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
+# ** Warning: ../tb/monitor_out.sv(48): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.DUT(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.dut_if(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.mbe(arch)#1
+# Loading ieee.numeric_std(body)
+# Loading work.booth_mul(arch)#1
+# Loading work.dadda_adder_stage1(arch)#1
+# Loading work.dadda_adder_stage2(arch)#1
+# Loading work.dadda_adder_stage3(arch)#1
+# Loading work.dadda_adder_stage4(arch)#1
+# ** Warning: (vsim-3839) Variable '/top/out/data', driven via a port connection, is multiply driven. See ../src/DUT.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /top/sum File: ../src/DUT.sv Line: 9
+# ** Warning: (vsim-3764) Stand-alone call to function 'begin_tr' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top_sv_unit::driver File: ../tb/driver.sv Line: 67
+# Loading /software/mentor/questa10.7c/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+run 100 ns
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
+# MBE: input A =       9177, input B =       9725, output OUT =             89246325
+# MBE: input A = 00000000000000000010001111011001, input B = 00000000000000000010010111111101, output OUT = 0000000000000000000000000000000000000101010100011100101001110101
+# refmod: input A =        9177, input B =        9725, output OUT =    89246325
+# refmod: input A = 00000000000000000010001111011001, input B = 00000000000000000010010111111101, output OUT = 00000101010100011100101001110101
+# UVM_INFO @ 45: uvm_test_top.env_h.comp [Comparator Match] 
+# MBE: input A =       9536, input B =       1307, output OUT =             12463552
+# MBE: input A = 00000000000000000010010101000000, input B = 00000000000000000000010100011011, output OUT = 0000000000000000000000000000000000000000101111100010110111000000
+# refmod: input A =        9536, input B =        1307, output OUT =    12463552
+# refmod: input A = 00000000000000000010010101000000, input B = 00000000000000000000010100011011, output OUT = 00000000101111100010110111000000
+# UVM_INFO @ 75: uvm_test_top.env_h.comp [Comparator Match] 
+# MBE: input A =       3035, input B =       2330, output OUT =              7071550
+# MBE: input A = 00000000000000000000101111011011, input B = 00000000000000000000100100011010, output OUT = 0000000000000000000000000000000000000000011010111110011100111110
+# refmod: input A =        3035, input B =        2330, output OUT =     7071550
+# refmod: input A = 00000000000000000000101111011011, input B = 00000000000000000000100100011010, output OUT = 00000000011010111110011100111110
+# End time: 12:57:17 on Mar 05,2022, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 4

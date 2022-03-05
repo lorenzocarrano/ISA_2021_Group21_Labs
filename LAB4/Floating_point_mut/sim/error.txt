@@ -1,0 +1,132 @@
+You can run vsim
+Start time: 13:01:45 on Mar 05,2022
+vcom ../src/MBE/adder_row.vhd ../src/MBE/booth_mul.vhd ../src/MBE/dadda_adder_stage1.vhd ../src/MBE/dadda_adder_stage2.vhd ../src/MBE/dadda_adder_stage3.vhd ../src/MBE/dadda_adder_stage4.vhd ../src/MBE/dadda_adder_stage5.vhd ../src/MBE/fa.vhd ../src/MBE/ha.vhd ../src/MBE/MBE.vhd ../src/MBE/partial_product.vhd ../src/MBE/rca.vhd 
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity Addend_row
+-- Compiling architecture arch of Addend_row
+-- Loading package NUMERIC_STD
+-- Compiling entity booth_mul
+-- Compiling architecture arch of booth_mul
+-- Compiling entity dadda_adder_stage1
+-- Compiling architecture arch of dadda_adder_stage1
+-- Compiling entity dadda_adder_stage2
+-- Compiling architecture arch of dadda_adder_stage2
+-- Compiling entity dadda_adder_stage3
+-- Compiling architecture arch of dadda_adder_stage3
+-- Compiling entity dadda_adder_stage4
+-- Compiling architecture arch of dadda_adder_stage4
+-- Compiling entity dadda_adder_stage5
+-- Compiling architecture arch of dadda_adder_stage5
+-- Compiling entity FA
+-- Compiling architecture BEHAVIORAL of FA
+-- Compiling entity HA
+-- Compiling architecture BEHAVIORAL of HA
+-- Compiling entity MBE
+-- Compiling architecture arch of MBE
+-- Compiling entity partial_product
+-- Compiling architecture arch of partial_product
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity RCA
+-- Compiling architecture STRUCTURAL of RCA
+End time: 13:01:45 on Mar 05,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Start time: 13:01:45 on Mar 05,2022
+vcom ../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd ../src/fpuvhdl/common/fpround_fpround.vhd ../src/fpuvhdl/common/packfp_packfp.vhd ../src/fpuvhdl/common/unpackfp_unpackfp.vhd 
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity FPnormalize
+-- Compiling architecture FPnormalize of FPnormalize
+-- Compiling entity FPround
+-- Compiling architecture FPround of FPround
+-- Compiling entity PackFP
+-- Compiling architecture PackFP of PackFP
+-- Compiling entity UnpackFP
+-- Compiling architecture UnpackFP of UnpackFP
+End time: 13:01:45 on Mar 05,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Start time: 13:01:45 on Mar 05,2022
+vcom ../src/fpuvhdl/adder/fpadd_normalize_struct.vhd ../src/fpuvhdl/adder/fpadd_pipeline.vhd ../src/fpuvhdl/adder/fpadd_stage1_struct.vhd ../src/fpuvhdl/adder/fpadd_stage2_struct.vhd ../src/fpuvhdl/adder/fpadd_stage3_struct.vhd ../src/fpuvhdl/adder/fpadd_stage4_struct.vhd ../src/fpuvhdl/adder/fpadd_stage5_struct.vhd ../src/fpuvhdl/adder/fpadd_stage6_struct.vhd ../src/fpuvhdl/adder/fpalign_struct.vhd ../src/fpuvhdl/adder/fpinvert_fpinvert.vhd ../src/fpuvhdl/adder/fplzc_fplzc.vhd ../src/fpuvhdl/adder/fpselcomplement_fpselcomplement.vhd ../src/fpuvhdl/adder/fpswap_fpswap.vhd 
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPadd_normalize
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling architecture struct of FPadd_normalize
+** Error: (vcom-11) Could not find work.fplzc.
+** Error (suppressible): ../src/fpuvhdl/adder/fpadd_normalize_struct.vhd(77): (vcom-1195) Cannot find expanded name "work.FPlzc".
+** Error: ../src/fpuvhdl/adder/fpadd_normalize_struct.vhd(77): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/adder/fpadd_normalize_struct.vhd(77): Unknown expanded name.
+** Note: ../src/fpuvhdl/adder/fpadd_normalize_struct.vhd(228): VHDL Compiler exiting
+End time: 13:01:45 on Mar 05,2022, Elapsed time: 0:00:00
+Errors: 4, Warnings: 0
+Start time: 13:01:45 on Mar 05,2022
+vcom ../src/fpuvhdl/multiplier/fd.vhd ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd ../src/fpuvhdl/multiplier/fpmul_stage1_struct.vhd ../src/fpuvhdl/multiplier/fpmul_stage2_struct.vhd ../src/fpuvhdl/multiplier/fpmul_stage3_struct.vhd ../src/fpuvhdl/multiplier/fpmul_stage4_struct.vhd ../src/fpuvhdl/multiplier/register.vhd 
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FD
+-- Compiling architecture SYNCH of FD
+-- Compiling configuration CFG_FD_SYNCH
+-- Loading entity FD
+-- Loading architecture SYNCH of FD
+-- Loading package std_logic_arith
+-- Compiling entity FPmul
+-- Compiling architecture pipeline of FPmul
+** Error: (vcom-11) Could not find work.fpmul_stage1.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(176): (vcom-1195) Cannot find expanded name "work.FPmul_stage1".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(176): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(176): Unknown expanded name.
+** Error: (vcom-11) Could not find work.fpmul_stage2.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(177): (vcom-1195) Cannot find expanded name "work.FPmul_stage2".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(177): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(177): Unknown expanded name.
+** Error: (vcom-11) Could not find work.fpmul_stage3.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(178): (vcom-1195) Cannot find expanded name "work.FPmul_stage3".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(178): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(178): Unknown expanded name.
+** Error: (vcom-11) Could not find work.fpmul_stage4.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(179): (vcom-1195) Cannot find expanded name "work.FPmul_stage4".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(179): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(179): Unknown expanded name.
+** Note: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(265): VHDL Compiler exiting
+End time: 13:01:45 on Mar 05,2022, Elapsed time: 0:00:00
+Errors: 16, Warnings: 0
+Start time: 13:01:45 on Mar 05,2022
+vcom ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd 
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FPmul
+-- Compiling architecture pipeline of FPmul
+** Error: (vcom-11) Could not find work.fpmul_stage1.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(176): (vcom-1195) Cannot find expanded name "work.FPmul_stage1".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(176): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(176): Unknown expanded name.
+** Error: (vcom-11) Could not find work.fpmul_stage2.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(177): (vcom-1195) Cannot find expanded name "work.FPmul_stage2".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(177): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(177): Unknown expanded name.
+** Error: (vcom-11) Could not find work.fpmul_stage3.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(178): (vcom-1195) Cannot find expanded name "work.FPmul_stage3".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(178): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(178): Unknown expanded name.
+** Error: (vcom-11) Could not find work.fpmul_stage4.
+** Error (suppressible): ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(179): (vcom-1195) Cannot find expanded name "work.FPmul_stage4".
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(179): (vcom-1105) Name (expanded name) does not denote an entity name.
+** Error: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(179): Unknown expanded name.
+** Note: ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd(265): VHDL Compiler exiting
+End time: 13:01:45 on Mar 05,2022, Elapsed time: 0:00:00
+Errors: 16, Warnings: 0
