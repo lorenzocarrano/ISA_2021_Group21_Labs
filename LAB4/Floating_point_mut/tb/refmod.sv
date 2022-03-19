@@ -6,8 +6,10 @@ class refmod extends uvm_component;
     uvm_get_port #(packet_in) in;
     uvm_put_port #(packet_out) out;
 
-	shortreal A_f;
-	shortreal B_f;
+	//shortreal A_f;
+	//shortreal B_f;
+	shortreal A_f_vec [3:0];
+	shortreal B_f_vec [3:0];
     
     function new(string name = "refmod", uvm_component parent);
         super.new(name, parent);
@@ -25,11 +27,18 @@ class refmod extends uvm_component;
         
         forever begin
             in.get(tr_in);
-			A_f = $bitstoshortreal(tr_in.A);
-			B_f = $bitstoshortreal(tr_in.B);
-            tr_out.data = $shortrealtobits(A_f*B_f);
-            $display("refmod: input A = %f, input B = %f, output OUT = %f",A_f, B_f, $bitstoshortreal(tr_out.data));
-			$display("refmod: input A = %b, input B = %b, output OUT = %b",tr_in.A, tr_in.B, tr_out.data);
+			B_f_vec[3] <= B_f_vec[2];
+			A_f_vec[3] <= A_f_vec[2];
+			B_f_vec[2] <= B_f_vec[1];
+			A_f_vec[2] <= A_f_vec[1];
+			B_f_vec[1] <= B_f_vec[0];
+			A_f_vec[1] <= A_f_vec[0];
+			A_f_vec[0] = $bitstoshortreal(tr_in.A);
+			B_f_vec[0] = $bitstoshortreal(tr_in.B);
+		
+            tr_out.data = $shortrealtobits(A_f_vec[1]*B_f_vec[1]);
+            $display("refmod: input A = %f, input B = %f, output OUT = %f",A_f_vec[1], B_f_vec[1], $bitstoshortreal(tr_out.data));
+			$display("refmod: input A = %b, input B = %b, output OUT = %b",$shortrealtobits(A_f_vec[1]), $shortrealtobits(A_f_vec[1]), tr_out.data);
             out.put(tr_out);
         end
     endtask: run_phase
