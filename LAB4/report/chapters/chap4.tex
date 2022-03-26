@@ -3,42 +3,65 @@
 % Remember that the character % is a comment in latex
 %
 % chapter 4
-\chapter{Hazards}
+\chapter{Floating Point Multiplier}
 \label{cha4}
 
-\section{Data Hazards Unit}
+\section{Testbench Modifications}
 
-The data Hazard Unit detects the need of a value that has not been read from 
-data memory yet. This problem is detected in the Decode stage, when one of the 
-two source register is the destination of a load instruction in the previous cycle. 
-To avoid this problem a stall is inserted in the pipeline to wait for the load of the data 
-from memory. 
+The floating point multiplier, in which the MBE multiplier tested in the previous section is used for the multiplication of the significands, is a pipelined architecture. 
+This means that the results of the multiplications are ready some clock cycles after the generation of the inputs. In order to compensate for the added latency, 
+the verification has to be delayed with respect to the generation of the inputs.
+After an initial latency of six clock cycles necessary to perform the first multiplication, the testbench handles the multiplier in a pipelined way, 
+performing and verifying one operation every three clock cycles. This is possible by saving the generated inputs in a chain of two registers; since the FSM is composed
+of three states, this is equivalent to delaying the inputs of six clock cycles. When a new result is ready, it is confronted with the correct one computed using the inputs 
+present in the second register of the chain.
+The FSM is composed of three states:
 
-To insert the stall:
 \begin{itemize}
-    \item The program counter is not updated;
-    \item The IF/ID pipeline is not updated and keeps storing the previous instruction;
-    \item All control signals are set to zero, regardless of the Control Unit, using a multiplexer.
-\end{itemize}
-The stall lasts only one clock cycle.
-
-After reading the value from memory the forwarding unit will place it in the proper 
-position in Execution stage.
-
-\section{Branch Detection}
-
-The branches are detected in Decode stage, where a dedicated adder will calculate always the new value where to jump.
-Two situations occur:
-\begin{itemize}
-    \item unconditional branch, the jump is always taken and PC is always upgrade with the offset value;
-    \item conditional branch, before proceeding with jump a condition must be verified, for this Laboratory
-     exists only the possibility of the equivalence of two content registers. It takes care also about the fact that
-     some register value could be forwarded from other stages. 
+    \item Initial: all control signals are initialized, then the FSM moves on to the WAIT state.
+    \item Wait: the inputs are saved in order to be delayed, and the results of the multiplications are displayed. Two flags are set, in\_inter.ready = 0 
+    to stop the generation of new inputs, and out\_inter.valid = 1 to signal the presence of a new valid output to confront with the reference one.
+    \item Send: when the results have been compared, in\_inter.ready is set to 1 to generate a new input and out\_inter.valid = 0.
 \end{itemize}
 
-If a branch is not taken nothing happens and the following instruction will load like usual. 
-In case of branch taken the instruction before is flushed and substitute with a NOP, 
-in the next clock cycle, the instruction loaded will be the 
-one reached through the new offset program counter, calculated with the previous jump instruction.
+\section{Input Generation}
 
-NOP instruction is the following one: \textit{addi x0, x0, 0}.
+Since it is not possible to generate random single-precision floating point numbers, random 32-bits sequences are generated. Using the functions \$shortrealtobits() 
+and \$bitstoshortreal() it is possible to convert from floating point numbers to their binary representation and viceversa. To make the results more readable, 
+some constraints have been applied to the input generation: in particular, the bits from 30 to 23, which represent the exponent of the floating point number, 
+are forced to be equal to 128 for both generated inputs.
+
+\section{Testbench Run}
+
+During the testbench run no mismatches occurred, as shown in the transcript file.\\
+\\
+\# FPMUL: input A = 3.210777, input B = -2.400374\\
+\# FPMUL: input A = 01000000010011010111110101011111, input B = 11000000000110011001111110111001\\
+\# FPMUL: output OUT = -7.707065\\
+\# FPMUL: output OUT = 11000000111101101010000001000110\\
+\# refmod: input A = 3.210777, input B = -2.400374, output OUT = -7.707065\\
+\# refmod: input A = 01000000010011010111110101011111, input B = 01000000010011010111110101011111, output OUT = 11000000111101101010000001000110\\
+\# UVM\_INFO @ 3015: uvm\_test\_top.env\_h.comp [Comparator Match] \\
+\# FPMUL: input A = 3.084183, input B = -3.686763\\
+\# FPMUL: input A = 01000000010001010110001100111111, input B = 11000000011010111111001111101110\\
+\# FPMUL: output OUT = -11.370651\\
+\# FPMUL: output OUT = 11000001001101011110111000110000\\
+\# refmod: input A = 3.084183, input B = -3.686763, output OUT = -11.370651\\
+\# refmod: input A = 01000000010001010110001100111111, input B = 01000000010001010110001100111111, output OUT = 11000001001101011110111000110000\\
+\# UVM\_INFO @ 3045: uvm\_test\_top.env\_h.comp [Comparator Match] \\
+\# UVM\_INFO verilog\_src/uvm-1.1d/src/base/uvm\_objection.svh(1267) @ 3045: reporter [TEST\_DONE] 'run' phase is ready to proceed to the 'extract' phase\\
+\# UVM\_INFO ../tb/env.sv(42) @ 3045: uvm\_test\_top.env\_h [env] Reporting matched 101\\
+\# \\
+\# --- UVM Report Summary ---\\
+\# \\
+\# ** Report counts by severity\\
+\# UVM\_INFO :  106\\
+\# UVM\_WARNING :    0\\
+\# UVM\_ERROR :    0\\
+\# UVM\_FATAL :    0\\
+\# ** Report counts by id\\
+\# [Comparator Match]   101\\
+\# [Questa UVM]     2\\
+\# [RNTST]     1\\
+\# [TEST\_DONE]     1\\
+\# [env]     1\\
