@@ -8,4 +8,5 @@ vcom ../src/fpuvhdl/common/*
 vcom ../src/fpuvhdl/multiplier/*
 vcom ../src/MBE/*
 vlog -sv ../tb/top.sv
+
 vsim top

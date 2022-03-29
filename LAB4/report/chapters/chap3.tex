@@ -3,28 +3,44 @@
 % Remember that the character % is a comment in latex
 %
 % chapter 3
-\chapter{Control Unit}
+\chapter{Integer Multiplier}
 \label{cha3}
-The control unit is the entity that regulates the control signals of the pipeline and it has been designed hardwired.
-It receives as input the OPCODE, as well as the FUNC3 and FUNC7 when present. 
-According to those values it generates the correct control signals for the components present in the datapath. The signals are then pipelined in order to 
-arrive to the corresponding component exactly when they are needed. Specifically the OPCODE specifies what kind of instruction has to be executed, while the
-FUNC codes are used to control the operation performed by the ALU.
 
-In case of stall the control unit sees nothing and external component switch the value of control signal.
+In this section the MBE-Dadda tree multiplier, from lab 2, has been tested.
 
-The control signals are:
-\begin{itemize}
-    \item branch, in case of conditional branch instruction, wait for the computation of the condition before performing or not the jump;
-    \item branch\_j, in case of unconditional instruction, jump always;
-    \item ALUSrc, to choose between value of source register two and immediate;
-    \item ALUSrc\_PC, to choose between value of source register one and program counter;
-    \item ALU\_control\_signals, to choose the ALU operation;
-    \item MemWrite, to write on data memory;
-    \item MemRead, to read from data memory;
-    \item RegWrite, to write in register file;
-    \item MemToReg, to decide if write value back from read data memory or from ALU result.
-\end{itemize}
+\section{Compilation}
+Now, in order to compile and simulate the files, that are no more written in system verilog, a dedicated 
+bash file has been written to execute this task automatically.
+
+\lstinputlisting[language=bash]{../MBE-Dadda/sim/sim.sh}
+
+\section{Change interface}
+
+The first things that have to be changed are the interface. For the input one there is no problem,
+both are still on 32 bits, while the output has the double bits and must be changed from 32 to 64 bits.
+
+\lstinputlisting[language=Verilog]{../MBE-Dadda/src/dut_if.sv}
+
+\section{Change reference model}
+
+The last things that must changed is the reference model. Now the executed operation is a multiplication and 
+no more addition and the reference must be changed properly.
+
+\begin{lstlisting}[language=Verilog, caption=Inside refmode.sv]
+    ... 
+
+    forever begin
+        in.get(tr_in);
+        tr_out.data = tr_in.A * tr_in.B;
+        $display("refmod: input A = \%d, input B = \%d, output OUT = \%d",tr_in.A, tr_in.B, tr_out.data);
+        $display("refmod: input A = \%b, input B = \%b, output OUT = \%b",tr_in.A, tr_in.B, tr_out.data);
+        out.put(tr_out);
+    end
+    
+    ...
+\end{lstlisting}
+
+
 
 
 
