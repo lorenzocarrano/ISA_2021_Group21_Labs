@@ -1,0 +1,24 @@
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
+# MBE: input A =       9177, input B =       9725, output OUT =             89246325
+# MBE: input A = 00000000000000000010001111011001, input B = 00000000000000000010010111111101, output OUT = 0000000000000000000000000000000000000101010100011100101001110101
+# refmod: input A =        9177, input B =        9725, output OUT =    89246325
+# refmod: input A = 00000000000000000010001111011001, input B = 00000000000000000010010111111101, output OUT = 00000101010100011100101001110101
+# UVM_INFO @ 45: uvm_test_top.env_h.comp [Comparator Match] 
+# MBE: input A =       9536, input B =       1307, output OUT =             12463552
+# MBE: input A = 00000000000000000010010101000000, input B = 00000000000000000000010100011011, output OUT = 0000000000000000000000000000000000000000101111100010110111000000
+# refmod: input A =        9536, input B =        1307, output OUT =    12463552
+# refmod: input A = 00000000000000000010010101000000, input B = 00000000000000000000010100011011, output OUT = 00000000101111100010110111000000
+# UVM_INFO @ 75: uvm_test_top.env_h.comp [Comparator Match] 
+# MBE: input A =       3035, input B =       2330, output OUT =              7071550
+# MBE: input A = 00000000000000000000101111011011, input B = 00000000000000000000100100011010, output OUT = 0000000000000000000000000000000000000000011010111110011100111110
+# refmod: input A =        3035, input B =        2330, output OUT =     7071550
+# refmod: input A = 00000000000000000000101111011011, input B = 00000000000000000000100100011010, output OUT = 00000000011010111110011100111110
+# UVM_INFO @ 105: uvm_test_top.env_h.comp [Comparator Match] 
+# MBE: input A =       2880, input B =       3695, output OUT =             10641600
+# MBE: input A = 00000000000000000000101101000000, input B = 00000000000000000000111001101111, output OUT = 0000000000000000000000000000000000000000101000100110000011000000
+# refmod: input A =        2880, input B =        3695, output OUT =    10641600
+# refmod: input A = 00000000000000000000101101000000, input B = 00000000000000000000111001101111, output OUT = 00000000101000100110000011000000
+# UVM_INFO @ 135: uvm_test_top.env_h.comp [Comparator Match] 
+
