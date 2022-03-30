@@ -1,0 +1,581 @@
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim top 
+# Start time: 12:36:45 on Mar 26,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../tb/monitor.sv(49): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
+# ** Warning: ../tb/monitor_out.sv(48): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.DUT(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.dut_if(fast)
+# ** Warning: (vsim-3838) Variable '/top/out/data' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See ../src/DUT.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /top/sum File: ../src/DUT.sv Line: 3
+# ** Warning: (vsim-3764) Stand-alone call to function 'begin_tr' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top_sv_unit::driver File: ../tb/driver.sv Line: 67
+# Loading /software/mentor/questa10.7c/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+run 5000 ns
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
+# adder: input A =        491, input B =         30, output OUT =        521
+# adder: input A = 00000000000000000000000111101011, input B = 00000000000000000000000000011110, output OUT = 00000000000000000000001000001001
+# refmod: input A =         491, input B =          30, output OUT =         521
+# refmod: input A = 00000000000000000000000111101011, input B = 00000000000000000000000000011110, output OUT = 00000000000000000000001000001001
+# UVM_INFO @ 45: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        677, input B =         46, output OUT =        723
+# adder: input A = 00000000000000000000001010100101, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001011010011
+# refmod: input A =         677, input B =          46, output OUT =         723
+# refmod: input A = 00000000000000000000001010100101, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001011010011
+# UVM_INFO @ 75: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        337, input B =         26, output OUT =        363
+# adder: input A = 00000000000000000000000101010001, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000000101101011
+# refmod: input A =         337, input B =          26, output OUT =         363
+# refmod: input A = 00000000000000000000000101010001, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000000101101011
+# UVM_INFO @ 105: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        653, input B =          7, output OUT =        660
+# adder: input A = 00000000000000000000001010001101, input B = 00000000000000000000000000000111, output OUT = 00000000000000000000001010010100
+# refmod: input A =         653, input B =           7, output OUT =         660
+# refmod: input A = 00000000000000000000001010001101, input B = 00000000000000000000000000000111, output OUT = 00000000000000000000001010010100
+# UVM_INFO @ 135: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        734, input B =         64, output OUT =        798
+# adder: input A = 00000000000000000000001011011110, input B = 00000000000000000000000001000000, output OUT = 00000000000000000000001100011110
+# refmod: input A =         734, input B =          64, output OUT =         798
+# refmod: input A = 00000000000000000000001011011110, input B = 00000000000000000000000001000000, output OUT = 00000000000000000000001100011110
+# UVM_INFO @ 165: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        569, input B =         45, output OUT =        614
+# adder: input A = 00000000000000000000001000111001, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001001100110
+# refmod: input A =         569, input B =          45, output OUT =         614
+# refmod: input A = 00000000000000000000001000111001, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001001100110
+# UVM_INFO @ 195: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        397, input B =         32, output OUT =        429
+# adder: input A = 00000000000000000000000110001101, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000000110101101
+# refmod: input A =         397, input B =          32, output OUT =         429
+# refmod: input A = 00000000000000000000000110001101, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000000110101101
+# UVM_INFO @ 225: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        671, input B =         21, output OUT =        692
+# adder: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000001010110100
+# refmod: input A =         671, input B =          21, output OUT =         692
+# refmod: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000001010110100
+# UVM_INFO @ 255: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        652, input B =         46, output OUT =        698
+# adder: input A = 00000000000000000000001010001100, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001010111010
+# refmod: input A =         652, input B =          46, output OUT =         698
+# refmod: input A = 00000000000000000000001010001100, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001010111010
+# UVM_INFO @ 285: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        804, input B =         56, output OUT =        860
+# adder: input A = 00000000000000000000001100100100, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101011100
+# refmod: input A =         804, input B =          56, output OUT =         860
+# refmod: input A = 00000000000000000000001100100100, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101011100
+# UVM_INFO @ 315: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        954, input B =         92, output OUT =       1046
+# adder: input A = 00000000000000000000001110111010, input B = 00000000000000000000000001011100, output OUT = 00000000000000000000010000010110
+# refmod: input A =         954, input B =          92, output OUT =        1046
+# refmod: input A = 00000000000000000000001110111010, input B = 00000000000000000000000001011100, output OUT = 00000000000000000000010000010110
+# UVM_INFO @ 345: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        952, input B =         18, output OUT =        970
+# adder: input A = 00000000000000000000001110111000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000001111001010
+# refmod: input A =         952, input B =          18, output OUT =         970
+# refmod: input A = 00000000000000000000001110111000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000001111001010
+# UVM_INFO @ 375: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        378, input B =         11, output OUT =        389
+# adder: input A = 00000000000000000000000101111010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000000110000101
+# refmod: input A =         378, input B =          11, output OUT =         389
+# refmod: input A = 00000000000000000000000101111010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000000110000101
+# UVM_INFO @ 405: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        990, input B =         88, output OUT =       1078
+# adder: input A = 00000000000000000000001111011110, input B = 00000000000000000000000001011000, output OUT = 00000000000000000000010000110110
+# refmod: input A =         990, input B =          88, output OUT =        1078
+# refmod: input A = 00000000000000000000001111011110, input B = 00000000000000000000000001011000, output OUT = 00000000000000000000010000110110
+# UVM_INFO @ 435: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        650, input B =         56, output OUT =        706
+# adder: input A = 00000000000000000000001010001010, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001011000010
+# refmod: input A =         650, input B =          56, output OUT =         706
+# refmod: input A = 00000000000000000000001010001010, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001011000010
+# UVM_INFO @ 465: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        159, input B =         14, output OUT =        173
+# adder: input A = 00000000000000000000000010011111, input B = 00000000000000000000000000001110, output OUT = 00000000000000000000000010101101
+# refmod: input A =         159, input B =          14, output OUT =         173
+# refmod: input A = 00000000000000000000000010011111, input B = 00000000000000000000000000001110, output OUT = 00000000000000000000000010101101
+# UVM_INFO @ 495: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        414, input B =          3, output OUT =        417
+# adder: input A = 00000000000000000000000110011110, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000000110100001
+# refmod: input A =         414, input B =           3, output OUT =         417
+# refmod: input A = 00000000000000000000000110011110, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000000110100001
+# UVM_INFO @ 525: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        824, input B =         28, output OUT =        852
+# adder: input A = 00000000000000000000001100111000, input B = 00000000000000000000000000011100, output OUT = 00000000000000000000001101010100
+# refmod: input A =         824, input B =          28, output OUT =         852
+# refmod: input A = 00000000000000000000001100111000, input B = 00000000000000000000000000011100, output OUT = 00000000000000000000001101010100
+# UVM_INFO @ 555: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        772, input B =         51, output OUT =        823
+# adder: input A = 00000000000000000000001100000100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001100110111
+# refmod: input A =         772, input B =          51, output OUT =         823
+# refmod: input A = 00000000000000000000001100000100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001100110111
+# UVM_INFO @ 585: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        687, input B =         22, output OUT =        709
+# adder: input A = 00000000000000000000001010101111, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001011000101
+# refmod: input A =         687, input B =          22, output OUT =         709
+# refmod: input A = 00000000000000000000001010101111, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001011000101
+# UVM_INFO @ 615: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        196, input B =          8, output OUT =        204
+# adder: input A = 00000000000000000000000011000100, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011001100
+# refmod: input A =         196, input B =           8, output OUT =         204
+# refmod: input A = 00000000000000000000000011000100, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011001100
+# UVM_INFO @ 645: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        789, input B =         41, output OUT =        830
+# adder: input A = 00000000000000000000001100010101, input B = 00000000000000000000000000101001, output OUT = 00000000000000000000001100111110
+# refmod: input A =         789, input B =          41, output OUT =         830
+# refmod: input A = 00000000000000000000001100010101, input B = 00000000000000000000000000101001, output OUT = 00000000000000000000001100111110
+# UVM_INFO @ 675: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        591, input B =         49, output OUT =        640
+# adder: input A = 00000000000000000000001001001111, input B = 00000000000000000000000000110001, output OUT = 00000000000000000000001010000000
+# refmod: input A =         591, input B =          49, output OUT =         640
+# refmod: input A = 00000000000000000000001001001111, input B = 00000000000000000000000000110001, output OUT = 00000000000000000000001010000000
+# UVM_INFO @ 705: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        854, input B =         60, output OUT =        914
+# adder: input A = 00000000000000000000001101010110, input B = 00000000000000000000000000111100, output OUT = 00000000000000000000001110010010
+# refmod: input A =         854, input B =          60, output OUT =         914
+# refmod: input A = 00000000000000000000001101010110, input B = 00000000000000000000000000111100, output OUT = 00000000000000000000001110010010
+# UVM_INFO @ 735: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        722, input B =         59, output OUT =        781
+# adder: input A = 00000000000000000000001011010010, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001100001101
+# refmod: input A =         722, input B =          59, output OUT =         781
+# refmod: input A = 00000000000000000000001011010010, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001100001101
+# UVM_INFO @ 765: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        830, input B =         58, output OUT =        888
+# adder: input A = 00000000000000000000001100111110, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101111000
+# refmod: input A =         830, input B =          58, output OUT =         888
+# refmod: input A = 00000000000000000000001100111110, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101111000
+# UVM_INFO @ 795: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        758, input B =         43, output OUT =        801
+# adder: input A = 00000000000000000000001011110110, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001100100001
+# refmod: input A =         758, input B =          43, output OUT =         801
+# refmod: input A = 00000000000000000000001011110110, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001100100001
+# UVM_INFO @ 825: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        186, input B =         16, output OUT =        202
+# adder: input A = 00000000000000000000000010111010, input B = 00000000000000000000000000010000, output OUT = 00000000000000000000000011001010
+# refmod: input A =         186, input B =          16, output OUT =         202
+# refmod: input A = 00000000000000000000000010111010, input B = 00000000000000000000000000010000, output OUT = 00000000000000000000000011001010
+# UVM_INFO @ 855: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        952, input B =         84, output OUT =       1036
+# adder: input A = 00000000000000000000001110111000, input B = 00000000000000000000000001010100, output OUT = 00000000000000000000010000001100
+# refmod: input A =         952, input B =          84, output OUT =        1036
+# refmod: input A = 00000000000000000000001110111000, input B = 00000000000000000000000001010100, output OUT = 00000000000000000000010000001100
+# UVM_INFO @ 885: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        352, input B =          9, output OUT =        361
+# adder: input A = 00000000000000000000000101100000, input B = 00000000000000000000000000001001, output OUT = 00000000000000000000000101101001
+# refmod: input A =         352, input B =           9, output OUT =         361
+# refmod: input A = 00000000000000000000000101100000, input B = 00000000000000000000000000001001, output OUT = 00000000000000000000000101101001
+# UVM_INFO @ 915: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        296, input B =         18, output OUT =        314
+# adder: input A = 00000000000000000000000100101000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000100111010
+# refmod: input A =         296, input B =          18, output OUT =         314
+# refmod: input A = 00000000000000000000000100101000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000100111010
+# UVM_INFO @ 945: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        800, input B =         68, output OUT =        868
+# adder: input A = 00000000000000000000001100100000, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100100
+# refmod: input A =         800, input B =          68, output OUT =         868
+# refmod: input A = 00000000000000000000001100100000, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100100
+# UVM_INFO @ 975: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        516, input B =         45, output OUT =        561
+# adder: input A = 00000000000000000000001000000100, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001000110001
+# refmod: input A =         516, input B =          45, output OUT =         561
+# refmod: input A = 00000000000000000000001000000100, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001000110001
+# UVM_INFO @ 1005: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        957, input B =         86, output OUT =       1043
+# adder: input A = 00000000000000000000001110111101, input B = 00000000000000000000000001010110, output OUT = 00000000000000000000010000010011
+# refmod: input A =         957, input B =          86, output OUT =        1043
+# refmod: input A = 00000000000000000000001110111101, input B = 00000000000000000000000001010110, output OUT = 00000000000000000000010000010011
+# UVM_INFO @ 1035: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        960, input B =         94, output OUT =       1054
+# adder: input A = 00000000000000000000001111000000, input B = 00000000000000000000000001011110, output OUT = 00000000000000000000010000011110
+# refmod: input A =         960, input B =          94, output OUT =        1054
+# refmod: input A = 00000000000000000000001111000000, input B = 00000000000000000000000001011110, output OUT = 00000000000000000000010000011110
+# UVM_INFO @ 1065: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        948, input B =         82, output OUT =       1030
+# adder: input A = 00000000000000000000001110110100, input B = 00000000000000000000000001010010, output OUT = 00000000000000000000010000000110
+# refmod: input A =         948, input B =          82, output OUT =        1030
+# refmod: input A = 00000000000000000000001110110100, input B = 00000000000000000000000001010010, output OUT = 00000000000000000000010000000110
+# UVM_INFO @ 1095: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        984, input B =         85, output OUT =       1069
+# adder: input A = 00000000000000000000001111011000, input B = 00000000000000000000000001010101, output OUT = 00000000000000000000010000101101
+# refmod: input A =         984, input B =          85, output OUT =        1069
+# refmod: input A = 00000000000000000000001111011000, input B = 00000000000000000000000001010101, output OUT = 00000000000000000000010000101101
+# UVM_INFO @ 1125: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        311, input B =          1, output OUT =        312
+# adder: input A = 00000000000000000000000100110111, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100111000
+# refmod: input A =         311, input B =           1, output OUT =         312
+# refmod: input A = 00000000000000000000000100110111, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100111000
+# UVM_INFO @ 1155: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        955, input B =         67, output OUT =       1022
+# adder: input A = 00000000000000000000001110111011, input B = 00000000000000000000000001000011, output OUT = 00000000000000000000001111111110
+# refmod: input A =         955, input B =          67, output OUT =        1022
+# refmod: input A = 00000000000000000000001110111011, input B = 00000000000000000000000001000011, output OUT = 00000000000000000000001111111110
+# UVM_INFO @ 1185: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        603, input B =         57, output OUT =        660
+# adder: input A = 00000000000000000000001001011011, input B = 00000000000000000000000000111001, output OUT = 00000000000000000000001010010100
+# refmod: input A =         603, input B =          57, output OUT =         660
+# refmod: input A = 00000000000000000000001001011011, input B = 00000000000000000000000000111001, output OUT = 00000000000000000000001010010100
+# UVM_INFO @ 1215: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        954, input B =         62, output OUT =       1016
+# adder: input A = 00000000000000000000001110111010, input B = 00000000000000000000000000111110, output OUT = 00000000000000000000001111111000
+# refmod: input A =         954, input B =          62, output OUT =        1016
+# refmod: input A = 00000000000000000000001110111010, input B = 00000000000000000000000000111110, output OUT = 00000000000000000000001111111000
+# UVM_INFO @ 1245: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        706, input B =         44, output OUT =        750
+# adder: input A = 00000000000000000000001011000010, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001011101110
+# refmod: input A =         706, input B =          44, output OUT =         750
+# refmod: input A = 00000000000000000000001011000010, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001011101110
+# UVM_INFO @ 1275: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        663, input B =         40, output OUT =        703
+# adder: input A = 00000000000000000000001010010111, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010111111
+# refmod: input A =         663, input B =          40, output OUT =         703
+# refmod: input A = 00000000000000000000001010010111, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010111111
+# UVM_INFO @ 1305: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        637, input B =         38, output OUT =        675
+# adder: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000100110, output OUT = 00000000000000000000001010100011
+# refmod: input A =         637, input B =          38, output OUT =         675
+# refmod: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000100110, output OUT = 00000000000000000000001010100011
+# UVM_INFO @ 1335: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        531, input B =          3, output OUT =        534
+# adder: input A = 00000000000000000000001000010011, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001000010110
+# refmod: input A =         531, input B =           3, output OUT =         534
+# refmod: input A = 00000000000000000000001000010011, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001000010110
+# UVM_INFO @ 1365: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        577, input B =         35, output OUT =        612
+# adder: input A = 00000000000000000000001001000001, input B = 00000000000000000000000000100011, output OUT = 00000000000000000000001001100100
+# refmod: input A =         577, input B =          35, output OUT =         612
+# refmod: input A = 00000000000000000000001001000001, input B = 00000000000000000000000000100011, output OUT = 00000000000000000000001001100100
+# UVM_INFO @ 1395: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        971, input B =         43, output OUT =       1014
+# adder: input A = 00000000000000000000001111001011, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001111110110
+# refmod: input A =         971, input B =          43, output OUT =        1014
+# refmod: input A = 00000000000000000000001111001011, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001111110110
+# UVM_INFO @ 1425: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        442, input B =         18, output OUT =        460
+# adder: input A = 00000000000000000000000110111010, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000111001100
+# refmod: input A =         442, input B =          18, output OUT =         460
+# refmod: input A = 00000000000000000000000110111010, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000111001100
+# UVM_INFO @ 1455: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        572, input B =         50, output OUT =        622
+# adder: input A = 00000000000000000000001000111100, input B = 00000000000000000000000000110010, output OUT = 00000000000000000000001001101110
+# refmod: input A =         572, input B =          50, output OUT =         622
+# refmod: input A = 00000000000000000000001000111100, input B = 00000000000000000000000000110010, output OUT = 00000000000000000000001001101110
+# UVM_INFO @ 1485: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        711, input B =         26, output OUT =        737
+# adder: input A = 00000000000000000000001011000111, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000001011100001
+# refmod: input A =         711, input B =          26, output OUT =         737
+# refmod: input A = 00000000000000000000001011000111, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000001011100001
+# UVM_INFO @ 1515: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        948, input B =         59, output OUT =       1007
+# adder: input A = 00000000000000000000001110110100, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001111101111
+# refmod: input A =         948, input B =          59, output OUT =        1007
+# refmod: input A = 00000000000000000000001110110100, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001111101111
+# UVM_INFO @ 1545: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        389, input B =          5, output OUT =        394
+# adder: input A = 00000000000000000000000110000101, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000110001010
+# refmod: input A =         389, input B =           5, output OUT =         394
+# refmod: input A = 00000000000000000000000110000101, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000110001010
+# UVM_INFO @ 1575: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        666, input B =         11, output OUT =        677
+# adder: input A = 00000000000000000000001010011010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010100101
+# refmod: input A =         666, input B =          11, output OUT =         677
+# refmod: input A = 00000000000000000000001010011010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010100101
+# UVM_INFO @ 1605: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        366, input B =          1, output OUT =        367
+# adder: input A = 00000000000000000000000101101110, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000101101111
+# refmod: input A =         366, input B =           1, output OUT =         367
+# refmod: input A = 00000000000000000000000101101110, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000101101111
+# UVM_INFO @ 1635: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        225, input B =         15, output OUT =        240
+# adder: input A = 00000000000000000000000011100001, input B = 00000000000000000000000000001111, output OUT = 00000000000000000000000011110000
+# refmod: input A =         225, input B =          15, output OUT =         240
+# refmod: input A = 00000000000000000000000011100001, input B = 00000000000000000000000000001111, output OUT = 00000000000000000000000011110000
+# UVM_INFO @ 1665: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        900, input B =         40, output OUT =        940
+# adder: input A = 00000000000000000000001110000100, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001110101100
+# refmod: input A =         900, input B =          40, output OUT =         940
+# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001110101100
+# UVM_INFO @ 1695: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        514, input B =         33, output OUT =        547
+# adder: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000100001, output OUT = 00000000000000000000001000100011
+# refmod: input A =         514, input B =          33, output OUT =         547
+# refmod: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000100001, output OUT = 00000000000000000000001000100011
+# UVM_INFO @ 1725: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        997, input B =         54, output OUT =       1051
+# adder: input A = 00000000000000000000001111100101, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000010000011011
+# refmod: input A =         997, input B =          54, output OUT =        1051
+# refmod: input A = 00000000000000000000001111100101, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000010000011011
+# UVM_INFO @ 1755: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        595, input B =          2, output OUT =        597
+# adder: input A = 00000000000000000000001001010011, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000001001010101
+# refmod: input A =         595, input B =           2, output OUT =         597
+# refmod: input A = 00000000000000000000001001010011, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000001001010101
+# UVM_INFO @ 1785: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        947, input B =         87, output OUT =       1034
+# adder: input A = 00000000000000000000001110110011, input B = 00000000000000000000000001010111, output OUT = 00000000000000000000010000001010
+# refmod: input A =         947, input B =          87, output OUT =        1034
+# refmod: input A = 00000000000000000000001110110011, input B = 00000000000000000000000001010111, output OUT = 00000000000000000000010000001010
+# UVM_INFO @ 1815: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        992, input B =         98, output OUT =       1090
+# adder: input A = 00000000000000000000001111100000, input B = 00000000000000000000000001100010, output OUT = 00000000000000000000010001000010
+# refmod: input A =         992, input B =          98, output OUT =        1090
+# refmod: input A = 00000000000000000000001111100000, input B = 00000000000000000000000001100010, output OUT = 00000000000000000000010001000010
+# UVM_INFO @ 1845: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        637, input B =         11, output OUT =        648
+# adder: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010001000
+# refmod: input A =         637, input B =          11, output OUT =         648
+# refmod: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010001000
+# UVM_INFO @ 1875: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        897, input B =         39, output OUT =        936
+# adder: input A = 00000000000000000000001110000001, input B = 00000000000000000000000000100111, output OUT = 00000000000000000000001110101000
+# refmod: input A =         897, input B =          39, output OUT =         936
+# refmod: input A = 00000000000000000000001110000001, input B = 00000000000000000000000000100111, output OUT = 00000000000000000000001110101000
+# UVM_INFO @ 1905: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        145, input B =          5, output OUT =        150
+# adder: input A = 00000000000000000000000010010001, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000010010110
+# refmod: input A =         145, input B =           5, output OUT =         150
+# refmod: input A = 00000000000000000000000010010001, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000010010110
+# UVM_INFO @ 1935: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        185, input B =          8, output OUT =        193
+# adder: input A = 00000000000000000000000010111001, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011000001
+# refmod: input A =         185, input B =           8, output OUT =         193
+# refmod: input A = 00000000000000000000000010111001, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011000001
+# UVM_INFO @ 1965: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        819, input B =         56, output OUT =        875
+# adder: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101101011
+# refmod: input A =         819, input B =          56, output OUT =         875
+# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101101011
+# UVM_INFO @ 1995: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        618, input B =         40, output OUT =        658
+# adder: input A = 00000000000000000000001001101010, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010010010
+# refmod: input A =         618, input B =          40, output OUT =         658
+# refmod: input A = 00000000000000000000001001101010, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010010010
+# UVM_INFO @ 2025: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        893, input B =         44, output OUT =        937
+# adder: input A = 00000000000000000000001101111101, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001110101001
+# refmod: input A =         893, input B =          44, output OUT =         937
+# refmod: input A = 00000000000000000000001101111101, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001110101001
+# UVM_INFO @ 2055: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        684, input B =         51, output OUT =        735
+# adder: input A = 00000000000000000000001010101100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001011011111
+# refmod: input A =         684, input B =          51, output OUT =         735
+# refmod: input A = 00000000000000000000001010101100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001011011111
+# UVM_INFO @ 2085: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        281, input B =          1, output OUT =        282
+# adder: input A = 00000000000000000000000100011001, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100011010
+# refmod: input A =         281, input B =           1, output OUT =         282
+# refmod: input A = 00000000000000000000000100011001, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100011010
+# UVM_INFO @ 2115: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        963, input B =         90, output OUT =       1053
+# adder: input A = 00000000000000000000001111000011, input B = 00000000000000000000000001011010, output OUT = 00000000000000000000010000011101
+# refmod: input A =         963, input B =          90, output OUT =        1053
+# refmod: input A = 00000000000000000000001111000011, input B = 00000000000000000000000001011010, output OUT = 00000000000000000000010000011101
+# UVM_INFO @ 2145: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        190, input B =          5, output OUT =        195
+# adder: input A = 00000000000000000000000010111110, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000011000011
+# refmod: input A =         190, input B =           5, output OUT =         195
+# refmod: input A = 00000000000000000000000010111110, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000011000011
+# UVM_INFO @ 2175: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        921, input B =         32, output OUT =        953
+# adder: input A = 00000000000000000000001110011001, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000001110111001
+# refmod: input A =         921, input B =          32, output OUT =         953
+# refmod: input A = 00000000000000000000001110011001, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000001110111001
+# UVM_INFO @ 2205: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        640, input B =         22, output OUT =        662
+# adder: input A = 00000000000000000000001010000000, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001010010110
+# refmod: input A =         640, input B =          22, output OUT =         662
+# refmod: input A = 00000000000000000000001010000000, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001010010110
+# UVM_INFO @ 2235: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        371, input B =         13, output OUT =        384
+# adder: input A = 00000000000000000000000101110011, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110000000
+# refmod: input A =         371, input B =          13, output OUT =         384
+# refmod: input A = 00000000000000000000000101110011, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110000000
+# UVM_INFO @ 2265: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        819, input B =         69, output OUT =        888
+# adder: input A = 00000000000000000000001100110011, input B = 00000000000000000000000001000101, output OUT = 00000000000000000000001101111000
+# refmod: input A =         819, input B =          69, output OUT =         888
+# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000001000101, output OUT = 00000000000000000000001101111000
+# UVM_INFO @ 2295: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        202, input B =         17, output OUT =        219
+# adder: input A = 00000000000000000000000011001010, input B = 00000000000000000000000000010001, output OUT = 00000000000000000000000011011011
+# refmod: input A =         202, input B =          17, output OUT =         219
+# refmod: input A = 00000000000000000000000011001010, input B = 00000000000000000000000000010001, output OUT = 00000000000000000000000011011011
+# UVM_INFO @ 2325: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        623, input B =         24, output OUT =        647
+# adder: input A = 00000000000000000000001001101111, input B = 00000000000000000000000000011000, output OUT = 00000000000000000000001010000111
+# refmod: input A =         623, input B =          24, output OUT =         647
+# refmod: input A = 00000000000000000000001001101111, input B = 00000000000000000000000000011000, output OUT = 00000000000000000000001010000111
+# UVM_INFO @ 2355: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        514, input B =         19, output OUT =        533
+# adder: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000010011, output OUT = 00000000000000000000001000010101
+# refmod: input A =         514, input B =          19, output OUT =         533
+# refmod: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000010011, output OUT = 00000000000000000000001000010101
+# UVM_INFO @ 2385: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        875, input B =         70, output OUT =        945
+# adder: input A = 00000000000000000000001101101011, input B = 00000000000000000000000001000110, output OUT = 00000000000000000000001110110001
+# refmod: input A =         875, input B =          70, output OUT =         945
+# refmod: input A = 00000000000000000000001101101011, input B = 00000000000000000000000001000110, output OUT = 00000000000000000000001110110001
+# UVM_INFO @ 2415: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        799, input B =         68, output OUT =        867
+# adder: input A = 00000000000000000000001100011111, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100011
+# refmod: input A =         799, input B =          68, output OUT =         867
+# refmod: input A = 00000000000000000000001100011111, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100011
+# UVM_INFO @ 2445: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        408, input B =         13, output OUT =        421
+# adder: input A = 00000000000000000000000110011000, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110100101
+# refmod: input A =         408, input B =          13, output OUT =         421
+# refmod: input A = 00000000000000000000000110011000, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110100101
+# UVM_INFO @ 2475: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        324, input B =         31, output OUT =        355
+# adder: input A = 00000000000000000000000101000100, input B = 00000000000000000000000000011111, output OUT = 00000000000000000000000101100011
+# refmod: input A =         324, input B =          31, output OUT =         355
+# refmod: input A = 00000000000000000000000101000100, input B = 00000000000000000000000000011111, output OUT = 00000000000000000000000101100011
+# UVM_INFO @ 2505: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        108, input B =          2, output OUT =        110
+# adder: input A = 00000000000000000000000001101100, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000000001101110
+# refmod: input A =         108, input B =           2, output OUT =         110
+# refmod: input A = 00000000000000000000000001101100, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000000001101110
+# UVM_INFO @ 2535: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        906, input B =          3, output OUT =        909
+# adder: input A = 00000000000000000000001110001010, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001110001101
+# refmod: input A =         906, input B =           3, output OUT =         909
+# refmod: input A = 00000000000000000000001110001010, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001110001101
+# UVM_INFO @ 2565: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        770, input B =         42, output OUT =        812
+# adder: input A = 00000000000000000000001100000010, input B = 00000000000000000000000000101010, output OUT = 00000000000000000000001100101100
+# refmod: input A =         770, input B =          42, output OUT =         812
+# refmod: input A = 00000000000000000000001100000010, input B = 00000000000000000000000000101010, output OUT = 00000000000000000000001100101100
+# UVM_INFO @ 2595: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        671, input B =         54, output OUT =        725
+# adder: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001011010101
+# refmod: input A =         671, input B =          54, output OUT =         725
+# refmod: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001011010101
+# UVM_INFO @ 2625: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        819, input B =         27, output OUT =        846
+# adder: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000011011, output OUT = 00000000000000000000001101001110
+# refmod: input A =         819, input B =          27, output OUT =         846
+# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000011011, output OUT = 00000000000000000000001101001110
+# UVM_INFO @ 2655: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        594, input B =         11, output OUT =        605
+# adder: input A = 00000000000000000000001001010010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001001011101
+# refmod: input A =         594, input B =          11, output OUT =         605
+# refmod: input A = 00000000000000000000001001010010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001001011101
+# UVM_INFO @ 2685: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        984, input B =         11, output OUT =        995
+# adder: input A = 00000000000000000000001111011000, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001111100011
+# refmod: input A =         984, input B =          11, output OUT =         995
+# refmod: input A = 00000000000000000000001111011000, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001111100011
+# UVM_INFO @ 2715: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        451, input B =          1, output OUT =        452
+# adder: input A = 00000000000000000000000111000011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000111000100
+# refmod: input A =         451, input B =           1, output OUT =         452
+# refmod: input A = 00000000000000000000000111000011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000111000100
+# UVM_INFO @ 2745: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        911, input B =         54, output OUT =        965
+# adder: input A = 00000000000000000000001110001111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001111000101
+# refmod: input A =         911, input B =          54, output OUT =         965
+# refmod: input A = 00000000000000000000001110001111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001111000101
+# UVM_INFO @ 2775: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        859, input B =         12, output OUT =        871
+# adder: input A = 00000000000000000000001101011011, input B = 00000000000000000000000000001100, output OUT = 00000000000000000000001101100111
+# refmod: input A =         859, input B =          12, output OUT =         871
+# refmod: input A = 00000000000000000000001101011011, input B = 00000000000000000000000000001100, output OUT = 00000000000000000000001101100111
+# UVM_INFO @ 2805: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        787, input B =         58, output OUT =        845
+# adder: input A = 00000000000000000000001100010011, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101001101
+# refmod: input A =         787, input B =          58, output OUT =         845
+# refmod: input A = 00000000000000000000001100010011, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101001101
+# UVM_INFO @ 2835: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        518, input B =         25, output OUT =        543
+# adder: input A = 00000000000000000000001000000110, input B = 00000000000000000000000000011001, output OUT = 00000000000000000000001000011111
+# refmod: input A =         518, input B =          25, output OUT =         543
+# refmod: input A = 00000000000000000000001000000110, input B = 00000000000000000000000000011001, output OUT = 00000000000000000000001000011111
+# UVM_INFO @ 2865: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        791, input B =         55, output OUT =        846
+# adder: input A = 00000000000000000000001100010111, input B = 00000000000000000000000000110111, output OUT = 00000000000000000000001101001110
+# refmod: input A =         791, input B =          55, output OUT =         846
+# refmod: input A = 00000000000000000000001100010111, input B = 00000000000000000000000000110111, output OUT = 00000000000000000000001101001110
+# UVM_INFO @ 2895: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        255, input B =         21, output OUT =        276
+# adder: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000000100010100
+# refmod: input A =         255, input B =          21, output OUT =         276
+# refmod: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000000100010100
+# UVM_INFO @ 2925: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        255, input B =          6, output OUT =        261
+# adder: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000000110, output OUT = 00000000000000000000000100000101
+# refmod: input A =         255, input B =           6, output OUT =         261
+# refmod: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000000110, output OUT = 00000000000000000000000100000101
+# UVM_INFO @ 2955: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        898, input B =         23, output OUT =        921
+# adder: input A = 00000000000000000000001110000010, input B = 00000000000000000000000000010111, output OUT = 00000000000000000000001110011001
+# refmod: input A =         898, input B =          23, output OUT =         921
+# refmod: input A = 00000000000000000000001110000010, input B = 00000000000000000000000000010111, output OUT = 00000000000000000000001110011001
+# UVM_INFO @ 2985: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        900, input B =         66, output OUT =        966
+# adder: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001111000110
+# refmod: input A =         900, input B =          66, output OUT =         966
+# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001111000110
+# UVM_INFO @ 3015: uvm_test_top.env_h.comp [Comparator Match] 
+# adder: input A =        435, input B =          1, output OUT =        436
+# adder: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100
+# refmod: input A =         435, input B =           1, output OUT =         436
+# refmod: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100
+# UVM_INFO @ 3045: uvm_test_top.env_h.comp [Comparator Match] 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3045: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../tb/env.sv(42) @ 3045: uvm_test_top.env_h [env] Reporting matched 101
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  106
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Comparator Match]   101
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [env]     1
+# ** Note: $finish    : /software/mentor/questa10.7c/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3045 ns  Iteration: 58  Instance: /top
+# End time: 12:37:12 on Mar 26,2022, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 4

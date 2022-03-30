@@ -13,7 +13,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim top 
-# Start time: 12:36:45 on Mar 26,2022
+# Start time: 23:45:31 on Mar 30,2022
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: ../tb/monitor.sv(49): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
 # ** Warning: ../tb/monitor_out.sv(48): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
@@ -56,526 +56,730 @@ run 5000 ns
 # UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
 # adder: input A =        491, input B =         30, output OUT =        521
 # adder: input A = 00000000000000000000000111101011, input B = 00000000000000000000000000011110, output OUT = 00000000000000000000001000001001
-# refmod: input A =         491, input B =          30, output OUT =         521
-# refmod: input A = 00000000000000000000000111101011, input B = 00000000000000000000000000011110, output OUT = 00000000000000000000001000001001
-# UVM_INFO @ 45: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         491, input B =          30, output OUT =         461
+# refmod: input A = 00000000000000000000000111101011, input B = 00000000000000000000000000011110, output OUT = 00000000000000000000000111001101
+# UVM_INFO @ 45: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1cd : rhs = 'h209
+# UVM_INFO @ 45: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 45: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        677, input B =         46, output OUT =        723
 # adder: input A = 00000000000000000000001010100101, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001011010011
-# refmod: input A =         677, input B =          46, output OUT =         723
-# refmod: input A = 00000000000000000000001010100101, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001011010011
-# UVM_INFO @ 75: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         677, input B =          46, output OUT =         631
+# refmod: input A = 00000000000000000000001010100101, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001001110111
+# UVM_INFO @ 75: reporter [MISCMP] Miscompare for exp.data: lhs = 'h277 : rhs = 'h2d3
+# UVM_INFO @ 75: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 75: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        337, input B =         26, output OUT =        363
 # adder: input A = 00000000000000000000000101010001, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000000101101011
-# refmod: input A =         337, input B =          26, output OUT =         363
-# refmod: input A = 00000000000000000000000101010001, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000000101101011
-# UVM_INFO @ 105: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         337, input B =          26, output OUT =         311
+# refmod: input A = 00000000000000000000000101010001, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000000100110111
+# UVM_INFO @ 105: reporter [MISCMP] Miscompare for exp.data: lhs = 'h137 : rhs = 'h16b
+# UVM_INFO @ 105: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 105: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        653, input B =          7, output OUT =        660
 # adder: input A = 00000000000000000000001010001101, input B = 00000000000000000000000000000111, output OUT = 00000000000000000000001010010100
-# refmod: input A =         653, input B =           7, output OUT =         660
-# refmod: input A = 00000000000000000000001010001101, input B = 00000000000000000000000000000111, output OUT = 00000000000000000000001010010100
-# UVM_INFO @ 135: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         653, input B =           7, output OUT =         646
+# refmod: input A = 00000000000000000000001010001101, input B = 00000000000000000000000000000111, output OUT = 00000000000000000000001010000110
+# UVM_INFO @ 135: reporter [MISCMP] Miscompare for exp.data: lhs = 'h286 : rhs = 'h294
+# UVM_INFO @ 135: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 135: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        734, input B =         64, output OUT =        798
 # adder: input A = 00000000000000000000001011011110, input B = 00000000000000000000000001000000, output OUT = 00000000000000000000001100011110
-# refmod: input A =         734, input B =          64, output OUT =         798
-# refmod: input A = 00000000000000000000001011011110, input B = 00000000000000000000000001000000, output OUT = 00000000000000000000001100011110
-# UVM_INFO @ 165: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         734, input B =          64, output OUT =         670
+# refmod: input A = 00000000000000000000001011011110, input B = 00000000000000000000000001000000, output OUT = 00000000000000000000001010011110
+# UVM_INFO @ 165: reporter [MISCMP] Miscompare for exp.data: lhs = 'h29e : rhs = 'h31e
+# UVM_INFO @ 165: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 165: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        569, input B =         45, output OUT =        614
 # adder: input A = 00000000000000000000001000111001, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001001100110
-# refmod: input A =         569, input B =          45, output OUT =         614
-# refmod: input A = 00000000000000000000001000111001, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001001100110
-# UVM_INFO @ 195: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         569, input B =          45, output OUT =         524
+# refmod: input A = 00000000000000000000001000111001, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001000001100
+# UVM_INFO @ 195: reporter [MISCMP] Miscompare for exp.data: lhs = 'h20c : rhs = 'h266
+# UVM_INFO @ 195: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 195: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        397, input B =         32, output OUT =        429
 # adder: input A = 00000000000000000000000110001101, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000000110101101
-# refmod: input A =         397, input B =          32, output OUT =         429
-# refmod: input A = 00000000000000000000000110001101, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000000110101101
-# UVM_INFO @ 225: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         397, input B =          32, output OUT =         365
+# refmod: input A = 00000000000000000000000110001101, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000000101101101
+# UVM_INFO @ 225: reporter [MISCMP] Miscompare for exp.data: lhs = 'h16d : rhs = 'h1ad
+# UVM_INFO @ 225: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 225: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        671, input B =         21, output OUT =        692
 # adder: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000001010110100
-# refmod: input A =         671, input B =          21, output OUT =         692
-# refmod: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000001010110100
-# UVM_INFO @ 255: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         671, input B =          21, output OUT =         650
+# refmod: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000001010001010
+# UVM_INFO @ 255: reporter [MISCMP] Miscompare for exp.data: lhs = 'h28a : rhs = 'h2b4
+# UVM_INFO @ 255: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 255: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        652, input B =         46, output OUT =        698
 # adder: input A = 00000000000000000000001010001100, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001010111010
-# refmod: input A =         652, input B =          46, output OUT =         698
-# refmod: input A = 00000000000000000000001010001100, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001010111010
-# UVM_INFO @ 285: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         652, input B =          46, output OUT =         606
+# refmod: input A = 00000000000000000000001010001100, input B = 00000000000000000000000000101110, output OUT = 00000000000000000000001001011110
+# UVM_INFO @ 285: reporter [MISCMP] Miscompare for exp.data: lhs = 'h25e : rhs = 'h2ba
+# UVM_INFO @ 285: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 285: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        804, input B =         56, output OUT =        860
 # adder: input A = 00000000000000000000001100100100, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101011100
-# refmod: input A =         804, input B =          56, output OUT =         860
-# refmod: input A = 00000000000000000000001100100100, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101011100
-# UVM_INFO @ 315: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         804, input B =          56, output OUT =         748
+# refmod: input A = 00000000000000000000001100100100, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001011101100
+# UVM_INFO @ 315: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2ec : rhs = 'h35c
+# UVM_INFO @ 315: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 315: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        954, input B =         92, output OUT =       1046
 # adder: input A = 00000000000000000000001110111010, input B = 00000000000000000000000001011100, output OUT = 00000000000000000000010000010110
-# refmod: input A =         954, input B =          92, output OUT =        1046
-# refmod: input A = 00000000000000000000001110111010, input B = 00000000000000000000000001011100, output OUT = 00000000000000000000010000010110
-# UVM_INFO @ 345: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         954, input B =          92, output OUT =         862
+# refmod: input A = 00000000000000000000001110111010, input B = 00000000000000000000000001011100, output OUT = 00000000000000000000001101011110
+# UVM_INFO @ 345: reporter [MISCMP] Miscompare for exp.data: lhs = 'h35e : rhs = 'h416
+# UVM_INFO @ 345: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 345: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        952, input B =         18, output OUT =        970
 # adder: input A = 00000000000000000000001110111000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000001111001010
-# refmod: input A =         952, input B =          18, output OUT =         970
-# refmod: input A = 00000000000000000000001110111000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000001111001010
-# UVM_INFO @ 375: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         952, input B =          18, output OUT =         934
+# refmod: input A = 00000000000000000000001110111000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000001110100110
+# UVM_INFO @ 375: reporter [MISCMP] Miscompare for exp.data: lhs = 'h3a6 : rhs = 'h3ca
+# UVM_INFO @ 375: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 375: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        378, input B =         11, output OUT =        389
 # adder: input A = 00000000000000000000000101111010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000000110000101
-# refmod: input A =         378, input B =          11, output OUT =         389
-# refmod: input A = 00000000000000000000000101111010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000000110000101
-# UVM_INFO @ 405: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         378, input B =          11, output OUT =         367
+# refmod: input A = 00000000000000000000000101111010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000000101101111
+# UVM_INFO @ 405: reporter [MISCMP] Miscompare for exp.data: lhs = 'h16f : rhs = 'h185
+# UVM_INFO @ 405: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 405: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        990, input B =         88, output OUT =       1078
 # adder: input A = 00000000000000000000001111011110, input B = 00000000000000000000000001011000, output OUT = 00000000000000000000010000110110
-# refmod: input A =         990, input B =          88, output OUT =        1078
-# refmod: input A = 00000000000000000000001111011110, input B = 00000000000000000000000001011000, output OUT = 00000000000000000000010000110110
-# UVM_INFO @ 435: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         990, input B =          88, output OUT =         902
+# refmod: input A = 00000000000000000000001111011110, input B = 00000000000000000000000001011000, output OUT = 00000000000000000000001110000110
+# UVM_INFO @ 435: reporter [MISCMP] Miscompare for exp.data: lhs = 'h386 : rhs = 'h436
+# UVM_INFO @ 435: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 435: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        650, input B =         56, output OUT =        706
 # adder: input A = 00000000000000000000001010001010, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001011000010
-# refmod: input A =         650, input B =          56, output OUT =         706
-# refmod: input A = 00000000000000000000001010001010, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001011000010
-# UVM_INFO @ 465: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         650, input B =          56, output OUT =         594
+# refmod: input A = 00000000000000000000001010001010, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001001010010
+# UVM_INFO @ 465: reporter [MISCMP] Miscompare for exp.data: lhs = 'h252 : rhs = 'h2c2
+# UVM_INFO @ 465: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 465: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        159, input B =         14, output OUT =        173
 # adder: input A = 00000000000000000000000010011111, input B = 00000000000000000000000000001110, output OUT = 00000000000000000000000010101101
-# refmod: input A =         159, input B =          14, output OUT =         173
-# refmod: input A = 00000000000000000000000010011111, input B = 00000000000000000000000000001110, output OUT = 00000000000000000000000010101101
-# UVM_INFO @ 495: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         159, input B =          14, output OUT =         145
+# refmod: input A = 00000000000000000000000010011111, input B = 00000000000000000000000000001110, output OUT = 00000000000000000000000010010001
+# UVM_INFO @ 495: reporter [MISCMP] Miscompare for exp.data: lhs = 'h91 : rhs = 'had
+# UVM_INFO @ 495: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 495: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        414, input B =          3, output OUT =        417
 # adder: input A = 00000000000000000000000110011110, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000000110100001
-# refmod: input A =         414, input B =           3, output OUT =         417
-# refmod: input A = 00000000000000000000000110011110, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000000110100001
-# UVM_INFO @ 525: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         414, input B =           3, output OUT =         411
+# refmod: input A = 00000000000000000000000110011110, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000000110011011
+# UVM_INFO @ 525: reporter [MISCMP] Miscompare for exp.data: lhs = 'h19b : rhs = 'h1a1
+# UVM_INFO @ 525: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 525: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        824, input B =         28, output OUT =        852
 # adder: input A = 00000000000000000000001100111000, input B = 00000000000000000000000000011100, output OUT = 00000000000000000000001101010100
-# refmod: input A =         824, input B =          28, output OUT =         852
-# refmod: input A = 00000000000000000000001100111000, input B = 00000000000000000000000000011100, output OUT = 00000000000000000000001101010100
-# UVM_INFO @ 555: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         824, input B =          28, output OUT =         796
+# refmod: input A = 00000000000000000000001100111000, input B = 00000000000000000000000000011100, output OUT = 00000000000000000000001100011100
+# UVM_INFO @ 555: reporter [MISCMP] Miscompare for exp.data: lhs = 'h31c : rhs = 'h354
+# UVM_INFO @ 555: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 555: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        772, input B =         51, output OUT =        823
 # adder: input A = 00000000000000000000001100000100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001100110111
-# refmod: input A =         772, input B =          51, output OUT =         823
-# refmod: input A = 00000000000000000000001100000100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001100110111
-# UVM_INFO @ 585: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         772, input B =          51, output OUT =         721
+# refmod: input A = 00000000000000000000001100000100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001011010001
+# UVM_INFO @ 585: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2d1 : rhs = 'h337
+# UVM_INFO @ 585: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 585: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        687, input B =         22, output OUT =        709
 # adder: input A = 00000000000000000000001010101111, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001011000101
-# refmod: input A =         687, input B =          22, output OUT =         709
-# refmod: input A = 00000000000000000000001010101111, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001011000101
-# UVM_INFO @ 615: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         687, input B =          22, output OUT =         665
+# refmod: input A = 00000000000000000000001010101111, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001010011001
+# UVM_INFO @ 615: reporter [MISCMP] Miscompare for exp.data: lhs = 'h299 : rhs = 'h2c5
+# UVM_INFO @ 615: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 615: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        196, input B =          8, output OUT =        204
 # adder: input A = 00000000000000000000000011000100, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011001100
-# refmod: input A =         196, input B =           8, output OUT =         204
-# refmod: input A = 00000000000000000000000011000100, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011001100
-# UVM_INFO @ 645: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         196, input B =           8, output OUT =         188
+# refmod: input A = 00000000000000000000000011000100, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000010111100
+# UVM_INFO @ 645: reporter [MISCMP] Miscompare for exp.data: lhs = 'hbc : rhs = 'hcc
+# UVM_INFO @ 645: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 645: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        789, input B =         41, output OUT =        830
 # adder: input A = 00000000000000000000001100010101, input B = 00000000000000000000000000101001, output OUT = 00000000000000000000001100111110
-# refmod: input A =         789, input B =          41, output OUT =         830
-# refmod: input A = 00000000000000000000001100010101, input B = 00000000000000000000000000101001, output OUT = 00000000000000000000001100111110
-# UVM_INFO @ 675: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         789, input B =          41, output OUT =         748
+# refmod: input A = 00000000000000000000001100010101, input B = 00000000000000000000000000101001, output OUT = 00000000000000000000001011101100
+# UVM_INFO @ 675: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2ec : rhs = 'h33e
+# UVM_INFO @ 675: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 675: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        591, input B =         49, output OUT =        640
 # adder: input A = 00000000000000000000001001001111, input B = 00000000000000000000000000110001, output OUT = 00000000000000000000001010000000
-# refmod: input A =         591, input B =          49, output OUT =         640
-# refmod: input A = 00000000000000000000001001001111, input B = 00000000000000000000000000110001, output OUT = 00000000000000000000001010000000
-# UVM_INFO @ 705: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         591, input B =          49, output OUT =         542
+# refmod: input A = 00000000000000000000001001001111, input B = 00000000000000000000000000110001, output OUT = 00000000000000000000001000011110
+# UVM_INFO @ 705: reporter [MISCMP] Miscompare for exp.data: lhs = 'h21e : rhs = 'h280
+# UVM_INFO @ 705: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 705: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        854, input B =         60, output OUT =        914
 # adder: input A = 00000000000000000000001101010110, input B = 00000000000000000000000000111100, output OUT = 00000000000000000000001110010010
-# refmod: input A =         854, input B =          60, output OUT =         914
-# refmod: input A = 00000000000000000000001101010110, input B = 00000000000000000000000000111100, output OUT = 00000000000000000000001110010010
-# UVM_INFO @ 735: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         854, input B =          60, output OUT =         794
+# refmod: input A = 00000000000000000000001101010110, input B = 00000000000000000000000000111100, output OUT = 00000000000000000000001100011010
+# UVM_INFO @ 735: reporter [MISCMP] Miscompare for exp.data: lhs = 'h31a : rhs = 'h392
+# UVM_INFO @ 735: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 735: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        722, input B =         59, output OUT =        781
 # adder: input A = 00000000000000000000001011010010, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001100001101
-# refmod: input A =         722, input B =          59, output OUT =         781
-# refmod: input A = 00000000000000000000001011010010, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001100001101
-# UVM_INFO @ 765: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         722, input B =          59, output OUT =         663
+# refmod: input A = 00000000000000000000001011010010, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001010010111
+# UVM_INFO @ 765: reporter [MISCMP] Miscompare for exp.data: lhs = 'h297 : rhs = 'h30d
+# UVM_INFO @ 765: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 765: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        830, input B =         58, output OUT =        888
 # adder: input A = 00000000000000000000001100111110, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101111000
-# refmod: input A =         830, input B =          58, output OUT =         888
-# refmod: input A = 00000000000000000000001100111110, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101111000
-# UVM_INFO @ 795: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         830, input B =          58, output OUT =         772
+# refmod: input A = 00000000000000000000001100111110, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001100000100
+# UVM_INFO @ 795: reporter [MISCMP] Miscompare for exp.data: lhs = 'h304 : rhs = 'h378
+# UVM_INFO @ 795: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 795: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        758, input B =         43, output OUT =        801
 # adder: input A = 00000000000000000000001011110110, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001100100001
-# refmod: input A =         758, input B =          43, output OUT =         801
-# refmod: input A = 00000000000000000000001011110110, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001100100001
-# UVM_INFO @ 825: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         758, input B =          43, output OUT =         715
+# refmod: input A = 00000000000000000000001011110110, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001011001011
+# UVM_INFO @ 825: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2cb : rhs = 'h321
+# UVM_INFO @ 825: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 825: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        186, input B =         16, output OUT =        202
 # adder: input A = 00000000000000000000000010111010, input B = 00000000000000000000000000010000, output OUT = 00000000000000000000000011001010
-# refmod: input A =         186, input B =          16, output OUT =         202
-# refmod: input A = 00000000000000000000000010111010, input B = 00000000000000000000000000010000, output OUT = 00000000000000000000000011001010
-# UVM_INFO @ 855: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         186, input B =          16, output OUT =         170
+# refmod: input A = 00000000000000000000000010111010, input B = 00000000000000000000000000010000, output OUT = 00000000000000000000000010101010
+# UVM_INFO @ 855: reporter [MISCMP] Miscompare for exp.data: lhs = 'haa : rhs = 'hca
+# UVM_INFO @ 855: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 855: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        952, input B =         84, output OUT =       1036
 # adder: input A = 00000000000000000000001110111000, input B = 00000000000000000000000001010100, output OUT = 00000000000000000000010000001100
-# refmod: input A =         952, input B =          84, output OUT =        1036
-# refmod: input A = 00000000000000000000001110111000, input B = 00000000000000000000000001010100, output OUT = 00000000000000000000010000001100
-# UVM_INFO @ 885: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         952, input B =          84, output OUT =         868
+# refmod: input A = 00000000000000000000001110111000, input B = 00000000000000000000000001010100, output OUT = 00000000000000000000001101100100
+# UVM_INFO @ 885: reporter [MISCMP] Miscompare for exp.data: lhs = 'h364 : rhs = 'h40c
+# UVM_INFO @ 885: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 885: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        352, input B =          9, output OUT =        361
 # adder: input A = 00000000000000000000000101100000, input B = 00000000000000000000000000001001, output OUT = 00000000000000000000000101101001
-# refmod: input A =         352, input B =           9, output OUT =         361
-# refmod: input A = 00000000000000000000000101100000, input B = 00000000000000000000000000001001, output OUT = 00000000000000000000000101101001
-# UVM_INFO @ 915: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         352, input B =           9, output OUT =         343
+# refmod: input A = 00000000000000000000000101100000, input B = 00000000000000000000000000001001, output OUT = 00000000000000000000000101010111
+# UVM_INFO @ 915: reporter [MISCMP] Miscompare for exp.data: lhs = 'h157 : rhs = 'h169
+# UVM_INFO @ 915: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 915: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        296, input B =         18, output OUT =        314
 # adder: input A = 00000000000000000000000100101000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000100111010
-# refmod: input A =         296, input B =          18, output OUT =         314
-# refmod: input A = 00000000000000000000000100101000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000100111010
-# UVM_INFO @ 945: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         296, input B =          18, output OUT =         278
+# refmod: input A = 00000000000000000000000100101000, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000100010110
+# UVM_INFO @ 945: reporter [MISCMP] Miscompare for exp.data: lhs = 'h116 : rhs = 'h13a
+# UVM_INFO @ 945: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 945: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        800, input B =         68, output OUT =        868
 # adder: input A = 00000000000000000000001100100000, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100100
-# refmod: input A =         800, input B =          68, output OUT =         868
-# refmod: input A = 00000000000000000000001100100000, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100100
-# UVM_INFO @ 975: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         800, input B =          68, output OUT =         732
+# refmod: input A = 00000000000000000000001100100000, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001011011100
+# UVM_INFO @ 975: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2dc : rhs = 'h364
+# UVM_INFO @ 975: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 975: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        516, input B =         45, output OUT =        561
 # adder: input A = 00000000000000000000001000000100, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001000110001
-# refmod: input A =         516, input B =          45, output OUT =         561
-# refmod: input A = 00000000000000000000001000000100, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000001000110001
-# UVM_INFO @ 1005: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         516, input B =          45, output OUT =         471
+# refmod: input A = 00000000000000000000001000000100, input B = 00000000000000000000000000101101, output OUT = 00000000000000000000000111010111
+# UVM_INFO @ 1005: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1d7 : rhs = 'h231
+# UVM_INFO @ 1005: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1005: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        957, input B =         86, output OUT =       1043
 # adder: input A = 00000000000000000000001110111101, input B = 00000000000000000000000001010110, output OUT = 00000000000000000000010000010011
-# refmod: input A =         957, input B =          86, output OUT =        1043
-# refmod: input A = 00000000000000000000001110111101, input B = 00000000000000000000000001010110, output OUT = 00000000000000000000010000010011
-# UVM_INFO @ 1035: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         957, input B =          86, output OUT =         871
+# refmod: input A = 00000000000000000000001110111101, input B = 00000000000000000000000001010110, output OUT = 00000000000000000000001101100111
+# UVM_INFO @ 1035: reporter [MISCMP] Miscompare for exp.data: lhs = 'h367 : rhs = 'h413
+# UVM_INFO @ 1035: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1035: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        960, input B =         94, output OUT =       1054
 # adder: input A = 00000000000000000000001111000000, input B = 00000000000000000000000001011110, output OUT = 00000000000000000000010000011110
-# refmod: input A =         960, input B =          94, output OUT =        1054
-# refmod: input A = 00000000000000000000001111000000, input B = 00000000000000000000000001011110, output OUT = 00000000000000000000010000011110
-# UVM_INFO @ 1065: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         960, input B =          94, output OUT =         866
+# refmod: input A = 00000000000000000000001111000000, input B = 00000000000000000000000001011110, output OUT = 00000000000000000000001101100010
+# UVM_INFO @ 1065: reporter [MISCMP] Miscompare for exp.data: lhs = 'h362 : rhs = 'h41e
+# UVM_INFO @ 1065: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1065: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        948, input B =         82, output OUT =       1030
 # adder: input A = 00000000000000000000001110110100, input B = 00000000000000000000000001010010, output OUT = 00000000000000000000010000000110
-# refmod: input A =         948, input B =          82, output OUT =        1030
-# refmod: input A = 00000000000000000000001110110100, input B = 00000000000000000000000001010010, output OUT = 00000000000000000000010000000110
-# UVM_INFO @ 1095: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         948, input B =          82, output OUT =         866
+# refmod: input A = 00000000000000000000001110110100, input B = 00000000000000000000000001010010, output OUT = 00000000000000000000001101100010
+# UVM_INFO @ 1095: reporter [MISCMP] Miscompare for exp.data: lhs = 'h362 : rhs = 'h406
+# UVM_INFO @ 1095: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1095: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        984, input B =         85, output OUT =       1069
 # adder: input A = 00000000000000000000001111011000, input B = 00000000000000000000000001010101, output OUT = 00000000000000000000010000101101
-# refmod: input A =         984, input B =          85, output OUT =        1069
-# refmod: input A = 00000000000000000000001111011000, input B = 00000000000000000000000001010101, output OUT = 00000000000000000000010000101101
-# UVM_INFO @ 1125: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         984, input B =          85, output OUT =         899
+# refmod: input A = 00000000000000000000001111011000, input B = 00000000000000000000000001010101, output OUT = 00000000000000000000001110000011
+# UVM_INFO @ 1125: reporter [MISCMP] Miscompare for exp.data: lhs = 'h383 : rhs = 'h42d
+# UVM_INFO @ 1125: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1125: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        311, input B =          1, output OUT =        312
 # adder: input A = 00000000000000000000000100110111, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100111000
-# refmod: input A =         311, input B =           1, output OUT =         312
-# refmod: input A = 00000000000000000000000100110111, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100111000
-# UVM_INFO @ 1155: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         311, input B =           1, output OUT =         310
+# refmod: input A = 00000000000000000000000100110111, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100110110
+# UVM_INFO @ 1155: reporter [MISCMP] Miscompare for exp.data: lhs = 'h136 : rhs = 'h138
+# UVM_INFO @ 1155: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1155: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        955, input B =         67, output OUT =       1022
 # adder: input A = 00000000000000000000001110111011, input B = 00000000000000000000000001000011, output OUT = 00000000000000000000001111111110
-# refmod: input A =         955, input B =          67, output OUT =        1022
-# refmod: input A = 00000000000000000000001110111011, input B = 00000000000000000000000001000011, output OUT = 00000000000000000000001111111110
-# UVM_INFO @ 1185: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         955, input B =          67, output OUT =         888
+# refmod: input A = 00000000000000000000001110111011, input B = 00000000000000000000000001000011, output OUT = 00000000000000000000001101111000
+# UVM_INFO @ 1185: reporter [MISCMP] Miscompare for exp.data: lhs = 'h378 : rhs = 'h3fe
+# UVM_INFO @ 1185: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1185: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        603, input B =         57, output OUT =        660
 # adder: input A = 00000000000000000000001001011011, input B = 00000000000000000000000000111001, output OUT = 00000000000000000000001010010100
-# refmod: input A =         603, input B =          57, output OUT =         660
-# refmod: input A = 00000000000000000000001001011011, input B = 00000000000000000000000000111001, output OUT = 00000000000000000000001010010100
-# UVM_INFO @ 1215: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         603, input B =          57, output OUT =         546
+# refmod: input A = 00000000000000000000001001011011, input B = 00000000000000000000000000111001, output OUT = 00000000000000000000001000100010
+# UVM_INFO @ 1215: reporter [MISCMP] Miscompare for exp.data: lhs = 'h222 : rhs = 'h294
+# UVM_INFO @ 1215: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1215: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        954, input B =         62, output OUT =       1016
 # adder: input A = 00000000000000000000001110111010, input B = 00000000000000000000000000111110, output OUT = 00000000000000000000001111111000
-# refmod: input A =         954, input B =          62, output OUT =        1016
-# refmod: input A = 00000000000000000000001110111010, input B = 00000000000000000000000000111110, output OUT = 00000000000000000000001111111000
-# UVM_INFO @ 1245: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         954, input B =          62, output OUT =         892
+# refmod: input A = 00000000000000000000001110111010, input B = 00000000000000000000000000111110, output OUT = 00000000000000000000001101111100
+# UVM_INFO @ 1245: reporter [MISCMP] Miscompare for exp.data: lhs = 'h37c : rhs = 'h3f8
+# UVM_INFO @ 1245: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1245: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        706, input B =         44, output OUT =        750
 # adder: input A = 00000000000000000000001011000010, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001011101110
-# refmod: input A =         706, input B =          44, output OUT =         750
-# refmod: input A = 00000000000000000000001011000010, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001011101110
-# UVM_INFO @ 1275: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         706, input B =          44, output OUT =         662
+# refmod: input A = 00000000000000000000001011000010, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001010010110
+# UVM_INFO @ 1275: reporter [MISCMP] Miscompare for exp.data: lhs = 'h296 : rhs = 'h2ee
+# UVM_INFO @ 1275: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1275: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        663, input B =         40, output OUT =        703
 # adder: input A = 00000000000000000000001010010111, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010111111
-# refmod: input A =         663, input B =          40, output OUT =         703
-# refmod: input A = 00000000000000000000001010010111, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010111111
-# UVM_INFO @ 1305: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         663, input B =          40, output OUT =         623
+# refmod: input A = 00000000000000000000001010010111, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001001101111
+# UVM_INFO @ 1305: reporter [MISCMP] Miscompare for exp.data: lhs = 'h26f : rhs = 'h2bf
+# UVM_INFO @ 1305: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1305: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        637, input B =         38, output OUT =        675
 # adder: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000100110, output OUT = 00000000000000000000001010100011
-# refmod: input A =         637, input B =          38, output OUT =         675
-# refmod: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000100110, output OUT = 00000000000000000000001010100011
-# UVM_INFO @ 1335: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         637, input B =          38, output OUT =         599
+# refmod: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000100110, output OUT = 00000000000000000000001001010111
+# UVM_INFO @ 1335: reporter [MISCMP] Miscompare for exp.data: lhs = 'h257 : rhs = 'h2a3
+# UVM_INFO @ 1335: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1335: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        531, input B =          3, output OUT =        534
 # adder: input A = 00000000000000000000001000010011, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001000010110
-# refmod: input A =         531, input B =           3, output OUT =         534
-# refmod: input A = 00000000000000000000001000010011, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001000010110
-# UVM_INFO @ 1365: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         531, input B =           3, output OUT =         528
+# refmod: input A = 00000000000000000000001000010011, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001000010000
+# UVM_INFO @ 1365: reporter [MISCMP] Miscompare for exp.data: lhs = 'h210 : rhs = 'h216
+# UVM_INFO @ 1365: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1365: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        577, input B =         35, output OUT =        612
 # adder: input A = 00000000000000000000001001000001, input B = 00000000000000000000000000100011, output OUT = 00000000000000000000001001100100
-# refmod: input A =         577, input B =          35, output OUT =         612
-# refmod: input A = 00000000000000000000001001000001, input B = 00000000000000000000000000100011, output OUT = 00000000000000000000001001100100
-# UVM_INFO @ 1395: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         577, input B =          35, output OUT =         542
+# refmod: input A = 00000000000000000000001001000001, input B = 00000000000000000000000000100011, output OUT = 00000000000000000000001000011110
+# UVM_INFO @ 1395: reporter [MISCMP] Miscompare for exp.data: lhs = 'h21e : rhs = 'h264
+# UVM_INFO @ 1395: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1395: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        971, input B =         43, output OUT =       1014
 # adder: input A = 00000000000000000000001111001011, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001111110110
-# refmod: input A =         971, input B =          43, output OUT =        1014
-# refmod: input A = 00000000000000000000001111001011, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001111110110
-# UVM_INFO @ 1425: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         971, input B =          43, output OUT =         928
+# refmod: input A = 00000000000000000000001111001011, input B = 00000000000000000000000000101011, output OUT = 00000000000000000000001110100000
+# UVM_INFO @ 1425: reporter [MISCMP] Miscompare for exp.data: lhs = 'h3a0 : rhs = 'h3f6
+# UVM_INFO @ 1425: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1425: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        442, input B =         18, output OUT =        460
 # adder: input A = 00000000000000000000000110111010, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000111001100
-# refmod: input A =         442, input B =          18, output OUT =         460
-# refmod: input A = 00000000000000000000000110111010, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000111001100
-# UVM_INFO @ 1455: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         442, input B =          18, output OUT =         424
+# refmod: input A = 00000000000000000000000110111010, input B = 00000000000000000000000000010010, output OUT = 00000000000000000000000110101000
+# UVM_INFO @ 1455: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1a8 : rhs = 'h1cc
+# UVM_INFO @ 1455: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1455: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        572, input B =         50, output OUT =        622
 # adder: input A = 00000000000000000000001000111100, input B = 00000000000000000000000000110010, output OUT = 00000000000000000000001001101110
-# refmod: input A =         572, input B =          50, output OUT =         622
-# refmod: input A = 00000000000000000000001000111100, input B = 00000000000000000000000000110010, output OUT = 00000000000000000000001001101110
-# UVM_INFO @ 1485: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         572, input B =          50, output OUT =         522
+# refmod: input A = 00000000000000000000001000111100, input B = 00000000000000000000000000110010, output OUT = 00000000000000000000001000001010
+# UVM_INFO @ 1485: reporter [MISCMP] Miscompare for exp.data: lhs = 'h20a : rhs = 'h26e
+# UVM_INFO @ 1485: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1485: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        711, input B =         26, output OUT =        737
 # adder: input A = 00000000000000000000001011000111, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000001011100001
-# refmod: input A =         711, input B =          26, output OUT =         737
-# refmod: input A = 00000000000000000000001011000111, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000001011100001
-# UVM_INFO @ 1515: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         711, input B =          26, output OUT =         685
+# refmod: input A = 00000000000000000000001011000111, input B = 00000000000000000000000000011010, output OUT = 00000000000000000000001010101101
+# UVM_INFO @ 1515: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2ad : rhs = 'h2e1
+# UVM_INFO @ 1515: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1515: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        948, input B =         59, output OUT =       1007
 # adder: input A = 00000000000000000000001110110100, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001111101111
-# refmod: input A =         948, input B =          59, output OUT =        1007
-# refmod: input A = 00000000000000000000001110110100, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001111101111
-# UVM_INFO @ 1545: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         948, input B =          59, output OUT =         889
+# refmod: input A = 00000000000000000000001110110100, input B = 00000000000000000000000000111011, output OUT = 00000000000000000000001101111001
+# UVM_INFO @ 1545: reporter [MISCMP] Miscompare for exp.data: lhs = 'h379 : rhs = 'h3ef
+# UVM_INFO @ 1545: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1545: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        389, input B =          5, output OUT =        394
 # adder: input A = 00000000000000000000000110000101, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000110001010
-# refmod: input A =         389, input B =           5, output OUT =         394
-# refmod: input A = 00000000000000000000000110000101, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000110001010
-# UVM_INFO @ 1575: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         389, input B =           5, output OUT =         384
+# refmod: input A = 00000000000000000000000110000101, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000110000000
+# UVM_INFO @ 1575: reporter [MISCMP] Miscompare for exp.data: lhs = 'h180 : rhs = 'h18a
+# UVM_INFO @ 1575: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1575: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        666, input B =         11, output OUT =        677
 # adder: input A = 00000000000000000000001010011010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010100101
-# refmod: input A =         666, input B =          11, output OUT =         677
-# refmod: input A = 00000000000000000000001010011010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010100101
-# UVM_INFO @ 1605: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         666, input B =          11, output OUT =         655
+# refmod: input A = 00000000000000000000001010011010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010001111
+# UVM_INFO @ 1605: reporter [MISCMP] Miscompare for exp.data: lhs = 'h28f : rhs = 'h2a5
+# UVM_INFO @ 1605: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1605: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        366, input B =          1, output OUT =        367
 # adder: input A = 00000000000000000000000101101110, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000101101111
-# refmod: input A =         366, input B =           1, output OUT =         367
-# refmod: input A = 00000000000000000000000101101110, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000101101111
-# UVM_INFO @ 1635: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         366, input B =           1, output OUT =         365
+# refmod: input A = 00000000000000000000000101101110, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000101101101
+# UVM_INFO @ 1635: reporter [MISCMP] Miscompare for exp.data: lhs = 'h16d : rhs = 'h16f
+# UVM_INFO @ 1635: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1635: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        225, input B =         15, output OUT =        240
 # adder: input A = 00000000000000000000000011100001, input B = 00000000000000000000000000001111, output OUT = 00000000000000000000000011110000
-# refmod: input A =         225, input B =          15, output OUT =         240
-# refmod: input A = 00000000000000000000000011100001, input B = 00000000000000000000000000001111, output OUT = 00000000000000000000000011110000
-# UVM_INFO @ 1665: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         225, input B =          15, output OUT =         210
+# refmod: input A = 00000000000000000000000011100001, input B = 00000000000000000000000000001111, output OUT = 00000000000000000000000011010010
+# UVM_INFO @ 1665: reporter [MISCMP] Miscompare for exp.data: lhs = 'hd2 : rhs = 'hf0
+# UVM_INFO @ 1665: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1665: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        900, input B =         40, output OUT =        940
 # adder: input A = 00000000000000000000001110000100, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001110101100
-# refmod: input A =         900, input B =          40, output OUT =         940
-# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001110101100
-# UVM_INFO @ 1695: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         900, input B =          40, output OUT =         860
+# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001101011100
+# UVM_INFO @ 1695: reporter [MISCMP] Miscompare for exp.data: lhs = 'h35c : rhs = 'h3ac
+# UVM_INFO @ 1695: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1695: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        514, input B =         33, output OUT =        547
 # adder: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000100001, output OUT = 00000000000000000000001000100011
-# refmod: input A =         514, input B =          33, output OUT =         547
-# refmod: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000100001, output OUT = 00000000000000000000001000100011
-# UVM_INFO @ 1725: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         514, input B =          33, output OUT =         481
+# refmod: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000100001, output OUT = 00000000000000000000000111100001
+# UVM_INFO @ 1725: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1e1 : rhs = 'h223
+# UVM_INFO @ 1725: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1725: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        997, input B =         54, output OUT =       1051
 # adder: input A = 00000000000000000000001111100101, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000010000011011
-# refmod: input A =         997, input B =          54, output OUT =        1051
-# refmod: input A = 00000000000000000000001111100101, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000010000011011
-# UVM_INFO @ 1755: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         997, input B =          54, output OUT =         943
+# refmod: input A = 00000000000000000000001111100101, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001110101111
+# UVM_INFO @ 1755: reporter [MISCMP] Miscompare for exp.data: lhs = 'h3af : rhs = 'h41b
+# UVM_INFO @ 1755: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1755: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        595, input B =          2, output OUT =        597
 # adder: input A = 00000000000000000000001001010011, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000001001010101
-# refmod: input A =         595, input B =           2, output OUT =         597
-# refmod: input A = 00000000000000000000001001010011, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000001001010101
-# UVM_INFO @ 1785: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         595, input B =           2, output OUT =         593
+# refmod: input A = 00000000000000000000001001010011, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000001001010001
+# UVM_INFO @ 1785: reporter [MISCMP] Miscompare for exp.data: lhs = 'h251 : rhs = 'h255
+# UVM_INFO @ 1785: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1785: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        947, input B =         87, output OUT =       1034
 # adder: input A = 00000000000000000000001110110011, input B = 00000000000000000000000001010111, output OUT = 00000000000000000000010000001010
-# refmod: input A =         947, input B =          87, output OUT =        1034
-# refmod: input A = 00000000000000000000001110110011, input B = 00000000000000000000000001010111, output OUT = 00000000000000000000010000001010
-# UVM_INFO @ 1815: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         947, input B =          87, output OUT =         860
+# refmod: input A = 00000000000000000000001110110011, input B = 00000000000000000000000001010111, output OUT = 00000000000000000000001101011100
+# UVM_INFO @ 1815: reporter [MISCMP] Miscompare for exp.data: lhs = 'h35c : rhs = 'h40a
+# UVM_INFO @ 1815: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1815: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        992, input B =         98, output OUT =       1090
 # adder: input A = 00000000000000000000001111100000, input B = 00000000000000000000000001100010, output OUT = 00000000000000000000010001000010
-# refmod: input A =         992, input B =          98, output OUT =        1090
-# refmod: input A = 00000000000000000000001111100000, input B = 00000000000000000000000001100010, output OUT = 00000000000000000000010001000010
-# UVM_INFO @ 1845: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         992, input B =          98, output OUT =         894
+# refmod: input A = 00000000000000000000001111100000, input B = 00000000000000000000000001100010, output OUT = 00000000000000000000001101111110
+# UVM_INFO @ 1845: reporter [MISCMP] Miscompare for exp.data: lhs = 'h37e : rhs = 'h442
+# UVM_INFO @ 1845: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1845: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        637, input B =         11, output OUT =        648
 # adder: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010001000
-# refmod: input A =         637, input B =          11, output OUT =         648
-# refmod: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001010001000
-# UVM_INFO @ 1875: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         637, input B =          11, output OUT =         626
+# refmod: input A = 00000000000000000000001001111101, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001001110010
+# UVM_INFO @ 1875: reporter [MISCMP] Miscompare for exp.data: lhs = 'h272 : rhs = 'h288
+# UVM_INFO @ 1875: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1875: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        897, input B =         39, output OUT =        936
 # adder: input A = 00000000000000000000001110000001, input B = 00000000000000000000000000100111, output OUT = 00000000000000000000001110101000
-# refmod: input A =         897, input B =          39, output OUT =         936
-# refmod: input A = 00000000000000000000001110000001, input B = 00000000000000000000000000100111, output OUT = 00000000000000000000001110101000
-# UVM_INFO @ 1905: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         897, input B =          39, output OUT =         858
+# refmod: input A = 00000000000000000000001110000001, input B = 00000000000000000000000000100111, output OUT = 00000000000000000000001101011010
+# UVM_INFO @ 1905: reporter [MISCMP] Miscompare for exp.data: lhs = 'h35a : rhs = 'h3a8
+# UVM_INFO @ 1905: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1905: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        145, input B =          5, output OUT =        150
 # adder: input A = 00000000000000000000000010010001, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000010010110
-# refmod: input A =         145, input B =           5, output OUT =         150
-# refmod: input A = 00000000000000000000000010010001, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000010010110
-# UVM_INFO @ 1935: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         145, input B =           5, output OUT =         140
+# refmod: input A = 00000000000000000000000010010001, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000010001100
+# UVM_INFO @ 1935: reporter [MISCMP] Miscompare for exp.data: lhs = 'h8c : rhs = 'h96
+# UVM_INFO @ 1935: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1935: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        185, input B =          8, output OUT =        193
 # adder: input A = 00000000000000000000000010111001, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011000001
-# refmod: input A =         185, input B =           8, output OUT =         193
-# refmod: input A = 00000000000000000000000010111001, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000011000001
-# UVM_INFO @ 1965: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         185, input B =           8, output OUT =         177
+# refmod: input A = 00000000000000000000000010111001, input B = 00000000000000000000000000001000, output OUT = 00000000000000000000000010110001
+# UVM_INFO @ 1965: reporter [MISCMP] Miscompare for exp.data: lhs = 'hb1 : rhs = 'hc1
+# UVM_INFO @ 1965: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1965: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        819, input B =         56, output OUT =        875
 # adder: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101101011
-# refmod: input A =         819, input B =          56, output OUT =         875
-# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001101101011
-# UVM_INFO @ 1995: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         819, input B =          56, output OUT =         763
+# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000111000, output OUT = 00000000000000000000001011111011
+# UVM_INFO @ 1995: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2fb : rhs = 'h36b
+# UVM_INFO @ 1995: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 1995: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        618, input B =         40, output OUT =        658
 # adder: input A = 00000000000000000000001001101010, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010010010
-# refmod: input A =         618, input B =          40, output OUT =         658
-# refmod: input A = 00000000000000000000001001101010, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001010010010
-# UVM_INFO @ 2025: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         618, input B =          40, output OUT =         578
+# refmod: input A = 00000000000000000000001001101010, input B = 00000000000000000000000000101000, output OUT = 00000000000000000000001001000010
+# UVM_INFO @ 2025: reporter [MISCMP] Miscompare for exp.data: lhs = 'h242 : rhs = 'h292
+# UVM_INFO @ 2025: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2025: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        893, input B =         44, output OUT =        937
 # adder: input A = 00000000000000000000001101111101, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001110101001
-# refmod: input A =         893, input B =          44, output OUT =         937
-# refmod: input A = 00000000000000000000001101111101, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001110101001
-# UVM_INFO @ 2055: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         893, input B =          44, output OUT =         849
+# refmod: input A = 00000000000000000000001101111101, input B = 00000000000000000000000000101100, output OUT = 00000000000000000000001101010001
+# UVM_INFO @ 2055: reporter [MISCMP] Miscompare for exp.data: lhs = 'h351 : rhs = 'h3a9
+# UVM_INFO @ 2055: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2055: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        684, input B =         51, output OUT =        735
 # adder: input A = 00000000000000000000001010101100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001011011111
-# refmod: input A =         684, input B =          51, output OUT =         735
-# refmod: input A = 00000000000000000000001010101100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001011011111
-# UVM_INFO @ 2085: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         684, input B =          51, output OUT =         633
+# refmod: input A = 00000000000000000000001010101100, input B = 00000000000000000000000000110011, output OUT = 00000000000000000000001001111001
+# UVM_INFO @ 2085: reporter [MISCMP] Miscompare for exp.data: lhs = 'h279 : rhs = 'h2df
+# UVM_INFO @ 2085: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2085: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        281, input B =          1, output OUT =        282
 # adder: input A = 00000000000000000000000100011001, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100011010
-# refmod: input A =         281, input B =           1, output OUT =         282
-# refmod: input A = 00000000000000000000000100011001, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100011010
-# UVM_INFO @ 2115: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         281, input B =           1, output OUT =         280
+# refmod: input A = 00000000000000000000000100011001, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000100011000
+# UVM_INFO @ 2115: reporter [MISCMP] Miscompare for exp.data: lhs = 'h118 : rhs = 'h11a
+# UVM_INFO @ 2115: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2115: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        963, input B =         90, output OUT =       1053
 # adder: input A = 00000000000000000000001111000011, input B = 00000000000000000000000001011010, output OUT = 00000000000000000000010000011101
-# refmod: input A =         963, input B =          90, output OUT =        1053
-# refmod: input A = 00000000000000000000001111000011, input B = 00000000000000000000000001011010, output OUT = 00000000000000000000010000011101
-# UVM_INFO @ 2145: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         963, input B =          90, output OUT =         873
+# refmod: input A = 00000000000000000000001111000011, input B = 00000000000000000000000001011010, output OUT = 00000000000000000000001101101001
+# UVM_INFO @ 2145: reporter [MISCMP] Miscompare for exp.data: lhs = 'h369 : rhs = 'h41d
+# UVM_INFO @ 2145: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2145: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        190, input B =          5, output OUT =        195
 # adder: input A = 00000000000000000000000010111110, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000011000011
-# refmod: input A =         190, input B =           5, output OUT =         195
-# refmod: input A = 00000000000000000000000010111110, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000011000011
-# UVM_INFO @ 2175: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         190, input B =           5, output OUT =         185
+# refmod: input A = 00000000000000000000000010111110, input B = 00000000000000000000000000000101, output OUT = 00000000000000000000000010111001
+# UVM_INFO @ 2175: reporter [MISCMP] Miscompare for exp.data: lhs = 'hb9 : rhs = 'hc3
+# UVM_INFO @ 2175: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2175: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        921, input B =         32, output OUT =        953
 # adder: input A = 00000000000000000000001110011001, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000001110111001
-# refmod: input A =         921, input B =          32, output OUT =         953
-# refmod: input A = 00000000000000000000001110011001, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000001110111001
-# UVM_INFO @ 2205: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         921, input B =          32, output OUT =         889
+# refmod: input A = 00000000000000000000001110011001, input B = 00000000000000000000000000100000, output OUT = 00000000000000000000001101111001
+# UVM_INFO @ 2205: reporter [MISCMP] Miscompare for exp.data: lhs = 'h379 : rhs = 'h3b9
+# UVM_INFO @ 2205: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2205: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        640, input B =         22, output OUT =        662
 # adder: input A = 00000000000000000000001010000000, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001010010110
-# refmod: input A =         640, input B =          22, output OUT =         662
-# refmod: input A = 00000000000000000000001010000000, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001010010110
-# UVM_INFO @ 2235: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         640, input B =          22, output OUT =         618
+# refmod: input A = 00000000000000000000001010000000, input B = 00000000000000000000000000010110, output OUT = 00000000000000000000001001101010
+# UVM_INFO @ 2235: reporter [MISCMP] Miscompare for exp.data: lhs = 'h26a : rhs = 'h296
+# UVM_INFO @ 2235: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2235: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        371, input B =         13, output OUT =        384
 # adder: input A = 00000000000000000000000101110011, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110000000
-# refmod: input A =         371, input B =          13, output OUT =         384
-# refmod: input A = 00000000000000000000000101110011, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110000000
-# UVM_INFO @ 2265: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         371, input B =          13, output OUT =         358
+# refmod: input A = 00000000000000000000000101110011, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000101100110
+# UVM_INFO @ 2265: reporter [MISCMP] Miscompare for exp.data: lhs = 'h166 : rhs = 'h180
+# UVM_INFO @ 2265: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2265: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        819, input B =         69, output OUT =        888
 # adder: input A = 00000000000000000000001100110011, input B = 00000000000000000000000001000101, output OUT = 00000000000000000000001101111000
-# refmod: input A =         819, input B =          69, output OUT =         888
-# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000001000101, output OUT = 00000000000000000000001101111000
-# UVM_INFO @ 2295: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         819, input B =          69, output OUT =         750
+# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000001000101, output OUT = 00000000000000000000001011101110
+# UVM_INFO @ 2295: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2ee : rhs = 'h378
+# UVM_INFO @ 2295: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2295: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        202, input B =         17, output OUT =        219
 # adder: input A = 00000000000000000000000011001010, input B = 00000000000000000000000000010001, output OUT = 00000000000000000000000011011011
-# refmod: input A =         202, input B =          17, output OUT =         219
-# refmod: input A = 00000000000000000000000011001010, input B = 00000000000000000000000000010001, output OUT = 00000000000000000000000011011011
-# UVM_INFO @ 2325: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         202, input B =          17, output OUT =         185
+# refmod: input A = 00000000000000000000000011001010, input B = 00000000000000000000000000010001, output OUT = 00000000000000000000000010111001
+# UVM_INFO @ 2325: reporter [MISCMP] Miscompare for exp.data: lhs = 'hb9 : rhs = 'hdb
+# UVM_INFO @ 2325: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2325: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        623, input B =         24, output OUT =        647
 # adder: input A = 00000000000000000000001001101111, input B = 00000000000000000000000000011000, output OUT = 00000000000000000000001010000111
-# refmod: input A =         623, input B =          24, output OUT =         647
-# refmod: input A = 00000000000000000000001001101111, input B = 00000000000000000000000000011000, output OUT = 00000000000000000000001010000111
-# UVM_INFO @ 2355: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         623, input B =          24, output OUT =         599
+# refmod: input A = 00000000000000000000001001101111, input B = 00000000000000000000000000011000, output OUT = 00000000000000000000001001010111
+# UVM_INFO @ 2355: reporter [MISCMP] Miscompare for exp.data: lhs = 'h257 : rhs = 'h287
+# UVM_INFO @ 2355: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2355: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        514, input B =         19, output OUT =        533
 # adder: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000010011, output OUT = 00000000000000000000001000010101
-# refmod: input A =         514, input B =          19, output OUT =         533
-# refmod: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000010011, output OUT = 00000000000000000000001000010101
-# UVM_INFO @ 2385: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         514, input B =          19, output OUT =         495
+# refmod: input A = 00000000000000000000001000000010, input B = 00000000000000000000000000010011, output OUT = 00000000000000000000000111101111
+# UVM_INFO @ 2385: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1ef : rhs = 'h215
+# UVM_INFO @ 2385: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2385: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        875, input B =         70, output OUT =        945
 # adder: input A = 00000000000000000000001101101011, input B = 00000000000000000000000001000110, output OUT = 00000000000000000000001110110001
-# refmod: input A =         875, input B =          70, output OUT =         945
-# refmod: input A = 00000000000000000000001101101011, input B = 00000000000000000000000001000110, output OUT = 00000000000000000000001110110001
-# UVM_INFO @ 2415: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         875, input B =          70, output OUT =         805
+# refmod: input A = 00000000000000000000001101101011, input B = 00000000000000000000000001000110, output OUT = 00000000000000000000001100100101
+# UVM_INFO @ 2415: reporter [MISCMP] Miscompare for exp.data: lhs = 'h325 : rhs = 'h3b1
+# UVM_INFO @ 2415: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2415: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        799, input B =         68, output OUT =        867
 # adder: input A = 00000000000000000000001100011111, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100011
-# refmod: input A =         799, input B =          68, output OUT =         867
-# refmod: input A = 00000000000000000000001100011111, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001101100011
-# UVM_INFO @ 2445: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         799, input B =          68, output OUT =         731
+# refmod: input A = 00000000000000000000001100011111, input B = 00000000000000000000000001000100, output OUT = 00000000000000000000001011011011
+# UVM_INFO @ 2445: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2db : rhs = 'h363
+# UVM_INFO @ 2445: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2445: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        408, input B =         13, output OUT =        421
 # adder: input A = 00000000000000000000000110011000, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110100101
-# refmod: input A =         408, input B =          13, output OUT =         421
-# refmod: input A = 00000000000000000000000110011000, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110100101
-# UVM_INFO @ 2475: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         408, input B =          13, output OUT =         395
+# refmod: input A = 00000000000000000000000110011000, input B = 00000000000000000000000000001101, output OUT = 00000000000000000000000110001011
+# UVM_INFO @ 2475: reporter [MISCMP] Miscompare for exp.data: lhs = 'h18b : rhs = 'h1a5
+# UVM_INFO @ 2475: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2475: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        324, input B =         31, output OUT =        355
 # adder: input A = 00000000000000000000000101000100, input B = 00000000000000000000000000011111, output OUT = 00000000000000000000000101100011
-# refmod: input A =         324, input B =          31, output OUT =         355
-# refmod: input A = 00000000000000000000000101000100, input B = 00000000000000000000000000011111, output OUT = 00000000000000000000000101100011
-# UVM_INFO @ 2505: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         324, input B =          31, output OUT =         293
+# refmod: input A = 00000000000000000000000101000100, input B = 00000000000000000000000000011111, output OUT = 00000000000000000000000100100101
+# UVM_INFO @ 2505: reporter [MISCMP] Miscompare for exp.data: lhs = 'h125 : rhs = 'h163
+# UVM_INFO @ 2505: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2505: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        108, input B =          2, output OUT =        110
 # adder: input A = 00000000000000000000000001101100, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000000001101110
-# refmod: input A =         108, input B =           2, output OUT =         110
-# refmod: input A = 00000000000000000000000001101100, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000000001101110
-# UVM_INFO @ 2535: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         108, input B =           2, output OUT =         106
+# refmod: input A = 00000000000000000000000001101100, input B = 00000000000000000000000000000010, output OUT = 00000000000000000000000001101010
+# UVM_INFO @ 2535: reporter [MISCMP] Miscompare for exp.data: lhs = 'h6a : rhs = 'h6e
+# UVM_INFO @ 2535: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2535: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        906, input B =          3, output OUT =        909
 # adder: input A = 00000000000000000000001110001010, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001110001101
-# refmod: input A =         906, input B =           3, output OUT =         909
-# refmod: input A = 00000000000000000000001110001010, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001110001101
-# UVM_INFO @ 2565: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         906, input B =           3, output OUT =         903
+# refmod: input A = 00000000000000000000001110001010, input B = 00000000000000000000000000000011, output OUT = 00000000000000000000001110000111
+# UVM_INFO @ 2565: reporter [MISCMP] Miscompare for exp.data: lhs = 'h387 : rhs = 'h38d
+# UVM_INFO @ 2565: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2565: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        770, input B =         42, output OUT =        812
 # adder: input A = 00000000000000000000001100000010, input B = 00000000000000000000000000101010, output OUT = 00000000000000000000001100101100
-# refmod: input A =         770, input B =          42, output OUT =         812
-# refmod: input A = 00000000000000000000001100000010, input B = 00000000000000000000000000101010, output OUT = 00000000000000000000001100101100
-# UVM_INFO @ 2595: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         770, input B =          42, output OUT =         728
+# refmod: input A = 00000000000000000000001100000010, input B = 00000000000000000000000000101010, output OUT = 00000000000000000000001011011000
+# UVM_INFO @ 2595: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2d8 : rhs = 'h32c
+# UVM_INFO @ 2595: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2595: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        671, input B =         54, output OUT =        725
 # adder: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001011010101
-# refmod: input A =         671, input B =          54, output OUT =         725
-# refmod: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001011010101
-# UVM_INFO @ 2625: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         671, input B =          54, output OUT =         617
+# refmod: input A = 00000000000000000000001010011111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001001101001
+# UVM_INFO @ 2625: reporter [MISCMP] Miscompare for exp.data: lhs = 'h269 : rhs = 'h2d5
+# UVM_INFO @ 2625: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2625: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        819, input B =         27, output OUT =        846
 # adder: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000011011, output OUT = 00000000000000000000001101001110
-# refmod: input A =         819, input B =          27, output OUT =         846
-# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000011011, output OUT = 00000000000000000000001101001110
-# UVM_INFO @ 2655: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         819, input B =          27, output OUT =         792
+# refmod: input A = 00000000000000000000001100110011, input B = 00000000000000000000000000011011, output OUT = 00000000000000000000001100011000
+# UVM_INFO @ 2655: reporter [MISCMP] Miscompare for exp.data: lhs = 'h318 : rhs = 'h34e
+# UVM_INFO @ 2655: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2655: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        594, input B =         11, output OUT =        605
 # adder: input A = 00000000000000000000001001010010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001001011101
-# refmod: input A =         594, input B =          11, output OUT =         605
-# refmod: input A = 00000000000000000000001001010010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001001011101
-# UVM_INFO @ 2685: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         594, input B =          11, output OUT =         583
+# refmod: input A = 00000000000000000000001001010010, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001001000111
+# UVM_INFO @ 2685: reporter [MISCMP] Miscompare for exp.data: lhs = 'h247 : rhs = 'h25d
+# UVM_INFO @ 2685: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2685: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        984, input B =         11, output OUT =        995
 # adder: input A = 00000000000000000000001111011000, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001111100011
-# refmod: input A =         984, input B =          11, output OUT =         995
-# refmod: input A = 00000000000000000000001111011000, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001111100011
-# UVM_INFO @ 2715: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         984, input B =          11, output OUT =         973
+# refmod: input A = 00000000000000000000001111011000, input B = 00000000000000000000000000001011, output OUT = 00000000000000000000001111001101
+# UVM_INFO @ 2715: reporter [MISCMP] Miscompare for exp.data: lhs = 'h3cd : rhs = 'h3e3
+# UVM_INFO @ 2715: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2715: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        451, input B =          1, output OUT =        452
 # adder: input A = 00000000000000000000000111000011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000111000100
-# refmod: input A =         451, input B =           1, output OUT =         452
-# refmod: input A = 00000000000000000000000111000011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000111000100
-# UVM_INFO @ 2745: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         451, input B =           1, output OUT =         450
+# refmod: input A = 00000000000000000000000111000011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000111000010
+# UVM_INFO @ 2745: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1c2 : rhs = 'h1c4
+# UVM_INFO @ 2745: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2745: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        911, input B =         54, output OUT =        965
 # adder: input A = 00000000000000000000001110001111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001111000101
-# refmod: input A =         911, input B =          54, output OUT =         965
-# refmod: input A = 00000000000000000000001110001111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001111000101
-# UVM_INFO @ 2775: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         911, input B =          54, output OUT =         857
+# refmod: input A = 00000000000000000000001110001111, input B = 00000000000000000000000000110110, output OUT = 00000000000000000000001101011001
+# UVM_INFO @ 2775: reporter [MISCMP] Miscompare for exp.data: lhs = 'h359 : rhs = 'h3c5
+# UVM_INFO @ 2775: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2775: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        859, input B =         12, output OUT =        871
 # adder: input A = 00000000000000000000001101011011, input B = 00000000000000000000000000001100, output OUT = 00000000000000000000001101100111
-# refmod: input A =         859, input B =          12, output OUT =         871
-# refmod: input A = 00000000000000000000001101011011, input B = 00000000000000000000000000001100, output OUT = 00000000000000000000001101100111
-# UVM_INFO @ 2805: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         859, input B =          12, output OUT =         847
+# refmod: input A = 00000000000000000000001101011011, input B = 00000000000000000000000000001100, output OUT = 00000000000000000000001101001111
+# UVM_INFO @ 2805: reporter [MISCMP] Miscompare for exp.data: lhs = 'h34f : rhs = 'h367
+# UVM_INFO @ 2805: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2805: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        787, input B =         58, output OUT =        845
 # adder: input A = 00000000000000000000001100010011, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101001101
-# refmod: input A =         787, input B =          58, output OUT =         845
-# refmod: input A = 00000000000000000000001100010011, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001101001101
-# UVM_INFO @ 2835: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         787, input B =          58, output OUT =         729
+# refmod: input A = 00000000000000000000001100010011, input B = 00000000000000000000000000111010, output OUT = 00000000000000000000001011011001
+# UVM_INFO @ 2835: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2d9 : rhs = 'h34d
+# UVM_INFO @ 2835: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2835: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        518, input B =         25, output OUT =        543
 # adder: input A = 00000000000000000000001000000110, input B = 00000000000000000000000000011001, output OUT = 00000000000000000000001000011111
-# refmod: input A =         518, input B =          25, output OUT =         543
-# refmod: input A = 00000000000000000000001000000110, input B = 00000000000000000000000000011001, output OUT = 00000000000000000000001000011111
-# UVM_INFO @ 2865: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         518, input B =          25, output OUT =         493
+# refmod: input A = 00000000000000000000001000000110, input B = 00000000000000000000000000011001, output OUT = 00000000000000000000000111101101
+# UVM_INFO @ 2865: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1ed : rhs = 'h21f
+# UVM_INFO @ 2865: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2865: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        791, input B =         55, output OUT =        846
 # adder: input A = 00000000000000000000001100010111, input B = 00000000000000000000000000110111, output OUT = 00000000000000000000001101001110
-# refmod: input A =         791, input B =          55, output OUT =         846
-# refmod: input A = 00000000000000000000001100010111, input B = 00000000000000000000000000110111, output OUT = 00000000000000000000001101001110
-# UVM_INFO @ 2895: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         791, input B =          55, output OUT =         736
+# refmod: input A = 00000000000000000000001100010111, input B = 00000000000000000000000000110111, output OUT = 00000000000000000000001011100000
+# UVM_INFO @ 2895: reporter [MISCMP] Miscompare for exp.data: lhs = 'h2e0 : rhs = 'h34e
+# UVM_INFO @ 2895: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2895: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        255, input B =         21, output OUT =        276
 # adder: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000000100010100
-# refmod: input A =         255, input B =          21, output OUT =         276
-# refmod: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000000100010100
-# UVM_INFO @ 2925: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         255, input B =          21, output OUT =         234
+# refmod: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000010101, output OUT = 00000000000000000000000011101010
+# UVM_INFO @ 2925: reporter [MISCMP] Miscompare for exp.data: lhs = 'hea : rhs = 'h114
+# UVM_INFO @ 2925: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2925: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        255, input B =          6, output OUT =        261
 # adder: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000000110, output OUT = 00000000000000000000000100000101
-# refmod: input A =         255, input B =           6, output OUT =         261
-# refmod: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000000110, output OUT = 00000000000000000000000100000101
-# UVM_INFO @ 2955: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         255, input B =           6, output OUT =         249
+# refmod: input A = 00000000000000000000000011111111, input B = 00000000000000000000000000000110, output OUT = 00000000000000000000000011111001
+# UVM_INFO @ 2955: reporter [MISCMP] Miscompare for exp.data: lhs = 'hf9 : rhs = 'h105
+# UVM_INFO @ 2955: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2955: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        898, input B =         23, output OUT =        921
 # adder: input A = 00000000000000000000001110000010, input B = 00000000000000000000000000010111, output OUT = 00000000000000000000001110011001
-# refmod: input A =         898, input B =          23, output OUT =         921
-# refmod: input A = 00000000000000000000001110000010, input B = 00000000000000000000000000010111, output OUT = 00000000000000000000001110011001
-# UVM_INFO @ 2985: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         898, input B =          23, output OUT =         875
+# refmod: input A = 00000000000000000000001110000010, input B = 00000000000000000000000000010111, output OUT = 00000000000000000000001101101011
+# UVM_INFO @ 2985: reporter [MISCMP] Miscompare for exp.data: lhs = 'h36b : rhs = 'h399
+# UVM_INFO @ 2985: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 2985: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        900, input B =         66, output OUT =        966
 # adder: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001111000110
-# refmod: input A =         900, input B =          66, output OUT =         966
-# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001111000110
-# UVM_INFO @ 3015: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         900, input B =          66, output OUT =         834
+# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001101000010
+# UVM_INFO @ 3015: reporter [MISCMP] Miscompare for exp.data: lhs = 'h342 : rhs = 'h3c6
+# UVM_INFO @ 3015: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 3015: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # adder: input A =        435, input B =          1, output OUT =        436
 # adder: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100
-# refmod: input A =         435, input B =           1, output OUT =         436
-# refmod: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100
-# UVM_INFO @ 3045: uvm_test_top.env_h.comp [Comparator Match] 
+# refmod: input A =         435, input B =           1, output OUT =         434
+# refmod: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110010
+# UVM_INFO @ 3045: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1b2 : rhs = 'h1b4
+# UVM_INFO @ 3045: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 3045: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3045: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../tb/env.sv(42) @ 3045: uvm_test_top.env_h [env] Reporting matched 101
+# UVM_INFO ../tb/env.sv(42) @ 3045: uvm_test_top.env_h [env] Reporting matched 0
+# UVM_ERROR ../tb/env.sv(44) @ 3045: uvm_test_top.env_h [env] Saw 101 mismatched samples
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  106
-# UVM_WARNING :    0
-# UVM_ERROR :    0
+# UVM_INFO :  207
+# UVM_WARNING :  101
+# UVM_ERROR :    1
 # UVM_FATAL :    0
 # ** Report counts by id
-# [Comparator Match]   101
+# [Comparator Mismatch]   101
+# [MISCMP]   202
 # [Questa UVM]     2
 # [RNTST]     1
 # [TEST_DONE]     1
-# [env]     1
+# [env]     2
 # ** Note: $finish    : /software/mentor/questa10.7c/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 3045 ns  Iteration: 58  Instance: /top
-# End time: 12:37:12 on Mar 26,2022, Elapsed time: 0:00:27
+# End time: 23:46:29 on Mar 30,2022, Elapsed time: 0:00:58
 # Errors: 0, Warnings: 4
