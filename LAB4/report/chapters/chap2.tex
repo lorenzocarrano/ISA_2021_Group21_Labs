@@ -7,32 +7,32 @@
 \chapter{Adder}
 \label{cha2}
 
-First step has been test the correctness of the behavior of the SystemVerilog description of
+The first step has been to test the correctness of the behavior of the System Verilog description of
 an adder by using QuestaSim.
-In order to evaluate performance, in terms of coherence with the expected behavior, it is needed
+In order to evaluate the performance, in terms of coherence with the expected behavior, it is needed
 to check the amount of matches and mismatches.
 For each input sequence, it was observed that the output of the adder description to be tested
 and the output of the gold model were coincidental, thus we can conclude that the overall 
 behavior of the described adder is correct.
 
 \section{Changing the parallelism}
-Changing the parallelism means to modiify, of course, both the interface of the unit under test and
+Changing the parallelism means to modify both the interface of the unit under test and
 size of each input/output sequence.
-Even in this case, no mismatches have been detected by comparation with the golden model.
+Even in this case, no mismatches have been detected by comparison with the golden model.
 
 \section{Constraints Definition}
 It is possible to define some constraints over the randomly generated input sequences 
-employed in the testm, for example using the inside operator, to define a range of values
+employed in the test, for example using the inside operator, to define a range of values
 for one of the inputs of the adder.
 Even in this case, no mismatches have been observed.
 
-\section{Uncorrect Gold Model}
-At this point, a gold model with an uncorrect behavior has been employed for the test, and thus
+\section{Incorrect Gold Model}
+At this point, a golden model with an incorrect behavior has been employed for the test, thus
 in this case it is expected to observe mismatches inside each record of the transcript.
 For each mismatch, a warning is signaled in the transcript, and an error is reported inside
 the final summary.
 
-\section{Forcig Overflow Condition}
+\section{Forcing Overflow Condition}
 At this step the behavior of the unit under test in case of overflow has been tested.
 In order to do that, it has been necessary to set proper constraints over the input sequences.
 It has been possible to observe that the adder correctly handles overflow conditions.

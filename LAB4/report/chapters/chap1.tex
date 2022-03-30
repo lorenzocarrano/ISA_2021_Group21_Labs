@@ -6,25 +6,25 @@
 \chapter{Introduction}
 \label{chap1}
 
-During the verificatoin steps of HDL design different testbench had been used to 
-check the correctness of implementation. Each of them has been manualy modified to 
-verify the correct bheavior of design under different input oand no automatic tools 
+During the verification steps of HDL design different testbenches have been used to 
+check the correctness of implementation. Each of them has been manually modified to 
+verify the correct behavior of the design under different inputs, and no automatic tools 
 had been used in order to automatize this process.
 
-The UVM is the lastest tecniquie used to create modular testbench. It's a free framework 
-based on System Verilog and exploid the Object-Oriented paradigma. This paradigm entails
+The UVM is the latest technique used to create modular testbenches. It's a free framework 
+based on System Verilog and exploits the Object-Oriented paradigm. This paradigm entails
 the separation of concerns while building the testbench architecture and the specific test that
 can be performed: multiple tests can be applied to the same architecture just by modifying the
 input stimuli sequence (and constraints) and by selecting different Design Under Test (DUT)
-properties to be observed. Alternatively, same tests can be applied to different testbench architectures.
+properties to be observed. Alternatively, the same tests can be applied to different testbench architectures.
 
-In this laboratory the generation of different input has been randomly and the right output to compare has 
-been elaborated based on a reference model, implemented through the UVM class, properly create according 
-the DUT. In this way the only operation to perfome in order to change the testbench are:
+In this laboratory the generation of different input has been random and the right output to compare has 
+been elaborated based on a reference model, implemented through the UVM class, properly created according 
+to the DUT. In this way the only operation to performed in order to change the testbench are:
 \begin{itemize}
-    \item choose the proper DUT
-    \item select a range for input value
-    \item modify the model reference and the FSM to follow the design bheavior
+    \item choose the proper DUT;
+    \item select a range for input values;
+    \item modify the model reference and the FSM to follow the design behavior.
 \end{itemize}
 
 

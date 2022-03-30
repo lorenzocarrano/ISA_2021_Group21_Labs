@@ -3,18 +3,14 @@
 \contentsline {chapter}{\numberline {2}Adder}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Changing the parallelism}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Constraints Definition}{2}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Uncorrect Gold Model}{2}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Forcig Overflow Condition}{2}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Control Unit}{3}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Floating Point Multiplier}{4}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testbench Modifications}{4}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Input Generation}{4}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Testbench Run}{5}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Testbench}{6}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Memory component}{6}{section.5.1}%
-\contentsline {section}{\numberline {5.2}ASM code}{6}{section.5.2}%
-\contentsline {section}{\numberline {5.3}ABS function}{6}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Conclusion}{7}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Synthesis and Place \& Route}{8}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Shynthesis}{8}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Place \& Route}{8}{section.6.2}%
+\contentsline {section}{\numberline {2.3}Incorrect Gold Model}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Forcing Overflow Condition}{2}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Integer Multiplier}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Compilation}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Change interface}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Change reference model}{4}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Testbench Run}{4}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Floating Point Multiplier}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testbench Modifications}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Input Generation}{6}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Testbench Run}{7}{section.4.3}%
