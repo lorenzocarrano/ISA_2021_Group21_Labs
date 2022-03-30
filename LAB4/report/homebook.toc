@@ -1,16 +1,16 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Adder}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Changing the parallelism}{2}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Constraints Definition}{2}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Incorrect Gold Model}{2}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Forcing Overflow Condition}{2}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Integer Multiplier}{3}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Compilation}{3}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Change interface}{3}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Change reference model}{4}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Testbench Run}{4}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Floating Point Multiplier}{6}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testbench Modifications}{6}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Input Generation}{6}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Testbench Run}{7}{section.4.3}%
+\contentsline {section}{\numberline {2.1}Introduction}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Changing the parallelism}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Constraints Definition}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Incorrect Gold Model}{3}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Integer Multiplier}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Compilation}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Change interface}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Change reference model}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Testbench Run}{6}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Floating Point Multiplier}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testbench Modifications}{8}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Input Generation}{8}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Testbench Run}{9}{section.4.3}%

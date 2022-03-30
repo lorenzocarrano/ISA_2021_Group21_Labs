@@ -6,7 +6,7 @@
  
 \chapter{Adder}
 \label{cha2}
-
+\section{Introduction}
 The first step has been to test the correctness of the behavior of the System Verilog description of
 an adder by using QuestaSim.
 In order to evaluate the performance, in terms of coherence with the expected behavior, it is needed
@@ -25,14 +25,69 @@ It is possible to define some constraints over the randomly generated input sequ
 employed in the test, for example using the inside operator, to define a range of values
 for one of the inputs of the adder.
 Even in this case, no mismatches have been observed.
+\\
+\\
+\# adder: input A =        900, input B =         66, output OUT =        966\\
+\# adder: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001111000110\\
+\# refmod: input A =         900, input B =          66, output OUT =         966\\
+\# refmod: input A = 00000000000000000000001110000100, input B = 00000000000000000000000001000010, output OUT = 00000000000000000000001111000110\\
+\# UVM\_INFO @ 3015: uvm\_test\_top.env\_h.comp [Comparator Match] \\
+\# adder: input A =        435, input B =          1, output OUT =        436\\
+\# adder: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100\\
+\# refmod: input A =         435, input B =           1, output OUT =         436\\
+\# refmod: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100\\
+\# UVM\_INFO @ 3045: uvm\_test\_top.env\_h.comp [Comparator Match] \\
+\# UVM\_INFO verilog\_src/uvm-1.1d/src/base/uvm\_objection.svh(1267) @ 3045: reporter [TEST\_DONE] 'run' phase is ready to proceed to the 'extract' phase\\
+\# UVM\_INFO ../tb/env.sv(42) @ 3045: uvm\_test\_top.env\_h [env] Reporting matched 101\\
+\# \\
+\# --- UVM Report Summary ---\\
+\# \\
+\# ** Report counts by severity\\
+\# UVM\_INFO :  106\\
+\# UVM\_WARNING :    0\\
+\# UVM\_ERROR :    0\\
+\# UVM\_FATAL :    0\\
+\# ** Report counts by id\\
+\# [Comparator Match]   101\\
+\# [Questa UVM]     2\\
+\# [RNTST]     1\\
+\# [TEST\_DONE]     1\\
+\# [env]     1\\
 
 \section{Incorrect Gold Model}
 At this point, a golden model with an incorrect behavior has been employed for the test, thus
 in this case it is expected to observe mismatches inside each record of the transcript.
 For each mismatch, a warning is signaled in the transcript, and an error is reported inside
 the final summary.
+\\
+\\
+\# adder: input A =        435, input B =          1, output OUT =        436\\
+\# adder: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110100\\
+\# refmod: input A =         435, input B =           1, output OUT =         434\\
+\# refmod: input A = 00000000000000000000000110110011, input B = 00000000000000000000000000000001, output OUT = 00000000000000000000000110110010\\
+\# UVM\_INFO @ 3045: reporter [MISCMP] Miscompare for exp.data: lhs = 'h1b2 : rhs = 'h1b4\\
+\# UVM\_INFO @ 3045: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617\\
+\# UVM\_WARNING @ 3045: uvm\_test\_top.env\_h.comp [Comparator Mismatch] \\
+\# UVM\_INFO verilog\_src/uvm-1.1d/src/base/uvm\_objection.svh(1267) @ 3045: reporter [TEST\_DONE] 'run' phase is ready to proceed to the 'extract' phase\\
+\# UVM\_INFO ../tb/env.sv(42) @ 3045: uvm\_test\_top.env\_h [env] Reporting matched 0\\
+\# UVM\_ERROR ../tb/env.sv(44) @ 3045: uvm\_test\_top.env\_h [env] Saw 101 mismatched samples\\
+\# \\
+\# --- UVM Report Summary ---\\
+\# \\
+\# ** Report counts by severity\\
+\# UVM\_INFO :  207\\
+\# UVM\_WARNING :  101\\
+\# UVM\_ERROR :    1\\
+\# UVM\_FATAL :    0\\
+\# ** Report counts by id\\
+\# [Comparator Mismatch]   101\\
+\# [MISCMP]   202\\
+\# [Questa UVM]     2\\
+\# [RNTST]     1\\
+\# [TEST\_DONE]     1\\
+\# [env]     2\\
 
-\section{Forcing Overflow Condition}
-At this step the behavior of the unit under test in case of overflow has been tested.
-In order to do that, it has been necessary to set proper constraints over the input sequences.
-It has been possible to observe that the adder correctly handles overflow conditions.
+%\section{Forcing Overflow Condition}
+%At this step the behavior of the unit under test in case of overflow has been tested.
+%In order to do that, it has been necessary to set proper constraints over the input sequences.
+%It has been possible to observe that the adder correctly handles overflow conditions.

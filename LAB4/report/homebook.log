@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  30 MAR 2022 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.18)  30 MAR 2022 22:20
 entering extended mode
 **c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB4/report/homebook.tex
 (c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB4/report/homebook.tex
@@ -497,9 +497,69 @@ Chapter 1.
 
 ]
 Chapter 2.
-) (chapters/chap3.tex [2
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--56
+
+ []
+
+
+Overfull \hbox (18.81467pt too wide) in paragraph at lines 24--56
+\OT1/cmr/m/n/10 # adder: in-put A = 00000000000000000000001110000100, in-put B = 00000000000000000000000001000010,
+ []
+
+
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 24--56
+\OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000000001110000100, in-put B = 00000000000000000000000001000010,
+ []
+
+
+Overfull \hbox (18.81467pt too wide) in paragraph at lines 24--56
+\OT1/cmr/m/n/10 # adder: in-put A = 00000000000000000000000110110011, in-put B = 00000000000000000000000000000001,
+ []
+
+
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 24--56
+\OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000000000110110011, in-put B = 00000000000000000000000000000001,
+ []
+
+
+Overfull \hbox (12.10437pt too wide) in paragraph at lines 24--56
+\OT1/cmr/m/n/10 # UVM[]INFO ver-ilog[]src/uvm-1.1d/src/base/uvm[]objection.svh(1267) @ 3045: re-porter [TEST[]DONE]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--56
+
+ []
+
+[2
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 58--89
+
+ []
+
+
+Overfull \hbox (18.81467pt too wide) in paragraph at lines 58--89
+\OT1/cmr/m/n/10 # adder: in-put A = 00000000000000000000000110110011, in-put B = 00000000000000000000000000000001,
+ []
+
+
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 58--89
+\OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000000000110110011, in-put B = 00000000000000000000000000000001,
+ []
+
+
+Overfull \hbox (12.10437pt too wide) in paragraph at lines 58--89
+\OT1/cmr/m/n/10 # UVM[]INFO ver-ilog[]src/uvm-1.1d/src/base/uvm[]objection.svh(1267) @ 3045: re-porter [TEST[]DONE]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--89
+
+ []
+
+[3]) (chapters/chap3.tex [4]
 Chapter 3.
 (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -511,7 +571,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstlang2.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\monca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
-) (../MBE-Dadda/src/dut_if.sv) [3
+) (../MBE-Dadda/src/dut_if.sv) [5
 
 ]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 35.
@@ -520,67 +580,67 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
-
-Overfull \hbox (188.9887pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (188.9887pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 ) (chapters/chap4.tex
-Underfull \hbox (badness 10000) in paragraph at lines 45--6
+Underfull \hbox (badness 10000) in paragraph at lines 48--6
 
  []
 
 
-Overfull \hbox (15.73134pt too wide) in paragraph at lines 45--6
+Overfull \hbox (15.73134pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # MBE: in-put A = 00000000000000000010001111011001, in-put B = 00000000000000000010010111111101,
  []
 
 
-Overfull \hbox (24.92581pt too wide) in paragraph at lines 45--6
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000010001111011001, in-put B = 00000000000000000010010111111101,
  []
 
 
-Overfull \hbox (15.73134pt too wide) in paragraph at lines 45--6
+Overfull \hbox (15.73134pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # MBE: in-put A = 00000000000000000010010101000000, in-put B = 00000000000000000000010100011011,
  []
 
 
-Overfull \hbox (24.92581pt too wide) in paragraph at lines 45--6
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000010010101000000, in-put B = 00000000000000000000010100011011,
  []
 
 
-Overfull \hbox (15.73134pt too wide) in paragraph at lines 45--6
+Overfull \hbox (15.73134pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # MBE: in-put A = 00000000000000000000101111011011, in-put B = 00000000000000000000100100011010,
  []
 
 
-Overfull \hbox (24.92581pt too wide) in paragraph at lines 45--6
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000000101111011011, in-put B = 00000000000000000000100100011010,
  []
 
 
-Overfull \hbox (15.73134pt too wide) in paragraph at lines 45--6
+Overfull \hbox (15.73134pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # MBE: in-put A = 00000000000000000000101101000000, in-put B = 00000000000000000000111001101111,
  []
 
 
-Overfull \hbox (24.92581pt too wide) in paragraph at lines 45--6
+Overfull \hbox (24.92581pt too wide) in paragraph at lines 48--6
 \OT1/cmr/m/n/10 # ref-mod: in-put A = 00000000000000000000101101000000, in-put B = 00000000000000000000111001101111,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--6
+Overfull \hbox (12.10437pt too wide) in paragraph at lines 48--6
+\OT1/cmr/m/n/10 # UVM[]INFO ver-ilog[]src/uvm-1.1d/src/base/uvm[]objection.svh(1267) @ 3045: re-porter [TEST[]DONE]
+ []
+
+
+Overfull \hbox (41.68768pt too wide) in paragraph at lines 48--6
+\OT1/cmr/m/n/10 'run' phase is ready to pro-ceed to the 'ex-tract' phase # UVM[]INFO ../t-b/env.sv(42) @ 3045: uvm[]test[]top.env[]h
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--6
 
  []
 
-[4] [5]
+[6] [7]
 Chapter 4.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 36--213
@@ -617,24 +677,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--213
 
  []
 
-[6
+[8
 
-] [7] (homebook.aux)
+] [9] (homebook.aux)
 Package rerunfilecheck Info: File `homebook.out' has not changed.
-(rerunfilecheck)             Checksum: 50FA526DD71D63E20DC0DD8D94625497;2153.
+(rerunfilecheck)             Checksum: DC5926B1C92B9BB2F6AA0DAE9E78CF65;2077.
  ) 
 Here is how much of TeX's memory you used:
- 15430 strings out of 478699
- 243422 string characters out of 2846961
- 737174 words of memory out of 3000000
- 33210 multiletter control sequences out of 15000+600000
+ 15437 strings out of 478699
+ 243477 string characters out of 2846961
+ 737170 words of memory out of 3000000
+ 33213 multiletter control sequences out of 15000+600000
  409390 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,63p,324b,1367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,63p,324b,1354s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk> <C:\Users\monca\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/monca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on homebook.pdf (9 pages, 354516 bytes).
+Output written on homebook.pdf (11 pages, 356947 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

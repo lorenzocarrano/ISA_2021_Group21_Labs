@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex homebook.idx"] 1648312638 "homebook.idx" "homebook.ind" "homebook" 1648647149
-  "homebook.idx" 1648647148 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex homebook.idx"] 1648670963 "homebook.idx" "homebook.ind" "homebook" 1648671660
+  "homebook.idx" 1648671658 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "homebook.ind"
   "homebook.ilg"
-["pdflatex"] 1648647146 "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB4/report/homebook.tex" "homebook.pdf" "homebook" 1648647149
+["pdflatex"] 1648671657 "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB4/report/homebook.tex" "homebook.pdf" "homebook" 1648671660
   "../MBE-Dadda/sim/sim.sh" 1648588388 218 2eb0c99100fc9b82e889630365f8993a ""
   "../MBE-Dadda/src/dut_if.sv" 1646482871 263 29c75d587962e5bb2974fcfeec711d40 ""
   "C:/Users/monca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1000.pk" 1648646705 12124 f42a93b2b18471539ddd1d7961322502 ""
@@ -115,20 +115,20 @@
   "C:/Users/monca/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636288472 56029 3f7889dab51d620aa43177c391b7b190 ""
   "c:/Users/monca/Documents/Politecnico/ISA/LAB/ISA_2021_Group21_Labs/LAB4/report/homebook.tex" 1648588388 5444 80fd31c60626870a730a3aede878a83f ""
   "chapters/chap1.tex" 1648646697 1628 94e97919d07257e75b5d0525a838de59 ""
-  "chapters/chap2.tex" 1648647141 1920 4863a9dc66ce5bbbe704729b3dc75439 ""
-  "chapters/chap3.tex" 1648588388 3921 74e52f59f1f7fee77fc45cd974dfc949 ""
+  "chapters/chap2.tex" 1648671651 5014 e086dd86acc0a09f5d8bb484e48af9b3 ""
+  "chapters/chap3.tex" 1648670962 4524 14e3b0f92672a1444405c4338cbd2e65 ""
   "chapters/chap4.tex" 1648316461 4190 d10bbb0cf824e9da6a4e633728d2e99a ""
-  "homebook.aux" 1648647149 3436 5949c0af37b96687964f3a8d1849edaa "pdflatex"
-  "homebook.ind" 1648316238 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
-  "homebook.out" 1648647149 2153 50fa526dd71d63e20dc0dd8d94625497 "pdflatex"
+  "homebook.aux" 1648671659 3423 dc491e87928ad078887a76c7e32183cc "pdflatex"
+  "homebook.ind" 1648670964 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
+  "homebook.out" 1648671659 2077 dc5926b1c92b9bb2f6aa0dae9e78cf65 "pdflatex"
   "homebook.tex" 1648588388 5444 80fd31c60626870a730a3aede878a83f ""
-  "homebook.toc" 1648647149 1180 643eb4cafbd7b051daf4f5dcacca05ba "pdflatex"
+  "homebook.toc" 1648671659 1166 488c5a56f3b3e117be686748ac5d2471 "pdflatex"
   "logopoli_new.png" 1639343406 268312 19b7b3b5d2bea6d36e5545454ae1f690 ""
   "titlesec.sty" 1639343406 37821 64ad863c8c12f6a697080a369b2f9f4d ""
   (generated)
-  "homebook.out"
-  "homebook.log"
   "homebook.pdf"
+  "homebook.out"
   "homebook.idx"
+  "homebook.log"
   "homebook.toc"
   "homebook.aux"

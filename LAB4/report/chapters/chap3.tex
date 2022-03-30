@@ -32,8 +32,10 @@ no more addition and the reference must be changed properly.
     forever begin
         in.get(tr_in);
         tr_out.data = tr_in.A * tr_in.B;
-        $display("refmod: input A = \%d, input B = \%d, output OUT = \%d",tr_in.A, tr_in.B, tr_out.data);
-        $display("refmod: input A = \%b, input B = \%b, output OUT = \%b",tr_in.A, tr_in.B, tr_out.data);
+        $display('refmod: input A = \%d, input B = \%d, 
+            output OUT = \%d',tr_in.A, tr_in.B, tr_out.data);
+        $display('refmod: input A = \%b, input B = \%b, 
+            output OUT = \%b',tr_in.A, tr_in.B, tr_out.data);
         out.put(tr_out);
     end
     
@@ -41,6 +43,7 @@ no more addition and the reference must be changed properly.
 \end{lstlisting}
 
 \section{Testbench Run}
+
 
 During the testbench run no mismatches occurred, as shown in the transcript file.\\
 \\
@@ -64,3 +67,19 @@ During the testbench run no mismatches occurred, as shown in the transcript file
 \# refmod: input A =        2880, input B =        3695, output OUT =    10641600\\
 \# refmod: input A = 00000000000000000000101101000000, input B = 00000000000000000000111001101111, output OUT = 00000000101000100110000011000000\\
 \# UVM\_INFO @ 135: uvm\_test\_top.env\_h.comp [Comparator Match] \\
+\# UVM\_INFO verilog\_src/uvm-1.1d/src/base/uvm\_objection.svh(1267) @ 3045: reporter [TEST\_DONE] 'run' phase is ready to proceed to the 'extract' phase
+\# UVM\_INFO ../tb/env.sv(42) @ 3045: uvm\_test\_top.env\_h [env] Reporting matched 101
+\# \\
+\# --- UVM Report Summary ---\\
+\# \\
+\# ** Report counts by severity\\
+\# UVM\_INFO :  106\\
+\# UVM\_WARNING :    0\\
+\# UVM\_ERROR :    0\\
+\# UVM\_FATAL :    0\\
+\# ** Report counts by id\\
+\# [Comparator Match]   101\\
+\# [Questa UVM]     2\\
+\# [RNTST]     1\\
+\# [TEST\_DONE]     1\\
+\# [env]     1\\
