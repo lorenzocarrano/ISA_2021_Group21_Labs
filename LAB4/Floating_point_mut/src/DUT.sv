@@ -27,14 +27,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                 WAIT: begin
                     if(in_inter.valid) begin
                         in_inter.ready <= 0;
-                        //out_inter.data <= in_inter.A + in_inter.B;
-                   
-						//array_A[4] <= array_A[3];
-						//array_B[4] <= array_B[3];
-						array_A[3] <= array_A[2];
-						array_B[3] <= array_B[2];
-						array_A[2] <= array_A[1];
-						array_B[2] <= array_B[1];
+                   	
 						array_A[1] <= array_A[0];
 						array_B[1] <= array_B[0];
 						array_A[0] <= in_inter.A;

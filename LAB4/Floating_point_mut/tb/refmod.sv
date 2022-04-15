@@ -27,10 +27,6 @@ class refmod extends uvm_component;
         
         forever begin
             in.get(tr_in);
-			B_f_vec[3] <= B_f_vec[2];
-			A_f_vec[3] <= A_f_vec[2];
-			B_f_vec[2] <= B_f_vec[1];
-			A_f_vec[2] <= A_f_vec[1];
 			B_f_vec[1] <= B_f_vec[0];
 			A_f_vec[1] <= A_f_vec[0];
 			A_f_vec[0] = $bitstoshortreal(tr_in.A);
